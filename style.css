@@ -1,0 +1,443 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+border:0;
+font:inherit;
+font-size:100%;
+margin:0;
+padding:0;
+vertical-align:baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+display:block;
+}
+
+html, body {
+/*
+  background: #101327 url('bg.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+*/
+/*  background: #3B6658; */
+  background: #408663;
+  font-family: 'Georgia', serif;
+  font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+  color: #5A595A;
+  margin: 0;
+  padding: 0;
+}
+
+.clear {clear: both;}
+
+p {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+  color: #5A595A;
+}
+
+#cv {
+  width: 90%;
+  max-width: 800px;
+  /*background: #fafafa;*/
+  background: #F2F2F2;
+  margin: 20px auto;
+  box-shadow: 0 0 25px #333333;
+}
+
+.mainDetails {
+  padding: 25px 35px;
+  border-bottom: 1px dashed #408663;
+  background: #373A44;
+}
+
+#name h1 {
+  font-size: 2.5em;
+  font-family: 'Georgia', serif;
+  margin-bottom: -6px;
+  line-height: 1.4em;
+  color: #fff;
+}
+
+#name h2 {
+  font-size: 1em;
+  margin-left: 2px;
+  font-family: 'Georgia', serif;
+  color: #ededed;
+}
+
+#mainArea {
+  padding: 0 40px 20px 40px;
+  border-top: 4px solid #373A44;
+}
+
+#mainArea a:link {
+  color: #045FB4;
+  text-decoration: none;
+}
+
+#mainArea a:visted {
+  color: #380B61;
+  text-decoration: none;
+}
+
+#mainArea a:hover, #mainArea a:active {
+  text-decoration: underline;
+}
+
+#headshot {
+  width: 12.5%;
+  float: left;
+  margin-right: 30px;
+}
+
+#headshot img {
+  width: 100%;
+  height: auto;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #444;
+}
+
+#name {
+  float: left;
+}
+
+#contactDetails {
+  float: right;
+}
+
+#contactDetails ul {
+  list-style-type: none;
+  font-size: 0.9em;
+  margin-top: 2px;
+}
+
+#contactDetails ul li {
+  margin-bottom: 3px;
+  color: #fff;
+}
+
+#contactDetails ul li a, a[href^=tel] {
+  color: #fff;
+  text-decoration: none;
+  /*
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  */
+}
+
+#contactDetails ul li a:hover {
+  color: #EBD94C;
+}
+
+article.job {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px dashed #dedede;
+}
+
+article.job:last-child {
+  border-bottom: none;
+}
+
+
+article.job ul {
+  list-style: square inside;
+}
+
+.jobNote {
+/*  font-size: 14px; */
+  color: #777;
+}
+
+section {
+  border-top: 1px solid #dedede;
+  padding: 20px 0 0;
+}
+
+section:first-child {
+  border-top: 0;
+}
+
+section:last-child {
+  padding: 20px 0 10px;
+}
+
+.sectionTitle {
+  float: left;
+  width: 18%;
+}
+
+.sectionContent {
+  float: right;
+  width: 82%;
+  line-height: 140%;
+}
+
+.sectionTitle h1 {
+  font-family: 'Georgia', serif;
+  font-size: 1.2em;
+  color: #737373;
+  margin-bottom: 6px;
+}
+
+.sectionContent h2 {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  color: #34495D;
+}
+
+.sectionBody {
+}
+
+.subDetails {
+/*  font-size: 14px; */
+  margin: 8px auto 8px auto;
+}
+
+table {
+  width: 100%;
+  margin-left: 20px;
+}
+
+td {
+  padding:0;
+  margin:0;
+  width: 30%;
+}
+
+.keySkills {
+  list-style-type: none;
+  /*
+  -moz-column-count:3;
+  -webkit-column-count:3;
+  column-count:3;
+  */
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: #444;
+}
+
+#references article {
+  margin-bottom: 22px;
+}
+
+#references .sectionBody {
+}
+
+#references h2 {
+  display: inline;
+}
+
+#references ul {
+  list-style: none;
+}
+
+#references .fa {
+  margin-right: 8px;
+}
+
+#references .ref_title {
+  display: inline;
+}
+
+#skills article {
+  margin-bottom: 20px;
+}
+
+#skills ul {
+  margin: 0 auto;
+}
+
+
+#skills li {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #dedede;
+  padding: 4px;
+}
+
+#skills h2 {
+  margin-bottom: 3px;
+}
+
+#other ul {
+  list-style-type: square #fff;
+  list-style-position: inside;
+  margin-bottom: 25px;
+}
+
+#contactDetails i {
+  width: 18px;
+  text-align: center;
+  padding-right: 8px;
+}
+
+table.references td {
+  width: auto;
+}
+
+#footer {
+  padding: 22px 22px 32px 22px;
+/*  border-top: 10px solid #1A68AB; */
+/*  background: #f7f7f7; */
+  background: #26272A;
+  font-family: 'Calibri', sans-serif;
+}
+
+#footer .contact {
+  float: left;
+}
+
+#footer .top {
+  float: right;
+}
+
+#footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #EBD94C;
+  text-decoration: underline;
+}
+
+@media all and (min-width: 602px) and (max-width: 800px) {
+  #headshot {
+    display: none;
+  }
+
+  .keySkills {
+  -moz-column-count:2;
+  -webkit-column-count:2;
+  column-count:2;
+  }
+}
+
+@media all and (max-width: 601px) {
+  #cv {
+    width: 95%;
+    margin: 10px auto;
+    min-width: 280px;
+  }
+
+  #headshot {
+    display: none;
+  }
+
+  #name, #contactDetails {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .sectionTitle, .sectionContent {
+    float: none;
+    width: 100%;
+  }
+
+  .sectionTitle {
+    margin-left: -2px;
+    font-size: 1.25em;
+  }
+
+  .keySkills {
+    -moz-column-count:2;
+    -webkit-column-count:2;
+    column-count:2;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .mainDetails {
+    padding: 15px 15px;
+  }
+
+  section {
+    padding: 15px 0 0;
+  }
+
+  #mainArea {
+    padding: 0 25px;
+  }
+
+
+  .keySkills {
+  -moz-column-count:1;
+  -webkit-column-count:1;
+  column-count:1;
+  }
+
+  #name h1 {
+    line-height: .8em;
+    margin-bottom: 4px;
+  }
+}
+
+@media print {
+  html,body {
+    background: none;
+  }
+  #cv {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+
+  .mainDetails {
+	border-bottom: 1px solid #646464;
+  }
+
+  #mainArea {
+	border-top: none;
+	padding: 0 20px 20px 20px;
+  }
+  #skills li {
+    display: inline-block;
+    vertical-align: top;
+    padding: none;
+    margin: none;
+  }
+  #name h1 {
+    font-family: 'Georgia', serif;
+    color: #444;
+  }
+
+  #name h2 {
+    font-family: 'Georgia', serif;
+    color: #555;
+  }
+
+  #footer {
+    display: none;
+  }
+
+  .sectionTitle h1 {
+    color: #555;
+  }
+
+  #contactDetails ul li,
+  #contactDetails a,
+  #contactDetails ul li a, a[href^=tel] {
+    color: #555;
+  }
+
+  .jobNote {
+    color: #666;
+  }
+
+  article {
+    page-break-inside: avoid;
+  }
+
+  #headshot {
+    display:none;
+  }
+
+}
