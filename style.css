@@ -282,21 +282,17 @@ table.references td {
   width: auto;
 }
 
-#footer {
-  padding: 22px 22px 32px 22px;
+#footer, #copyright {
+  padding: 22px 22px 12px 22px;
 /*  border-top: 10px solid #1A68AB; */
 /*  background: #f7f7f7; */
   background: #26272A;
   font-family: 'Calibri', sans-serif;
 }
 
-#footer .contact, #footer .copyright, #footer .top {
+#footer .contact, #footer .top {
   float: left;
-  width: 33%;
-}
-
-#footer .copyright {
-  text-align: center;
+  width: 50%;
 }
 
 #footer .top {
@@ -317,6 +313,19 @@ table.references td {
   content: "";
   display: table;
   clear: both;
+}
+
+#copyright {
+  text-align: center;
+  background: #26272A;
+  padding: 0px 22px 12px 22px;
+}
+
+@media all and (max-width: 800px) {
+  #contactDetails ul li a {
+    font-size: 1.1em;
+    color: #e9dd83;
+  }
 }
 
 @media all and (min-width: 602px) and (max-width: 800px) {
@@ -389,6 +398,16 @@ table.references td {
     line-height: .8em;
     margin-bottom: 4px;
   }
+
+  #contactDetails {
+    font-size: 1.2em;
+  }
+
+  #contactDetails ul li a {
+    font-size: 1.2em;
+    color: #70ad8f;
+  }
+
 }
 
 @media print {
