@@ -290,12 +290,17 @@ table.references td {
   font-family: 'Calibri', sans-serif;
 }
 
-#footer .contact {
+#footer .contact, #footer .copyright, #footer .top {
   float: left;
+  width: 33%;
+}
+
+#footer .copyright {
+  text-align: center;
 }
 
 #footer .top {
-  float: right;
+  text-align: right;
 }
 
 #footer a {
@@ -306,6 +311,12 @@ table.references td {
 #footer a:hover {
   color: #EBD94C;
   text-decoration: underline;
+}
+
+#footer:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 @media all and (min-width: 602px) and (max-width: 800px) {
