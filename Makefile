@@ -6,9 +6,9 @@ clean:
 minify:
 	mkdir _site
 	docker run --rm -it \
-      -v ${PWD}:/site \
-      thekevjames/minify:2.5.2 \
-      minify --recursive --output /site/_site /site
+	  -v ${PWD}:/site \
+	  thekevjames/minify:2.5.2 \
+	  minify --recursive --output /site/_site /site
 
 s3-deploy:
 	docker run --env-file=../aws.env -v ${PWD}:/site -w /site mikesir87/aws-cli \
