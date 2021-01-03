@@ -41,7 +41,7 @@ deploy:
       --delete
       --exclude ".git/*"
       --exclude ".gitlab-ci.yml"
-      --exclude "Makefile" \
+      --exclude "Makefile"
       --exclude "README.md"
       --exclude "resume/*"
       --acl public-read
