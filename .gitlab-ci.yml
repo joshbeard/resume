@@ -37,13 +37,12 @@ deploy:
     - minify
   script:
     - aws s3 sync .
-      s3://$S3_BUCKET_NAME
+      s3://$S3_BUCKET_NAME/resume
       --delete
       --exclude ".git/*"
       --exclude ".gitlab-ci.yml"
       --exclude "Makefile"
       --exclude "README.md"
-      --exclude "resume/*"
       --acl public-read
   only:
     - master
