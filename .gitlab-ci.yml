@@ -24,7 +24,7 @@ minify:
     paths:
       - ./
     exclude:
-      - .git/
+      - .git/*
   only:
     - master
 
