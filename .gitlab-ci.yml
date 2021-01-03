@@ -1,0 +1,47 @@
+# .gitlab-ci for resume
+#
+# 1. Minify
+# 2. Deploy to S3
+#
+# Variables set in GitLab vars:
+# AWS_ACCESS_KEY_ID
+# AWS_DEFAULT_REGION
+# AWS_SECRET_ACCESS_KEY
+# S3_BUCKET_NAME
+#
+---
+stages:
+  - minify
+  - deploy
+
+minify:
+  stage: minify
+  image:
+    name: thekevjames/minify:2.5.2
+    entrypoint: ['']
+  script: minify --recursive --output $CI_PROJECT_DIR $CI_PROJECT_DIR
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  image:
+    name: banst/awscli
+    entrypoint: ['']
+  dependencies:
+    - minify
+  script:
+    - aws s3 sync .
+      s3://$S3_BUCKET_NAME
+      --delete
+      --exclude ".git/*"
+      --exclude ".gitlab-ci.yml"
+      --exclude "Makefile" \
+      --exclude "README.md"
+      --exclude "resume/*"
+      --acl public-read
+  only:
+    - master
