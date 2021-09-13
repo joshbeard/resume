@@ -122,8 +122,8 @@ p {
 }
 
 article.job {
-  margin-bottom: 25px;
-  padding-bottom: 25px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
   border-bottom: 1px dashed #dedede;
 }
 
@@ -137,6 +137,7 @@ article.job ul {
 
 .jobNote {
   color: #777;
+  margin-bottom: 4px;
 }
 
 section {
@@ -176,13 +177,17 @@ section:last-child {
   color: #34495D;
 }
 
+.sectionBody {
+  margin-top: 8px;
+}
+
 #mainArea .sectionContent .job h2 a:visited,
 #mainArea .sectionContent .job h2 a {
   color: #34495D;
 }
 
-.subDetails {
-  margin: 8px auto 8px auto;
+p.jobDate {
+  margin: 4px auto 4px auto;
 }
 
 table {
@@ -395,8 +400,12 @@ table.references td {
   html,body {
     background: none;
   }
+  body {
+    /*margin: 25mm 25mm 25mm 25mm;*/
+  }
+  /*@page { size:8.5in 11in; margin: 2cm }*/
   #cv {
-    width: 100%;
+    width: 90%;
     border: none;
     box-shadow: none;
   }
