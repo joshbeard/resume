@@ -13,7 +13,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 
 html, body {
   background: #408663;
-  font-family: 'Georgia', times, serif;
+  /* font-family: 'Georgia', times, serif; */
   font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
   color: #5A595A;
   margin: 0;
@@ -47,7 +47,7 @@ p {
 
 #name h1 {
   font-size: 2.5em;
-  font-family: 'Georgia', times, serif;
+  /* font-family: 'Georgia', times, serif; */
   margin-bottom: -6px;
   line-height: 1.4em;
   color: #fff;
@@ -56,7 +56,7 @@ p {
 #name h2 {
   font-size: 1em;
   margin-left: 2px;
-  font-family: 'Georgia', times, serif;
+  /* font-family: 'Georgia', times, serif; */
   color: #ededed;
 }
 
@@ -164,15 +164,15 @@ section:last-child {
   line-height: 140%;
 }
 
-.sectionTitle h1 {
-  font-family: 'Georgia', serif;
+.sectionTitle h2 {
+  /* font-family: 'Georgia', serif; */
   font-size: 1.2em;
   color: #737373;
   margin-bottom: 6px;
 }
 
-.sectionContent h2 {
-  font-family: 'Georgia', serif;
+.sectionContent h3 {
+  /* font-family: 'Georgia', serif; */
   font-size: 18px;
   color: #34495D;
 }
