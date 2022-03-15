@@ -22,7 +22,7 @@ jobs:
           name: src
           path: |
             index.html
-            style.css
+            assets/
 
   deploy:
     runs-on: ubuntu-latest
@@ -48,3 +48,12 @@ jobs:
           AWS_REGION: 'us-west-2'
           SOURCE_DIR: '.'
           DEST_DIR: "resume/"
+
+      - name: Invalidate CloudFront Cache
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ secrets.CF_DISTRIBUTION }}
+          PATHS: "/resume/*"
+          AWS_REGION: "us-east-1"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
