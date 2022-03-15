@@ -1,3 +1,5 @@
+# NOTE: This depends on AWS resources deployed for the "joshbeard.me" website.
+# Refer to https://github.com/joshbeard/joshbeard.me-tf-aws
 name: Build
 on:
   push:
