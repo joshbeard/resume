@@ -27,6 +27,23 @@ jobs:
             -c assets/css/style.css
             --metadata title="Josh Beard"
 
+      - uses: docker://pandoc/latex
+        with:
+          args: >
+            --from markdown --to docx README.md \
+            -f gfm \
+            -o web/dist/resume.docx
+
+      - uses: docker://browserless/chrome:latest
+        with:
+          entrypoint: /usr/bin/google-chrome
+          args: >
+            -headless
+            -disable-gpu
+            --no-sandbox
+            --print-to-pdf=web/dist/resume.pdf
+            web/dist/index.html
+
       - name: Minify Action
         uses: anthonyftwang/minify-action@v1.0.1
 
