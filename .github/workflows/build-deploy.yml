@@ -30,8 +30,8 @@ jobs:
       - uses: docker://pandoc/latex
         with:
           args: >
-            --from markdown --to docx README.md \
-            -f gfm \
+            --from markdown --to docx README.md
+            -f gfm
             -o web/dist/resume.docx
 
       - uses: docker://browserless/chrome:latest
