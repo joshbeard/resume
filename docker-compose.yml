@@ -4,6 +4,6 @@ services:
   web:
     image: nginx
     volumes:
-      - ${PWD}/dist:/usr/share/nginx/html/resume
+      - ${PWD}/web/dist:/usr/share/nginx/html
     ports:
       - 8080:80
