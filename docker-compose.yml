@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx
+    volumes:
+      - ${PWD}/dist:/usr/share/nginx/html/resume
+    ports:
+      - 8080:80

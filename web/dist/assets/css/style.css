@@ -11,6 +11,71 @@
        url('../fonts/ubuntu/ubuntu-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/ubuntu/ubuntu-v19-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
 }
+/* ubuntu-italic - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/ubuntu/ubuntu-v19-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/ubuntu/ubuntu-v19-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ubuntu/ubuntu-v19-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v19-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v19-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ubuntu/ubuntu-v19-latin-italic.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+/* ubuntu-500 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/ubuntu/ubuntu-v19-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/ubuntu/ubuntu-v19-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ubuntu/ubuntu-v19-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v19-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v19-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ubuntu/ubuntu-v19-latin-500.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+/* ubuntu-500italic - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/ubuntu/ubuntu-v19-latin-500italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/ubuntu/ubuntu-v19-latin-500italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ubuntu/ubuntu-v19-latin-500italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v19-latin-500italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v19-latin-500italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ubuntu/ubuntu-v19-latin-500italic.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+/* ubuntu-700 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/ubuntu/ubuntu-v19-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/ubuntu/ubuntu-v19-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ubuntu/ubuntu-v19-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v19-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v19-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ubuntu/ubuntu-v19-latin-700.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+/* ubuntu-700italic - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/ubuntu/ubuntu-v19-latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/ubuntu/ubuntu-v19-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ubuntu/ubuntu-v19-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v19-latin-700italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ubuntu/ubuntu-v19-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ubuntu/ubuntu-v19-latin-700italic.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
 
 /* play-regular - latin */
 @font-face {
@@ -32,6 +97,12 @@
   margin:0;
   padding:0;
   vertical-align:baseline;
+  font-family: 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+strong {
+  font-weight: 500;
+  font-style: bold;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
@@ -47,6 +118,10 @@ html, body {
   padding: 0;
 }
 
+header {
+  display: none;
+}
+
 .clear {
   clear: both;
 }
@@ -54,7 +129,7 @@ html, body {
 p {
   font-size: 1em;
   line-height: 1.4em;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   color: #5A595A;
 }
 
@@ -66,86 +141,75 @@ p {
   box-shadow: 0 0 25px #333333;
 }
 
-.mainDetails {
+#heading {
   padding: 25px 35px;
   border-bottom: 1px dashed #408663;
   background: #373A44;
-}
-
-#name h1 {
-  font-size: 2.5em;
-  font-family: 'Play', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: -6px;
-  line-height: 1.4em;
-  color: #fff;
-}
-
-#name h2 {
-  font-size: 1em;
-  margin-left: 2px;
-  font-family: 'Play', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ededed;
-}
-
-#mainArea {
-  padding: 0 40px 20px 40px;
-  border-top: 4px solid #373A44;
-}
-
-#mainArea a:link {
-  color: #045FB4;
-  text-decoration: none;
-}
-
-#mainArea a:visited {
-  color: #380B61;
-  text-decoration: none;
-}
-
-#mainArea a:hover, #mainArea a:active {
-  text-decoration: underline;
-}
-
-#headshot {
-  width: 12.5%;
-  float: left;
-  margin-right: 30px;
-}
-
-#headshot img {
-  width: 100%;
-  height: auto;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  border: 1px solid #444;
 }
 
 #name {
   float: left;
 }
 
-#contactDetails {
-  float: right;
+h1 {
+  font-size: 2.5em;
+  margin-bottom: -6px;
+  line-height: 1.4em;
+  color: #fff;
+  content: "Josh Beard";
+}
+
+#name h2 {
+  font-size: 1em;
+  margin-left: 2px;
+  color: #ededed;
+}
+
+h1, h2, h3 {
   font-family: 'Play', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#contactDetails ul {
+#resume_content {
+  padding: 0 40px 20px 40px;
+  border-top: 4px solid #373A44;
+}
+
+#resume_content a:link {
+  color: #045FB4;
+  text-decoration: none;
+}
+
+#resume_content a:visited {
+  color: #380B61;
+  text-decoration: none;
+}
+
+#resume_content a:hover, #resume_content a:active {
+  text-decoration: underline;
+}
+
+#contact_details {
+  float: right;
+}
+
+#contact_details ul {
   list-style-type: none;
   font-size: 0.9em;
   margin-top: 2px;
+  font-family: 'Play', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#contactDetails ul li {
+#contact_details ul li {
   margin-bottom: 3px;
   color: #fff;
 }
 
-#contactDetails ul li a, a[href^=tel] {
+#contact_details ul li a, a[href^=tel] {
   color: #fff;
   text-decoration: none;
 }
 
-#contactDetails ul li a:hover {
+#contact_details ul li a:hover {
   color: #EBD94C;
 }
 
@@ -159,11 +223,13 @@ article.job:last-child {
   border-bottom: none;
 }
 
+h3 + ul,
 article.job ul {
   list-style: square inside;
-  margin-bottom: 10px;
+  margin: 20px 0 0 10px;
 }
 
+h3 + ul li,
 article.job ul li {
   margin-bottom: 4px;
 }
@@ -186,34 +252,41 @@ section:last-child {
   padding: 20px 0 10px;
 }
 
-.sectionTitle {
+section h2 {
   float: left;
   width: 18%;
 }
 
-.sectionContent {
+.section_content {
   float: right;
   width: 82%;
   line-height: 140%;
+  margin-bottom: 20px;
 }
 
-.sectionTitle h2 {
+h2 {
   font-size: 1.2em;
   color: #737373;
   margin-bottom: 6px;
 }
 
-.sectionContent h3 {
+h3 {
   font-size: 18px;
   color: #34495D;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
-.sectionBody {
+h3:first-child {
+  margin-top: 0;
+}
+
+.section_body {
   margin-top: 8px;
 }
 
-#mainArea .sectionContent .job h2 a:visited,
-#mainArea .sectionContent .job h2 a {
+#resume_content .section_content .job h2 a:visited,
+#resume_content .section_content .job h2 a {
   color: #34495D;
 }
 
@@ -221,81 +294,10 @@ p.jobDate {
   margin: 4px auto 4px auto;
 }
 
-table {
-  width: 100%;
-  margin-left: 20px;
-}
-
-td {
-  padding:0;
-  margin:0;
-  width: 30%;
-}
-
-.keySkills {
-  list-style-type: none;
-  margin-bottom: 20px;
-  font-size: 1em;
-  color: #444;
-}
-
-#references article {
-  margin-bottom: 22px;
-}
-
-#references h2 {
-  display: inline;
-}
-
-#references ul {
-  list-style: none;
-}
-
-#references .fa {
-  margin-right: 8px;
-}
-
-#references .ref_title {
-  display: inline;
-}
-
-#skills article {
-  margin-bottom: 20px;
-}
-
-#skills ul {
-  margin: 0 auto;
-}
-
-
-#skills li {
-  display: inline-block;
-}
-
-#skills ul > li:not(:last-child)::after {
-  content: "\00b7";
-  margin: 0 .25em;
-}
-
-
-#skills h2 {
-  margin-bottom: 3px;
-}
-
-#other ul {
-  list-style-type: square #fff;
-  list-style-position: inside;
-  margin-bottom: 25px;
-}
-
-#contactDetails i {
+#contact_details i {
   width: 18px;
   text-align: center;
   padding-right: 8px;
-}
-
-table.references td {
-  width: auto;
 }
 
 #footer, #copyright {
@@ -336,21 +338,9 @@ table.references td {
 }
 
 @media all and (max-width: 800px) {
-  #contactDetails ul li a {
+  #contact_details ul li a {
     font-size: 1.1em;
     color: #e9dd83;
-  }
-}
-
-@media all and (min-width: 602px) and (max-width: 800px) {
-  #headshot {
-    display: none;
-  }
-
-  .keySkills {
-  -moz-column-count:2;
-  -webkit-column-count:2;
-  column-count:2;
   }
 }
 
@@ -361,35 +351,25 @@ table.references td {
     min-width: 280px;
   }
 
-  #headshot {
-    display: none;
-  }
-
-  #name, #contactDetails {
+  #name, #contact_details {
     float: none;
     width: 100%;
     text-align: center;
   }
 
-  .sectionTitle, .sectionContent {
+  section h2, .section_content {
     float: none;
     width: 100%;
   }
 
-  .sectionTitle {
+  section h2 {
     margin-left: -2px;
     font-size: 1.25em;
-  }
-
-  .keySkills {
-    -moz-column-count:2;
-    -webkit-column-count:2;
-    column-count:2;
   }
 }
 
 @media all and (max-width: 480px) {
-  .mainDetails {
+  #heading {
     padding: 15px 15px;
   }
 
@@ -397,15 +377,8 @@ table.references td {
     padding: 15px 0 0;
   }
 
-  #mainArea {
+  #resume_content {
     padding: 0 25px;
-  }
-
-
-  .keySkills {
-  -moz-column-count:1;
-  -webkit-column-count:1;
-  column-count:1;
   }
 
   #name h1 {
@@ -413,11 +386,11 @@ table.references td {
     margin-bottom: 4px;
   }
 
-  #contactDetails {
+  #contact_details {
     font-size: 1.2em;
   }
 
-  #contactDetails ul li a {
+  #contact_details ul li a {
     font-size: 1.2em;
     color: #70ad8f;
   }
@@ -434,39 +407,33 @@ table.references td {
   }
   /*@page { size:8.5in 11in; margin: 2cm }*/
   #cv {
-    width: 90%;
+    width: 80%;
     border: none;
     box-shadow: none;
     background: #fff;
   }
 
-  .mainDetails {
+  #heading {
     border-bottom: 1px solid #ccc;
     background: #f2f2f2;
   }
 
-  #mainArea {
+  #resume_content {
     border-top: none;
     padding: 0 20px 20px 20px;
   }
-  #mainArea a:link {
+  #resume_content a:link {
     color: #5A595A;
     text-decoration: none;
   }
 
-  #mainArea a:visited {
+  #resume_content a:visited {
     color: #5A595A;
     text-decoration: none;
   }
-  #mainArea .sectionContent .job h3 a:visited,
-  #mainArea .sectionContent .job h3 a {
+  h3 a:visited,
+  h3 a {
     color: #34495D;
-  }
-  #skills li {
-    display: inline-block;
-    vertical-align: top;
-    padding: none;
-    margin: none;
   }
   #name h1 {
     color: #444;
@@ -480,23 +447,20 @@ table.references td {
     display: none;
   }
 
-  .sectionTitle {
+  section h2 {
     float: none;
-  }
-
-  .sectionTitle h2 {
     color: #555;
     font-size: 1.5em;
   }
 
-  .sectionContent {
+  .section_content {
     float: none;
     margin-top: 10px;
   }
 
-  #contactDetails ul li,
-  #contactDetails a,
-  #contactDetails ul li a, a[href^=tel] {
+  #contact_details ul li,
+  #contact_details a,
+  #contact_details ul li a, a[href^=tel] {
     color: #555;
   }
 
@@ -506,10 +470,6 @@ table.references td {
 
   article {
     page-break-inside: avoid;
-  }
-
-  #headshot {
-    display:none;
   }
 
 }
