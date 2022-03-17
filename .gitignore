@@ -1,3 +1,6 @@
 _site/
-dist/index.html
+web/dist/index.html
 .DS_Store
+*.pdf
+*.docx
+*.log
