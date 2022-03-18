@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - master
-      - refactor
+      - testing
 
 jobs:
   build:
@@ -16,7 +16,13 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - uses: docker://pandoc/core:2.17
+      - name: Checksums of static assets
+        run: |
+          echo "STYLE_SHA=$(sha256sum dist/assets/css/style.css | head -c 16)" >> $GITHUB_ENV
+          echo "FONTAWESOME_SHA=$(sha256sum dist/assets/fonts/fa/css/all.css | head -c 16)" >> $GITHUB_ENV
+
+      - name: Generate HTML
+        uses: docker://pandoc/core:2.17
         with:
           args: >
             --from markdown --to html README.md
@@ -24,17 +30,23 @@ jobs:
             -H src/_includes/header.html
             -B src/_includes/body.html
             -A src/_includes/footer.html
-            -c assets/css/style.css
+            -c assets/css/style.css?v=${{ env.STYLE_SHA }}
+            -c assets/fonts/fa/css/brands.min.css?v=${{ env.FONTAWESOME_SHA }}
+            -c assets/fonts/fa/css/fontawesome.min.css?v=${{ env.FONTAWESOME_SHA }}
+            -c assets/fonts/fa/css/regular.min.css?v=${{ env.FONTAWESOME_SHA }}
+            -c assets/fonts/fa/css/solid.min.css?v=${{ env.FONTAWESOME_SHA }}
             --metadata title="Josh Beard"
 
-      - uses: docker://pandoc/latex
+      - name: Generate Word Document
+        uses: docker://pandoc/latex
         with:
           args: >
             --from markdown --to docx README.md
             -f gfm
             -o dist/Josh-Beard-Resume.docx
 
-      - uses: browser-actions/setup-chrome@latest
+      - name: Generate PDF Document
+        uses: browser-actions/setup-chrome@latest
       - run: >
           chrome
           -headless
@@ -64,20 +76,35 @@ jobs:
       - name: Upload to S3
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --follow-symlinks --delete
+          args: --acl public-read --follow-symlinks --delete --cache-control max-age=604800
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-west-2'
           SOURCE_DIR: '.'
-          DEST_DIR: "resume/"
+          DEST_DIR: "resume/test"
+
+      - name: Set up AWSCLI
+        uses: hsupu/setup-awscli@v1
+
+      - name: Set cache on S3 objects
+        run: |
+          aws s3 cp s3://s3-website-joshbeard-me/resume/test/assets/ s3://s3-website-joshbeard-me/resume/test/assets/ --recursive --acl public-read --cache-control max-age=15552000
+          for f in index.html Josh-Beard-Resume.pdf Josh-Beard-Resume.docx; do
+            aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }}/resume/test/${f} s3://${{ secrets.AWS_S3_BUCKET }}/resume/test/ --acl public-read --cache-control max-age=1209600
+          done
+        env:
+          # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'us-west-2'
 
       - name: Invalidate CloudFront Cache
         uses: chetan/invalidate-cloudfront-action@v2
         env:
           DISTRIBUTION: ${{ secrets.CF_DISTRIBUTION }}
-          PATHS: "/resume/*"
+          PATHS: "/resume/test*"
           AWS_REGION: "us-east-1"
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
