@@ -192,6 +192,12 @@ h1, h2, h3 {
   float: right;
 }
 
+#contact_details i {
+  width: 18px;
+  text-align: center;
+  padding-right: 4px;
+}
+
 #contact_details ul {
   list-style-type: none;
   font-size: 0.9em;
@@ -211,6 +217,15 @@ h1, h2, h3 {
 
 #contact_details ul li a:hover {
   color: #EBD94C;
+}
+
+#contact_details #other_formats li {
+  display: inline;
+  margin-left: 6px;
+}
+
+#contact_details #other_formats li:first-child {
+  margin-left: 0;
 }
 
 article.job {
@@ -292,12 +307,6 @@ h3:first-child {
 
 p.jobDate {
   margin: 4px auto 4px auto;
-}
-
-#contact_details i {
-  width: 18px;
-  text-align: center;
-  padding-right: 8px;
 }
 
 #footer, #copyright {
@@ -416,6 +425,10 @@ p.jobDate {
   #heading {
     border-bottom: 1px solid #ccc;
     background: #f2f2f2;
+  }
+
+  #contact_details #other_formats {
+    display: none;
   }
 
   #resume_content {

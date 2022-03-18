@@ -10,10 +10,18 @@
 
 <div id="contact_details" markdown="1">
 
-* <i class="fas fa-fw fa-envelope"></i> [josh@joshbeard.me](mailto:josh@joshbeard.me)
-* <i class="fas fa-globe-americas"></i> [joshbeard.me](https://joshbeard.me)
-* <i class="fab fa-fw fa-linkedin"></i> [LinkedIn: joshuawbeard](https://www.linkedin.com/in/joshuawbeard/)
-* <i class="fab fa-fw fa-github"></i> [github.com/joshbeard](https://github.com/joshbeard/)
+* <i class="fas fa-fw fa-envelope"></i>[josh@joshbeard.me](mailto:josh@joshbeard.me)
+* <i class="fas fa-globe-americas"></i>[joshbeard.me](https://joshbeard.me)
+* <i class="fab fa-fw fa-linkedin"></i>[LinkedIn: joshuawbeard](https://www.linkedin.com/in/joshuawbeard/)
+* <i class="fab fa-fw fa-github"></i>[github.com/joshbeard](https://github.com/joshbeard/)
+
+<div id="other_formats" markdown="1">
+
+* <i class="fas fa-fw fa-file-pdf"></i>[PDF](https://joshbeard.me/resume/Josh-Beard-Resume.pdf)
+* <i class="fas fa-fw fa-file-word"></i>[Docx](https://joshbeard.me/resume/Josh-Beard-Resume.docx)
+
+</div>
+
 
 </div>
 
