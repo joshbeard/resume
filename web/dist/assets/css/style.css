@@ -305,31 +305,36 @@ h3:first-child {
   color: #34495D;
 }
 
-p.jobDate {
-  margin: 4px auto 4px auto;
+#footer {
+  padding: 22px 22px 12px 22px;
+  color: #fff;
 }
 
-#footer, #copyright {
-  padding: 22px 22px 12px 22px;
+#footer, #foot_copyright {
   background: #26272A;
   font-family: 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 }
 
-#footer .contact, #footer .top {
+#footer #foot_copyright,
+#footer #foot_source,
+#footer #foot_contact,
+#footer #foot_to_top {
   float: left;
   width: 50%;
 }
 
-#footer .top {
+#footer #foot_copyright,
+#footer #foot_to_top {
   text-align: right;
 }
 
-#footer a {
+#footer a, #foot_copyright a {
   color: #fff;
   text-decoration: none;
 }
 
-#footer a:hover {
+#footer a:hover, #foot_copyright a:hover {
   color: #EBD94C;
   text-decoration: underline;
 }
@@ -338,12 +343,6 @@ p.jobDate {
   content: "";
   display: table;
   clear: both;
-}
-
-#copyright {
-  text-align: center;
-  background: #26272A;
-  padding: 0px 22px 12px 22px;
 }
 
 @media all and (max-width: 800px) {
@@ -372,8 +371,11 @@ p.jobDate {
   }
 
   section h2 {
-    margin-left: -2px;
-    font-size: 1.25em;
+    font-size: 2em;
+  }
+
+  #footer {
+    line-height: 3;
   }
 }
 
@@ -395,13 +397,29 @@ p.jobDate {
     margin-bottom: 4px;
   }
 
+  #name h2 {
+    font-size: 1.2em;
+  }
+
   #contact_details {
     font-size: 1.2em;
   }
 
   #contact_details ul li a {
-    font-size: 1.2em;
     color: #70ad8f;
+  }
+
+  #footer #foot_contact,
+  #footer #foot_copyright,
+  #footer #foot_source,
+  #footer #foot_to_top {
+    float: none;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 3;
   }
 
 }
@@ -456,7 +474,7 @@ p.jobDate {
     color: #555;
   }
 
-  #footer, #copyright {
+  #footer, #foot_copyright {
     display: none;
   }
 
@@ -475,10 +493,6 @@ p.jobDate {
   #contact_details a,
   #contact_details ul li a, a[href^=tel] {
     color: #555;
-  }
-
-  .jobNote {
-    color: #666;
   }
 
   article {
