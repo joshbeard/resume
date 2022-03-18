@@ -32,7 +32,7 @@ jobs:
           args: >
             --from markdown --to docx README.md
             -f gfm
-            -o web/dist/resume.docx
+            -o web/dist/Josh-Beard-Resume.docx
 
       - uses: browser-actions/setup-chrome@latest
       - run: >
@@ -40,7 +40,7 @@ jobs:
           -headless
           -disable-gpu
           --no-sandbox
-          --print-to-pdf=web/dist/resume.pdf
+          --print-to-pdf-no-header=web/dist/Josh-Beard-Resume.pdf
           web/dist/index.html
 
       - name: Minify Action
