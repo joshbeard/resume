@@ -18,10 +18,9 @@
 <div id="other_formats" markdown="1">
 
 * <i class="fas fa-fw fa-file-pdf"></i>[PDF](https://joshbeard.me/resume/Josh-Beard-Resume.pdf)
-* <i class="fas fa-fw fa-file-word"></i>[Docx](https://joshbeard.me/resume/Josh-Beard-Resume.docx)
+* <i class="fas fa-fw fa-file-word"></i>[Word](https://joshbeard.me/resume/Josh-Beard-Resume.docx)
 
 </div>
-
 
 </div>
 
