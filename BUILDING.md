@@ -13,6 +13,28 @@ It's published here:
 * PDF: <https://joshbeard.me/resume/Josh-Beard-Resume.pdf>
 * Word: <https://joshbeard.me/resume/Josh-Beard-Resume.docx>
 
+## Files
+
+```plain
+├── .github/                GitHub Workflows
+├── BUILDING.md             This document
+├── README.md               The resume (with minimal HTML in it)
+├── build.sh*               Shell script for building locally
+├── dist/                   Directory containing things to deploy
+│   └── assets/             Static assets for the website
+│       ├── css/
+│       ├── fonts/
+│       └── img/
+├── docker-compose.yml      docker-compose file for local development
+└── src/                    Source files used during building (html snips)
+    └── _includes/          HTML sections that are used to produce the website by Pandoc
+        ├── body.html
+        ├── footer.html
+        └── header.html
+```
+
+## Build and Deployment
+
 The [GitHub Workflow](.github/workflows/build-deploy.yml) uses [Pandoc](https://pandoc.org/)
 to create the HTML page from the source Markdown. Pandoc is also used to
 generate the Microsoft Word document from the Markdown source.

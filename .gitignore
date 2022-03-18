@@ -1,5 +1,5 @@
 _site/
-web/dist/index.html
+dist/index.html
 .DS_Store
 *.pdf
 *.docx

@@ -20,10 +20,10 @@ jobs:
         with:
           args: >
             --from markdown --to html README.md
-            -o web/dist/index.html
-            -H web/src/_includes/header.html
-            -B web/src/_includes/body.html
-            -A web/src/_includes/footer.html
+            -o dist/index.html
+            -H src/_includes/header.html
+            -B src/_includes/body.html
+            -A src/_includes/footer.html
             -c assets/css/style.css
             --metadata title="Josh Beard"
 
@@ -32,7 +32,7 @@ jobs:
           args: >
             --from markdown --to docx README.md
             -f gfm
-            -o web/dist/Josh-Beard-Resume.docx
+            -o dist/Josh-Beard-Resume.docx
 
       - uses: browser-actions/setup-chrome@latest
       - run: >
@@ -40,9 +40,9 @@ jobs:
           -headless
           -disable-gpu
           --no-sandbox
-          --print-to-pdf=web/dist/Josh-Beard-Resume.pdf
+          --print-to-pdf=dist/Josh-Beard-Resume.pdf
           --print-to-pdf-no-header
-          web/dist/index.html
+          dist/index.html
 
       - name: Minify Action
         uses: anthonyftwang/minify-action@v1.0.1
@@ -51,7 +51,7 @@ jobs:
         with:
           name: src
           path: |
-            web/dist/
+            dist/
 
   deploy:
     runs-on: ubuntu-latest
@@ -65,11 +65,6 @@ jobs:
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
-            --exclude ".git\*"
-            --exclude ".gitlab-ci.yml"
-            --exclude ".gitignore"
-            --exclude "Makefile"
-            --exclude "README.md"
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

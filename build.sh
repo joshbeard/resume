@@ -4,10 +4,10 @@ function html() {
   echo "-> Creating HTML"
   docker run --rm -v ${PWD}:/work -w /work \
     -it pandoc/latex --from markdown --to html README.md \
-    -o web/dist/index.html \
-    -H web/src/_includes/header.html \
-    -B web/src/_includes/body.html \
-    -A web/src/_includes/footer.html \
+    -o dist/index.html \
+    -H src/_includes/header.html \
+    -B src/_includes/body.html \
+    -A src/_includes/footer.html \
     -c assets/css/style.css \
     --metadata title="Josh Beard"
 }
@@ -20,7 +20,7 @@ function docx() {
     -V linkcolor:blue \
     -V geometry:a4paper \
     -V geometry:margin=2cm \
-    -o web/dist/resume.docx
+    -o dist/resume.docx
 }
 
 function pdf() {
@@ -29,7 +29,7 @@ function pdf() {
     --entrypoint=/usr/bin/google-chrome \
     -it browserless/chrome:latest \
     -headless -disable-gpu --no-sandbox \
-    --print-to-pdf=web/dist/resume.pdf web/dist/index.html
+    --print-to-pdf=dist/resume.pdf dist/index.html
 }
 
 if [ -z "$1" ]; then
