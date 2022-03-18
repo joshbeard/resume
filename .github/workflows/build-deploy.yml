@@ -40,7 +40,8 @@ jobs:
           -headless
           -disable-gpu
           --no-sandbox
-          --print-to-pdf-no-header=web/dist/Josh-Beard-Resume.pdf
+          --print-to-pdf=web/dist/Josh-Beard-Resume.pdf
+          --print-to-pdf-no-header
           web/dist/index.html
 
       - name: Minify Action
