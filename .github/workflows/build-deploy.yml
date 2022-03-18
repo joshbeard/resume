@@ -34,15 +34,14 @@ jobs:
             -f gfm
             -o web/dist/resume.docx
 
-      - uses: docker://browserless/chrome:latest
-        with:
-          entrypoint: /usr/bin/google-chrome
-          args: >
-            -headless
-            -disable-gpu
-            --no-sandbox
-            --print-to-pdf=web/dist/resume.pdf
-            web/dist/index.html
+      - uses: browser-actions/setup-chrome@latest
+      - run: >
+          chrome
+          -headless
+          -disable-gpu
+          --no-sandbox
+          --print-to-pdf=web/dist/resume.pdf
+          web/dist/index.html
 
       - name: Minify Action
         uses: anthonyftwang/minify-action@v1.0.1
