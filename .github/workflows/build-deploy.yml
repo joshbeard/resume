@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - master
-      - testing
 
 jobs:
   build:
@@ -83,16 +82,16 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-west-2'
           SOURCE_DIR: '.'
-          DEST_DIR: "resume/test"
+          DEST_DIR: "resume/"
 
       - name: Set up AWSCLI
         uses: hsupu/setup-awscli@v1
 
       - name: Set cache on S3 objects
         run: |
-          aws s3 cp s3://s3-website-joshbeard-me/resume/test/assets/ s3://s3-website-joshbeard-me/resume/test/assets/ --recursive --acl public-read --cache-control max-age=15552000
+          aws s3 cp s3://s3-website-joshbeard-me/resume/assets/ s3://s3-website-joshbeard-me/resume/assets/ --recursive --acl public-read --cache-control max-age=15552000
           for f in index.html Josh-Beard-Resume.pdf Josh-Beard-Resume.docx; do
-            aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }}/resume/test/${f} s3://${{ secrets.AWS_S3_BUCKET }}/resume/test/ --acl public-read --cache-control max-age=1209600
+            aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }}/resume/${f} s3://${{ secrets.AWS_S3_BUCKET }}/resume/ --acl public-read --cache-control max-age=1209600
           done
         env:
           # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
@@ -104,7 +103,7 @@ jobs:
         uses: chetan/invalidate-cloudfront-action@v2
         env:
           DISTRIBUTION: ${{ secrets.CF_DISTRIBUTION }}
-          PATHS: "/resume/test*"
+          PATHS: "/resume/*"
           AWS_REGION: "us-east-1"
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
