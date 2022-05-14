@@ -53,12 +53,10 @@ IT professional with a strong background in systems administration, cloud, and D
 
 ### Lead DevOps Engineer with Apogee Engineering, LLC
 
-__Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/)
-at the [US Geological Survey](https://www.usgs.gov/).__
+__September 2015 - Present &middot; Remote__
 
-__September 2015 - Present &middot; Denver/Colorado Springs, CO (Remote)__
-
-__April 2015 - September 2015 Contracted with Comso, Inc.__
+Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/)
+at the [US Geological Survey](https://www.usgs.gov/).
 
 * Lead and perform many of the group's most challenging technical projects.
 * Collaborate with over a dozen teams to deliver applications to the USGS science community.
@@ -72,10 +70,11 @@ __April 2015 - September 2015 Contracted with Comso, Inc.__
 * Instruct colleagues on a variety of subjects, including Docker, AWS, and Terraform.
 * Implemented and maintained configuraton management (Puppet, Ansible) across hundreds of servers.
 * Developed new HTTP architecture, utilizing CloudFront, Nginx, and S3.
+* Contracted with Comso, Inc. _April 2015 - September 2015_.
 
 _Primary technology used: Linux, GitLab, Docker, AWS, Terraform, Ansible, Puppet,
 Python, Packer, VMware vSphere, Jira, Artifactory, Bamboo, BitBucket, Tomcat,
-Ruby, Nginx, Apache._
+Ruby, Nginx, Traefik, Apache._
 
 </article>
 
@@ -121,7 +120,7 @@ Shell, Ruby, KVM, pf, Sophos, Graylog, Nginx, Icinga, NFS, Postfix._
 
 ### Web Developer at Douglas School District
 
-__September 2011 - September 2013__
+__September 2011 - September 2013 &middot; Box Elder, SD__
 
 * Implemented WordPress as a content management system for the district's websites.
 * Increased web performance through improvements to code and server configuration.
@@ -204,18 +203,20 @@ Sensu,
 Serverless,
 Terraform *(AWS, VMware, DigitalOcean, Proxmox, misc)*,
 Tomcat,
+Traefik,
 Unix Shell,
 Vagrant
 
 ### Development
 
 CI/CD,
-Shell,
+Bash and Shell,
 Python,
 Ruby,
 PHP,
 Git,
 Atlassian,
+HTML/CSS,
 Everything is Code
 
 </div>
