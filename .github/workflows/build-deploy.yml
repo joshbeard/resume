@@ -29,11 +29,11 @@ jobs:
             -H src/_includes/header.html
             -B src/_includes/body.html
             -A src/_includes/footer.html
-            -c assets/css/style.css?v=${{ env.STYLE_SHA }}
-            -c assets/fonts/fa/css/brands.min.css?v=${{ env.FONTAWESOME_SHA }}
-            -c assets/fonts/fa/css/fontawesome.min.css?v=${{ env.FONTAWESOME_SHA }}
-            -c assets/fonts/fa/css/regular.min.css?v=${{ env.FONTAWESOME_SHA }}
-            -c assets/fonts/fa/css/solid.min.css?v=${{ env.FONTAWESOME_SHA }}
+            -c /resume/assets/css/style.css?v=${{ env.STYLE_SHA }}
+            -c /resume/assets/fonts/fa/css/brands.min.css?v=${{ env.FONTAWESOME_SHA }}
+            -c /resume/assets/fonts/fa/css/fontawesome.min.css?v=${{ env.FONTAWESOME_SHA }}
+            -c /resume/assets/fonts/fa/css/regular.min.css?v=${{ env.FONTAWESOME_SHA }}
+            -c /resume/assets/fonts/fa/css/solid.min.css?v=${{ env.FONTAWESOME_SHA }}
             --metadata title="Josh Beard"
 
       - name: Generate Word Document
