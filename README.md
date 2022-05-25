@@ -53,7 +53,7 @@ IT professional with a strong background in systems administration, cloud, and D
 
 ### Lead DevOps Engineer with Apogee Engineering, LLC
 
-__September 2015 - Present &middot; Remote__
+__September 2015 - May 2022 &middot; Remote__
 
 Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/)
 at the [US Geological Survey](https://www.usgs.gov/).
