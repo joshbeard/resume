@@ -36,8 +36,22 @@ jobs:
             -c /resume/assets/fonts/fa/css/solid.min.css?v=${{ env.FONTAWESOME_SHA }}
             --metadata title="Josh Beard"
 
-      - name: Minify Action
-        uses: anthonyftwang/minify-action@v1.0.1
+      # This is for generating a local document for generating the PDF.
+      - name: Generate Local HTML
+        uses: docker://pandoc/core:2.17
+        with:
+          args: >
+            --from markdown --to html README.md
+            -o _resume.html
+            -H src/_includes/header.html
+            -B src/_includes/body.html
+            -A src/_includes/footer.html
+            -c assets/css/style.css?v=${{ env.STYLE_SHA }}
+            -c assets/fonts/fa/css/brands.min.css?v=${{ env.FONTAWESOME_SHA }}
+            -c assets/fonts/fa/css/fontawesome.min.css?v=${{ env.FONTAWESOME_SHA }}
+            -c assets/fonts/fa/css/regular.min.css?v=${{ env.FONTAWESOME_SHA }}
+            -c assets/fonts/fa/css/solid.min.css?v=${{ env.FONTAWESOME_SHA }}
+            --metadata title="Josh Beard"
 
       - name: Generate Word Document
         uses: docker://pandoc/latex
@@ -56,7 +70,10 @@ jobs:
           --no-sandbox
           --print-to-pdf=dist/Josh-Beard-Resume.pdf
           --print-to-pdf-no-header
-          dist/index.html
+          _resume.html
+
+      - name: Minify Action
+        uses: anthonyftwang/minify-action@v1.0.1
 
       - uses: actions/upload-artifact@master
         with:
