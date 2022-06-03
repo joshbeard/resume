@@ -13,6 +13,7 @@
 * <i class="fas fa-fw fa-envelope"></i>[josh@joshbeard.me](mailto:josh@joshbeard.me)
 * <i class="fas fa-globe-americas"></i>[joshbeard.me](https://joshbeard.me)
 * <i class="fab fa-fw fa-github"></i>[github.com/joshbeard](https://github.com/joshbeard/)
+* <i class="fa-solid fa-map-pin"></i>Colorado Springs, CO
 
 <div id="other_formats" markdown="1">
 
