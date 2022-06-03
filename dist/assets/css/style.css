@@ -142,7 +142,7 @@ p {
 }
 
 #heading {
-  padding: 25px 35px;
+  padding: 25px 35px 12px 35px;
   border-bottom: 1px dashed #408663;
   background: #373A44;
 }
@@ -217,6 +217,12 @@ h1, h2, h3 {
 
 #contact_details ul li a:hover {
   color: #EBD94C;
+}
+
+#contact_details #other_formats {
+  border-top: 1px solid #767D92;
+  margin-top: 4px;
+  padding-top: 4px;
 }
 
 #contact_details #other_formats li {
