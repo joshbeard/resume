@@ -42,7 +42,7 @@ jobs:
         with:
           args: >
             --from markdown --to html README.md
-            -o _resume.html
+            -o dist/resume.html
             -H src/_includes/header.html
             -B src/_includes/body.html
             -A src/_includes/footer.html
@@ -70,7 +70,7 @@ jobs:
           --no-sandbox
           --print-to-pdf=dist/Josh-Beard-Resume.pdf
           --print-to-pdf-no-header
-          _resume.html
+          dist/resume.html
 
       - name: Minify Action
         uses: anthonyftwang/minify-action@v1.0.1
