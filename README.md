@@ -59,18 +59,18 @@ __September 2015 - May 2022 &middot; Remote__
 Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/)
 at the [US Geological Survey](https://www.usgs.gov/).
 
-* Lead and perform many of the group's most challenging technical projects.
-* Collaborate with over a dozen teams to deliver applications to the USGS science community.
+* Lead and contributed to many of the group's most challenging technical projects.
+* Collaborated with over a dozen teams to deliver applications to the USGS science community.
 * Responsible for the architecture and implementation of the IT platform for over 50 USGS products.
 * Migrated over 50 products from on-premise and on-VM deployments to AWS deployments, using Docker and native AWS services.
 * Composed CI/CD pipelines for hundreds of projects, improving consistency through automation, empowering product teams, and reducing friction for releasing software.
-* Author and maintain hundreds of pages of robust documentation for "all things DevOps" and project-specific documentation, utilizing Markdown and adopting a "docs-as-code" workflow.
-* Accelerate and helped plan long-term IT strategy and the details of execution.
+* Authored and maintained hundreds of pages of robust documentation for "all things DevOps" and project-specific documentation, utilizing Markdown and adopting a "docs-as-code" workflow.
+* Accelerated and helped plan long-term IT strategy and the details of execution.
 * Reduced costs through architecture improvements while reducing the server count by more than 45%.
-* Work with hundreds of codebases spanning several languages and product teams.
-* Instruct colleagues on a variety of subjects, including Docker, AWS, and Terraform.
+* Instructed colleagues on a variety of subjects, including Docker, AWS, and Terraform.
 * Implemented and maintained configuraton management (Puppet, Ansible) across hundreds of servers.
 * Developed new HTTP architecture, utilizing CloudFront, Nginx, and S3.
+* Worked with hundreds of codebases spanning several languages and product teams.
 * Contracted with Comso, Inc. _April 2015 - September 2015_.
 
 _Primary technology used: Linux, GitLab, Docker, AWS, Terraform, Ansible, Puppet,
