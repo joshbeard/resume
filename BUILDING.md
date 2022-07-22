@@ -44,7 +44,7 @@ generate the Microsoft Word document from the Markdown source.
 
 A [GitHub action for headless Chrome](https://github.com/marketplace/actions/setup-chrome)
 is used to generate the PDF from the HTML. I experimented with Pandoc a
-little, but the Chrome "print to PDF" works pleny well out of the box.
+little, but the Chrome "print to PDF" works well out of the box.
 
 My resume is published to the S3 website bucket for
 [joshbeard.me](https://github.com/joshbeard/joshbeard.me-tf-aws).
