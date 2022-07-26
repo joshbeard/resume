@@ -1,6 +1,3 @@
----
-lang: en-US
----
 <div id="heading" markdown="1">
 
 <div id="name" markdown="1">
@@ -211,6 +208,7 @@ Docker,
 Elasticsearch,
 FreeBSD,
 GitHub,
+GitHub Actions,
 GitHub Workflows,
 GitLab,
 GitLab CI/CD,
