@@ -43,7 +43,7 @@ jobs:
         with:
           name: html
           path: |
-            index.html
+            dist/index.html
 
       # This is for generating a local document for generating the PDF.
       - name: Generate Local HTML
