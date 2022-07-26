@@ -7,6 +7,26 @@ on:
       - master
 
 jobs:
+
+  # NOTE: This spell checker only checks the changes *in a commit*. It won't
+  # scan the whole repo or even a whole file - just what's changed.
+  # See https://github.com/TypoCI/spellcheck-action
+  # Another option: https://github.com/check-spelling/check-spelling
+  spellcheck:
+    name: Typo CI (GitHub Action)
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+
+      - name: TypoCheck
+        uses: typoci/spellcheck-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   build:
     runs-on: ubuntu-latest
 
