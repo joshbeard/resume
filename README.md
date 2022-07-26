@@ -39,7 +39,7 @@ lang: en-US
 
 <div class="section_content" markdown="1">
 
-IT professional with a strong background in systems administration, cloud, and DevOps with over 12 years of experience and collaborations with more than a hundred teams across hundreds of projects.
+IT professional with a strong background in systems administration, cloud, and DevOps with over 13 years of experience and collaborations with more than a hundred teams across hundreds of projects.
 
 </div>
 
@@ -52,6 +52,29 @@ IT professional with a strong background in systems administration, cloud, and D
 ## Experience
 
 <div class="section_content" markdown="1">
+
+<article class="job" markdown="1">
+
+### Lead DevSecOps Engineer with Ventera, Inc.
+
+__June 2022 - Present &middot; Remote__
+
+Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources)
+at the [US Geological Survey](https://www.usgs.gov/).
+
+* DevSecOps on a small team working on a project focused on modernizing and advancing a
+  highly-utilized set of services for water data collected and provided by the
+  USGS.
+* Collaboratively designed, implemented, and supported infrastructure, CI/CD pipelines for a Python
+  codebase of Lambda functions, modularized static website functions, and supporting resources.
+* Cloud-native and 'serverless' application development and infrastructure.
+* Integrated and automated code analysis into developer workflow and pipeline.
+* Advise leadership on technical decisions, including architecture, product
+  adoption, and standards.
+
+_Primary technology used: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more), GitLab, Python, Jira_
+
+</article>
 
 <article class="job" markdown="1">
 
@@ -76,7 +99,7 @@ at the [US Geological Survey](https://www.usgs.gov/).
 * Worked with hundreds of codebases spanning several languages and product teams.
 * Contracted with Comso, Inc. _April 2015 - September 2015_.
 
-_Primary technology used: Linux, GitLab, Docker, AWS, Terraform, Ansible, Puppet,
+_Primary technology used: Linux, GitLab, Docker, AWS (wide range of services), Terraform, Ansible, Puppet,
 Python, Packer, VMware vSphere, Jira, Artifactory, Bamboo, BitBucket, Tomcat,
 Ruby, Nginx, Traefik, Apache._
 
@@ -221,6 +244,9 @@ PHP,
 Git,
 Atlassian,
 HTML/CSS,
+Test-Driven Development (TDD),
+Accessibility,
+Security and Compliance,
 Everything is Code
 
 </div>
