@@ -38,6 +38,25 @@ jobs:
             -c /resume/assets/css/fonts.css?v=${{ env.FONTS_SHA }}
             --metadata title="Josh Beard"
 
+  validate:
+    runs-on: ubuntu-latest
+    needs: minify
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/download-artifact@master
+        with:
+          name: src
+          path: _site
+
+      - name: HTML5Validator
+        uses: Cyb3r-Jak3/html5validator-action@v7.1.1
+        with:
+          root: ./
+          blacklist: src
+
       # This is for generating a local document for generating the PDF.
       - name: Generate Local HTML
         uses: docker://pandoc/core:2.17
