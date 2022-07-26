@@ -66,7 +66,7 @@ at the [US Geological Survey](https://www.usgs.gov/).
   highly-utilized set of services for water data collected and provided by the
   USGS.
 * Collaboratively designed, implemented, and supported infrastructure, CI/CD pipelines for a Python
-  codebase of Lambda functions, modularized static website functions, and supporting resources.
+  codebase of Lambda functions, modularized static websites, and supporting resources.
 * Cloud-native and 'serverless' application development and infrastructure.
 * Integrated and automated code analysis into developer workflow and pipeline.
 * Advise leadership on technical decisions, including architecture, product
