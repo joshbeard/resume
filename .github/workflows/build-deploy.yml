@@ -138,6 +138,7 @@ jobs:
     name: Deploy Resume Website
     runs-on: ubuntu-latest
     needs: validate
+    if: "!contains(github.event.head_commit.message, '[skip deploy]')"
 
     steps:
       - uses: actions/download-artifact@master
