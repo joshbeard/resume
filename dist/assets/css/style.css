@@ -373,6 +373,10 @@ h3:first-child {
     display: none;
   }
 
+  img.icon {
+    display: none;
+  }
+
   #resume_content {
     border-top: none;
     padding: 0 20px 20px 20px;
