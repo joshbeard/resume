@@ -52,13 +52,12 @@ IT professional with a strong background in systems administration, cloud, and D
 
 <article class="job" markdown="1">
 
-### Lead DevSecOps Engineer with Ventera, Inc.
+### Lead DevSecOps Engineer with Ventera, Inc. at USGS
 
 __June 2022 - Present &middot; Remote__
 
-Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources)
-at the [US Geological Survey](https://www.usgs.gov/).
-
+* Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources)
+  at the [US Geological Survey](https://www.usgs.gov/).
 * DevSecOps on a small team working on a project focused on modernizing and advancing a
   highly-utilized set of services for water data collected and provided by the
   USGS.
@@ -75,13 +74,12 @@ _Primary technology used: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS,
 
 <article class="job" markdown="1">
 
-### Lead DevOps Engineer with Apogee Engineering, LLC
+### Lead DevOps Engineer with Apogee Engineering, LLC at USGS
 
 __September 2015 - May 2022 &middot; Remote__
 
-Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/)
+* Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/)
 at the [US Geological Survey](https://www.usgs.gov/).
-
 * Lead and contributed to many of the group's most challenging technical projects.
 * Collaborated with over a dozen teams to deliver applications to the USGS science community.
 * Responsible for the architecture and implementation of the IT platform for over 50 USGS products.
