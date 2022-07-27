@@ -39,9 +39,7 @@ jobs:
 
       - name: Checksums of static assets
         run: |
-          echo "FONTS_SHA=$(sha256sum dist/assets/css/fonts.css | head -c 16)" >> $GITHUB_ENV
           echo "STYLE_SHA=$(sha256sum dist/assets/css/style.css | head -c 16)" >> $GITHUB_ENV
-          echo "FONTAWESOME_SHA=$(sha256sum dist/assets/fonts/fa/js/fontawesome.min.js | head -c 16)" >> $GITHUB_ENV
 
       - name: Add language tag to Markdown before rendering from it
         run: |
@@ -57,7 +55,6 @@ jobs:
             -B src/_includes/body.html
             -A src/_includes/footer.html
             -c /resume/assets/css/style.css?v=${{ env.STYLE_SHA }}
-            -c /resume/assets/css/fonts.css?v=${{ env.FONTS_SHA }}
             --metadata title="Josh Beard"
 
       - name: Upload HTML Artifact
@@ -78,7 +75,6 @@ jobs:
             -B src/_includes/body.html
             -A src/_includes/footer.html
             -c assets/css/style.css?v=${{ env.STYLE_SHA }}
-            -c assets/css/fonts.css?v=${{ env.FONTS_SHA }}
             --metadata title="Josh Beard"
 
       - name: Generate Word Document
@@ -99,12 +95,6 @@ jobs:
           --print-to-pdf=dist/Josh-Beard-Resume.pdf
           --print-to-pdf-no-header
           dist/resume.html
-
-      # Stupid hack to insert the SHA of the FontAwesome artifact in the
-      # <script> line that requests it in the index.html.
-      - name: Set FontAwesome asset version (cache busting)
-        run: |
-          sed -i "s/___FONTAWESOME_SHA___/${{ env.FONTAWESOME_SHA }}/g" dist/index.html
 
       - name: Minify Action
         uses: anthonyftwang/minify-action@v1.0.1

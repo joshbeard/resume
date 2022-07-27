@@ -4,7 +4,7 @@
   margin:0;
   padding:0;
   vertical-align:baseline;
-  font-family: 'Ubuntu', Helvetica, Verdana, sans-serif;
+  font-family: Helvetica, Verdana, sans-serif;
   font-display: optional;
 }
 
@@ -18,7 +18,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 
 html, body {
   background: #408663;
-  font-family: 'Ubuntu', Helvetica, Verdana, sans-serif;
+  font-family: Helvetica, Verdana, sans-serif;
   font-display: optional;
   font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
   color: #5A595A;
@@ -32,6 +32,11 @@ header {
 
 .clear {
   clear: both;
+}
+
+img.icon {
+  width: 12px;
+  margin-right: 8px;
 }
 
 p {
@@ -74,7 +79,7 @@ h1 {
 }
 
 h1, h2, h3 {
-  font-family: 'Play', Helvetica, Arial, Verdana, sans-serif;
+  font-family: Helvetica, Verdana, sans-serif;
   font-display: optional;
 }
 
@@ -113,7 +118,7 @@ h1, h2, h3 {
   list-style-type: none;
   font-size: 0.9em;
   margin-top: 2px;
-  font-family: 'Play', Helvetica, Verdana, sans-serif;
+  font-family: Helvetica, Verdana, sans-serif;
   font-display: optional;
 }
 
@@ -230,7 +235,7 @@ h3:first-child {
 
 #footer, #foot_copyright {
   background: #26272A;
-  font-family: 'Ubuntu', Helvetica, Verdana, sans-serif;
+  font-family: Helvetica, Verdana, sans-serif;
   font-display: optional;
   line-height: 1.5;
 }

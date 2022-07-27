@@ -9,9 +9,7 @@ function html() {
     -B src/_includes/body.html \
     -A src/_includes/footer.html \
     -c assets/css/style.css \
-    -c assets/css/fonts.css \
     --metadata title="Josh Beard"
-  sed -i '' "s/___FONTAWESOME_SHA___/${FONTAWESOME_SHA}/g" dist/index.html
 }
 
 function docx() {
