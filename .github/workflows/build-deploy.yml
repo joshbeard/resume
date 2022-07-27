@@ -28,6 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build:
+    name: Build Resume
     runs-on: ubuntu-latest
 
     steps:
@@ -58,7 +59,7 @@ jobs:
             -c /resume/assets/css/fonts.css?v=${{ env.FONTS_SHA }}
             --metadata title="Josh Beard"
 
-      - name: Artifact
+      - name: Upload HTML Artifact
         uses: actions/upload-artifact@master
         with:
           name: html
@@ -108,6 +109,7 @@ jobs:
         uses: anthonyftwang/minify-action@v1.0.1
 
       - uses: actions/upload-artifact@master
+        name: Upload Resume Artifacts
         with:
           name: src
           path: |
@@ -122,16 +124,18 @@ jobs:
           ref: ${{ github.ref }}
 
       - uses: actions/download-artifact@master
+        name: Download Resume Artifacts
         with:
           name: html
           path: _site
 
-      - name: HTML5Validator
+      - name: HTML Validation
         uses: Cyb3r-Jak3/html5validator-action@v7.1.1
         with:
           root: _site
 
   deploy:
+    name: Deploy Resume Website
     runs-on: ubuntu-latest
     needs: validate
 
@@ -151,7 +155,7 @@ jobs:
           SOURCE_DIR: '.'
           DEST_DIR: "resume/"
 
-      - name: Set up AWSCLI
+      - name: Set up aws-cli
         uses: hsupu/setup-awscli@v1
 
       - name: Set cache on S3 objects
