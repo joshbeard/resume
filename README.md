@@ -10,15 +10,15 @@
 
 <div id="contact_details" markdown="1">
 
-* <img src="/resume/assets/img/envelope-solid.png" alt="envelope" class="icon" />[josh@joshbeard.me](mailto:josh@joshbeard.me)
-* <img src="/resume/assets/img/globe-americas-solid.png" alt="envelope" class="icon" />[joshbeard.me](https://joshbeard.me)
-* <img src="/resume/assets/img/github-brands.png" alt="envelope" class="icon" />[github.com/joshbeard](https://github.com/joshbeard/)
-* <img src="/resume/assets/img/map-marker-solid.png" alt="envelope" class="icon" />Colorado Springs, CO
+* <img src="/resume/assets/img/envelope-solid.png" alt="envelope icon" class="icon" />[josh@joshbeard.me](mailto:josh@joshbeard.me)
+* <img src="/resume/assets/img/globe-americas-solid.png" alt="web icon" class="icon" />[joshbeard.me](https://joshbeard.me)
+* <img src="/resume/assets/img/github-brands.png" alt="github icon" class="icon" />[github.com/joshbeard](https://github.com/joshbeard/)
+* <img src="/resume/assets/img/map-marker-solid.png" alt="map marker icon" class="icon" />Colorado Springs, CO
 
 <div id="other_formats" markdown="1">
 
-* <img src="/resume/assets/img/file-pdf-regular.png" alt="envelope" class="icon" />[PDF](https://joshbeard.me/resume/Josh-Beard-Resume.pdf)
-* <img src="/resume/assets/img/file-word-regular.png" alt="envelope" class="icon" />[Word](https://joshbeard.me/resume/Josh-Beard-Resume.docx)
+* <img src="/resume/assets/img/file-pdf-regular.png" alt="pdf document icon" class="icon" />[PDF](https://joshbeard.me/resume/Josh-Beard-Resume.pdf)
+* <img src="/resume/assets/img/file-word-regular.png" alt="word document icon" class="icon" />[Word](https://joshbeard.me/resume/Josh-Beard-Resume.docx)
 
 </div>
 
