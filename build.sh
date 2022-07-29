@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
-function html_md() {
+html_md() {
   python build.py
 }
 
-function docx() {
+docx() {
   echo "-> Creating DOCX"
     -it pandoc/latex --from markdown --to docx README.md \
     -f gfm \
@@ -14,7 +14,7 @@ function docx() {
     -o dist/resume.docx
 }
 
-function pdf() {
+pdf() {
   echo "-> Creating PDF"
   docker run --rm -v ${PWD}:/work -w /work \
     --entrypoint=/usr/bin/google-chrome \
