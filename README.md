@@ -28,7 +28,7 @@ June 2022 - Present - Remote
 
 * Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources) at the [US Geological Survey](https://www.usgs.gov/).
 * DevSecOps on a small team working on a project focused on modernizing and advancing a highly-utilized set of services for water data collected and provided by the USGS.
-* Collaboratively designed, implemented, and supported infrastructure, CI/CD pipelines for a Python codebase of Lambda functions, modularized static websites, and supporting resources.
+* Collaboratively designed, implemented, and supported infrastructure and CI/CD pipelines for a Python codebase of Lambda functions, modularized static websites, and supporting resources.
 * Cloud-native and 'serverless' application development and infrastructure.
 * Integrated and automated code analysis into developer workflow and pipeline.
 
