@@ -6,6 +6,7 @@ html_md() {
 
 docx() {
   echo "-> Creating DOCX"
+  docker run --rm -v ${PWD}:/work -w /work \
     -it pandoc/latex --from markdown --to docx README.md \
     -f gfm \
     -V linkcolor:blue \
