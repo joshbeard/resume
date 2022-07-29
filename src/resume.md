@@ -33,20 +33,11 @@
     {{ skill }}
     {%- if not loop.last %}, {% endif %}
 {%- endfor %}_
-{% endif %}
+{%- endif %}
 {% endfor %}
 ## Skills
 
-### Products
-
 {% for skill in resume['skills']['products'] -%}
-{{ skill }}
-{%- if not loop.last %}, {% endif %}
-{%- endfor %}
-
-### Development
-
-{% for skill in resume['skills']['development'] -%}
 {{ skill }}
 {%- if not loop.last %}, {% endif %}
 {%- endfor %}

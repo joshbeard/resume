@@ -41,28 +41,36 @@
             <div id="contact_details">
                 <ul>
                     <li>
-                        <img src="assets/img/envelope-solid.png" alt="mail:" class="icon" /><a
-                        href="mailto:{{ resume['contact']['email'] }}">{{ resume['contact']['email'] }}</a>
+                        <a href="mailto:{{ resume['contact']['email'] }}"><img
+                            src="assets/img/envelope-solid.png" alt="mail:" class="icon" /></a><a
+                            href="mailto:{{ resume['contact']['email'] }}">{{ resume['contact']['email'] }}</a>
                     </li>
                     <li>
-                        <img src="assets/img/globe-americas-solid.png" alt="web:" class="icon" /><a
+                        <a href="{{ resume['contact']['web']['url'] }}"><img
+                            src="assets/img/globe-americas-solid.png" alt="web:" class="icon" /></a><a
                             href="{{ resume['contact']['web']['url'] }}">{{ resume['contact']['web']['title'] }}</a>
                     </li>
                     <li>
-                        <img src="assets/img/github-brands.png" alt="github:" class="icon" /><a
+                        <a href="https://github.com/{{ resume['contact']['github'] }}"><img
+                            src="assets/img/github-brands.png" alt="github:" class="icon" /></a><a
                             href="https://github.com/{{ resume['contact']['github'] }}">github.com/{{ resume['contact']['github'] }}</a>
                     </li>
                     <li>
-                        <img src="assets/img/map-marker-solid.png" alt="location:" class="icon" /><a
+                        <a href="{{ resume['contact']['location']['url'] }}"><img
+                            src="assets/img/map-marker-solid.png" alt="location:" class="icon" /></a><a
                             href="{{ resume['contact']['location']['url'] }}">{{ resume['contact']['location']['title'] }}</a>
                     </li>
                 </ul>
                 <div id="other_formats">
-                    <ul><li><img src="assets/img/file-pdf-regular.png" alt="PDF" class="icon" /><a
+                    <ul>
+                        <li><a href="Josh-Beard-Resume.pdf"><img
+                                src="assets/img/file-pdf-regular.png" alt="PDF" class="icon" /></a><a
                                 href="Josh-Beard-Resume.pdf">.pdf</a></li>
-                        <li><img src="assets/img/file-word-regular.png" alt="Word" class="icon" /><a
+                        <li><a href="Josh-Beard-Resume.docx"><img
+                                src="assets/img/file-word-regular.png" alt="Word" class="icon" /></a><a
                                 href="Josh-Beard-Resume.docx">.docx</a></li>
-                        <li><img src="assets/img/markdown-brands.png" alt="Markdown" class="icon" /><a
+                        <li><a href="https://github.com/joshbeard/resume/blob/master/README.md"><img
+                                src="assets/img/markdown-brands.png" alt="Markdown" class="icon" /></a><a
                                 href="https://github.com/joshbeard/resume/blob/master/README.md">.md</a></li>
                     </ul>
                 </div>
@@ -105,20 +113,11 @@
             <section>
                 <h2 id="skills">Skills</h2>
                 <div class="section_content">
-                    <h3 id="key-platforms-systems-software">Key Platforms, Systems,
-                        Software</h3>
-                        <p>
-                        {%- for skill in resume['skills']['products'] -%}
-                            {{ skill }}
-                            {%- if not loop.last %}, {% endif %}
-                        {%- endfor %}
-                        </p>
-                    <h3 id="development">Development</h3>
                     <p>
-                        {%- for skill in resume['skills']['development'] -%}
-                            {{ skill }}
-                            {%- if not loop.last %}, {% endif %}
-                        {%- endfor %}
+                    {%- for skill in resume['skills']['products'] -%}
+                        {{ skill }}
+                        {%- if not loop.last %}, {% endif %}
+                    {%- endfor %}
                     </p>
                 </div>
                 <div class="clear"></div>

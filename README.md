@@ -29,11 +29,9 @@ June 2022 - Present - Remote
 * DevSecOps on a small team working on a project focused on modernizing and advancing a highly-utilized set of services for water data collected and provided by the USGS.
 * Collaboratively designed, implemented, and supported infrastructure, CI/CD pipelines for a Python codebase of Lambda functions, modularized static websites, and supporting resources.
 * Cloud-native and 'serverless' application development and infrastructure.
-* Integrated and automated code analysis into developer workflow and pipeline.
-* Advise leadership on technical decisions, including architecture, product adoption, and standards.
+* Integrated and automated code analysis into developer workflow and pipeline. adoption, and standards.
 
     _Key technology and skills: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more), GitLab, Python, Jira_
-
 
 ### Lead DevOps Engineer with Apogee Engineering, LLC at USGS
 
@@ -42,6 +40,7 @@ September 2015 - May 2022 - Remote
 * Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/) at the [US Geological Survey](https://www.usgs.gov/).
 * Lead and contributed to many of the group's most challenging technical projects.
 * Collaborated with over a dozen teams to deliver applications to the USGS science community.
+* Worked with hundreds of codebases spanning several languages and product teams.
 * Responsible for the architecture and implementation of the IT platform for over 50 USGS products.
 * Migrated over 50 products from on-premise and on-VM deployments to AWS deployments, using Docker and native AWS services.
 * Composed CI/CD pipelines for hundreds of projects, improving consistency through automation, empowering product teams, and reducing friction for releasing software.
@@ -50,12 +49,11 @@ September 2015 - May 2022 - Remote
 * Reduced costs through architecture improvements while reducing the server count by more than 45%.
 * Instructed colleagues on a variety of subjects, including Docker, AWS, and Terraform.
 * Implemented and maintained configuration management (Puppet, Ansible) across hundreds of servers.
+* Implemented and maintained Infrastructure as Code across dozens of applications and services.
 * Developed new HTTP architecture, utilizing CloudFront, Nginx, and S3.
-* Worked with hundreds of codebases spanning several languages and product teams.
 * Contracted with Comso, Inc. _April 2015 - September 2015_.
 
     _Key technology and skills: Linux, GitLab, Docker, AWS (wide range of services), Terraform, Ansible, Puppet, Python, Packer, VMware vSphere, Jira, Artifactory, Bamboo, BitBucket, Tomcat, Ruby, Nginx, Traefik, Apache_
-
 
 ### Sr. Professional Services Engineer with Puppet Inc.
 
@@ -67,10 +65,8 @@ September 2013 - April 2015 - Remote
 * Developed Puppet, Ruby, and shell code for extending products and automating processes.
 * Consulted on pre-sales, scoping of work, and post-sales support.
 * Earned high marks for customer satisfaction, team work, and professionalism.
-* Puppet Professional Certification, 2013
 
     _Key technology and skills: Linux, Puppet and Puppet Enterprise, Git, GitLab, Packer, Vagrant, Jira, Tomcat, Ruby, Shell, Nginx, Apache, WebSphere_
-
 
 ### Linux/Unix Systems Administrator with Douglas School District
 
@@ -86,14 +82,13 @@ January 2010 - September 2013 - Box Elder, SD
 
     _Key technology and skills: FreeBSD, Linux, MacOS, Puppet, Apache, Nginx, BIND, Shell, Ruby, KVM, pf, Sophos, Graylog, Nginx, Icinga, NFS, Postfix_
 
-
 ### Web Developer with Douglas School District
 
 September 2011 - September 2013 - Box Elder, SD
 
 * Implemented WordPress as a content management system for the district's websites.
 * Increased web performance through improvements to code and server configuration.
-* Developed HTML, CSS, and PHP in support of district websites.
+* Developed HTML, CSS, and PHP
 
 ### Tier II Technical Support with Apple, Inc.
 
@@ -107,18 +102,8 @@ October 2008 - January 2010 - Remote
 August 2006 - October 2008 - Fort Carson, CO
 
 * Supported Army battalion network and communications equipment, including workstations, tactical radios, GPS, crypto, network services, and multimedia systems.
-* Responsible for establishing battalion communications quickly in deployment scenarios (satellite link, network, VOIP, radio communications, battlefield monitoring systems).
-* Trained colleagues, senior leadership, and end-users.
 * Among first members of battalion staff at Fort Carson and integral part of initial stand up of IT operations and communications.
-* United States Army Signal School Honor Graduate, 2007. Fort Gordon, GA.
-* Served with distinction and was awarded early promotion.
 
 ## Skills
 
-### Products
-
-Ansible, Apache, Artifactory, AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc), Bamboo, BitBucket, Cloud, Debian/Ubuntu, DigitalOcean, Docker, Elasticsearch, FreeBSD, GitHub, GitHub Actions, GitHub Workflows, GitLab, GitLab CI/CD, Graylog, HAProxy, Jira, LXC, MariaDB/MySQL, MongoDB, Nginx, Packer, Postfix, PostgreSQL, Puppet/Puppet Enterprise, RedHat/CentOS, Sensu, Serverless, Terraform (AWS, VMware, DigitalOcean, Proxmox, misc), Tomcat, Traefik, Unix Shell, Vagrant
-
-### Development
-
-CI/CD, Bash and Shell, Python, Ruby, PHP, Git, Atlassian, HTML/CSS, Test-Driven Development (TDD), Accessibility, Security and Compliance, Everything is Code
+AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc), Accessibility, Ansible, Apache, Artifactory, Atlassian, Bamboo, Bash and Shell, BitBucket, CI/CD, Cloud, Debian/Ubuntu, DigitalOcean, Docker, Elasticsearch, Everything is Code, FreeBSD, Git, GitHub, GitHub Actions, GitHub Workflows, GitLab, GitLab CI/CD, Graylog, HAProxy, HTML/CSS, Jira, LXC, MariaDB/MySQL, MongoDB, Nginx, PHP, Packer, Postfix, PostgreSQL, Puppet/Puppet Enterprise, Python, RedHat/CentOS, Ruby, Security and Compliance, Sensu, Serverless, Terraform (AWS, VMware, DigitalOcean, Proxmox, misc), Test-Driven Development (TDD), Tomcat, Traefik, Unix Shell, Vagrant
