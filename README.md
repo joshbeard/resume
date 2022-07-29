@@ -11,7 +11,7 @@
 
 ## Other Formats
 
-* Web/HTML: <http://localhost:8080/resume>
+* Web/HTML: <https://joshbeard.me/resume>
 * [PDF](https://joshbeard.me/resume/Josh-Beard-Resume.pdf)
 * [Word](https://joshbeard.me/resume/Josh-Beard-Resume.docx)
 
@@ -49,7 +49,7 @@ September 2015 - May 2022 - Remote
 * Accelerated and helped plan long-term IT strategy and the details of execution.
 * Reduced costs through architecture improvements while reducing the server count by more than 45%.
 * Instructed colleagues on a variety of subjects, including Docker, AWS, and Terraform.
-* Implemented and maintained configuraton management (Puppet, Ansible) across hundreds of servers.
+* Implemented and maintained configuration management (Puppet, Ansible) across hundreds of servers.
 * Developed new HTTP architecture, utilizing CloudFront, Nginx, and S3.
 * Worked with hundreds of codebases spanning several languages and product teams.
 * Contracted with Comso, Inc. _April 2015 - September 2015_.
