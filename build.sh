@@ -17,10 +17,9 @@ docx() {
 pdf() {
   echo "-> Creating PDF"
   docker run --rm -v ${PWD}:/work -w /work \
-    --entrypoint=/usr/bin/google-chrome \
-    -it browserless/chrome:latest \
-    -headless -disable-gpu --no-sandbox \
-    --print-to-pdf=dist/resume.pdf dist/index.html
+    --entrypoint=/usr/bin/google-chrome -it \
+    browserless/chrome:latest -headless -disable-gpu \
+    --no-sandbox --print-to-pdf=dist/resume.pdf dist/index.html
 }
 
 if [ -z "$1" ]; then
