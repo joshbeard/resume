@@ -19,6 +19,7 @@
 
 IT professional with a strong background in systems administration, cloud, and DevOps with over 13 years of experience and collaborations with more than a hundred teams across hundreds of projects.
 
+
 ## Experience
 
 ### Lead DevSecOps Engineer with Ventera, Inc at USGS
@@ -29,7 +30,7 @@ June 2022 - Present - Remote
 * DevSecOps on a small team working on a project focused on modernizing and advancing a highly-utilized set of services for water data collected and provided by the USGS.
 * Collaboratively designed, implemented, and supported infrastructure, CI/CD pipelines for a Python codebase of Lambda functions, modularized static websites, and supporting resources.
 * Cloud-native and 'serverless' application development and infrastructure.
-* Integrated and automated code analysis into developer workflow and pipeline. adoption, and standards.
+* Integrated and automated code analysis into developer workflow and pipeline.
 
     _Key technology and skills: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more), GitLab, Python, Jira_
 
@@ -37,7 +38,7 @@ June 2022 - Present - Remote
 
 September 2015 - May 2022 - Remote
 
-* Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/) at the [US Geological Survey](https://www.usgs.gov/).
+* Contracted to [Science Analytics and Synthesis](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/) at the [US Geological Survey](https://www.usgs.gov/).
 * Lead and contributed to many of the group's most challenging technical projects.
 * Collaborated with over a dozen teams to deliver applications to the USGS science community.
 * Worked with hundreds of codebases spanning several languages and product teams.

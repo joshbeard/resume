@@ -1,3 +1,10 @@
+#
+# Josh Beard's Resume
+# https://joshbeard.me/resume
+#
+# This YAML file is parsed by 'build.py' to generate resume documents.
+# See 'BUILDING.md' for more information.
+#
 ---
 # -----------------------------------------------------------------------------
 # Header
@@ -21,7 +28,10 @@ contact:
     title: Colorado Springs, CO
     url: https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado
 
-summary: IT professional with a strong background in systems administration, cloud, and DevOps with over 13 years of experience and collaborations with more than a hundred teams across hundreds of projects.
+summary: >
+  IT professional with a strong background in systems administration, cloud, and
+  DevOps with over 13 years of experience and collaborations with more than a
+  hundred teams across hundreds of projects.
 
 # -----------------------------------------------------------------------------
 # Experience
@@ -33,18 +43,22 @@ experience:
     end: Present
     location: Remote
     details:
+      # yamllint disable-line
       - Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources)
         at the [US Geological Survey](https://www.usgs.gov/).
-      - DevSecOps on a small team working on a project focused on modernizing and advancing a
-        highly-utilized set of services for water data collected and provided by the
-        USGS.
-      - Collaboratively designed, implemented, and supported infrastructure, CI/CD pipelines for a Python
-        codebase of Lambda functions, modularized static websites, and supporting resources.
-      - Cloud-native and 'serverless' application development and infrastructure.
-      - Integrated and automated code analysis into developer workflow and pipeline.
-        adoption, and standards.
+      - DevSecOps on a small team working on a project focused on modernizing
+        and advancing a highly-utilized set of services for water data collected
+        and provided by the USGS.
+      - Collaboratively designed, implemented, and supported infrastructure,
+        CI/CD pipelines for a Python codebase of Lambda functions, modularized
+        static websites, and supporting resources.
+      - Cloud-native and 'serverless' application development and
+        infrastructure.
+      - Integrated and automated code analysis into developer workflow and
+        pipeline.
     tech:
-      - AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more)
+      - AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway,
+        more)
       - GitLab
       - Python
       - Jira
@@ -54,19 +68,35 @@ experience:
     end: May 2022
     location: Remote
     details:
-      - Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/) at the [US Geological Survey](https://www.usgs.gov/).
-      - Lead and contributed to many of the group's most challenging technical projects.
-      - Collaborated with over a dozen teams to deliver applications to the USGS science community.
-      - Worked with hundreds of codebases spanning several languages and product teams.
-      - Responsible for the architecture and implementation of the IT platform for over 50 USGS products.
-      - Migrated over 50 products from on-premise and on-VM deployments to AWS deployments, using Docker and native AWS services.
-      - Composed CI/CD pipelines for hundreds of projects, improving consistency through automation, empowering product teams, and reducing friction for releasing software.
-      - Authored and maintained hundreds of pages of robust documentation for "all things DevOps" and project-specific documentation, utilizing Markdown and adopting a "docs-as-code" workflow.
-      - Accelerated and helped plan long-term IT strategy and the details of execution.
-      - Reduced costs through architecture improvements while reducing the server count by more than 45%.
-      - Instructed colleagues on a variety of subjects, including Docker, AWS, and Terraform.
-      - Implemented and maintained configuration management (Puppet, Ansible) across hundreds of servers.
-      - Implemented and maintained Infrastructure as Code across dozens of applications and services.
+      # yamllint disable-line
+      - Contracted to [Science Analytics and Synthesis](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/)
+        at the [US Geological Survey](https://www.usgs.gov/).
+      - Lead and contributed to many of the group's most challenging technical
+        projects.
+      - Collaborated with over a dozen teams to deliver applications to the USGS
+        science community.
+      - Worked with hundreds of codebases spanning several languages and product
+        teams.
+      - Responsible for the architecture and implementation of the IT platform
+        for over 50 USGS products.
+      - Migrated over 50 products from on-premise and on-VM deployments to AWS
+        deployments, using Docker and native AWS services.
+      - Composed CI/CD pipelines for hundreds of projects, improving consistency
+        through automation, empowering product teams, and reducing friction for
+        releasing software.
+      - Authored and maintained hundreds of pages of robust documentation for
+        "all things DevOps" and project-specific documentation, utilizing
+        Markdown and adopting a "docs-as-code" workflow.
+      - Accelerated and helped plan long-term IT strategy and the details of
+        execution.
+      - Reduced costs through architecture improvements while reducing the
+        server count by more than 45%.
+      - Instructed colleagues on a variety of subjects, including Docker, AWS,
+        and Terraform.
+      - Implemented and maintained configuration management (Puppet, Ansible)
+        across hundreds of servers.
+      - Implemented and maintained Infrastructure as Code across dozens of
+        applications and services.
       - Developed new HTTP architecture, utilizing CloudFront, Nginx, and S3.
       - Contracted with Comso, Inc. _April 2015 - September 2015_.
     tech:
@@ -95,12 +125,18 @@ experience:
     end: April 2015
     location: Remote
     details:
-      - Consulted on Puppet products and DevOps practices for a wide range of customers, including some of Puppet's largest customers and most sophisticated engagements.
-      - Instructed dozens of classes on Puppet products to organizations and general public.
-      - Contributed Puppet modules and other tools for community use and used within Puppet's commercial products.
-      - Developed Puppet, Ruby, and shell code for extending products and automating processes.
+      - Consulted on Puppet products and DevOps practices for a wide range of
+        customers, including some of Puppet's largest customers and most
+        sophisticated engagements.
+      - Instructed dozens of classes on Puppet products to organizations and
+        general public.
+      - Contributed Puppet modules and other tools for community use and used
+        within Puppet's commercial products.
+      - Developed Puppet, Ruby, and shell code for extending products and
+        automating processes.
       - Consulted on pre-sales, scoping of work, and post-sales support.
-      - Earned high marks for customer satisfaction, team work, and professionalism.
+      - Earned high marks for customer satisfaction, team work, and
+        professionalism.
     tech:
       - Linux
       - Puppet and Puppet Enterprise
@@ -121,13 +157,20 @@ experience:
     end: September 2013
     location: Box Elder, SD
     details:
-      - Deployed and administered school district Linux and FreeBSD servers and services for thousands of users.
-      - Advised and collaborated with district IT staff and administration on technology adoption and integration.
-      - Improved integration across network services for over 2,000 students, faculty, and staff.
-      - Administered network file systems, HTTP, DNS/DHCP, Firewalls, Monitoring, Logging, Mail (SMTP, POP3, IMAP, filtering, webmail), and other services for all district users.
-      - Improved workstation provisioning through automation, deploying several hundred new workstations a year.
+      - Deployed and administered school district Linux and FreeBSD servers and
+        services for thousands of users.
+      - Advised and collaborated with district IT staff and administration on
+        technology adoption and integration.
+      - Improved integration across network services for over 2,000 students,
+        faculty, and staff.
+      - Administered network file systems, HTTP, DNS/DHCP, Firewalls,
+        Monitoring, Logging, Mail (SMTP, POP3, IMAP, filtering, webmail), and
+        other services for all district users.
+      - Improved workstation provisioning through automation, deploying several
+        hundred new workstations a year.
       - Introduced configuration management (Puppet) to manage servers.
-      - Developed code and packages to automate several processes, including the bulk provisioning of users (staff, students)
+      - Developed code and packages to automate several processes, including the
+        bulk provisioning of users (staff, students)
     tech:
       - FreeBSD
       - Linux
@@ -152,8 +195,10 @@ experience:
     end: September 2013
     location: Box Elder, SD
     details:
-      - Implemented WordPress as a content management system for the district's websites.
-      - Increased web performance through improvements to code and server configuration.
+      - Implemented WordPress as a content management system for the district's
+        websites.
+      - Increased web performance through improvements to code and server
+        configuration.
       - Developed HTML, CSS, and PHP
   - title: Tier II Technical Support
     org: Apple, Inc.
@@ -161,23 +206,29 @@ experience:
     end: January 2010
     location: Remote
     details:
-      - Provided end-user support to customers and business using Apple products; especially Apple’s computers and macOS.
-      - Consistently received high marks for customer satisfaction and troubleshooting.
+      - Provided end-user support to customers and business using Apple
+        products; especially Apple’s computers and macOS.
+      - Consistently received high marks for customer satisfaction and
+        troubleshooting.
   - title: Signal Support Systems Specialist
     org: US Army
     start: August 2006
     end: October 2008
     location: Fort Carson, CO
     details:
-      - Supported Army battalion network and communications equipment, including workstations, tactical radios, GPS, crypto, network services, and multimedia systems.
-      - Among first members of battalion staff at Fort Carson and integral part of initial stand up of IT operations and communications.
+      - Supported Army battalion network and communications equipment, including
+        workstations, tactical radios, GPS, crypto, network services, and
+        multimedia systems.
+      - Among first members of battalion staff at Fort Carson and integral part
+        of initial stand up of IT operations and communications.
 
 # -----------------------------------------------------------------------------
 # Skills
 # -----------------------------------------------------------------------------
 skills:
   products:
-    - AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc)
+    - AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda,
+      Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc)
     - Accessibility
     - Ansible
     - Apache
