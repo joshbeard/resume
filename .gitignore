@@ -1,6 +1,9 @@
 _site/
-dist/index.html
+/dist/index.html
+/dist/resume.html
+/dist/resume.md
 .DS_Store
 *.pdf
 *.docx
 *.log
+env

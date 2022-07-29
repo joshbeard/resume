@@ -1,15 +1,10 @@
 * {
-  border:0;
-  font-size:100%;
-  margin:0;
-  padding:0;
-  vertical-align:baseline;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
   font-family: Helvetica, Verdana, sans-serif;
-  font-display: optional;
-}
-
-strong {
-  font-style: bold;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
@@ -19,8 +14,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 html, body {
   background: #408663;
   font-family: Helvetica, Verdana, sans-serif;
-  font-display: optional;
-  font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+  /*font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));*/
   color: #5A595A;
   margin: 0;
   padding: 0;
@@ -35,8 +29,8 @@ header {
 }
 
 img.icon {
-  width: 12px;
-  margin-right: 8px;
+  width: 14px;
+  margin-right: 6px;
 }
 
 p {
@@ -48,7 +42,7 @@ p {
 
 #cv {
   width: 90%;
-  max-width: 800px;
+  max-width: 1024px;
   background: #F2F2F2;
   margin: 20px auto;
   box-shadow: 0 0 25px #333333;
@@ -80,7 +74,6 @@ h1 {
 
 h1, h2, h3 {
   font-family: Helvetica, Verdana, sans-serif;
-  font-display: optional;
 }
 
 #resume_content {
@@ -106,20 +99,11 @@ h1, h2, h3 {
   float: right;
 }
 
-/* icons */
-#contact_details svg,
-#contact_details i {
-  width: 18px;
-  text-align: center;
-  padding-right: 4px;
-}
-
 #contact_details ul {
   list-style-type: none;
   font-size: 0.9em;
   margin-top: 2px;
   font-family: Helvetica, Verdana, sans-serif;
-  font-display: optional;
 }
 
 #contact_details ul li {
@@ -148,7 +132,7 @@ h1, h2, h3 {
 }
 
 #contact_details #other_formats li:first-child {
-  margin-left: 0;
+  margin-left: 0px;
 }
 
 article.job {
@@ -170,6 +154,10 @@ article.job ul {
 h3 + ul li,
 article.job ul li {
   margin-bottom: 4px;
+}
+
+article.job ul li p {
+  display: inline;
 }
 
 .jobNote {
@@ -236,7 +224,6 @@ h3:first-child {
 #footer, #foot_copyright {
   background: #26272A;
   font-family: Helvetica, Verdana, sans-serif;
-  font-display: optional;
   line-height: 1.5;
 }
 

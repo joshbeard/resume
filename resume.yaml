@@ -1,0 +1,233 @@
+---
+# -----------------------------------------------------------------------------
+# Header
+# -----------------------------------------------------------------------------
+name: Josh Beard
+description: Josh Beard is an IT professional in Colorado
+url: https://joshbeard.me/resume
+repo:
+  url: https://github.com/joshbeard/resume
+pdf: https://joshbeard.me/resume/Josh-Beard-Resume.pdf
+word: https://joshbeard.me/resume/Josh-Beard-Resume.docx
+headline: IT Professional / DevOps / Sysadmin
+
+contact:
+  email: josh@joshbeard.me
+  web:
+    url: https://joshbeard.me
+    title: joshbeard.me
+  github: joshbeard
+  location:
+    title: Colorado Springs, CO
+    url: https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado
+
+summary: IT professional with a strong background in systems administration, cloud, and DevOps with over 13 years of experience and collaborations with more than a hundred teams across hundreds of projects.
+
+# -----------------------------------------------------------------------------
+# Experience
+# -----------------------------------------------------------------------------
+experience:
+  - title: Lead DevSecOps Engineer
+    org: Ventera, Inc at USGS
+    start: June 2022
+    end: Present
+    location: Remote
+    details:
+      - Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources)
+        at the [US Geological Survey](https://www.usgs.gov/).
+      - DevSecOps on a small team working on a project focused on modernizing and advancing a
+        highly-utilized set of services for water data collected and provided by the
+        USGS.
+      - Collaboratively designed, implemented, and supported infrastructure, CI/CD pipelines for a Python
+        codebase of Lambda functions, modularized static websites, and supporting resources.
+      - Cloud-native and 'serverless' application development and infrastructure.
+      - Integrated and automated code analysis into developer workflow and pipeline.
+      - Advise leadership on technical decisions, including architecture, product
+        adoption, and standards.
+    tech:
+      - AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more)
+      - GitLab
+      - Python
+      - Jira
+  - title: Lead DevOps Engineer
+    org: Apogee Engineering, LLC at USGS
+    start: September 2015
+    end: May 2022
+    location: Remote
+    details:
+      - Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/) at the [US Geological Survey](https://www.usgs.gov/).
+      - Lead and contributed to many of the group's most challenging technical projects.
+      - Collaborated with over a dozen teams to deliver applications to the USGS science community.
+      - Responsible for the architecture and implementation of the IT platform for over 50 USGS products.
+      - Migrated over 50 products from on-premise and on-VM deployments to AWS deployments, using Docker and native AWS services.
+      - Composed CI/CD pipelines for hundreds of projects, improving consistency through automation, empowering product teams, and reducing friction for releasing software.
+      - Authored and maintained hundreds of pages of robust documentation for "all things DevOps" and project-specific documentation, utilizing Markdown and adopting a "docs-as-code" workflow.
+      - Accelerated and helped plan long-term IT strategy and the details of execution.
+      - Reduced costs through architecture improvements while reducing the server count by more than 45%.
+      - Instructed colleagues on a variety of subjects, including Docker, AWS, and Terraform.
+      - Implemented and maintained configuraton management (Puppet, Ansible) across hundreds of servers.
+      - Developed new HTTP architecture, utilizing CloudFront, Nginx, and S3.
+      - Worked with hundreds of codebases spanning several languages and product teams.
+      - Contracted with Comso, Inc. _April 2015 - September 2015_.
+    tech:
+      - Linux
+      - GitLab
+      - Docker
+      - AWS (wide range of services)
+      - Terraform
+      - Ansible
+      - Puppet
+      - Python
+      - Packer
+      - VMware vSphere
+      - Jira
+      - Artifactory
+      - Bamboo
+      - BitBucket
+      - Tomcat
+      - Ruby
+      - Nginx
+      - Traefik
+      - Apache
+  - title: Sr. Professional Services Engineer
+    org: Puppet Inc.
+    start: September 2013
+    end: April 2015
+    location: Remote
+    details:
+      - Consulted on Puppet products and DevOps practices for a wide range of customers, including some of Puppet's largest customers and most sophisticated engagements.
+      - Instructed dozens of classes on Puppet products to organizations and general public.
+      - Contributed Puppet modules and other tools for community use and used within Puppet's commercial products.
+      - Developed Puppet, Ruby, and shell code for extending products and automating processes.
+      - Consulted on pre-sales, scoping of work, and post-sales support.
+      - Earned high marks for customer satisfaction, team work, and professionalism.
+      - Puppet Professional Certification, 2013
+    tech:
+      - Linux
+      - Puppet and Puppet Enterprise
+      - Git
+      - GitLab
+      - Packer
+      - Vagrant
+      - Jira
+      - Tomcat
+      - Ruby
+      - Shell
+      - Nginx
+      - Apache
+      - WebSphere
+  - title: Linux/Unix Systems Administrator
+    org: Douglas School District
+    start: January 2010
+    end: September 2013
+    location: Box Elder, SD
+    details:
+      - Deployed and administered school district Linux and FreeBSD servers and services for thousands of users.
+      - Advised and collaborated with district IT staff and administration on technology adoption and integration.
+      - Improved integration across network services for over 2,000 students, faculty, and staff.
+      - Administered network file systems, HTTP, DNS/DHCP, Firewalls, Monitoring, Logging, Mail (SMTP, POP3, IMAP, filtering, webmail), and other services for all district users.
+      - Improved workstation provisioning through automation, deploying several hundred new workstations a year.
+      - Introduced configuration management (Puppet) to manage servers.
+      - Developed code and packages to automate several processes, including the bulk provisioning of users (staff, students)
+    tech:
+      - FreeBSD
+      - Linux
+      - MacOS
+      - Puppet
+      - Apache
+      - Nginx
+      - BIND
+      - Shell
+      - Ruby
+      - KVM
+      - pf
+      - Sophos
+      - Graylog
+      - Nginx
+      - Icinga
+      - NFS
+      - Postfix
+  - title: Web Developer
+    org: Douglas School District
+    start: September 2011
+    end: September 2013
+    location: Box Elder, SD
+    details:
+      - Implemented WordPress as a content management system for the district's websites.
+      - Increased web performance through improvements to code and server configuration.
+      - Developed HTML, CSS, and PHP in support of district websites.
+  - title: Tier II Technical Support
+    org: Apple, Inc.
+    start: October 2008
+    end: January 2010
+    location: Remote
+    details:
+      - Provided end-user support to customers and business using Apple products; especially Apple’s computers and macOS.
+      - Consistently received high marks for customer satisfaction and troubleshooting.
+  - title: Signal Support Systems Specialist
+    org: US Army
+    start: August 2006
+    end: October 2008
+    location: Fort Carson, CO
+    details:
+      - Supported Army battalion network and communications equipment, including workstations, tactical radios, GPS, crypto, network services, and multimedia systems.
+      - Responsible for establishing battalion communications quickly in deployment scenarios (satellite link, network, VOIP, radio communications, battlefield monitoring systems).
+      - Trained colleagues, senior leadership, and end-users.
+      - Among first members of battalion staff at Fort Carson and integral part of initial stand up of IT operations and communications.
+      - United States Army Signal School Honor Graduate, 2007. Fort Gordon, GA.
+      - Served with distinction and was awarded early promotion.
+
+# -----------------------------------------------------------------------------
+# Skills
+# -----------------------------------------------------------------------------
+skills:
+  products:
+    - Ansible
+    - Apache
+    - Artifactory
+    - AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc)
+    - Bamboo
+    - BitBucket
+    - Cloud
+    - Debian/Ubuntu
+    - DigitalOcean
+    - Docker
+    - Elasticsearch
+    - FreeBSD
+    - GitHub
+    - GitHub Actions
+    - GitHub Workflows
+    - GitLab
+    - GitLab CI/CD
+    - Graylog
+    - HAProxy
+    - Jira
+    - LXC
+    - MariaDB/MySQL
+    - MongoDB
+    - Nginx
+    - Packer
+    - Postfix
+    - PostgreSQL
+    - Puppet/Puppet Enterprise
+    - RedHat/CentOS
+    - Sensu
+    - Serverless
+    - Terraform (AWS, VMware, DigitalOcean, Proxmox, misc)
+    - Tomcat
+    - Traefik
+    - Unix Shell
+    - Vagrant
+  development:
+    - CI/CD
+    - Bash and Shell
+    - Python
+    - Ruby
+    - PHP
+    - Git
+    - Atlassian
+    - HTML/CSS
+    - Test-Driven Development (TDD)
+    - Accessibility
+    - Security and Compliance
+    - Everything is Code

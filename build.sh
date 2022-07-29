@@ -1,20 +1,11 @@
 #!/usr/bin/env sh
 
-function html() {
-  echo "-> Creating HTML"
-  docker run --rm -v ${PWD}:/work -w /work \
-    -it pandoc/latex --from markdown --to html README.md \
-    -o dist/index.html \
-    -H src/_includes/header.html \
-    -B src/_includes/body.html \
-    -A src/_includes/footer.html \
-    -c assets/css/style.css \
-    --metadata title="Josh Beard"
+function html_md() {
+  python build.py
 }
 
 function docx() {
   echo "-> Creating DOCX"
-  docker run --rm -v ${PWD}:/work -w /work \
     -it pandoc/latex --from markdown --to docx README.md \
     -f gfm \
     -V linkcolor:blue \
@@ -33,11 +24,13 @@ function pdf() {
 }
 
 if [ -z "$1" ]; then
-  html
+  html_md
   docx
   pdf
 elif [ "$1" == "html" ]; then
-  html
+  html_md
+elif [ "$1" == "md" ]; then
+  md
 elif [ "$1" == "pdf" ]; then
   pdf
 elif [ "$1" == "docx" ]; then

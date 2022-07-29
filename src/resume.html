@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>{{ resume['name'] }}</title>
+    <base href="{{ resume['url'] }}/" />
+    <link rel="canonical" href="{{ resume['url'] }}" />
+    <meta name="description" content="{{ resume['description'] }}" />
+    <meta name="keywords" content="joshua beard, josh, joshbeard, jashbeard, devops, sysadmin, colorado springs, josh beard colorado springs, josh beard colorado, josh beard devops, josh beard denver, joshua beard colorado springs, joshua beard devops, devops engineer, colorado springs devops, colorado springs devops engineer, colorado devops engineer, denver devops engineer, josh beard resume, joshua beard resume, devops resume, devops engineer resume, sysadmin resume, systems administrator resume, josh beard sysadmin, josh beard systems administrator, josh beard apogee engineering, joshua beard apogee engineering, josh beard usgs, josh beard puppet, josh beard dsdk12" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Josh Beard's Resume" />
+    <meta property="og:description" content="{{ resume['description'] }}" />
+    <meta property="og:url" content="{{ resume['url'] }}" />
+    <meta property="og:site_name" content="Josh Beard's Resume" />
+    <meta property="og:image" content="{{ resume['url'] }}/assets/img/resume-og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <style type="text/css">{{ css }}</style>
+</head>
+
+<body>
+    <div id="cv">
+        <div id="heading">
+            <div id="name">
+                <h1>{{ resume['name'] }}</h1>
+                <h2 id="headline">{{ resume['headline'] }}</h2>
+            </div>
+            <div id="contact_details">
+                <ul>
+                    <li>
+                        <img src="assets/img/envelope-solid.png" alt="mail:" class="icon" /><a
+                        href="mailto:{{ resume['contact']['email'] }}">{{ resume['contact']['email'] }}</a>
+                    </li>
+                    <li>
+                        <img src="assets/img/globe-americas-solid.png" alt="web:" class="icon" /><a
+                            href="{{ resume['contact']['web']['url'] }}">{{ resume['contact']['web']['title'] }}</a>
+                    </li>
+                    <li>
+                        <img src="assets/img/github-brands.png" alt="github:" class="icon" /><a
+                            href="https://github.com/{{ resume['contact']['github'] }}">github.com/{{ resume['contact']['github'] }}</a>
+                    </li>
+                    <li>
+                        <img src="assets/img/map-marker-solid.png" alt="location:" class="icon" /><a
+                            href="{{ resume['contact']['location']['url'] }}">{{ resume['contact']['location']['title'] }}</a>
+                    </li>
+                </ul>
+                <div id="other_formats">
+                    <ul><li><img src="assets/img/file-pdf-regular.png" alt="PDF" class="icon" /><a
+                                href="Josh-Beard-Resume.pdf">.pdf</a></li>
+                        <li><img src="assets/img/file-word-regular.png" alt="Word" class="icon" /><a
+                                href="Josh-Beard-Resume.docx">.docx</a></li>
+                        <li><img src="assets/img/markdown-brands.png" alt="Markdown" class="icon" /><a
+                                href="https://github.com/joshbeard/resume/blob/master/README.md">.md</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <div id="resume_content">
+            <section>
+                <h2 id="summary">Summary</h2>
+                <div class="section_content">
+                    <p>{{ resume['summary'] }}</p>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section>
+                <h2 id="experience">Experience</h2>
+                <div class="section_content">
+                    {% for job in resume['experience'] %}
+                    <article class="job">
+                        <h3 class="position">{{ job['title'] }} with {{ job['org'] }}</h3>
+                        <p><strong>{{ job['start'] }} - {{ job['end'] }} · {{ job['location'] }}</strong></p>
+                        <ul>
+                            {%- for item in job['details_html'] %}
+                              <li>{{ item }}</li>
+                            {%- endfor %}
+                        </ul>
+                        <p>
+                        <em>
+                        {%- for skill in job['tech'] -%}
+                            {{ skill }}
+                            {%- if not loop.last %}, {% endif %}
+                        {%- endfor %}
+                        </em>
+                        </p>
+                    </article>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section>
+                <h2 id="skills">Skills</h2>
+                <div class="section_content">
+                    <h3 id="key-platforms-systems-software">Key Platforms, Systems,
+                        Software</h3>
+                        <p>
+                        {%- for skill in resume['skills']['products'] -%}
+                            {{ skill }}
+                            {%- if not loop.last %}, {% endif %}
+                        {%- endfor %}
+                        </p>
+                    <h3 id="development">Development</h3>
+                    <p>
+                        {%- for skill in resume['skills']['development'] -%}
+                            {{ skill }}
+                            {%- if not loop.last %}, {% endif %}
+                        {%- endfor %}
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </section>
+        </div>
+        <div id="footer">
+            <div id="foot_contact">
+                <a href="mailto:{{ resume['contact']['email'] }}"><img src="assets/img/envelope-solid.png" alt="envelope icon"
+                        class="icon" /><span>{{ resume['contact']['email'] }}</span></a>
+            </div>
+            <div id="foot_to_top">
+                <a href="#top"><img src="assets/img/arrow-alt-circle-up-solid.png" alt="up arrow icon"
+                        class="icon" /><span>Back to Top</span></a>
+            </div>
+            <div class="clear"></div>
+            <div id="foot_source">
+                <a href="{{ resume['repo']['url'] }}"><img src="assets/img/git-alt-brands.png"
+                        alt="git repo icon" class="icon" /><span>Resume source on GitHub</span></a><br />
+            </div>
+            <div id="foot_copyright">
+                <span>&copy; {{ year }} {{ resume['name'] }}</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+
+</html>

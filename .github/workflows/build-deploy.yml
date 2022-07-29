@@ -37,45 +37,17 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - name: Checksums of static assets
+      - name: Generate HTML and Markdown
         run: |
-          echo "STYLE_SHA=$(sha256sum dist/assets/css/style.css | head -c 16)" >> $GITHUB_ENV
+          pip install -r requirements.txt
+          python build.py
 
-      - name: Add language tag to Markdown before rendering from it
-        run: |
-          sed -i "1i ---\nlang: en-US\n---\n" README.md
-
-      - name: Generate HTML
-        uses: docker://pandoc/core:2.17
-        with:
-          args: >
-            --from markdown --to html README.md
-            -o dist/index.html
-            -H src/_includes/header.html
-            -B src/_includes/body.html
-            -A src/_includes/footer.html
-            -c /resume/assets/css/style.css?v=${{ env.STYLE_SHA }}
-            --metadata title="Josh Beard"
-
-      - name: Upload HTML Artifact
+      - name: Upload Markdown Artifact
         uses: actions/upload-artifact@master
         with:
-          name: html
+          name: markdown
           path: |
-            dist/index.html
-
-      # This is for generating a local document for generating the PDF.
-      - name: Generate Local HTML
-        uses: docker://pandoc/core:2.17
-        with:
-          args: >
-            --from markdown --to html README.md
-            -o dist/resume.html
-            -H src/_includes/header.html
-            -B src/_includes/body.html
-            -A src/_includes/footer.html
-            -c assets/css/style.css?v=${{ env.STYLE_SHA }}
-            --metadata title="Josh Beard"
+            README.md
 
       - name: Generate Word Document
         uses: docker://pandoc/latex
@@ -94,7 +66,7 @@ jobs:
           --no-sandbox
           --print-to-pdf=dist/Josh-Beard-Resume.pdf
           --print-to-pdf-no-header
-          dist/resume.html
+          dist/index.html
 
       - name: Minify Action
         uses: anthonyftwang/minify-action@v1.0.1
@@ -118,7 +90,7 @@ jobs:
       - uses: actions/download-artifact@master
         name: Download Resume Artifacts
         with:
-          name: html
+          name: src
           path: _site
 
       - name: HTML Validation
@@ -136,6 +108,7 @@ jobs:
       - uses: actions/download-artifact@master
         with:
           name: src
+
       - name: Upload to S3
         uses: jakejarvis/s3-sync-action@master
         with:
@@ -146,13 +119,14 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-west-2'
           SOURCE_DIR: '.'
-          DEST_DIR: "resume/"
+          DEST_DIR: "resume"
 
       - name: Set up aws-cli
         uses: hsupu/setup-awscli@v1
 
       - name: Set cache on S3 objects
         run: |
+          ls
           aws s3 cp s3://s3-website-joshbeard-me/resume/assets/ s3://s3-website-joshbeard-me/resume/assets/ --recursive --acl public-read --cache-control max-age=15552000
           for f in index.html Josh-Beard-Resume.pdf Josh-Beard-Resume.docx; do
             aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }}/resume/${f} s3://${{ secrets.AWS_S3_BUCKET }}/resume/ --acl public-read --cache-control max-age=1209600

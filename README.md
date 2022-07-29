@@ -1,85 +1,45 @@
-<div id="heading" markdown="1">
-
-<div id="name" markdown="1">
-
 # Josh Beard
 
 ## IT Professional / DevOps / Sysadmin
 
-</div>
+## Contact Details
 
-<div id="contact_details" markdown="1">
+* Email: [josh@joshbeard.me](mailto:josh@joshbeard.me)
+* Web: [joshbeard.me](https://joshbeard.me)
+* GitHub: [github.com/joshbeard](https://github.com/joshbeard)
+* Location: [Colorado Springs, CO](https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado)
 
-* <img src="/resume/assets/img/envelope-solid.png" alt="mail:" class="icon" />[josh@joshbeard.me](mailto:josh@joshbeard.me)
-* <img src="/resume/assets/img/globe-americas-solid.png" alt="web:" class="icon" />[joshbeard.me](https://joshbeard.me)
-* <img src="/resume/assets/img/github-brands.png" alt="github:" class="icon" />[github.com/joshbeard](https://github.com/joshbeard/)
-* <img src="/resume/assets/img/map-marker-solid.png" alt="location:" class="icon" />Colorado Springs, CO
+## Other Formats
 
-<div id="other_formats" markdown="1">
-
-* <img src="/resume/assets/img/file-pdf-regular.png" alt="pdf:" class="icon" />[PDF](https://joshbeard.me/resume/Josh-Beard-Resume.pdf)
-* <img src="/resume/assets/img/file-word-regular.png" alt="word:" class="icon" />[Word](https://joshbeard.me/resume/Josh-Beard-Resume.docx)
-
-</div>
-
-</div>
-
-<div class="clear"></div>
-
-</div>
-
-<div id="resume_content" markdown="1">
-
-<section markdown="1">
+* Web/HTML: <http://localhost:8080/resume>
+* [PDF](https://joshbeard.me/resume/Josh-Beard-Resume.pdf)
+* [Word](https://joshbeard.me/resume/Josh-Beard-Resume.docx)
 
 ## Summary
 
-<div class="section_content" markdown="1">
-
 IT professional with a strong background in systems administration, cloud, and DevOps with over 13 years of experience and collaborations with more than a hundred teams across hundreds of projects.
-
-</div>
-
-<div class="clear"></div>
-
-</section>
-
-<section markdown="1">
 
 ## Experience
 
-<div class="section_content" markdown="1">
+### Lead DevSecOps Engineer with Ventera, Inc at USGS
 
-<article class="job" markdown="1">
+June 2022 - Present - Remote
 
-### Lead DevSecOps Engineer with Ventera, Inc. at USGS
-
-__June 2022 - Present &middot; Remote__
-
-* Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources)
-  at the [US Geological Survey](https://www.usgs.gov/).
-* DevSecOps on a small team working on a project focused on modernizing and advancing a
-  highly-utilized set of services for water data collected and provided by the
-  USGS.
-* Collaboratively designed, implemented, and supported infrastructure, CI/CD pipelines for a Python
-  codebase of Lambda functions, modularized static websites, and supporting resources.
+* Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources) at the [US Geological Survey](https://www.usgs.gov/).
+* DevSecOps on a small team working on a project focused on modernizing and advancing a highly-utilized set of services for water data collected and provided by the USGS.
+* Collaboratively designed, implemented, and supported infrastructure, CI/CD pipelines for a Python codebase of Lambda functions, modularized static websites, and supporting resources.
 * Cloud-native and 'serverless' application development and infrastructure.
 * Integrated and automated code analysis into developer workflow and pipeline.
-* Advise leadership on technical decisions, including architecture, product
-  adoption, and standards.
+* Advise leadership on technical decisions, including architecture, product adoption, and standards.
 
-_Primary technology used: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more), GitLab, Python, Jira_
+    _Key technology and skills: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more), GitLab, Python, Jira_
 
-</article>
-
-<article class="job" markdown="1">
 
 ### Lead DevOps Engineer with Apogee Engineering, LLC at USGS
 
-__September 2015 - May 2022 &middot; Remote__
+September 2015 - May 2022 - Remote
 
-* Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/)
-at the [US Geological Survey](https://www.usgs.gov/).
+* Contracted to [Science Analytics and Synthesis (SAS)](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/) at the [US Geological Survey](https://www.usgs.gov/).
 * Lead and contributed to many of the group's most challenging technical projects.
 * Collaborated with over a dozen teams to deliver applications to the USGS science community.
 * Responsible for the architecture and implementation of the IT platform for over 50 USGS products.
@@ -94,17 +54,12 @@ at the [US Geological Survey](https://www.usgs.gov/).
 * Worked with hundreds of codebases spanning several languages and product teams.
 * Contracted with Comso, Inc. _April 2015 - September 2015_.
 
-_Primary technology used: Linux, GitLab, Docker, AWS (wide range of services), Terraform, Ansible, Puppet,
-Python, Packer, VMware vSphere, Jira, Artifactory, Bamboo, BitBucket, Tomcat,
-Ruby, Nginx, Traefik, Apache._
+    _Key technology and skills: Linux, GitLab, Docker, AWS (wide range of services), Terraform, Ansible, Puppet, Python, Packer, VMware vSphere, Jira, Artifactory, Bamboo, BitBucket, Tomcat, Ruby, Nginx, Traefik, Apache_
 
-</article>
 
-<article class="job" markdown="1">
+### Sr. Professional Services Engineer with Puppet Inc.
 
-### Sr. Professional Services Engineer at Puppet Inc.
-
-__September 2013 - April 2015 &middot; Denver, CO (Remote)__
+September 2013 - April 2015 - Remote
 
 * Consulted on Puppet products and DevOps practices for a wide range of customers, including some of Puppet's largest customers and most sophisticated engagements.
 * Instructed dozens of classes on Puppet products to organizations and general public.
@@ -114,16 +69,12 @@ __September 2013 - April 2015 &middot; Denver, CO (Remote)__
 * Earned high marks for customer satisfaction, team work, and professionalism.
 * Puppet Professional Certification, 2013
 
-_Primary technology used: Linux, Puppet and Puppet Enterprise, Git, GitLab,
-Packer, Vagrant, Jira, Tomcat, Ruby, Shell, Nginx, Apache, WebSphere._
+    _Key technology and skills: Linux, Puppet and Puppet Enterprise, Git, GitLab, Packer, Vagrant, Jira, Tomcat, Ruby, Shell, Nginx, Apache, WebSphere_
 
-</article>
 
-<article class="job" markdown="1">
+### Linux/Unix Systems Administrator with Douglas School District
 
-### Linux/Unix Systems Administrator at Douglas School District
-
-__January 2010 - September 2013 &middot; Box Elder, SD__
+January 2010 - September 2013 - Box Elder, SD
 
 * Deployed and administered school district Linux and FreeBSD servers and services for thousands of users.
 * Advised and collaborated with district IT staff and administration on technology adoption and integration.
@@ -133,122 +84,41 @@ __January 2010 - September 2013 &middot; Box Elder, SD__
 * Introduced configuration management (Puppet) to manage servers.
 * Developed code and packages to automate several processes, including the bulk provisioning of users (staff, students)
 
-_Primary technology used: FreeBSD, Linux, MacOS, Puppet, Apache, Nginx, BIND,
-Shell, Ruby, KVM, pf, Sophos, Graylog, Nginx, Icinga, NFS, Postfix._
+    _Key technology and skills: FreeBSD, Linux, MacOS, Puppet, Apache, Nginx, BIND, Shell, Ruby, KVM, pf, Sophos, Graylog, Nginx, Icinga, NFS, Postfix_
 
-</article>
 
-<article class="job" markdown="1">
+### Web Developer with Douglas School District
 
-### Web Developer at Douglas School District
-
-__September 2011 - September 2013 &middot; Box Elder, SD__
+September 2011 - September 2013 - Box Elder, SD
 
 * Implemented WordPress as a content management system for the district's websites.
 * Increased web performance through improvements to code and server configuration.
 * Developed HTML, CSS, and PHP in support of district websites.
 
-</article>
+### Tier II Technical Support with Apple, Inc.
 
-<article class="job" markdown="1">
+October 2008 - January 2010 - Remote
 
-### Tier II Technical Support at Apple, Inc.
-
-__October 2008 - January 2010 &middot; Colorado Springs, CO__
-
-* Provided end-user support to customers and business using
-Apple products; especially Apple’s computers and macOS.
+* Provided end-user support to customers and business using Apple products; especially Apple’s computers and macOS.
 * Consistently received high marks for customer satisfaction and troubleshooting.
 
-</article>
+### Signal Support Systems Specialist with US Army
 
-<article class="job" markdown="1">
+August 2006 - October 2008 - Fort Carson, CO
 
-### Signal Support Systems Specialist in the US Army
-
-__August 2006 - October 2008 &middot; Fort Carson, CO__
-
-* Supported Army battalion network and communications equipment, including
-  workstations, tactical radios, GPS, crypto, network services, and multimedia systems.
-* Responsible for establishing battalion communications quickly in deployment scenarios (satellite
-  link, network, VOIP, radio communications, battlefield monitoring systems).
+* Supported Army battalion network and communications equipment, including workstations, tactical radios, GPS, crypto, network services, and multimedia systems.
+* Responsible for establishing battalion communications quickly in deployment scenarios (satellite link, network, VOIP, radio communications, battlefield monitoring systems).
 * Trained colleagues, senior leadership, and end-users.
 * Among first members of battalion staff at Fort Carson and integral part of initial stand up of IT operations and communications.
 * United States Army Signal School Honor Graduate, 2007. Fort Gordon, GA.
 * Served with distinction and was awarded early promotion.
 
-</article>
-
-</div>
-
-<div class="clear"></div>
-
-</section>
-
-<section markdown="1">
-
 ## Skills
 
-<div class="section_content" markdown="1">
+### Products
 
-### Key Platforms, Systems, Software
-
-Ansible,
-Apache,
-Artifactory,
-AWS *(EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc)*,
-Bamboo,
-BitBucket,
-Cloud,
-Debian/Ubuntu,
-DigitalOcean,
-Docker,
-Elasticsearch,
-FreeBSD,
-GitHub,
-GitHub Actions,
-GitHub Workflows,
-GitLab,
-GitLab CI/CD,
-Graylog,
-HAProxy,
-Jira,
-LXC,
-MariaDB/MySQL,
-MongoDB,
-Nginx,
-Packer,
-Postfix,
-PostgreSQL,
-Puppet/Puppet Enterprise,
-RedHat/CentOS,
-Sensu,
-Serverless,
-Terraform *(AWS, VMware, DigitalOcean, Proxmox, misc)*,
-Tomcat,
-Traefik,
-Unix Shell,
-Vagrant
+Ansible, Apache, Artifactory, AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc), Bamboo, BitBucket, Cloud, Debian/Ubuntu, DigitalOcean, Docker, Elasticsearch, FreeBSD, GitHub, GitHub Actions, GitHub Workflows, GitLab, GitLab CI/CD, Graylog, HAProxy, Jira, LXC, MariaDB/MySQL, MongoDB, Nginx, Packer, Postfix, PostgreSQL, Puppet/Puppet Enterprise, RedHat/CentOS, Sensu, Serverless, Terraform (AWS, VMware, DigitalOcean, Proxmox, misc), Tomcat, Traefik, Unix Shell, Vagrant
 
 ### Development
 
-CI/CD,
-Bash and Shell,
-Python,
-Ruby,
-PHP,
-Git,
-Atlassian,
-HTML/CSS,
-Test-Driven Development (TDD),
-Accessibility,
-Security and Compliance,
-Everything is Code
-
-</div>
-
-<div class="clear"></div>
-
-</section>
-
-</div>
+CI/CD, Bash and Shell, Python, Ruby, PHP, Git, Atlassian, HTML/CSS, Test-Driven Development (TDD), Accessibility, Security and Compliance, Everything is Code
