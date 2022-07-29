@@ -108,6 +108,29 @@ jobs:
         with:
           root: _site
 
+  add-markdown:
+    name: Commit and add Markdown Resume
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/download-artifact@master
+        name: Download Resume Artifacts
+        with:
+          name: markdown
+          path: .
+
+      - name: Commit Markdown
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Josh Beard
+          author_email: josh@joshbeard.me
+          message: 'Generated Markdown Resume'
+          add: 'README.md'
+
   deploy:
     name: Deploy Resume Website
     runs-on: ubuntu-latest
