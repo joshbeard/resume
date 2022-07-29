@@ -8,6 +8,16 @@ on:
 
 jobs:
 
+  yamllint:
+    name: YAML Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: yaml-lint
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          file_or_dir: resume.yaml
+
   # NOTE: This spell checker only checks the changes *in a commit*. It won't
   # scan the whole repo or even a whole file - just what's changed.
   # See https://github.com/TypoCI/spellcheck-action
