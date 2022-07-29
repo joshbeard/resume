@@ -47,7 +47,7 @@ p {
 }
 
 #heading {
-  padding: 25px 35px 12px 35px;
+  padding: 25px 35px 12px;
   border-bottom: 1px dashed #408663;
   background: #373A44;
 }
@@ -75,7 +75,7 @@ h1, h2, h3 {
 }
 
 #resume_content {
-  padding: 0 40px 20px 40px;
+  padding: 0 40px 20px;
   border-top: 4px solid #373A44;
 }
 
@@ -165,7 +165,7 @@ article.job ul li p {
 
 section {
   border-top: 1px solid #dedede;
-  padding: 20px 0 0 0;
+  padding: 20px 0 0;
 }
 
 section:first-child {
@@ -215,7 +215,7 @@ h3:first-child {
 }
 
 #footer {
-  padding: 22px 22px 12px 22px;
+  padding: 22px 22px 12px;
   color: #fff;
 }
 
@@ -290,7 +290,7 @@ h3:first-child {
 
 @media all and (max-width: 480px) {
   #heading {
-    padding: 15px 15px;
+    padding: 15px;
   }
 
   section {
@@ -364,7 +364,7 @@ h3:first-child {
 
   #resume_content {
     border-top: none;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 20px;
   }
   #resume_content a:link {
     color: #5A595A;
