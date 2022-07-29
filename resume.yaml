@@ -49,7 +49,7 @@ experience:
       - DevSecOps on a small team working on a project focused on modernizing
         and advancing a highly-utilized set of services for water data collected
         and provided by the USGS.
-      - Collaboratively designed, implemented, and supported infrastructure,
+      - Collaboratively designed, implemented, and supported infrastructure and
         CI/CD pipelines for a Python codebase of Lambda functions, modularized
         static websites, and supporting resources.
       - Cloud-native and 'serverless' application development and
