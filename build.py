@@ -67,7 +67,7 @@ def gen_html():
     html_template = html_template_file.read()
     html_template_file.close()
 
-    html_tm = Template(html_template, autoescape=True)
+    html_tm = Template(html_template, autoescape=False)
     html = html_tm.render(resume=resume(), css=css(), year=year)
 
     with open(html_out, 'w') as html_file:
