@@ -19,6 +19,10 @@ css_file = "src/style.css"
 # Markdown
 md_template = 'src/resume.md'
 md_out = "README.md"
+
+# Gemini
+gmi_template = 'src/resume.gmi'
+gmi_out = "resume.gmi"
 # -----------------------------------------------------------------------------
 
 # Current date
@@ -29,6 +33,7 @@ year = date.strftime("%Y")
 def run():
   gen_html()
   gen_markdown()
+  gen_gemini()
 
 def resume():
     global resume_yaml
@@ -62,7 +67,7 @@ def gen_html():
     html_template = html_template_file.read()
     html_template_file.close()
 
-    html_tm = Template(html_template)
+    html_tm = Template(html_template, autoescape=True)
     html = html_tm.render(resume=resume(), css=css(), year=year)
 
     with open(html_out, 'w') as html_file:
@@ -78,13 +83,29 @@ def gen_markdown():
     md_template = md_template_file.read()
     md_template_file.close()
 
-    md_tm = Template(md_template)
+    md_tm = Template(md_template, autoescape=True)
     md = md_tm.render(resume=resume(), year=year)
 
     with open(md_out, 'w') as md_file:
         md_file.write(md)
     md_file.close()
     print(f"-> Wrote {md_out}")
+
+## Gemini Template
+def gen_gemini():
+    global gmi_template
+    global gmi_out
+    gmi_template_file = open(gmi_template)
+    gmi_template = gmi_template_file.read()
+    gmi_template_file.close()
+
+    gmi_tm = Template(gmi_template, autoescape=True)
+    md = gmi_tm.render(resume=resume(), year=year)
+
+    with open(gmi_out, 'w') as gmi_file:
+        gmi_file.write(md)
+    gmi_file.close()
+    print(f"-> Wrote {gmi_out}")
 
 ## Word
 
