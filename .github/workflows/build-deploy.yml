@@ -154,10 +154,20 @@ jobs:
         with:
           name: gmi
 
-      - name: testing gemini upload
-        run: |
-          ls -l
-          ping -c 3 ${{ secrets.LOCAL_GEMINI_SERVER }}
+      - name: Deploy to server
+        id: deploy
+        uses: Pendect/action-rsyncer@v1.1.0
+        env:
+          DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+        with:
+          flags: '-avzr'
+          options: ''
+          ssh_options: ''
+          src: 'resume.gmi'
+          dest: 'user@${{ secrets.LOCAL_GEMINI_SERVER }}:${{ secrets.DEPLOY_PATH }}/resume.gmi'
+
+      - name: Display status from deploy
+        run: echo "${{ steps.deploy.outputs.status }}"
 
 
   deploy:
