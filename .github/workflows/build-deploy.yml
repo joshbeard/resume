@@ -59,6 +59,13 @@ jobs:
           path: |
             README.md
 
+      - name: Upload Gemini Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: gmi
+          path: |
+            resume.gmi
+
       - name: Generate Word Document
         uses: docker://pandoc/latex
         with:
@@ -135,6 +142,23 @@ jobs:
           author_email: josh@joshbeard.me
           message: 'Generated Markdown Resume'
           add: 'README.md'
+
+  local-deploy:
+    name: Deploy locally
+    runs-on: self-hosted
+    needs: validate
+    if: "!contains(github.event.head_commit.message, '[skip deploy]')"
+
+    steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: gmi
+
+      - name: testing gemini upload
+        run: |
+          ls -l
+          ping -c 3 ${{ secrets.LOCAL_GEMINI_SERVER }}
+
 
   deploy:
     name: Deploy Resume Website
