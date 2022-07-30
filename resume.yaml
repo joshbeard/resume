@@ -209,7 +209,7 @@ experience:
       - Provided end-user support to customers and business using Apple
         products; especially Apple’s computers and macOS.
       - Consistently received high marks for customer satisfaction and
-        troubleshooting.
+        issue resolution.
   - title: Signal Support Systems Specialist
     org: US Army
     start: August 2006
@@ -254,6 +254,7 @@ skills:
     - Graylog
     - HAProxy
     - HTML/CSS
+    - Infrastructure as Code
     - Jira
     - LXC
     - MariaDB/MySQL
@@ -274,5 +275,4 @@ skills:
     - Test-Driven Development (TDD)
     - Tomcat
     - Traefik
-    - Unix Shell
     - Vagrant
