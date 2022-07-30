@@ -164,7 +164,7 @@ jobs:
           options: ''
           ssh_options: ''
           src: 'resume.gmi'
-          dest: 'user@${{ secrets.LOCAL_GEMINI_SERVER }}:${{ secrets.DEPLOY_PATH }}/resume.gmi'
+          dest: '${{ secrets.DEPLOY_USER }}@${{ secrets.LOCAL_GEMINI_SERVER }}:${{ secrets.DEPLOY_PATH }}/resume.gmi'
 
       - name: Display status from deploy
         run: echo "${{ steps.deploy.outputs.status }}"
