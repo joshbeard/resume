@@ -161,7 +161,7 @@ jobs:
           DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
         with:
           flags: '-v'
-          options: ''
+          options: '--chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r,'
           ssh_options: ''
           src: 'resume.gmi'
           dest: '${{ secrets.DEPLOY_USER }}@${{ secrets.LOCAL_GEMINI_SERVER }}:${{ secrets.DEPLOY_PATH }}/resume.gmi'
