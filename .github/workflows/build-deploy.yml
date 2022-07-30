@@ -154,13 +154,13 @@ jobs:
         with:
           name: gmi
 
-      - name: Deploy to server
+      - name: Deploy resume to Gemini server
         id: deploy
         uses: Pendect/action-rsyncer@v1.1.0
         env:
           DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
         with:
-          flags: '-avzr'
+          flags: '-v'
           options: ''
           ssh_options: ''
           src: 'resume.gmi'
