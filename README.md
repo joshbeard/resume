@@ -96,7 +96,7 @@ September 2011 - September 2013 - Box Elder, SD
 October 2008 - January 2010 - Remote
 
 * Provided end-user support to customers and business using Apple products; especially Apple’s computers and macOS.
-* Consistently received high marks for customer satisfaction and troubleshooting.
+* Consistently received high marks for customer satisfaction and issue resolution.
 
 ### Signal Support Systems Specialist with US Army
 
@@ -107,4 +107,4 @@ August 2006 - October 2008 - Fort Carson, CO
 
 ## Skills
 
-AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc), Accessibility, Ansible, Apache, Artifactory, Atlassian, Bamboo, Bash and Shell, BitBucket, CI/CD, Cloud, Debian/Ubuntu, DigitalOcean, Docker, Elasticsearch, Everything is Code, FreeBSD, Git, GitHub, GitHub Actions, GitHub Workflows, GitLab, GitLab CI/CD, Graylog, HAProxy, HTML/CSS, Jira, LXC, MariaDB/MySQL, MongoDB, Nginx, PHP, Packer, Postfix, PostgreSQL, Puppet/Puppet Enterprise, Python, RedHat/CentOS, Ruby, Security and Compliance, Sensu, Serverless, Terraform (AWS, VMware, DigitalOcean, Proxmox, misc), Test-Driven Development (TDD), Tomcat, Traefik, Unix Shell, Vagrant
+AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc), Accessibility, Ansible, Apache, Artifactory, Atlassian, Bamboo, Bash and Shell, BitBucket, CI/CD, Cloud, Debian/Ubuntu, DigitalOcean, Docker, Elasticsearch, Everything is Code, FreeBSD, Git, GitHub, GitHub Actions, GitHub Workflows, GitLab, GitLab CI/CD, Graylog, HAProxy, HTML/CSS, Infrastructure as Code, Jira, LXC, MariaDB/MySQL, MongoDB, Nginx, PHP, Packer, Postfix, PostgreSQL, Puppet/Puppet Enterprise, Python, RedHat/CentOS, Ruby, Security and Compliance, Sensu, Serverless, Terraform (AWS, VMware, DigitalOcean, Proxmox, misc), Test-Driven Development (TDD), Tomcat, Traefik, Vagrant
