@@ -1,0 +1,40 @@
+===================================================================
+* {{ resume['name'] | center(63) }} *
+===================================================================
+
+{{ resume['headline'] }}
+
+## Contact Details
+
+    => email: {{ resume['contact']['email'] }}
+    => web: {{ resume['contact']['web']['url'] }}
+    => github: https://github.com/{{ resume['contact']['github'] }}
+
+## Other Formats
+
+    => web: {{ resume['url'] }}
+    => pdf: {{ resume['pdf'] }}
+    => word: {{ resume['word'] }}
+
+## Summary
+
+    {{ resume['summary'] | wordwrap(63) | indent(4) }}
+
+## Experience
+{% for job in resume['experience'] %}
+### {{ job['title'] }} with {{ job['org'] }}
+
+    {{ job['start'] }} - {{ job['end'] }} - {{ job['location'] }}
+{% for item in job['details_plain'] %}
+  * {{ item | wordwrap(65) | indent(4) }}
+{%- endfor %}
+{%- if 'tech' in job %}
+
+    Key technology and skills:
+    {{ job['tech'] | join(", ") | wordwrap(63)  | indent(4) }}
+{%- endif %}
+{% endfor %}
+## Skills
+
+    {{ resume['skills']['products'] | join(", ") | wordwrap(63) | indent(4) }}
+
