@@ -92,6 +92,13 @@ jobs:
           --print-to-pdf-no-header
           dist/index.html
 
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: pdf
+          path: |
+            Josh-Beard-Resume.pdf
+
       - name: Minify Action
         uses: anthonyftwang/minify-action@v1.0.1
 
@@ -164,6 +171,10 @@ jobs:
       - uses: actions/download-artifact@master
         with:
           name: txt
+
+      - uses: actions/download-artifact@master
+        with:
+          name: pdf
 
       - name: Deploy resume to Gemini server
         id: deploy
