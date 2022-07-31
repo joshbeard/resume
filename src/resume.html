@@ -32,49 +32,51 @@
 </head>
 
 <body>
+        <div id="other_formats">
+            <ul>
+                <li><a href="Josh-Beard-Resume.pdf"><img
+                        src="assets/img/file-pdf-regular.png" alt="PDF" class="icon" /></a><a
+                        href="Josh-Beard-Resume.pdf">Pdf</a></li>
+                <li><a href="Josh-Beard-Resume.docx"><img
+                        src="assets/img/file-word-regular.png" alt="Word" class="icon" /></a><a
+                        href="Josh-Beard-Resume.docx">Docx</a></li>
+                <li><a href="https://github.com/joshbeard/resume/blob/master/README.md"><img
+                        src="assets/img/markdown-brands.png" alt="Markdown" class="icon" /></a><a
+                        href="https://github.com/joshbeard/resume/blob/master/README.md">Md</a></li>
+                <li><a href="resume.txt"><img
+                        src="assets/img/file-alt-solid.png" alt="Plain Text" class="icon" /></a><a
+                        href="resume.txt">Txt</a></li>
+            </ul>
+        </div>
     <div id="cv">
         <div id="heading">
             <div id="name">
                 <h1>{{ resume['name'] }}</h1>
                 <h2 id="headline">{{ resume['headline'] }}</h2>
             </div>
-            <div id="contact_details">
-                <ul>
-                    <li>
-                        <a href="mailto:{{ resume['contact']['email'] }}"><img
-                            src="assets/img/envelope-solid.png" alt="mail:" class="icon" /></a><a
-                            href="mailto:{{ resume['contact']['email'] }}">{{ resume['contact']['email'] }}</a>
-                    </li>
-                    <li>
-                        <a href="{{ resume['contact']['web']['url'] }}"><img
-                            src="assets/img/globe-americas-solid.png" alt="web:" class="icon" /></a><a
-                            href="{{ resume['contact']['web']['url'] }}">{{ resume['contact']['web']['title'] }}</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/{{ resume['contact']['github'] }}"><img
-                            src="assets/img/github-brands.png" alt="github:" class="icon" /></a><a
-                            href="https://github.com/{{ resume['contact']['github'] }}">github.com/{{ resume['contact']['github'] }}</a>
-                    </li>
-                    <li>
-                        <a href="{{ resume['contact']['location']['url'] }}"><img
-                            src="assets/img/map-marker-solid.png" alt="location:" class="icon" /></a><a
-                            href="{{ resume['contact']['location']['url'] }}">{{ resume['contact']['location']['title'] }}</a>
-                    </li>
-                </ul>
-                <div id="other_formats">
+            <div id="heading_extra">
+                <div id="contact_details">
                     <ul>
-                        <li><a href="Josh-Beard-Resume.pdf"><img
-                                src="assets/img/file-pdf-regular.png" alt="PDF" class="icon" /></a><a
-                                href="Josh-Beard-Resume.pdf">.pdf</a></li>
-                        <li><a href="Josh-Beard-Resume.docx"><img
-                                src="assets/img/file-word-regular.png" alt="Word" class="icon" /></a><a
-                                href="Josh-Beard-Resume.docx">.docx</a></li>
-                        <li><a href="https://github.com/joshbeard/resume/blob/master/README.md"><img
-                                src="assets/img/markdown-brands.png" alt="Markdown" class="icon" /></a><a
-                                href="https://github.com/joshbeard/resume/blob/master/README.md">.md</a></li>
-                        <li><a href="resume.txt"><img
-                                src="assets/img/file-alt-solid.png" alt="Plain Text" class="icon" /></a><a
-                                href="resume.txt">.txt</a></li>
+                        <li>
+                            <a href="mailto:{{ resume['contact']['email'] }}"><img
+                                src="assets/img/envelope-solid.png" alt="mail:" class="icon" /></a><a
+                                href="mailto:{{ resume['contact']['email'] }}">{{ resume['contact']['email'] }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ resume['contact']['web']['url'] }}"><img
+                                src="assets/img/globe-americas-solid.png" alt="web:" class="icon" /></a><a
+                                href="{{ resume['contact']['web']['url'] }}">{{ resume['contact']['web']['title'] }}</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/{{ resume['contact']['github'] }}"><img
+                                src="assets/img/github-brands.png" alt="github:" class="icon" /></a><a
+                                href="https://github.com/{{ resume['contact']['github'] }}">github.com/{{ resume['contact']['github'] }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ resume['contact']['location']['url'] }}"><img
+                                src="assets/img/map-marker-solid.png" alt="location:" class="icon" /></a><a
+                                href="{{ resume['contact']['location']['url'] }}">{{ resume['contact']['location']['title'] }}</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -100,7 +102,9 @@
                               <li>{{ item }}</li>
                             {%- endfor %}
                         </ul>
+                        {%- if 'tech' in job %}
                         <p>
+                            Key technology:
                         <em>
                         {%- for skill in job['tech'] -%}
                             {{ skill }}
@@ -108,6 +112,7 @@
                         {%- endfor %}
                         </em>
                         </p>
+                        {%- endif %}
                     </article>
                     {% endfor %}
                 </div>
@@ -127,23 +132,25 @@
             </section>
         </div>
         <div id="footer">
-            <div id="foot_contact">
-                <a href="mailto:{{ resume['contact']['email'] }}"><img src="assets/img/envelope-solid.png" alt="envelope icon"
-                        class="icon" /><span>{{ resume['contact']['email'] }}</span></a>
+            <div id="footer_left">
+                <div id="foot_contact">
+                    <a href="mailto:{{ resume['contact']['email'] }}"><img src="assets/img/envelope-solid.png" alt="envelope icon"
+                            class="icon" /><span>{{ resume['contact']['email'] }}</span></a>
+                </div>
+                <div id="foot_source">
+                    <a href="{{ resume['repo']['url'] }}"><img src="assets/img/git-alt-brands.png"
+                            alt="git repo icon" class="icon" /><span>Resume source on GitHub</span></a><br />
+                </div>
             </div>
-            <div id="foot_to_top">
-                <a href="#top"><img src="assets/img/arrow-alt-circle-up-solid.png" alt="up arrow icon"
-                        class="icon" /><span>Back to Top</span></a>
+            <div id="footer_right">
+                <div id="foot_to_top">
+                    <a href="#top"><img src="assets/img/arrow-alt-circle-up-solid.png" alt="up arrow icon"
+                            class="icon" /><span>Back to Top</span></a>
+                </div>
+                <div id="foot_copyright">
+                    <span>&copy; {{ year }} {{ resume['name'] }}</span>
+                </div>
             </div>
-            <div class="clear"></div>
-            <div id="foot_source">
-                <a href="{{ resume['repo']['url'] }}"><img src="assets/img/git-alt-brands.png"
-                        alt="git repo icon" class="icon" /><span>Resume source on GitHub</span></a><br />
-            </div>
-            <div id="foot_copyright">
-                <span>&copy; {{ year }} {{ resume['name'] }}</span>
-            </div>
-            <div class="clear"></div>
         </div>
     </div>
 </body>
