@@ -215,7 +215,7 @@ jobs:
 
       - uses: actions/download-artifact@master
         with:
-          name: narrow_text
+          name: narrow_txt
 
       - name: Deploy resume to Gopher server
         id: deploy_gopher
