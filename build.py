@@ -29,6 +29,9 @@ gmi_out = "resume.gmi"
 # Plain Text
 txt_template = 'src/resume.txt'
 txt_out = "resume.txt"
+# Plain Text - narrow width (for Gopher, mobile)
+narrow_txt_template = 'src/resume-45w.txt'
+narrow_txt_out = "resume-45w.txt"
 # -----------------------------------------------------------------------------
 
 # Current date
@@ -119,9 +122,10 @@ def gen_txt():
     global txt_out
 
     txt = build_template(source=txt_template)
-    #wrapper = textwrap.TextWrapper(width=67, replace_whitespace=False)
-    #txt = wrapper.fill(text=txt)
     write_out(target=txt_out, content=txt)
+
+    narrow_txt = build_template(source=narrow_txt_template)
+    write_out(target=narrow_txt_out, content=narrow_txt)
 
 ## Word
 

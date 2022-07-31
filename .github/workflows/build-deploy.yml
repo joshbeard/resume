@@ -73,6 +73,13 @@ jobs:
           path: |
             resume.txt
 
+      - name: Upload Narrow Text Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: narrow_txt
+          path: |
+            resume-45w.txt
+
       - name: Generate Word Document
         uses: docker://pandoc/latex
         with:
@@ -205,6 +212,25 @@ jobs:
 
       - name: Display status from deploy
         run: echo "${{ steps.deploy.outputs.status }}"
+
+      - uses: actions/download-artifact@master
+        with:
+          name: narrow_text
+
+      - name: Deploy resume to Gopher server
+        id: deploy_gopher
+        uses: Pendect/action-rsyncer@v1.1.0
+        env:
+          DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+        with:
+          flags: '-rv'
+          options: '--chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r'
+          ssh_options: ''
+          src: 'resume-45w.txt'
+          dest: '${{ secrets.DEPLOY_USER }}@${{ secrets.LOCAL_GEMINI_SERVER }}:${{ secrets.GOPHER_DEPLOY_PATH }}/resume.txt'
+
+      - name: Display status from deploy
+        run: echo "${{ steps.deploy_gopher.outputs.status }}"
 
 
   deploy:
