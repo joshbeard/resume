@@ -1,13 +1,20 @@
 # Building My Resume
 
 I'm maintaining the contents of my resume in the [`resume.yaml`](resume.yaml)
-file. The [`build.py`](build.py) script builds the HTML document using the
-[`src/resume.html`](src/resume.html) Jinja2 template. It also builds the
-Markdown document from the [`src/resume.md`](src/resume.md) template.
+file. The [`build.py`](build.py) script builds several versions from Jinja2
+templates:
 
-The [`dist/`](dist) directory contains assets that are deployed as-is -
-currently, that's just a few images. The `dist` directory acts as a staging
-directory - the generated `index.html` would exist at the root of this.
+* HTML from [`src/resume.html`](src/resume.html)
+* Markdown from [`src/resume.md`](src/resume.md)
+* Gemini from [`src/resume.gmi`](src/resume.gmi)
+* Plain Text from [`src/resume.txt`](src/resume.txt)
+* Plain Text Narrow Width from [`src/resume-45w.txt](src/resume-45w.txt)
+
+The [`dist/`](dist) directory contains assets that are deployed to my resume
+site as-is - currently, that's just a few images. The `dist` directory acts as a
+staging directory - the generated `index.html` would exist at the root of this.
+
+I deploy to S3 and my local Gemini and Gopher servers.
 
 ## Files
 
