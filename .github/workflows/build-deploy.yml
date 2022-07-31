@@ -66,6 +66,13 @@ jobs:
           path: |
             resume.gmi
 
+      - name: Upload Text Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: txt
+          path: |
+            resume.txt
+
       - name: Generate Word Document
         uses: docker://pandoc/latex
         with:
@@ -154,6 +161,10 @@ jobs:
         with:
           name: gmi
 
+      - uses: actions/download-artifact@master
+        with:
+          name: txt
+
       - name: Deploy resume to Gemini server
         id: deploy
         uses: Pendect/action-rsyncer@v1.1.0
@@ -163,8 +174,8 @@ jobs:
           flags: '-v'
           options: '--chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r'
           ssh_options: ''
-          src: 'resume.gmi'
-          dest: '${{ secrets.DEPLOY_USER }}@${{ secrets.LOCAL_GEMINI_SERVER }}:${{ secrets.DEPLOY_PATH }}/resume.gmi'
+          src: '.'
+          dest: '${{ secrets.DEPLOY_USER }}@${{ secrets.LOCAL_GEMINI_SERVER }}:${{ secrets.DEPLOY_PATH }}/'
 
       - name: Display status from deploy
         run: echo "${{ steps.deploy.outputs.status }}"
