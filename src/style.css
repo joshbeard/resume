@@ -254,12 +254,13 @@ h3:first-child {
   clear: both;
 }
 
+/*
 @media all and (max-width: 800px) {
   #contact_details ul li a {
     font-size: 1.1em;
-    color: #e9dd83;
   }
 }
+*/
 
 @media all and (max-width: 601px) {
   #cv {
