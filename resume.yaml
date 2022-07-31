@@ -192,22 +192,22 @@ experience:
     start: October 2008
     end: January 2010
     location: Remote
-#    details:
-#      - Provided end-user support to customers and business using Apple
-#        products; especially Apple’s computers and macOS.
-#      - Consistently received high marks for customer satisfaction and
-#        issue resolution.
+    #details:
+    #  - Provided end-user support to customers and business using Apple
+    #    products; especially Apple’s computers and macOS.
+    #  - Consistently received high marks for customer satisfaction and
+    #    issue resolution.
   - title: Signal Support Systems Specialist
     org: US Army
     start: August 2006
     end: October 2008
     location: Fort Carson, CO
-#    details:
-#      - Supported Army battalion network and communications equipment, including
-#        workstations, tactical radios, GPS, crypto, network services, and
-#        multimedia systems.
-#      - Among first members of battalion staff at Fort Carson and integral part
-#        of initial stand up of IT operations and communications.
+    #details:
+    #  - Supported Army battalion network and communications equipment,
+    #  including workstations, tactical radios, GPS, crypto, network services,
+    #  and multimedia systems.
+    #  - Among first members of battalion staff at Fort Carson and integral part
+    #    of initial stand up of IT operations and communications.
 
 # -----------------------------------------------------------------------------
 # Skills
