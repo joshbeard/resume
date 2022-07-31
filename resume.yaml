@@ -15,7 +15,9 @@ url: https://joshbeard.me/resume
 repo:
   url: https://github.com/joshbeard/resume
 pdf: https://joshbeard.me/resume/Josh-Beard-Resume.pdf
+pdf_filename: Josh-Beard-Resume.pdf
 word: https://joshbeard.me/resume/Josh-Beard-Resume.docx
+word_filename: Josh-Beard-Resume.docx
 headline: IT Professional / DevOps / Sysadmin
 
 contact:
