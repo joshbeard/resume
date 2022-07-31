@@ -81,6 +81,13 @@ jobs:
             -f gfm
             -o dist/Josh-Beard-Resume.docx
 
+      - name: Upload Word Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: word
+          path: |
+            dist/Josh-Beard-Resume.docx
+
       - name: Generate PDF Document
         uses: browser-actions/setup-chrome@latest
       - run: >
@@ -179,6 +186,10 @@ jobs:
       - uses: actions/download-artifact@master
         with:
           name: pdf
+
+      - uses: actions/download-artifact@master
+        with:
+          name: word
 
       - name: Deploy resume to Gemini server
         id: deploy
