@@ -43,7 +43,6 @@ def run():
   gen_txt()
 
 def md_strip(string):
-    print("stripping: %s" % string)
     _s = re.sub(r"\[([\w\s]+)\]\([\w\d\/\-\.:]+\)", "\\1", string)
     _s = re.sub(r"(\s+)__?(.*)__?(\s+)?", "\\1\\2\\3", _s)
     return _s
