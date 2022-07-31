@@ -89,10 +89,6 @@ experience:
       - Authored and maintained hundreds of pages of robust documentation for
         "all things DevOps" and project-specific documentation, utilizing
         Markdown and adopting a "docs-as-code" workflow.
-      - Accelerated and helped plan long-term IT strategy and the details of
-        execution.
-      - Reduced costs through architecture improvements while reducing the
-        server count by more than 45%.
       - Instructed colleagues on a variety of subjects, including Docker, AWS,
         and Terraform.
       - Implemented and maintained configuration management (Puppet, Ansible)
@@ -100,7 +96,6 @@ experience:
       - Implemented and maintained Infrastructure as Code across dozens of
         applications and services.
       - Developed new HTTP architecture, utilizing CloudFront, Nginx, and S3.
-      - Contracted with Comso, Inc. _April 2015 - September 2015_.
     tech:
       - Linux
       - GitLab
@@ -161,8 +156,6 @@ experience:
     details:
       - Deployed and administered school district Linux and FreeBSD servers and
         services for thousands of users.
-      - Advised and collaborated with district IT staff and administration on
-        technology adoption and integration.
       - Improved integration across network services for over 2,000 students,
         faculty, and staff.
       - Administered network file systems, HTTP, DNS/DHCP, Firewalls,
@@ -171,8 +164,7 @@ experience:
       - Improved workstation provisioning through automation, deploying several
         hundred new workstations a year.
       - Introduced configuration management (Puppet) to manage servers.
-      - Developed code and packages to automate several processes, including the
-        bulk provisioning of users (staff, students)
+      - Redesigned district website and implemented WordPress to manage it.
     tech:
       - FreeBSD
       - Linux
@@ -182,6 +174,9 @@ experience:
       - Nginx
       - BIND
       - Shell
+      - HTML
+      - CSS
+      - PHP
       - Ruby
       - KVM
       - pf
@@ -191,38 +186,28 @@ experience:
       - Icinga
       - NFS
       - Postfix
-  - title: Web Developer
-    org: Douglas School District
-    start: September 2011
-    end: September 2013
-    location: Box Elder, SD
-    details:
-      - Implemented WordPress as a content management system for the district's
-        websites.
-      - Increased web performance through improvements to code and server
-        configuration.
-      - Developed HTML, CSS, and PHP
+      - WordPress
   - title: Tier II Technical Support
     org: Apple, Inc.
     start: October 2008
     end: January 2010
     location: Remote
-    details:
-      - Provided end-user support to customers and business using Apple
-        products; especially Apple’s computers and macOS.
-      - Consistently received high marks for customer satisfaction and
-        issue resolution.
+#    details:
+#      - Provided end-user support to customers and business using Apple
+#        products; especially Apple’s computers and macOS.
+#      - Consistently received high marks for customer satisfaction and
+#        issue resolution.
   - title: Signal Support Systems Specialist
     org: US Army
     start: August 2006
     end: October 2008
     location: Fort Carson, CO
-    details:
-      - Supported Army battalion network and communications equipment, including
-        workstations, tactical radios, GPS, crypto, network services, and
-        multimedia systems.
-      - Among first members of battalion staff at Fort Carson and integral part
-        of initial stand up of IT operations and communications.
+#    details:
+#      - Supported Army battalion network and communications equipment, including
+#        workstations, tactical radios, GPS, crypto, network services, and
+#        multimedia systems.
+#      - Among first members of battalion staff at Fort Carson and integral part
+#        of initial stand up of IT operations and communications.
 
 # -----------------------------------------------------------------------------
 # Skills

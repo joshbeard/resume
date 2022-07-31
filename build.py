@@ -56,15 +56,13 @@ def resume():
     with open(resume_yaml, 'r') as file:
         resume_content = yaml.safe_load(file)
 
-    parsed_jobs = []
-    for job in resume_content['experience']:
-        job['details_html'] = []
-        job['details_plain'] = []
-        for detail in job['details']:
-            job['details_html'].append(markdown.markdown(detail))
-            job['details_plain'].append(md_strip(detail))
-        parsed_jobs.append(job)
-    resume_content['experience'] = parsed_jobs
+        for job in resume_content['experience']:
+            if 'details' in job:
+                job['details_html'] = []
+                job['details_plain'] = []
+                for detail in job['details']:
+                    job['details_html'].append(markdown.markdown(detail))
+                    job['details_plain'].append(md_strip(detail))
 
     return resume_content
 
