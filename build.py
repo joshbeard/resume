@@ -4,6 +4,8 @@ from jinja2 import Template
 import yaml
 import markdown
 import datetime
+import re
+
 
 # -----------------------------------------------------------------------------
 # Config
@@ -23,6 +25,10 @@ md_out = "README.md"
 # Gemini
 gmi_template = 'src/resume.gmi'
 gmi_out = "resume.gmi"
+
+# Plain Text
+txt_template = 'src/resume.txt'
+txt_out = "resume.txt"
 # -----------------------------------------------------------------------------
 
 # Current date
@@ -34,6 +40,13 @@ def run():
   gen_html()
   gen_markdown()
   gen_gemini()
+  gen_txt()
+
+def md_strip(string):
+    print("stripping: %s" % string)
+    _s = re.sub(r"\[([\w\s]+)\]\([\w\d\/\-\.:]+\)", "\\1", string)
+    _s = re.sub(r"(\s+)__?(.*)__?(\s+)?", "\\1\\2\\3", _s)
+    return _s
 
 def resume():
     global resume_yaml
@@ -44,8 +57,10 @@ def resume():
     parsed_jobs = []
     for job in resume_content['experience']:
         job['details_html'] = []
+        job['details_plain'] = []
         for detail in job['details']:
             job['details_html'].append(markdown.markdown(detail))
+            job['details_plain'].append(md_strip(detail))
         parsed_jobs.append(job)
     resume_content['experience'] = parsed_jobs
 
@@ -58,54 +73,56 @@ def css():
     _file.close()
     return css_content
 
+def build_template(**kwargs):
+    global year
+    _autoescape = kwargs['autoescape'] if 'autoescape' in kwargs else False
+    _template_file = open(kwargs['source'])
+    _template = _template_file.read()
+    _template_file.close()
+
+    _tm = Template(_template, autoescape=False)
+    return _tm.render(resume=resume(), css=css(), year=year)
+
+def write_out(**kwargs):
+    with open(kwargs['target'], 'w') as _file:
+        _file.write(kwargs['content'])
+    _file.close()
+    print(f"-> Wrote {kwargs['target']}")
+
 ## HTML Template
 def gen_html():
     global html_template
     global html_out, year
 
-    html_template_file = open(html_template)
-    html_template = html_template_file.read()
-    html_template_file.close()
+    html = build_template(source=html_template)
+    write_out(target=html_out, content=html)
 
-    html_tm = Template(html_template, autoescape=False)
-    html = html_tm.render(resume=resume(), css=css(), year=year)
-
-    with open(html_out, 'w') as html_file:
-        html_file.write(html)
-    html_file.close()
-    print(f"-> Wrote {html_out}")
 
 ## Markdown Template
 def gen_markdown():
     global md_template
     global md_out
-    md_template_file = open(md_template)
-    md_template = md_template_file.read()
-    md_template_file.close()
 
-    md_tm = Template(md_template, autoescape=True)
-    md = md_tm.render(resume=resume(), year=year)
-
-    with open(md_out, 'w') as md_file:
-        md_file.write(md)
-    md_file.close()
-    print(f"-> Wrote {md_out}")
+    md = build_template(source=md_template, autoescape=True)
+    write_out(target=md_out, content=md)
 
 ## Gemini Template
 def gen_gemini():
     global gmi_template
     global gmi_out
-    gmi_template_file = open(gmi_template)
-    gmi_template = gmi_template_file.read()
-    gmi_template_file.close()
 
-    gmi_tm = Template(gmi_template, autoescape=True)
-    md = gmi_tm.render(resume=resume(), year=year)
+    gmi = build_template(source=gmi_template)
+    write_out(target=gmi_out, content=gmi)
 
-    with open(gmi_out, 'w') as gmi_file:
-        gmi_file.write(md)
-    gmi_file.close()
-    print(f"-> Wrote {gmi_out}")
+## Text Template
+def gen_txt():
+    global txt_template
+    global txt_out
+
+    txt = build_template(source=txt_template)
+    #wrapper = textwrap.TextWrapper(width=67, replace_whitespace=False)
+    #txt = wrapper.fill(text=txt)
+    write_out(target=txt_out, content=txt)
 
 ## Word
 
