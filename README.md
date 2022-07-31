@@ -46,13 +46,10 @@ September 2015 - May 2022 - Remote
 * Migrated over 50 products from on-premise and on-VM deployments to AWS deployments, using Docker and native AWS services.
 * Composed CI/CD pipelines for hundreds of projects, improving consistency through automation, empowering product teams, and reducing friction for releasing software.
 * Authored and maintained hundreds of pages of robust documentation for "all things DevOps" and project-specific documentation, utilizing Markdown and adopting a "docs-as-code" workflow.
-* Accelerated and helped plan long-term IT strategy and the details of execution.
-* Reduced costs through architecture improvements while reducing the server count by more than 45%.
 * Instructed colleagues on a variety of subjects, including Docker, AWS, and Terraform.
 * Implemented and maintained configuration management (Puppet, Ansible) across hundreds of servers.
 * Implemented and maintained Infrastructure as Code across dozens of applications and services.
 * Developed new HTTP architecture, utilizing CloudFront, Nginx, and S3.
-* Contracted with Comso, Inc. _April 2015 - September 2015_.
 
     _Key technology and skills: Linux, GitLab, Docker, AWS (wide range of services), Terraform, Ansible, Puppet, Python, Packer, VMware vSphere, Jira, Artifactory, Bamboo, BitBucket, Tomcat, Ruby, Nginx, Traefik, Apache_
 
@@ -74,36 +71,23 @@ September 2013 - April 2015 - Remote
 January 2010 - September 2013 - Box Elder, SD
 
 * Deployed and administered school district Linux and FreeBSD servers and services for thousands of users.
-* Advised and collaborated with district IT staff and administration on technology adoption and integration.
 * Improved integration across network services for over 2,000 students, faculty, and staff.
 * Administered network file systems, HTTP, DNS/DHCP, Firewalls, Monitoring, Logging, Mail (SMTP, POP3, IMAP, filtering, webmail), and other services for all district users.
 * Improved workstation provisioning through automation, deploying several hundred new workstations a year.
 * Introduced configuration management (Puppet) to manage servers.
-* Developed code and packages to automate several processes, including the bulk provisioning of users (staff, students)
+* Redesigned district website and implemented WordPress to manage it.
 
-    _Key technology and skills: FreeBSD, Linux, MacOS, Puppet, Apache, Nginx, BIND, Shell, Ruby, KVM, pf, Sophos, Graylog, Nginx, Icinga, NFS, Postfix_
-
-### Web Developer with Douglas School District
-
-September 2011 - September 2013 - Box Elder, SD
-
-* Implemented WordPress as a content management system for the district's websites.
-* Increased web performance through improvements to code and server configuration.
-* Developed HTML, CSS, and PHP
+    _Key technology and skills: FreeBSD, Linux, MacOS, Puppet, Apache, Nginx, BIND, Shell, HTML, CSS, PHP, Ruby, KVM, pf, Sophos, Graylog, Nginx, Icinga, NFS, Postfix, WordPress_
 
 ### Tier II Technical Support with Apple, Inc.
 
 October 2008 - January 2010 - Remote
 
-* Provided end-user support to customers and business using Apple products; especially Apple’s computers and macOS.
-* Consistently received high marks for customer satisfaction and issue resolution.
 
 ### Signal Support Systems Specialist with US Army
 
 August 2006 - October 2008 - Fort Carson, CO
 
-* Supported Army battalion network and communications equipment, including workstations, tactical radios, GPS, crypto, network services, and multimedia systems.
-* Among first members of battalion staff at Fort Carson and integral part of initial stand up of IT operations and communications.
 
 ## Skills
 
