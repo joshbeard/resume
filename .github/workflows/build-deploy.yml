@@ -47,7 +47,7 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - name: Generate HTML and Markdown
+      - name: Generate resume documents from templates (html, md, gemini, txt)
         run: |
           pip install -r requirements.txt
           python build.py
@@ -101,6 +101,10 @@ jobs:
 
       - name: Minify Action
         uses: anthonyftwang/minify-action@v1.0.1
+
+      - name: Copy plain text
+        run: |
+          cp resume.txt dist
 
       - uses: actions/upload-artifact@master
         name: Upload Resume Artifacts
