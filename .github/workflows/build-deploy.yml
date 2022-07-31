@@ -97,7 +97,7 @@ jobs:
         with:
           name: pdf
           path: |
-            Josh-Beard-Resume.pdf
+            dist/Josh-Beard-Resume.pdf
 
       - name: Minify Action
         uses: anthonyftwang/minify-action@v1.0.1
