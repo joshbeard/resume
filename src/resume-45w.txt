@@ -20,7 +20,7 @@
 
 ## Summary
 
-    {{ resume['summary'] | wordwrap(40) | indent(4) }}
+    {{ resume['summary'] | wordwrap(36) | indent(4) }}
 
 ## Experience
 {% for job in resume['experience'] %}
@@ -30,14 +30,14 @@
 
     {{ job['start'] }} - {{ job['end'] }}
 {% for item in job['details_plain'] %}
-  * {{ item | wordwrap(35) | indent(4) }}
+  * {{ item | wordwrap(36) | indent(4) }}
 {% endfor %}
 {%- if 'tech' in job %}
     Key technology and skills:
-    {{ job['tech'] | join(", ") | wordwrap(35)  | indent(4) }}
+    {{ job['tech'] | join(", ") | wordwrap(36)  | indent(4) }}
 {%- endif %}
 {% endfor %}
 ## Skills
 
-    {{ resume['skills']['products'] | join(", ") | wordwrap(35) | indent(4) }}
+    {{ resume['skills']['products'] | join(", ") | wordwrap(36) | indent(4) }}
 
