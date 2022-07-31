@@ -7,3 +7,7 @@ _site/
 *.docx
 *.log
 env
+/resume.txt
+/resume.gmi
+/resume-45w.txt
+/.dccache
