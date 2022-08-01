@@ -367,8 +367,8 @@ h3:first-child {
   }
 
   #heading {
-    padding: 0;
-    border-bottom: 1px solid #ccc;
+    padding: 8px;
+    border: 1px solid #ccc;
     background: #f2f2f2;
     display: flex;
     text-align: left;
