@@ -39,12 +39,6 @@ currentDateTime = datetime.datetime.now()
 date = currentDateTime.date()
 year = date.strftime("%Y")
 
-def run():
-  gen_html()
-  gen_markdown()
-  gen_gemini()
-  gen_txt()
-
 def md_strip(string):
     _s = re.sub(r"\[([\w\s]+)\]\([\w\d\/\-\.:]+\)", "\\1", string)
     _s = re.sub(r"(\s+)__?(.*)__?(\s+)?", "\\1\\2\\3", _s)
@@ -125,6 +119,10 @@ def gen_txt():
     narrow_txt = build_template(source=narrow_txt_template)
     write_out(target=narrow_txt_out, content=narrow_txt)
 
-## Word
+def run():
+  gen_html()
+  gen_markdown()
+  gen_gemini()
+  gen_txt()
 
 run()

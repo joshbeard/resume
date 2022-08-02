@@ -48,7 +48,6 @@ p {
 
 #heading {
   padding: 25px 35px 12px;
-  border-bottom: 1px dashed #408663;
   background: #373A44;
   display: flex;
   flex-direction: row;
@@ -113,10 +112,15 @@ h1, h2, h3 {
 
 #other_formats {
   background: #16171B;
+  background: #31333C;
   color: #fff;
   padding: 4px 12px;
   text-align: right;
   font-variant: small-caps;
+}
+
+#contact_details ul li {
+  line-height: 1.5;
 }
 
 #contact_details ul li,
