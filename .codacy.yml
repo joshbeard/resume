@@ -1,0 +1,3 @@
+engines:
+  stylelint:
+    color-hex-case: upper
