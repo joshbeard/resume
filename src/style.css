@@ -1,9 +1,9 @@
 * {
+  margin: 0;
+  border: 0;
+  padding: 0;
   font-size: 100%;
   font-family: Helvetica, Verdana, sans-serif;
-  border: 0;
-  margin: 0;
-  padding: 0;
   vertical-align: baseline;
 }
 
@@ -47,10 +47,10 @@ p {
 }
 
 #heading {
-  padding: 25px 35px 12px;
-  background: #373A44;
   display: flex;
   flex-direction: row;
+  padding: 25px 35px 12px;
+  background: #373A44;
 }
 
 #name {
@@ -58,13 +58,13 @@ p {
 }
 
 #heading_extra {
-  overflow: hidden;
   flex: 0 1 auto;
+  overflow: hidden;
 }
 
 h1 {
-  font-size: 2.5em;
   margin-bottom: -6px;
+  font-size: 2.5em;
   line-height: 1.4em;
   color: #FFFFFF;
   content: "Josh Beard";
@@ -72,8 +72,8 @@ h1 {
 
 #name h2 {
   margin-left: 2px;
+  color: #EDEDED;
   font-size: 1em;
-  color: #ededed;
 }
 
 h1, h2, h3 {
@@ -100,10 +100,10 @@ h1, h2, h3 {
 
 #contact_details ul,
 #other_formats ul {
+  margin-top: 2px;
   font-size: 0.9em;
   font-family: Helvetica, Verdana, sans-serif;
   list-style-type: none;
-  margin-top: 2px;
 }
 
 
@@ -112,11 +112,11 @@ h1, h2, h3 {
 }
 
 #other_formats {
-  background: #31333C;
   padding: 4px 12px;
+  background: #31333C;
   color: #FFFFFF;
-  text-align: right;
   font-variant: small-caps;
+  text-align: right;
 }
 
 #contact_details ul li {
@@ -125,7 +125,7 @@ h1, h2, h3 {
 
 #contact_details ul li,
 #other_formats ul li {
-  color: #fff;
+  color: #FFFFFF;
 }
 
 #contact_details ul li a,
@@ -161,8 +161,8 @@ article.job:last-child {
 
 h3 + ul,
 article.job ul {
-  list-style: square inside;
   margin: 20px 0 0 10px;
+  list-style: square inside;
 }
 
 h3 + ul li,
@@ -174,14 +174,9 @@ article.job ul li p {
   display: inline;
 }
 
-.jobNote {
-  color: #777777;
-  margin-bottom: 4px;
-}
-
 section {
   padding: 20px 0 0;
-  border-top: 1px solid #dedede;
+  border-top: 1px solid #DEDEDE;
   display: flex;
 }
 
@@ -194,7 +189,6 @@ section:last-child {
 }
 
 section h2 {
-  /* width: 18%; */
   width: 130px;
   margin-right: 10px;
   word-wrap: break-word;
@@ -209,15 +203,15 @@ section h2 {
 
 h2 {
   margin-bottom: 6px;
-  font-size: 1.2em;
   color: #737373;
+  font-size: 1.2em;
 }
 
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-size: 18px;
   color: #34495D;
+  font-size: 18px;
 }
 
 h3:first-child {
@@ -276,8 +270,8 @@ h3:first-child {
 @media all and (max-width: 601px) {
   #cv {
     width: 95%;
-    margin: 10px auto;
     min-width: 280px;
+    margin: 10px auto;
   }
 
   #heading {
@@ -313,10 +307,10 @@ h3:first-child {
   #footer #foot_source,
   #footer #foot_to_top {
     display: block;
+    width: 100%;
     text-align: center;
     margin: 0;
     padding: 0;
-    width: 100%;
     line-height: 3;
   }
 
@@ -336,8 +330,8 @@ h3:first-child {
   }
 
   #name h1 {
-    line-height: .8em;
     margin-bottom: 4px;
+    line-height: .8em;
   }
 
   #name h2 {
@@ -364,15 +358,15 @@ h3:first-child {
   }
   #cv {
     width: 100%;
-    border: none;
     background: #FFFFFF;
+    border: none;
     box-shadow: none;
   }
 
   #heading {
     padding: 8px;
-    border: 1px solid #ccc;
-    background: #f2f2f2;
+    border: 1px solid #CCCCCC;
+    background: #F2F2F2;
     display: flex;
     text-align: left;
   }
@@ -391,8 +385,8 @@ h3:first-child {
   }
 
   #resume_content {
-    border-top: none;
     padding: 0;
+    border-top: none;
   }
   #resume_content a:link {
     color: #5A595A;
@@ -408,11 +402,11 @@ h3:first-child {
     color: #34495D;
   }
   #name h1 {
-    color: #444;
+    color: #444444;
   }
 
   #name h2 {
-    color: #555;
+    color: #555555;
   }
 
   #footer, #foot_copyright {
@@ -420,8 +414,8 @@ h3:first-child {
   }
 
   section h2 {
-    color: #555;
     font-size: 1.5em;
+    color: #555555;
   }
 
   .section_content {
@@ -431,7 +425,7 @@ h3:first-child {
   #contact_details ul li,
   #contact_details a,
   #contact_details ul li a, a[href^=tel] {
-    color: #555;
+    color: #555555;
   }
 
   /*
