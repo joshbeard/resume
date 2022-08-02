@@ -32,8 +32,8 @@ img.icon {
 }
 
 p {
-  font-size: 1em;
   color: #5A595A;
+  font-size: 1em;
   line-height: 1.4em;
 }
 
@@ -107,9 +107,9 @@ h1 {
 
 #other_formats {
   padding: 4px 12px;
+  font-variant: small-caps;
   color: #FFFFFF;
   background: #31333C;
-  font-variant: small-caps;
   text-align: right;
 }
 
@@ -302,8 +302,8 @@ h3:first-child {
     display: block;
     width: 100%;
     margin: 0;
-    text-align: center;
     padding: 0;
+    text-align: center;
     line-height: 3;
   }
 
@@ -359,8 +359,8 @@ h3:first-child {
   #heading {
     display: flex;
     padding: 8px;
-    background: #F2F2F2;
     text-align: left;
+    background: #F2F2F2;
     border: 1px solid #CCCCCC;
   }
 
