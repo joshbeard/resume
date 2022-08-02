@@ -1,10 +1,10 @@
 * {
-  border: 0;
   font-size: 100%;
+  font-family: Helvetica, Verdana, sans-serif;
+  border: 0;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-  font-family: Helvetica, Verdana, sans-serif;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
@@ -13,8 +13,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 
 html, body {
   background: #408663;
-  font-family: Helvetica, Verdana, sans-serif;
   color: #5A595A;
+  font-family: Helvetica, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -41,8 +41,8 @@ p {
 #cv {
   width: 90%;
   max-width: 1024px;
-  background: #F2F2F2;
   margin: 20px auto;
+  background: #F2F2F2;
   box-shadow: 0 0 25px #333333;
 }
 
@@ -66,13 +66,13 @@ h1 {
   font-size: 2.5em;
   margin-bottom: -6px;
   line-height: 1.4em;
-  color: #fff;
+  color: #FFFFFF;
   content: "Josh Beard";
 }
 
 #name h2 {
-  font-size: 1em;
   margin-left: 2px;
+  font-size: 1em;
   color: #ededed;
 }
 
@@ -100,21 +100,21 @@ h1, h2, h3 {
 
 #contact_details ul,
 #other_formats ul {
-  list-style-type: none;
   font-size: 0.9em;
-  margin-top: 2px;
   font-family: Helvetica, Verdana, sans-serif;
+  list-style-type: none;
+  margin-top: 2px;
 }
+
 
 #other_formats ul {
   font-size: 0.8em;
 }
 
 #other_formats {
-  background: #16171B;
   background: #31333C;
-  color: #fff;
   padding: 4px 12px;
+  color: #FFFFFF;
   text-align: right;
   font-variant: small-caps;
 }
@@ -152,7 +152,7 @@ a[href^=tel] {
 article.job {
   margin-bottom: 14px;
   padding-bottom: 14px;
-  border-bottom: 1px dashed #dedede;
+  border-bottom: 1px dashed #DEDEDE;
 }
 
 article.job:last-child {
@@ -175,13 +175,13 @@ article.job ul li p {
 }
 
 .jobNote {
-  color: #777;
+  color: #777777;
   margin-bottom: 4px;
 }
 
 section {
-  border-top: 1px solid #dedede;
   padding: 20px 0 0;
+  border-top: 1px solid #dedede;
   display: flex;
 }
 
@@ -202,23 +202,22 @@ section h2 {
 }
 
 .section_content {
-  /* width: 82%; */
   flex: 1;
-  line-height: 140%;
   margin-bottom: 20px;
+  line-height: 140%;
 }
 
 h2 {
+  margin-bottom: 6px;
   font-size: 1.2em;
   color: #737373;
-  margin-bottom: 6px;
 }
 
 h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 18px;
   color: #34495D;
-  margin-bottom: 10px;
-  margin-top: 20px;
 }
 
 h3:first-child {
@@ -350,7 +349,7 @@ h3:first-child {
   }
 
   #contact_details ul li a {
-    color: #70ad8f;
+    color: #70AD8F;
   }
 
 }
@@ -360,14 +359,14 @@ h3:first-child {
     background: none;
   }
   a {
-    color: #333;
+    color: #333333;
     text-decoration: none;
   }
   #cv {
     width: 100%;
     border: none;
+    background: #FFFFFF;
     box-shadow: none;
-    background: #fff;
   }
 
   #heading {
