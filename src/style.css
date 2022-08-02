@@ -3,8 +3,8 @@
   padding: 0;
   font-size: 100%;
   font-family: Helvetica, Verdana, sans-serif;
-  border: 0;
   vertical-align: baseline;
+  border: 0;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
@@ -14,8 +14,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 html, body {
   margin: 0;
   padding: 0;
-  background: #408663;
   color: #5A595A;
+  background: #408663;
 }
 
 header {
@@ -33,8 +33,8 @@ img.icon {
 
 p {
   font-size: 1em;
-  line-height: 1.4em;
   color: #5A595A;
+  line-height: 1.4em;
 }
 
 #cv {
@@ -63,8 +63,8 @@ p {
 
 h1 {
   margin-bottom: -6px;
-  font-size: 2.5em;
   color: #FFFFFF;
+  font-size: 2.5em;
   line-height: 1.4em;
   content: "Josh Beard";
 }
@@ -107,8 +107,8 @@ h1 {
 
 #other_formats {
   padding: 4px 12px;
-  background: #31333C;
   color: #FFFFFF;
+  background: #31333C;
   font-variant: small-caps;
   text-align: right;
 }
@@ -233,8 +233,8 @@ h3:first-child {
 }
 
 #footer, #foot_copyright {
-  background: #26272A;
   line-height: 1.5;
+  background: #26272A;
 }
 
 #footer #foot_copyright,
@@ -301,8 +301,8 @@ h3:first-child {
   #footer #foot_to_top {
     display: block;
     width: 100%;
-    text-align: center;
     margin: 0;
+    text-align: center;
     padding: 0;
     line-height: 3;
   }
@@ -360,8 +360,8 @@ h3:first-child {
     display: flex;
     padding: 8px;
     background: #F2F2F2;
-    border: 1px solid #CCCCCC;
     text-align: left;
+    border: 1px solid #CCCCCC;
   }
 
   #heading_right,
@@ -407,8 +407,8 @@ h3:first-child {
   }
 
   section h2 {
-    font-size: 1.5em;
     color: #555555;
+    font-size: 1.5em;
   }
 
   .section_content {
