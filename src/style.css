@@ -107,10 +107,10 @@ h1 {
 
 #other_formats {
   padding: 4px 12px;
-  font-variant: small-caps;
+  text-align: right;
   color: #FFFFFF;
   background: #31333C;
-  text-align: right;
+  font-variant: small-caps;
 }
 
 #contact_details ul li {
@@ -303,8 +303,8 @@ h3:first-child {
     width: 100%;
     margin: 0;
     padding: 0;
-    text-align: center;
     line-height: 3;
+    text-align: center;
   }
 
 }
