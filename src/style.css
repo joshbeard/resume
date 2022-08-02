@@ -107,10 +107,10 @@ h1 {
 
 #other_formats {
   padding: 4px 12px;
-  text-align: right;
   color: #FFFFFF;
-  background: #31333C;
+  text-align: right;
   font-variant: small-caps;
+  background: #31333C;
 }
 
 #contact_details ul li {
