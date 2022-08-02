@@ -6,7 +6,7 @@ html_md() {
 
 docx() {
   echo "-> Creating DOCX"
-  docker run --rm -v ${PWD}:/work -w /work \
+  docker run --rm -v "${PWD}":/work -w /work \
     -it pandoc/latex --from markdown --to docx README.md \
     -f gfm \
     -V linkcolor:blue \
@@ -17,7 +17,7 @@ docx() {
 
 pdf() {
   echo "-> Creating PDF"
-  docker run --rm -v ${PWD}:/work -w /work \
+  docker run --rm -v "${PWD}":/work -w /work \
     --entrypoint=/usr/bin/google-chrome -it \
     browserless/chrome:latest -headless -disable-gpu \
     --no-sandbox --print-to-pdf=dist/resume.pdf dist/index.html
