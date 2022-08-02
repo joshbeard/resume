@@ -1,7 +1,7 @@
 * {
   margin: 0;
-  border: 0;
   padding: 0;
+  border: 0;
   font-size: 100%;
   font-family: Helvetica, Verdana, sans-serif;
   vertical-align: baseline;
@@ -12,11 +12,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 }
 
 html, body {
+  margin: 0;
+  padding: 0;
   background: #408663;
   color: #5A595A;
   font-family: Helvetica, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 header {
@@ -65,8 +65,8 @@ p {
 h1 {
   margin-bottom: -6px;
   font-size: 2.5em;
-  line-height: 1.4em;
   color: #FFFFFF;
+  line-height: 1.4em;
   content: "Josh Beard";
 }
 
@@ -131,7 +131,7 @@ h1, h2, h3 {
 #contact_details ul li a,
 #other_formats ul li a,
 a[href^=tel] {
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -175,9 +175,9 @@ article.job ul li p {
 }
 
 section {
+  display: flex;
   padding: 20px 0 0;
   border-top: 1px solid #DEDEDE;
-  display: flex;
 }
 
 section:first-child {
@@ -189,10 +189,10 @@ section:last-child {
 }
 
 section h2 {
+  flex: 0 1 auto;
   width: 130px;
   margin-right: 10px;
   word-wrap: break-word;
-  flex: 0 1 auto;
 }
 
 .section_content {
@@ -364,10 +364,10 @@ h3:first-child {
   }
 
   #heading {
-    padding: 8px;
-    border: 1px solid #CCCCCC;
-    background: #F2F2F2;
     display: flex;
+    padding: 8px;
+    background: #F2F2F2;
+    border: 1px solid #CCCCCC;
     text-align: left;
   }
 
