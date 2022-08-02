@@ -29,7 +29,7 @@ June 2022 - Present - Remote
 * Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources) at the [US Geological Survey](https://www.usgs.gov/).
 * DevSecOps on a small team working on a project focused on modernizing and advancing a highly-utilized set of services for water data collected and provided by the USGS.
 * Collaboratively designed, implemented, and supported infrastructure and CI/CD pipelines for a Python codebase of Lambda functions, modularized static websites, and supporting resources.
-* Cloud-native and 'serverless' application development and infrastructure.
+* Cloud-native and &#39;serverless&#39; application development and infrastructure.
 * Integrated and automated code analysis into developer workflow and pipeline.
 
     _Key technology and skills: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more), GitLab, Python, Jira_
@@ -39,13 +39,13 @@ June 2022 - Present - Remote
 September 2015 - May 2022 - Remote
 
 * Contracted to [Science Analytics and Synthesis](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/) at the [US Geological Survey](https://www.usgs.gov/).
-* Lead and contributed to many of the group's most challenging technical projects.
+* Lead and contributed to many of the group&#39;s most challenging technical projects.
 * Collaborated with over a dozen teams to deliver applications to the USGS science community.
 * Worked with hundreds of codebases spanning several languages and product teams.
 * Responsible for the architecture and implementation of the IT platform for over 50 USGS products.
 * Migrated over 50 products from on-premise and on-VM deployments to AWS deployments, using Docker and native AWS services.
 * Composed CI/CD pipelines for hundreds of projects, improving consistency through automation, empowering product teams, and reducing friction for releasing software.
-* Authored and maintained hundreds of pages of robust documentation for "all things DevOps" and project-specific documentation, utilizing Markdown and adopting a "docs-as-code" workflow.
+* Authored and maintained hundreds of pages of robust documentation for &#34;all things DevOps&#34; and project-specific documentation, utilizing Markdown and adopting a &#34;docs-as-code&#34; workflow.
 * Instructed colleagues on a variety of subjects, including Docker, AWS, and Terraform.
 * Implemented and maintained configuration management (Puppet, Ansible) across hundreds of servers.
 * Implemented and maintained Infrastructure as Code across dozens of applications and services.
@@ -57,9 +57,9 @@ September 2015 - May 2022 - Remote
 
 September 2013 - April 2015 - Remote
 
-* Consulted on Puppet products and DevOps practices for a wide range of customers, including some of Puppet's largest customers and most sophisticated engagements.
+* Consulted on Puppet products and DevOps practices for a wide range of customers, including some of Puppet&#39;s largest customers and most sophisticated engagements.
 * Instructed dozens of classes on Puppet products to organizations and general public.
-* Contributed Puppet modules and other tools for community use and used within Puppet's commercial products.
+* Contributed Puppet modules and other tools for community use and used within Puppet&#39;s commercial products.
 * Developed Puppet, Ruby, and shell code for extending products and automating processes.
 * Consulted on pre-sales, scoping of work, and post-sales support.
 * Earned high marks for customer satisfaction, team work, and professionalism.
