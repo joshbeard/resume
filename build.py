@@ -74,7 +74,7 @@ def build_template(**kwargs):
     _template = _template_file.read()
     _template_file.close()
 
-    _tm = Template(_template, autoescape=False)
+    _tm = Template(_template, autoescape=_autoescape)
     return _tm.render(resume=resume(), css=css(), year=year)
 
 def write_out(**kwargs):
