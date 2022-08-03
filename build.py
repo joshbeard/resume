@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 from jinja2 import Template
-#from weasyprint import HTML, CSS
 import yaml
 import markdown
 import datetime
