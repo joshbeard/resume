@@ -3,6 +3,7 @@ from jinja2 import Template
 import yaml
 import markdown
 import datetime
+import os
 import re
 
 
@@ -32,6 +33,8 @@ txt_out = "resume.txt"
 narrow_txt_template = 'src/resume-45w.txt'
 narrow_txt_out = "resume-45w.txt"
 # -----------------------------------------------------------------------------
+
+base_dir = os.path.dirname(os.path.realpath(__file__))
 
 # Current date
 currentDateTime = datetime.datetime.now()
@@ -83,7 +86,8 @@ def build_template(**kwargs):
 
 def write_out(**kwargs):
     """Write a file"""
-    with open(kwargs['target'], 'w') as _file:
+    file_out = os.path.join(base_dir, kwargs['target'])
+    with open(file_out, 'w') as _file:
         _file.write(kwargs['content'])
     _file.close()
     print(f"-> Wrote {kwargs['target']}")
