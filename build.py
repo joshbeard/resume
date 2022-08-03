@@ -44,7 +44,6 @@ def md_strip(string):
     return _s
 
 def resume():
-    global resume_yaml
     ## Read resume YAML
     with open(resume_yaml, 'r') as file:
         resume_content = yaml.safe_load(file)
@@ -60,14 +59,12 @@ def resume():
     return resume_content
 
 def css():
-    global css_file
     _file = open(css_file, 'r')
     css_content = _file.read()
     _file.close()
     return css_content
 
 def build_template(**kwargs):
-    global year
     _autoescape = kwargs['autoescape'] if 'autoescape' in kwargs else False
     _template_file = open(kwargs['source'])
     _template = _template_file.read()
@@ -84,34 +81,22 @@ def write_out(**kwargs):
 
 ## HTML Template
 def gen_html():
-    global html_template
-    global html_out, year
-
     html = build_template(source=html_template)
     write_out(target=html_out, content=html)
 
 
 ## Markdown Template
 def gen_markdown():
-    global md_template
-    global md_out
-
     md = build_template(source=md_template, autoescape=True)
     write_out(target=md_out, content=md)
 
 ## Gemini Template
 def gen_gemini():
-    global gmi_template
-    global gmi_out
-
     gmi = build_template(source=gmi_template)
     write_out(target=gmi_out, content=gmi)
 
 ## Text Template
 def gen_txt():
-    global txt_template
-    global txt_out
-
     txt = build_template(source=txt_template)
     write_out(target=txt_out, content=txt)
 
