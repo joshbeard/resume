@@ -59,15 +59,15 @@ def resume():
     return resume_content
 
 def css():
-    _file = open(css_file, 'r')
-    css_content = _file.read()
+    with open(css_file, 'r') as _file:
+        css_content = _file.read()
     _file.close()
     return css_content
 
 def build_template(**kwargs):
     _autoescape = kwargs['autoescape'] if 'autoescape' in kwargs else False
-    _template_file = open(kwargs['source'])
-    _template = _template_file.read()
+    with open(kwargs['source'], 'r') as _template_file:
+        _template = _template_file.read()
     _template_file.close()
 
     _tm = Template(_template, autoescape=_autoescape)
