@@ -38,14 +38,16 @@ currentDateTime = datetime.datetime.now()
 date = currentDateTime.date()
 year = date.strftime("%Y")
 
+
 def md_strip(string):
+    """Strip Markdown URLs and emphasis from a string"""
     _s = re.sub(r"\[([\w\s]+)\]\([\w\d\/\-\.:]+\)", "\\1", string)
     _s = re.sub(r"(\s+)__?(.*)__?(\s+)?", "\\1\\2\\3", _s)
     return _s
 
 
 def resume():
-    # Read resume YAML
+    """Read resume YAML"""
     with open(resume_yaml, 'r') as file:
         resume_content = yaml.safe_load(file)
 
@@ -61,6 +63,7 @@ def resume():
 
 
 def css():
+    """Read CSS template"""
     with open(css_file, 'r') as _file:
         css_content = _file.read()
     _file.close()
@@ -68,6 +71,7 @@ def css():
 
 
 def build_template(**kwargs):
+    """Compile Jinja2 template and return it as a string"""
     _autoescape = kwargs['autoescape'] if 'autoescape' in kwargs else False
     with open(kwargs['source'], 'r') as _template_file:
         _template = _template_file.read()
@@ -78,32 +82,33 @@ def build_template(**kwargs):
 
 
 def write_out(**kwargs):
+    """Write a file"""
     with open(kwargs['target'], 'w') as _file:
         _file.write(kwargs['content'])
     _file.close()
     print(f"-> Wrote {kwargs['target']}")
 
 
-# HTML Template
 def gen_html():
+    """Generate HTML"""
     html = build_template(source=html_template)
     write_out(target=html_out, content=html)
 
 
-# Markdown Template
 def gen_markdown():
+    """Generate Markdown"""
     md = build_template(source=md_template, autoescape=True)
     write_out(target=md_out, content=md)
 
 
-# Gemini Template
 def gen_gemini():
+    """Generate Gemini"""
     gmi = build_template(source=gmi_template)
     write_out(target=gmi_out, content=gmi)
 
 
-# Text Template
 def gen_txt():
+    """Generate plain text"""
     txt = build_template(source=txt_template)
     write_out(target=txt_out, content=txt)
 
@@ -112,6 +117,7 @@ def gen_txt():
 
 
 def run():
+    """Build everything by default"""
     gen_html()
     gen_markdown()
     gen_gemini()
