@@ -214,9 +214,11 @@ experience:
 # -----------------------------------------------------------------------------
 skills:
   products:
+    - 12 Factor App Methodology
     - AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda,
       Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc)
     - Accessibility
+    - Analysis (e.g. Codacy, CodeFactor, Mend, DeepSource, Owasp ZAP, rspec)
     - Ansible
     - Apache
     - Artifactory
