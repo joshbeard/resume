@@ -43,8 +43,9 @@ def md_strip(string):
     _s = re.sub(r"(\s+)__?(.*)__?(\s+)?", "\\1\\2\\3", _s)
     return _s
 
+
 def resume():
-    ## Read resume YAML
+    # Read resume YAML
     with open(resume_yaml, 'r') as file:
         resume_content = yaml.safe_load(file)
 
@@ -58,11 +59,13 @@ def resume():
 
     return resume_content
 
+
 def css():
     with open(css_file, 'r') as _file:
         css_content = _file.read()
     _file.close()
     return css_content
+
 
 def build_template(**kwargs):
     _autoescape = kwargs['autoescape'] if 'autoescape' in kwargs else False
@@ -73,29 +76,33 @@ def build_template(**kwargs):
     _tm = Template(_template, autoescape=_autoescape)
     return _tm.render(resume=resume(), css=css(), year=year)
 
+
 def write_out(**kwargs):
     with open(kwargs['target'], 'w') as _file:
         _file.write(kwargs['content'])
     _file.close()
     print(f"-> Wrote {kwargs['target']}")
 
-## HTML Template
+
+# HTML Template
 def gen_html():
     html = build_template(source=html_template)
     write_out(target=html_out, content=html)
 
 
-## Markdown Template
+# Markdown Template
 def gen_markdown():
     md = build_template(source=md_template, autoescape=True)
     write_out(target=md_out, content=md)
 
-## Gemini Template
+
+# Gemini Template
 def gen_gemini():
     gmi = build_template(source=gmi_template)
     write_out(target=gmi_out, content=gmi)
 
-## Text Template
+
+# Text Template
 def gen_txt():
     txt = build_template(source=txt_template)
     write_out(target=txt_out, content=txt)
@@ -103,10 +110,12 @@ def gen_txt():
     narrow_txt = build_template(source=narrow_txt_template)
     write_out(target=narrow_txt_out, content=narrow_txt)
 
+
 def run():
-  gen_html()
-  gen_markdown()
-  gen_gemini()
-  gen_txt()
+    gen_html()
+    gen_markdown()
+    gen_gemini()
+    gen_txt()
+
 
 run()
