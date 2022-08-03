@@ -4,6 +4,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4045419784f447ce874f3cdc6d539617)](https://www.codacy.com/gh/joshbeard/resume/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=joshbeard/resume&amp;utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/joshbeard/resume/badge)](https://www.codefactor.io/repository/github/joshbeard/resume)
 [![DeepSource](https://deepsource.io/gh/joshbeard/resume.svg/?label=active+issues&show_trend=true&token=r6oAHM7Ii2Emi_95lfEkNtxX)](https://deepsource.io/gh/joshbeard/resume/?ref=repository-badge)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/joshbeard/resume)
 
 I'm maintaining the contents of my resume in the [`resume.yaml`](resume.yaml)
 file. The [`build.py`](build.py) script builds several versions from Jinja2
