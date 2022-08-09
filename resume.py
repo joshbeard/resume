@@ -103,10 +103,10 @@ def css():
 def build_template(**kwargs):
     """Compile Jinja2 template and return it as a string.
 
-     Returns:
-         A string containing the compiled resume template
-     Keyword Arguments:
-         source: The source template file
+    Returns:
+        A string containing the compiled resume template
+    Keyword Arguments:
+        source: The source template file
     """
     src_dir = FileSystemLoader(template_dir)
     env = Environment(loader=src_dir,
