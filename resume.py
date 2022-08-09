@@ -43,7 +43,7 @@ narrow_txt_template = os.environ.get('RESUME_TXT_NARROW_TEMPLATE', 'resume-45w.t
 narrow_txt_out = os.environ.get('RESUME_TXT_NARROW_OUT', 'resume-45w.txt')
 # -----------------------------------------------------------------------------
 
-## Helpers
+# Helpers
 base_dir = os.path.dirname(os.path.realpath(__file__))
 
 # Current date
@@ -55,10 +55,10 @@ year = date.strftime("%Y")
 def md_strip(string: str):
     """Returns a string with Markdown URLs and emphasis removed.
 
-        Parameters:
-            string (str): The string to parse
-        Returns:
-            _s (str): A string with Markdown removed
+    Parameters:
+        string (str): The string to parse
+    Returns:
+        _s (str): A string with Markdown removed
     """
     _s = re.sub(r"\[([\w\s]+)\]\([\w\d\/\-\.:]+\)", "\\1", string)
     _s = re.sub(r"(\s+)__?(.*)__?(\s+)?", "\\1\\2\\3", _s)
@@ -68,8 +68,8 @@ def md_strip(string: str):
 def resume():
     """Parses resume YAML, munges, and returns it as a dict.
 
-        Returns:
-            The resume content read from YAML as a dict
+    Returns:
+        The resume content read from YAML as a dict
     """
     with open(resume_yaml, 'r') as file:
         resume_content = yaml.safe_load(file)
@@ -91,8 +91,8 @@ def resume():
 def css():
     """Loads CSS source file and returns it as a string.
 
-        Returns:
-            The CSS from the compiled Jinja2 template as a string
+    Returns:
+        The CSS from the compiled Jinja2 template as a string
     """
     with open(os.path.join(template_dir, css_file), 'r') as _file:
         css_content = _file.read()
@@ -103,12 +103,11 @@ def css():
 def build_template(**kwargs):
     """Compile Jinja2 template and return it as a string.
 
-        Returns:
-            A string containing the compiled resume template
-        Keyword Arguments:
-            source: The source template file
+     Returns:
+         A string containing the compiled resume template
+     Keyword Arguments:
+         source: The source template file
     """
-
     src_dir = FileSystemLoader(template_dir)
     env = Environment(loader=src_dir, autoescape=select_autoescape(enabled_extensions=('html')))
     src_file = env.get_template(kwargs['source'])
