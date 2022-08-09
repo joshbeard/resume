@@ -159,6 +159,7 @@ def print_usage():
     """Print script usage."""
     print(f"{sys.argv[0]} [ html | md | gmi | txt ]")
 
+
 def main():
     """Build everything by default."""
     gen_html()
