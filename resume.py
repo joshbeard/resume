@@ -5,7 +5,7 @@
 # This sources the "resume.yaml" and produces the resume in several formats from
 # Jinja2 templates, including HTML, plain text, Markdown, and Gemini (gmi).
 # -----------------------------------------------------------------------------
-from jinja2 import Template, Environment, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 import yaml
 import markdown
 import datetime
@@ -110,7 +110,7 @@ def build_template(**kwargs):
     """
 
     src_dir = FileSystemLoader(template_dir)
-    env = Environment(loader=src_dir)
+    env = Environment(loader=src_dir, autoescape=select_autoescape(enabled_extensions=('html')))
     src_file = env.get_template(kwargs['source'])
 
     return src_file.render(resume=resume(), css=css(), year=year)
