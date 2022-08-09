@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "resume.yaml": "yaml"
+    },
+    "yaml.schemaStore.enable": false
+}
