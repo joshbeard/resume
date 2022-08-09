@@ -172,11 +172,11 @@ if __name__ == '__main__':
         arg = sys.argv[1]
         if arg == 'html':
             gen_html()
-        elif arg == 'md' or arg == 'markdown':
+        elif arg in ('md', 'markdown'):
             gen_markdown()
-        elif arg == 'gmi' or arg == 'gemini':
+        elif arg in ('gmi', 'gemini'):
             gen_gemini()
-        elif arg == 'txt' or arg == 'text':
+        elif arg in ('txt', 'text', 'gopher'):
             gen_txt()
         elif arg == 'help':
             print_usage()
