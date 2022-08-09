@@ -109,7 +109,8 @@ def build_template(**kwargs):
          source: The source template file
     """
     src_dir = FileSystemLoader(template_dir)
-    env = Environment(loader=src_dir, autoescape=select_autoescape(enabled_extensions=('html')))
+    env = Environment(loader=src_dir,
+        autoescape=select_autoescape(enabled_extensions=('html')))
     src_file = env.get_template(kwargs['source'])
 
     return src_file.render(resume=resume(), css=css(), year=year)
