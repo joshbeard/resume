@@ -10,11 +10,13 @@ I'm maintaining the contents of my resume in the [`resume.yaml`](resume.yaml)
 file. The [`resume.py`](resume.py) script builds several versions from Jinja2
 templates:
 
-* HTML from [`src/resume.html`](src/resume.html)
-* Markdown from [`src/resume.md`](src/resume.md)
-* Gemini from [`src/resume.gmi`](src/resume.gmi)
-* Plain Text from [`src/resume.txt`](src/resume.txt)
-* Plain Text Narrow Width from [`src/resume-45w.txt](src/resume-45w.txt)
+| Document                | Template
+| ----------------------- | -----------------------------------------
+| HTML                    | [`templates/resume.html`](templates/resume.html)
+| Markdown                | [`templates/resume.md`](templates/resume.md)
+| Gemini                  | [`templates/resume.gmi`](templates/resume.gmi)
+| Plain Text              | [`templates/resume.txt`](templates/resume.txt)
+| Plain Text Narrow Width | [`templates/resume-45w.txt`](templates/resume-45w.txt)
 
 The [`dist/`](dist) directory contains assets that are deployed to my resume
 site as-is - currently, that's just a few images. The `dist` directory acts as a
@@ -35,7 +37,7 @@ I deploy to S3 and my local Gemini and Gopher servers.
 ├── requirements.txt        Python dependencies
 ├── resume.py               Python script for building HTML and Markdown
 ├── resume.yaml             My resume data
-└── src/                    Source template files
+└── templates/              Source template files
 ```
 
 ### Other Files
@@ -67,7 +69,7 @@ make html
 The [GitHub Workflow](.github/workflows/build-deploy.yml) does several things:
 
 * Spell check (the contents of the most recent commit)
-* Builds HTML and Markdown using [`build.py`](build.py)
+* Builds HTML and Markdown using [`resume.py`](resume.py)
 * Generates Word document using [Pandoc](https://pandoc.org/)
 * Generates PDF document using [GitHub action for headless Chrome](https://github.com/marketplace/actions/setup-chrome)
 
