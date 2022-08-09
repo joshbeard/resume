@@ -17,7 +17,7 @@ import sys
 # Config
 # Environment variables with defaults.
 # -----------------------------------------------------------------------------
-template_dir = os.environ.get('RESUME_TEMPLATE_DIR', 'src')
+template_dir = os.environ.get('RESUME_TEMPLATE_DIR', 'templates')
 
 resume_yaml = os.environ.get('RESUME_YAML', 'resume.yaml')
 
@@ -157,7 +157,7 @@ def gen_txt():
 
 def print_usage():
     """Print script usage."""
-    print("build.py [ html | md | gmi | txt ]")
+    print(f"{sys.argv[0]} [ html | md | gmi | txt ]")
 
 def main():
     """Build everything by default."""

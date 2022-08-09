@@ -50,7 +50,7 @@ jobs:
       - name: Generate resume documents from templates (html, md, gemini, txt)
         run: |
           pip install -r requirements.txt
-          python build.py
+          make html md txt gmi
 
       - name: Upload Markdown Artifact
         uses: actions/upload-artifact@master
