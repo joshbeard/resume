@@ -47,8 +47,8 @@ narrow_txt_out = os.environ.get('RESUME_TXT_NARROW_OUT', 'resume-45w.txt')
 base_dir = os.path.dirname(os.path.realpath(__file__))
 
 # Current date
-currentDateTime = datetime.datetime.now()
-date = currentDateTime.date()
+current_date_time = datetime.datetime.now()
+date = current_date_time.date()
 year = date.strftime("%Y")
 
 
