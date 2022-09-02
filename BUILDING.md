@@ -16,7 +16,7 @@ templates:
 | Markdown                | [`templates/resume.md`](templates/resume.md)
 | Gemini                  | [`templates/resume.gmi`](templates/resume.gmi)
 | Plain Text              | [`templates/resume.txt`](templates/resume.txt)
-| Plain Text Narrow Width | [`templates/resume-45w.txt`](templates/resume-45w.txt)
+| Plain Text Narrow Width | [`templates/resume-narrow.txt`](templates/resume-narrow.txt)
 
 The [`dist/`](dist) directory contains assets that are deployed to my resume
 site as-is - currently, that's just a few images. The `dist` directory acts as a

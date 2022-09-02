@@ -78,7 +78,7 @@ jobs:
         with:
           name: narrow_txt
           path: |
-            resume-45w.txt
+            resume-narrow.txt
 
       - name: Generate Word Document
         uses: docker://pandoc/latex
@@ -118,7 +118,7 @@ jobs:
 
       - name: Copy plain text
         run: |
-          cp resume.txt dist
+          cp resume.txt resume-narrow.txt dist
 
       - uses: actions/upload-artifact@master
         name: Upload Resume Artifacts
@@ -226,7 +226,7 @@ jobs:
           flags: '-rv'
           options: '--chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r'
           ssh_options: ''
-          src: 'resume-45w.txt'
+          src: 'resume-narrow.txt'
           dest: '${{ secrets.DEPLOY_USER }}@${{ secrets.LOCAL_GEMINI_SERVER }}:${{ secrets.GOPHER_DEPLOY_PATH }}/resume.txt'
 
       - name: Display status from deploy
@@ -263,7 +263,7 @@ jobs:
         run: |
           ls
           aws s3 cp s3://s3-website-joshbeard-me/resume/assets/ s3://s3-website-joshbeard-me/resume/assets/ --recursive --acl public-read --cache-control max-age=15552000
-          for f in index.html Josh-Beard-Resume.pdf Josh-Beard-Resume.docx resume.txt resume-45w.txt; do
+          for f in index.html Josh-Beard-Resume.pdf Josh-Beard-Resume.docx resume.txt resume-narrow.txt; do
             aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }}/resume/${f} s3://${{ secrets.AWS_S3_BUCKET }}/resume/ --acl public-read --cache-control max-age=604800
           done
         env:

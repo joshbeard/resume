@@ -39,8 +39,8 @@ gmi_out = os.environ.get('RESUME_GMI_OUT', 'resume.gmi')
 txt_template = os.environ.get('RESUME_TXT_TEMPLATE', 'resume.txt')
 txt_out = os.environ.get('RESUME_TXT_OUT', 'resume.txt')
 # Plain Text - narrow width (for Gopher, mobile)
-narrow_txt_template = os.environ.get('RESUME_TXT_NARROW_TEMPLATE', 'resume-45w.txt')
-narrow_txt_out = os.environ.get('RESUME_TXT_NARROW_OUT', 'resume-45w.txt')
+narrow_txt_template = os.environ.get('RESUME_TXT_NARROW_TEMPLATE', 'resume-narrow.txt')
+narrow_txt_out = os.environ.get('RESUME_TXT_NARROW_OUT', 'resume-narrow.txt')
 # -----------------------------------------------------------------------------
 
 # Helpers

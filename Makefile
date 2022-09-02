@@ -32,7 +32,7 @@ test:
 	$(DOCKER_RUN) pipelinecomponents/yamllint yamllint resume.yaml
 
 clean:
-	rm -f resume-45w.txt resume.gmi resume.txt \
+	rm -f resume-narrow.txt resume.gmi resume.txt \
 		dist/resume.docx dist/resume.pdf dist/index.html
 	git restore --staged README.md
 	git restore README.md
