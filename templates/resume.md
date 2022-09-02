@@ -14,6 +14,10 @@
 * Web/HTML: <{{ resume['url'] }}>
 * [PDF]({{ resume['pdf'] }})
 * [Word]({{ resume['word'] }})
+* [Text]({{ resume['txt'] }})
+* [Gemini]({{ resume['gemini'] }})
+* [Gopher]({{ resume['gopher'] }})
+* Finger: `finger resume@jbeard.co`
 
 ## Summary
 
