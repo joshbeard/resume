@@ -14,7 +14,7 @@
 * Web/HTML: <https://joshbeard.me/resume>
 * [PDF](https://joshbeard.me/resume/Josh-Beard-Resume.pdf)
 * [Word](https://joshbeard.me/resume/Josh-Beard-Resume.docx)
-* [Text](https://joshbeard.me/resume/resume.txt)
+* [Text](https://joshbeard.me/resume/resume.txt) | [Narrow Text](https://joshbeard.me/resume/resume-narrow.txt)
 * [Gemini](gemini://jbeard.co/resume.gmi) <gemini://jbeard.co/resume.gmi>
 * [Gopher](gopher://jbeard.co:70/0/resume.txt) <gopher://jbeard.co:70/0/resume.txt>
 * `finger resume@jbeard.co`
