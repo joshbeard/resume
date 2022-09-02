@@ -15,9 +15,9 @@
 * [PDF]({{ resume['pdf'] }})
 * [Word]({{ resume['word'] }})
 * [Text]({{ resume['txt'] }})
-* [Gemini]({{ resume['gemini'] }})
-* [Gopher]({{ resume['gopher'] }})
-* Finger: `finger resume@jbeard.co`
+* [Gemini]({{ resume['gemini'] }}) <{{ resume['gemini'] }}>
+* [Gopher]({{ resume['gopher'] }}) <{{ resume['gopher'] }}>
+* `finger resume@jbeard.co`
 
 ## Summary
 

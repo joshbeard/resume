@@ -263,7 +263,7 @@ jobs:
         run: |
           ls
           aws s3 cp s3://s3-website-joshbeard-me/resume/assets/ s3://s3-website-joshbeard-me/resume/assets/ --recursive --acl public-read --cache-control max-age=15552000
-          for f in index.html Josh-Beard-Resume.pdf Josh-Beard-Resume.docx resume.txt; do
+          for f in index.html Josh-Beard-Resume.pdf Josh-Beard-Resume.docx resume.txt resume-45w.txt; do
             aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }}/resume/${f} s3://${{ secrets.AWS_S3_BUCKET }}/resume/ --acl public-read --cache-control max-age=604800
           done
         env:
