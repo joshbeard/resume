@@ -156,7 +156,7 @@ article.job:last-child {
 h3 + ul,
 article.job ul {
   margin: 20px 0 0 10px;
-  list-style: square inside;
+  list-style: square;
 }
 
 h3 + ul li,
