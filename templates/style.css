@@ -221,6 +221,10 @@ h3:first-child {
   color: #34495D;
 }
 
+p.key_tech {
+  margin-top: 14px;
+}
+
 #footer {
   display: flex;
   padding: 22px 22px 12px;
