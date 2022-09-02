@@ -21,6 +21,7 @@ pdf_filename: Josh-Beard-Resume.pdf
 word: https://joshbeard.me/resume/Josh-Beard-Resume.docx
 word_filename: Josh-Beard-Resume.docx
 txt: https://joshbeard.me/resume/resume.txt
+txt_narrow: https://joshbeard.me/resume/resume-narrow.txt
 gemini: gemini://jbeard.co/resume.gmi
 gopher: gopher://jbeard.co:70/0/resume.txt
 finger: resume@jbeard.co
