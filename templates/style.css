@@ -96,7 +96,6 @@ h1 {
 #contact_details ul,
 #other_formats ul {
   margin-top: 2px;
-  font-size: 0.9em;
   list-style-type: none;
 }
 
@@ -108,7 +107,7 @@ h1 {
 #other_formats {
   padding: 4px 12px;
   color: #FFFFFF;
-  font-variant: small-caps;
+  /* font-variant: small-caps; */
   text-align: right;
   background: #31333C;
 }
@@ -136,7 +135,7 @@ a[href^=tel] {
 
 #other_formats li {
   display: inline;
-  margin-left: 6px;
+  margin-left: 10px;
 }
 
 #other_formats li:first-child {
