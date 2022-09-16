@@ -125,7 +125,7 @@
                     <p>
                     {%- for skill in resume['skills']['products'] -%}
                         {{ skill }}
-                        {%- if not loop.last %}&nbsp;&middot;&nbsp;{% endif %}
+                        {%- if not loop.last %} &middot; {% endif %}
                     {%- endfor %}
                     </p>
                 </div>
