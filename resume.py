@@ -80,20 +80,20 @@ def resume(format='plain'):
 
         if format == 'raw':
             return resume_content
-        else:
-            print(f'format: {format}')
-            for i, job in enumerate(resume_content['experience']):
-                if 'details' in job:
-                    details = []
-                    for detail in job['details']:
-                        if format == 'plain':
-                            # Create a new key with Markdown formatting removed (for
-                            # plain text).
-                            details.append(md_strip(detail))
-                        if format == 'html':
-                            # Create a new key with the HTMLified details
-                            details.append(markdown.markdown(detail))
-                        resume_content['experience'][i]['details'] = details
+
+        print(f'format: {format}')
+        for i, job in enumerate(resume_content['experience']):
+            if 'details' in job:
+                details = []
+                for detail in job['details']:
+                    if format == 'plain':
+                        # Create a new key with Markdown formatting removed (for
+                        # plain text).
+                        details.append(md_strip(detail))
+                    if format == 'html':
+                        # Create a new key with the HTMLified details
+                        details.append(markdown.markdown(detail))
+                    resume_content['experience'][i]['details'] = details
 
     return resume_content
 
