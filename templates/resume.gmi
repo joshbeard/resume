@@ -12,8 +12,8 @@
 
 => {{ resume['url'] }} Web/HTML
 => resume.txt .txt
-=> {{ resume['pdf_filename'] }} .pdf
-=> {{ resume['word_filename'] }} .docx
+=> {{ resume['formats']['pdf']['filename'] }} .pdf
+=> {{ resume['formats']['word']['filename'] }} .docx
 
 ## Summary
 

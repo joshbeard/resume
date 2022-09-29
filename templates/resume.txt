@@ -15,6 +15,10 @@
     => pdf: {{ resume['pdf'] }}
     => word: {{ resume['word'] }}
 
+    => web: {{ resume['url'] }}
+    => pdf: {{ resume['formats']['pdf']['url'] }}
+    => word: {{ resume['formats']['word']['url'] }}
+
 ## Summary
 
     {{ resume['summary'] | wordwrap(63) | indent(4) }}

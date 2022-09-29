@@ -14,9 +14,9 @@
     => web:
        {{ resume['url'] }}
     => pdf:
-       {{ resume['pdf'] }}
+       {{ resume['formats']['pdf']['url'] }}
     => word:
-       {{ resume['word'] }}
+       {{ resume['formats']['word']['url'] }}
 
 ## Summary
 

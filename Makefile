@@ -2,10 +2,10 @@
 DOCKER_RUN = docker run --rm -v ${PWD}:/work -w /work -it
 BUILD_PY = python resume.py
 
-.PHONY: all clean html md markdown txt text gmi gemini pdf docx
-all: html md gmi txt pdf docx
+.PHONY: all clean html md markdown txt text gmi gemini pdf docx json
+all: html md gmi txt pdf docx json
 
-html md markdown txt text gmi gemini:
+html md markdown txt text gmi gemini json:
 	$(BUILD_PY) $@
 
 pdf:

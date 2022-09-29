@@ -7,6 +7,7 @@
 # -----------------------------------------------------------------------------
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 import yaml
+import json
 import markdown
 import datetime
 import os
@@ -41,6 +42,9 @@ txt_out = os.environ.get('RESUME_TXT_OUT', 'resume.txt')
 # Plain Text - narrow width (for Gopher, mobile)
 narrow_txt_template = os.environ.get('RESUME_TXT_NARROW_TEMPLATE', 'resume-narrow.txt')
 narrow_txt_out = os.environ.get('RESUME_TXT_NARROW_OUT', 'resume-narrow.txt')
+
+# JSON
+json_out = os.environ.get('RESUME_JSON_OUT', 'resume.json')
 # -----------------------------------------------------------------------------
 
 # Helpers
@@ -155,6 +159,12 @@ def gen_txt():
     write_out(target=narrow_txt_out, content=narrow_txt)
 
 
+def gen_json():
+    """Generate JSON from converting the YAML source."""
+    the_json = json.dumps(resume(), indent=2)
+    write_out(target=json_out, content=the_json)
+
+
 def print_usage():
     """Print script usage."""
     print(f"{sys.argv[0]} [ html | md | gmi | txt ]")
@@ -166,6 +176,7 @@ def main():
     gen_markdown()
     gen_gemini()
     gen_txt()
+    gen_json()
 
 
 if __name__ == '__main__':
@@ -179,6 +190,8 @@ if __name__ == '__main__':
             gen_gemini()
         elif arg in ('txt', 'text', 'gopher'):
             gen_txt()
+        elif arg == 'json':
+            gen_json()
         elif arg == 'help':
             print_usage()
         else:

@@ -10,23 +10,28 @@
 # Header
 # -----------------------------------------------------------------------------
 name: Josh Beard
+headline: IT Professional / DevOps / Sysadmin
 description: Josh Beard is an IT professional in Colorado
 url: https://joshbeard.me/resume
 repo:
   url: https://github.com/joshbeard/resume
 
-# Formats and URLs
-pdf: https://joshbeard.me/resume/Josh-Beard-Resume.pdf
-pdf_filename: Josh-Beard-Resume.pdf
-word: https://joshbeard.me/resume/Josh-Beard-Resume.docx
-word_filename: Josh-Beard-Resume.docx
-txt: https://joshbeard.me/resume/resume.txt
-txt_narrow: https://joshbeard.me/resume/resume-narrow.txt
-gemini: gemini://jbeard.co/resume.gmi
-gopher: gopher://jbeard.co:70/0/resume.txt
-finger: resume@jbeard.co
-
-headline: IT Professional / DevOps / Sysadmin
+formats:
+  # Formats and URLs
+  pdf:
+    url: https://joshbeard.me/resume/Josh-Beard-Resume.pdf
+    filename: Josh-Beard-Resume.pdf
+  word:
+    url: https://joshbeard.me/resume/Josh-Beard-Resume.docx
+    filename: Josh-Beard-Resume.docx
+  txt:
+    url: https://joshbeard.me/resume/resume.txt
+    narrow_url: https://joshbeard.me/resume/resume-narrow.txt
+  json:
+    url: https://joshbeard.me/resume/resume.json
+  gemini: gemini://jbeard.co/resume.gmi
+  gopher: gopher://jbeard.co:70/0/resume.txt
+  finger: resume@jbeard.co
 
 contact:
   email: josh@joshbeard.me
