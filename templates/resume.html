@@ -99,7 +99,7 @@
                         <h3 class="position">{{ job['title'] }} with {{ job['org'] }}</h3>
                         <p><strong>{{ job['start'] }} - {{ job['end'] }} · {{ job['location'] }}</strong></p>
                         <ul>
-                            {%- for item in job['details_html'] %}
+                            {%- for item in job['details'] %}
                               <li>{{ item }}</li>
                             {%- endfor %}
                         </ul>
