@@ -29,7 +29,7 @@
     {{ job['location'] }}
 
     {{ job['start'] }} - {{ job['end'] }}
-{% for item in job['details_plain'] %}
+{% for item in job['details'] %}
   * {{ item | wordwrap(36) | indent(4) }}
 {% endfor %}
 {%- if 'tech' in job %}
