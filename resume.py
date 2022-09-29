@@ -69,7 +69,7 @@ def md_strip(string: str):
     return _s
 
 
-def resume():
+def resume(formatted=True):
     """Parses resume YAML, munges, and returns it as a dict.
 
     Returns:
@@ -78,16 +78,17 @@ def resume():
     with open(resume_yaml, 'r') as file:
         resume_content = yaml.safe_load(file)
 
-        for job in resume_content['experience']:
-            if 'details' in job:
-                job['details_html'] = []
-                job['details_plain'] = []
-                for detail in job['details']:
-                    # Create a new key with the HTMLified details
-                    job['details_html'].append(markdown.markdown(detail))
-                    # Create a new key with Markdown formatting removed (for
-                    # plain text).
-                    job['details_plain'].append(md_strip(detail))
+        if formatted:
+            for job in resume_content['experience']:
+                if 'details' in job:
+                    job['details_html'] = []
+                    job['details_plain'] = []
+                    for detail in job['details']:
+                        # Create a new key with the HTMLified details
+                        job['details_html'].append(markdown.markdown(detail))
+                        # Create a new key with Markdown formatting removed (for
+                        # plain text).
+                        job['details_plain'].append(md_strip(detail))
 
     return resume_content
 
@@ -161,7 +162,7 @@ def gen_txt():
 
 def gen_json():
     """Generate JSON from converting the YAML source."""
-    the_json = json.dumps(resume(), indent=2)
+    the_json = json.dumps(resume(formatted=False), indent=2)
     write_out(target=json_out, content=the_json)
 
 
