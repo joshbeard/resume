@@ -18,6 +18,8 @@ templates:
 | Plain Text              | [`templates/resume.txt`](templates/resume.txt)
 | Plain Text Narrow Width | [`templates/resume-narrow.txt`](templates/resume-narrow.txt)
 
+It also produces a JSON file directly from the YAMl source (not a template).
+
 The [`dist/`](dist) directory contains assets that are deployed to my resume
 site as-is - currently, that's just a few images. The `dist` directory acts as a
 staging directory - the generated `index.html` would exist at the root of this.
@@ -95,3 +97,11 @@ Visit the local instance via <http://localhost:8080/resume/>
 * [GitHub action for headless Chrome](https://github.com/marketplace/actions/setup-chrome) for generating the PDF document.
 * [minify-action](https://github.com/anthonyftwang/minify-action) for minifying static documents.
 * AWS S3 and CloudFront for hosting.
+
+## Why
+
+Just for fun. I've maintained it in different ways over the years, more recently in simple HTML. However, I'd like to be able to
+provide it in Markdown, too, and also other formats as desired. YAML seems like the best choice for a human-friendly and
+machine-parsable format to maintain the source in to produce multiple formats. While this may not be the most intuitive for many people,
+it's all comfortable to me.
+
