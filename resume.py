@@ -69,7 +69,7 @@ def md_strip(string: str):
     return _s
 
 
-def resume(format='plain'):
+def resume(theformat='plain'):
     """Parses resume YAML, munges, and returns it as a dict.
 
     Returns:
@@ -78,19 +78,18 @@ def resume(format='plain'):
     with open(resume_yaml, 'r') as file:
         resume_content = yaml.safe_load(file)
 
-        if format == 'raw':
+        if theformat == 'raw':
             return resume_content
 
-        print(f'format: {format}')
         for i, job in enumerate(resume_content['experience']):
             if 'details' in job:
                 details = []
                 for detail in job['details']:
-                    if format == 'plain':
+                    if theformat == 'plain':
                         # Create a new key with Markdown formatting removed (for
                         # plain text).
                         details.append(md_strip(detail))
-                    if format == 'html':
+                    if theformat == 'html':
                         # Create a new key with the HTMLified details
                         details.append(markdown.markdown(detail))
                     resume_content['experience'][i]['details'] = details
@@ -123,7 +122,7 @@ def build_template(**kwargs):
                       autoescape=select_autoescape(enabled_extensions=('html')))
     src_file = env.get_template(kwargs['source'])
 
-    return src_file.render(resume=resume(format=kwargs['format']), css=css(), year=year)
+    return src_file.render(resume=resume(theformat=kwargs['theformat']), css=css(), year=year)
 
 
 def write_out(**kwargs):
@@ -137,19 +136,19 @@ def write_out(**kwargs):
 
 def gen_html():
     """Generate HTML file from Jina2 template."""
-    html = build_template(source=html_template, format='html')
+    html = build_template(source=html_template, theformat='html')
     write_out(target=html_out, content=html)
 
 
 def gen_markdown():
     """Generate Markdown file from Jina2 template."""
-    md = build_template(source=md_template, autoescape=True, format='raw')
+    md = build_template(source=md_template, autoescape=True, theformat='raw')
     write_out(target=md_out, content=md)
 
 
 def gen_gemini():
     """Generate Gemini file from Jina2 template."""
-    gmi = build_template(source=gmi_template, format='plain')
+    gmi = build_template(source=gmi_template, theformat='plain')
     write_out(target=gmi_out, content=gmi)
 
 
@@ -158,16 +157,16 @@ def gen_txt():
 
     A regular-width (<70 chars) and a narrow-width (<45 chars) file is created.
     """
-    txt = build_template(source=txt_template, format='plain')
+    txt = build_template(source=txt_template, theformat='plain')
     write_out(target=txt_out, content=txt)
 
-    narrow_txt = build_template(source=narrow_txt_template, format='plain')
+    narrow_txt = build_template(source=narrow_txt_template, theformat='plain')
     write_out(target=narrow_txt_out, content=narrow_txt)
 
 
 def gen_json():
     """Generate JSON from converting the YAML source."""
-    the_json = json.dumps(resume(format='plain'), indent=2)
+    the_json = json.dumps(resume(theformat='plain'), indent=2)
     write_out(target=json_out, content=the_json)
 
 
