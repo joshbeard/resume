@@ -6,6 +6,21 @@
 [![DeepSource](https://deepsource.io/gh/joshbeard/resume.svg/?label=active+issues&show_trend=true&token=r6oAHM7Ii2Emi_95lfEkNtxX)](https://deepsource.io/gh/joshbeard/resume/?ref=repository-badge)
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/joshbeard/resume)
 
+## Published
+
+* Web/HTML: <https://joshbeard.me/resume>
+* Markdown (GitHub): <https://github.com/joshbeard/resume/blob/master/README.md>
+* PDF: <https://joshbeard.me/resume/Josh-Beard-Resume.pdf>
+* Word: <https://joshbeard.me/resume/Josh-Beard-Resume.docx>
+* Text: <https://joshbeard.me/resume/resume.txt>
+* Narrow Text: <https://joshbeard.me/resume/resume-narrow.txt>
+* JSON: <https://joshbeard.me/resume/resume.json>
+* `gemini://jbeard.co/resume.gmi`
+* `gopher://jbeard.co:70/0/resume.txt`
+* `finger resume@jbeard.co`
+
+## Overview
+
 I'm maintaining the contents of my resume in the [`resume.yaml`](resume.yaml)
 file. The [`resume.py`](resume.py) script builds several versions from Jinja2
 templates:

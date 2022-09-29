@@ -12,10 +12,11 @@
 ## Other Formats
 
 * Web/HTML: <{{ resume['url'] }}>
-* [PDF]({{ resume['formats']['pdf']['url'] }})
-* [Word]({{ resume['formats']['word']['url'] }})
-* [Text]({{ resume['formats']['txt']['url'] }}) | [Narrow Text]({{ resume['formats']['txt']['narrow_url'] }})
-* [JSON]({{ resume['formats']['json']['url'] }})
+* PDF: <{{ resume['formats']['pdf']['url'] }}>
+* Word: <{{ resume['formats']['word']['url'] }}>
+* Text: <{{ resume['formats']['txt']['url'] }}>
+* Narrow Text: <{{ resume['formats']['txt']['narrow_url'] }}>
+* JSON: <{{ resume['formats']['json']['url'] }}>
 * `{{ resume['formats']['gemini'] }}`
 * `{{ resume['formats']['gopher'] }}`
 * `finger resume@jbeard.co`
