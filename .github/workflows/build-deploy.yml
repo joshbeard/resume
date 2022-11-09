@@ -87,6 +87,25 @@ jobs:
           path: |
             resume.json
 
+      - name: Add man page frontmatter
+        run: >
+          _DATE=$(date "+%B %Y")
+          echo "% JoshBeard(7) joshbeard.me\n% Josh Beard (josh@joshbeard.me)\n% ${_DATE}\n\n" | cat - README.md > README.man.md
+
+      - name: Generate man page
+        uses: docker://pandoc/latex
+        with:
+          args: >
+            --from markdown --to man
+            -s README.man.md -o joshbeard-resume.7
+
+      - name: Upload man page artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: man
+          path: |
+            joshbeard-resume.7
+
       - name: Generate Word Document
         uses: docker://pandoc/latex
         with:
@@ -125,7 +144,7 @@ jobs:
 
       - name: Copy artifacts into dist
         run: |
-          cp resume.txt resume-narrow.txt resume.json dist
+          cp joshbeard-resume.7 resume.txt resume-narrow.txt resume.json dist
 
       - uses: actions/upload-artifact@master
         name: Upload Resume Artifacts
@@ -204,6 +223,10 @@ jobs:
       - uses: actions/download-artifact@master
         with:
           name: word
+
+      - uses: actions/download-artifact@master
+        with:
+          name: man
 
       - name: Deploy resume to Gemini server
         id: deploy
