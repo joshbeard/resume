@@ -28,6 +28,11 @@ IT professional with a strong background in systems administration, cloud, and D
 
 ## Experience
 
+### Senior DevOps Engineer with Live Oak Bank
+
+September 2022 - Present - Remote
+
+
 ### Lead DevSecOps Engineer with Ventera, Inc at USGS
 
 June 2022 - Present - Remote
