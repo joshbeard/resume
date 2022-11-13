@@ -52,6 +52,12 @@ summary: >
 # Experience
 # -----------------------------------------------------------------------------
 experience:
+  - title: Senior DevOps Engineer
+    org: Live Oak Bank
+    start: September 2022
+    end: Present
+    location: Remote
+
   - title: Lead DevSecOps Engineer
     org: Ventera, Inc at USGS
     start: June 2022
@@ -77,6 +83,7 @@ experience:
       - GitLab
       - Python
       - Jira
+
   - title: Lead DevOps Engineer
     org: Apogee Engineering, LLC at USGS
     start: September 2015
@@ -129,6 +136,7 @@ experience:
       - Nginx
       - Traefik
       - Apache
+
   - title: Sr. Professional Services Engineer
     org: Puppet Inc.
     start: September 2013
@@ -161,6 +169,7 @@ experience:
       - Nginx
       - Apache
       - WebSphere
+
   - title: Linux/Unix Systems Administrator
     org: Douglas School District
     start: January 2010
@@ -200,6 +209,7 @@ experience:
       - NFS
       - Postfix
       - WordPress
+
   - title: Tier II Technical Support
     org: Apple, Inc.
     start: October 2008
@@ -210,6 +220,7 @@ experience:
     #    products; especially Apple’s computers and macOS.
     #  - Consistently received high marks for customer satisfaction and
     #    issue resolution.
+
   - title: Signal Support Systems Specialist
     org: US Army
     start: August 2006
