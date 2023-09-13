@@ -45,7 +45,7 @@ contact:
 
 summary: >
   IT professional with a strong background in systems administration, cloud, and
-  DevOps with over 13 years of experience and collaborations with more than a
+  DevOps with years of experience and collaborations with more than a
   hundred teams across hundreds of projects.
 
 # -----------------------------------------------------------------------------
@@ -57,11 +57,20 @@ experience:
     start: September 2022
     end: Present
     location: Remote
+    tech:
+      - AWS
+      - Docker
+      - GitLab
+      - Go
+      - Golang
+      - Python
+      - Shell
+      - Terraform
 
   - title: Lead DevSecOps Engineer
     org: Ventera, Inc at USGS
     start: June 2022
-    end: Present
+    end: April 2023
     location: Remote
     details:
       # yamllint disable-line
@@ -82,7 +91,6 @@ experience:
         more)
       - GitLab
       - Python
-      - Jira
 
   - title: Lead DevOps Engineer
     org: Apogee Engineering, LLC at USGS
@@ -253,6 +261,7 @@ skills:
     - BitBucket
     - CI/CD
     - Cloud
+    - DataDog
     - Debian/Ubuntu
     - DigitalOcean
     - Docker
@@ -265,6 +274,8 @@ skills:
     - GitHub Workflows
     - GitLab
     - GitLab CI/CD
+    - Go
+    - Golang
     - Graylog
     - HAProxy
     - HTML/CSS
@@ -274,18 +285,20 @@ skills:
     - MariaDB/MySQL
     - MongoDB
     - Nginx
+    - Octopus
+    - PagerDuty
     - PHP
     - Packer
     - Postfix
     - PostgreSQL
     - Puppet/Puppet Enterprise
     - Python
-    - RedHat/CentOS
+    - RedHat/CentOS/Rocky/EL
     - Ruby
     - Security and Compliance
     - Sensu
     - Serverless
-    - Terraform (AWS, VMware, DigitalOcean, Proxmox, misc)
+    - Terraform (including provider development)
     - Test-Driven Development (TDD)
     - Tomcat
     - Traefik
