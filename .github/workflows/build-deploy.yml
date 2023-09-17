@@ -83,10 +83,6 @@ jobs:
           --print-to-pdf-no-header
           dist/index.html
 
-      - name: Copy artifacts into dist
-        run: |
-          cp resume.txt resume-narrow.txt resume.json dist
-
       - name: ls
         run: ls -l . dist/
 
@@ -167,8 +163,7 @@ jobs:
 
       - name: Debug
         run: |
-          mv -f dist/README.md ./README.md
-          ls
+          ls -l
           git status
 
       - name: Commit Markdown
