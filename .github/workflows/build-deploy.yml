@@ -110,7 +110,7 @@ jobs:
         name: Download Resume Artifacts
         with:
           name: src
-          path: _site
+          path: dist
     
       - name: ls
         run: ls -l dist/ && head dist/index.html
@@ -162,11 +162,12 @@ jobs:
       - uses: actions/download-artifact@master
         name: Download Resume Artifacts
         with:
-          name: markdown
-          path: .
+          name: src
+          path: dist
 
       - name: Debug
         run: |
+          mv -f dist/RESUME.md .
           ls
           git status
 
