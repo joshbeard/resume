@@ -6,66 +6,32 @@
 [![DeepSource](https://deepsource.io/gh/joshbeard/resume.svg/?label=active+issues&show_trend=true&token=r6oAHM7Ii2Emi_95lfEkNtxX)](https://deepsource.io/gh/joshbeard/resume/?ref=repository-badge)
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/joshbeard/resume)
 
-## Published
-
-* Web/HTML: <https://joshbeard.me/resume>
-* Markdown (GitHub): <https://github.com/joshbeard/resume/blob/master/README.md>
-* PDF: <https://joshbeard.me/resume/Josh-Beard-Resume.pdf>
-* Word: <https://joshbeard.me/resume/Josh-Beard-Resume.docx>
-* Text: <https://joshbeard.me/resume/resume.txt>
-* Narrow Text: <https://joshbeard.me/resume/resume-narrow.txt>
-* JSON: <https://joshbeard.me/resume/resume.json>
-* `gemini://jbeard.co/resume.gmi`
-* `gopher://jbeard.co:70/0/resume.txt`
-* `finger resume@jbeard.co`
-
 ## Overview
 
 I'm maintaining the contents of my resume in the [`resume.yaml`](resume.yaml)
 file. The [`resume.py`](resume.py) script builds several versions from Jinja2
 templates:
 
-| Document                | Template
+| Format                  | Template
 | ----------------------- | -----------------------------------------
 | HTML                    | [`templates/resume.html`](templates/resume.html)
 | Markdown                | [`templates/resume.md`](templates/resume.md)
 | Gemini                  | [`templates/resume.gmi`](templates/resume.gmi)
 | Plain Text              | [`templates/resume.txt`](templates/resume.txt)
 | Plain Text Narrow Width | [`templates/resume-narrow.txt`](templates/resume-narrow.txt)
+| JSON                    | Converted from YAML source
 
-It also produces a JSON file directly from the YAMl source (not a template).
-
-The [`dist/`](dist) directory contains assets that are deployed to my resume
-site as-is - currently, that's just a few images. The `dist` directory acts as a
-staging directory - the generated `index.html` would exist at the root of this.
+The [`dist/`](dist) directory contains assets that are deployed for the website
+as-is. The `dist` directory acts as a staging directory - the generated
+`index.html` would exist at the root of this.
 
 I deploy to S3 and my local Gemini and Gopher servers.
 
-## Files
+## Copy this for your own resume
 
-```plain
-├── .github/                GitHub Workflows
-├── BUILDING.md             This document that describes how it's built and deployed
-├── README.md               A Markdown document generated and merged via CI (GitHub action) or via the `resume.py` script
-├── dist/                   Directory containing things to deploy
-│   └── assets/             Static assets for the website
-│       └── img/
-├── Makefile                Makefile for building and local tasks
-├── requirements.txt        Python dependencies
-├── resume.py               Python script for building HTML and Markdown
-├── resume.yaml             My resume data
-└── templates/              Source template files
-```
-
-### Other Files
-
-Some other files for various integrations are also maintained in this repository:
-
-* `.codacy.yml`: configuration for Codacy (via GitHub)
-* `.deepsource.toml`: configuration for DeepSource integration (via GitHub)
-* `.remarkrc.js`: configuration for the Remark Markdown validator (via Codacy, CodeFactor)
-* `.stylelintrc.json`: configuration for linters (used via GitHub - Codacy, CodeFactor)
-* `renovate.json`: configuration for RenovateBot (via GitHub)
+I didn't develop this for general use in mind, but feel free to take what you
+want from it. You'd probably want to modify the `resume.py` script, the
+[`templates/`](templates/), and the [`resume.yaml`](resume.yaml), of course.
 
 ## Build and Deployment
 
@@ -83,12 +49,8 @@ To build HTML only:
 make html
 ```
 
-The [GitHub Workflow](.github/workflows/build-deploy.yml) does several things:
-
-* Spell check (the contents of the most recent commit)
-* Builds HTML and Markdown using [`resume.py`](resume.py)
-* Generates Word document using [Pandoc](https://pandoc.org/)
-* Generates PDF document using [GitHub action for headless Chrome](https://github.com/marketplace/actions/setup-chrome)
+The [GitHub Workflow](.github/workflows/build-deploy.yml) builds and deploys
+my resume.
 
 My resume is published to the S3 website bucket for
 [joshbeard.me](https://github.com/joshbeard/joshbeard.me-tf-aws).
@@ -115,8 +77,22 @@ Visit the local instance via <http://localhost:8080/resume/>
 
 ## Why
 
-Just for fun. I've maintained it in different ways over the years, more recently in simple HTML. However, I'd like to be able to
-provide it in Markdown, too, and also other formats as desired. YAML seems like the best choice for a human-friendly and
-machine-parsable format to maintain the source in to produce multiple formats. While this may not be the most intuitive for many people,
-it's all comfortable to me.
+I've maintained my resume in different ways over the years, more recently in
+simple HTML. I hate using word processors and their nightmare document formats.
+I want a website version, but I also wanted a PDF and Markdown copy. For fun,
+I generate it in several formats, including some more esoteric ones like
+a [man page](), `finger resume@jbeard.co`, and [Gemini](gemini://jbeard.co/resume.gmi)
+
+## Published Formats
+
+* Web/HTML: <https://joshbeard.me/resume>
+* Markdown (GitHub): <https://github.com/joshbeard/resume/blob/master/README.md>
+* PDF: <https://joshbeard.me/resume/Josh-Beard-Resume.pdf>
+* Word: <https://joshbeard.me/resume/Josh-Beard-Resume.docx>
+* Text: <https://joshbeard.me/resume/resume.txt>
+* Narrow Text: <https://joshbeard.me/resume/resume-narrow.txt>
+* JSON: <https://joshbeard.me/resume/resume.json>
+* `gemini://jbeard.co/resume.gmi`
+* `gopher://jbeard.co:70/0/resume.txt`
+* `finger resume@jbeard.co`
 

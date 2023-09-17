@@ -2,13 +2,13 @@ _site/
 /dist/index.html
 /dist/resume.html
 /dist/resume.md
+/dist/resume.txt
+/dist/resume.gmi
+/dist/resume-narrow.txt
+/dist/resume.json
 .DS_Store
 *.pdf
 *.docx
 *.log
 env
-/resume.txt
-/resume.gmi
-/resume-narrow.txt
-/resume.json
 /.dccache
