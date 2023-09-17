@@ -167,7 +167,7 @@ jobs:
 
       - name: Debug
         run: |
-          mv -f dist/RESUME.md .
+          mv -f dist/README.md ./README.md
           ls
           git status
 
