@@ -87,6 +87,9 @@ jobs:
         run: |
           cp resume.txt resume-narrow.txt resume.json dist
 
+      - name: ls
+        run: ls -l . dist/
+
       - uses: actions/upload-artifact@master
         name: Upload Resume Artifacts
         with:
@@ -128,7 +131,9 @@ jobs:
   validate:
     name: HTML Validation
     runs-on: ubuntu-latest
-    needs: build
+    needs:
+      - build
+      - validate
     steps:
       - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
         with:
@@ -218,7 +223,9 @@ jobs:
   deploy:
     name: Deploy Resume Website
     runs-on: ubuntu-latest
-    needs: validate
+    needs:
+      - build
+      - validate
     if: "!contains(github.event.head_commit.message, '[skip deploy]')"
 
     steps:

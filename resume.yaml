@@ -57,6 +57,7 @@ experience:
     start: September 2022
     end: Present
     location: Remote
+    details: ""
     tech:
       - AWS
       - Docker
