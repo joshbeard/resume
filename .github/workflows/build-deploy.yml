@@ -85,7 +85,7 @@ jobs:
 
       - name: Copy artifacts into dist
         run: |
-          cp templates/style.css joshbeard-resume.7 resume.txt resume-narrow.txt resume.json dist
+          cp resume.txt resume-narrow.txt resume.json dist
 
       - uses: actions/upload-artifact@master
         name: Upload Resume Artifacts
