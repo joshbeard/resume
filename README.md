@@ -23,7 +23,7 @@
 
 ## Summary
 
-IT professional with a strong background in systems administration, cloud, and DevOps with over 13 years of experience and collaborations with more than a hundred teams across hundreds of projects.
+IT professional with a strong background in systems administration, cloud, and DevOps with years of experience and collaborations with more than a hundred teams across hundreds of projects.
 
 
 ## Experience
@@ -33,9 +33,11 @@ IT professional with a strong background in systems administration, cloud, and D
 September 2022 - Present - Remote
 
 
+    _Key technology and skills: AWS, Docker, GitLab, Go, Golang, Python, Shell, Terraform_
+
 ### Lead DevSecOps Engineer with Ventera, Inc at USGS
 
-June 2022 - Present - Remote
+June 2022 - April 2023 - Remote
 
 * Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources) at the [US Geological Survey](https://www.usgs.gov/).
 * DevSecOps on a small team working on a project focused on modernizing and advancing a highly-utilized set of services for water data collected and provided by the USGS.
@@ -43,7 +45,7 @@ June 2022 - Present - Remote
 * Cloud-native and 'serverless' application development and infrastructure.
 * Integrated and automated code analysis into developer workflow and pipeline.
 
-    _Key technology and skills: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more), GitLab, Python, Jira_
+    _Key technology and skills: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more), GitLab, Python_
 
 ### Lead DevOps Engineer with Apogee Engineering, LLC at USGS
 
@@ -102,4 +104,4 @@ August 2006 - October 2008 - Fort Carson, CO
 
 ## Skills
 
-12 Factor App Methodology, AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc), Accessibility, Analysis (e.g. Codacy, CodeFactor, Mend, DeepSource, Owasp ZAP, rspec), Ansible, Apache, Arch Linux, Artifactory, Atlassian, Bamboo, Bash and Shell, BitBucket, CI/CD, Cloud, Debian/Ubuntu, DigitalOcean, Docker, Elasticsearch, Everything is Code, FreeBSD, Git, GitHub, GitHub Actions, GitHub Workflows, GitLab, GitLab CI/CD, Graylog, HAProxy, HTML/CSS, Infrastructure as Code, Jira, LXC, MariaDB/MySQL, MongoDB, Nginx, PHP, Packer, Postfix, PostgreSQL, Puppet/Puppet Enterprise, Python, RedHat/CentOS, Ruby, Security and Compliance, Sensu, Serverless, Terraform (AWS, VMware, DigitalOcean, Proxmox, misc), Test-Driven Development (TDD), Tomcat, Traefik, Vagrant
+12 Factor App Methodology, AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc), Accessibility, Analysis (e.g. Codacy, CodeFactor, Mend, DeepSource, Owasp ZAP, rspec), Ansible, Apache, Arch Linux, Artifactory, Atlassian, Bamboo, Bash and Shell, BitBucket, CI/CD, Cloud, DataDog, Debian/Ubuntu, DigitalOcean, Docker, Elasticsearch, Everything is Code, FreeBSD, Git, GitHub, GitHub Actions, GitHub Workflows, GitLab, GitLab CI/CD, Go, Golang, Graylog, HAProxy, HTML/CSS, Infrastructure as Code, Jira, LXC, MariaDB/MySQL, MongoDB, Nginx, Octopus, PagerDuty, PHP, Packer, Postfix, PostgreSQL, Puppet/Puppet Enterprise, Python, RedHat/CentOS/Rocky/EL, Ruby, Security and Compliance, Sensu, Serverless, Terraform (including provider development), Test-Driven Development (TDD), Tomcat, Traefik, Vagrant
