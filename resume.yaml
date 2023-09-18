@@ -32,6 +32,9 @@ formats:
   gemini: gemini://jbeard.co/resume.gmi
   gopher: gopher://jbeard.co:70/0/resume.txt
   finger: resume@jbeard.co
+  man_page:
+    linux_gnu: man <(curl -sl https://joshbeard.me/resume/joshbeard-resume.7)
+    mac_bsd: curl -sL https://joshbeard.me/resume/joshbeard-resume.7 > /tmp/joshbeard.7 && man /tmp/joshbeard.7
 
 contact:
   email: josh@joshbeard.me

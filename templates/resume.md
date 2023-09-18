@@ -48,4 +48,7 @@ _Key technology and skills: {% for skill in job['tech'] -%}
 * `{{ resume['formats']['gemini'] }}`
 * `{{ resume['formats']['gopher'] }}`
 * `finger resume@jbeard.co`
+* man page:
+  * Linux/GNU: `{{ resume['formats']['man_page']['linux_gnu'] }}`
+  * macOS/BSD: `{{ resume['formats']['man_page']['macos_bsd'] }}`
 
