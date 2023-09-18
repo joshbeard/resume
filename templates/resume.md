@@ -8,18 +8,7 @@
 * Web: [{{ resume['contact']['web']['title'] }}]({{ resume['contact']['web']['url'] }})
 * GitHub: [github.com/{{ resume['contact']['github'] }}](https://github.com/{{ resume['contact']['github'] }})
 * Location: [{{ resume['contact']['location']['title'] }}]({{ resume['contact']['location']['url'] }})
-
-## Other Formats
-
-* Web/HTML: <{{ resume['url'] }}>
-* PDF: <{{ resume['formats']['pdf']['url'] }}>
-* Word: <{{ resume['formats']['word']['url'] }}>
-* Text: <{{ resume['formats']['txt']['url'] }}>
-* Narrow Text: <{{ resume['formats']['txt']['narrow_url'] }}>
-* JSON: <{{ resume['formats']['json']['url'] }}>
-* `{{ resume['formats']['gemini'] }}`
-* `{{ resume['formats']['gopher'] }}`
-* `finger resume@jbeard.co`
+* [Other Formats](#other-formats)
 
 ## Summary
 
@@ -35,9 +24,9 @@
 {%- endfor %}
 {%- if 'tech' in job %}
 
-    _Key technology and skills: {% for skill in job['tech'] -%}
-    {{ skill }}
-    {%- if not loop.last %}, {% endif %}
+_Key technology and skills: {% for skill in job['tech'] -%}
+{{ skill }}
+{%- if not loop.last %}, {% endif %}
 {%- endfor %}_
 {%- endif %}
 {% endfor %}
@@ -47,4 +36,16 @@
 {{ skill }}
 {%- if not loop.last %}, {% endif %}
 {%- endfor %}
+
+## Other Formats
+
+* Web/HTML: <{{ resume['url'] }}>
+* PDF: <{{ resume['formats']['pdf']['url'] }}>
+* Word: <{{ resume['formats']['word']['url'] }}>
+* Text: <{{ resume['formats']['txt']['url'] }}>
+* Narrow Text: <{{ resume['formats']['txt']['narrow_url'] }}>
+* JSON: <{{ resume['formats']['json']['url'] }}>
+* `{{ resume['formats']['gemini'] }}`
+* `{{ resume['formats']['gopher'] }}`
+* `finger resume@jbeard.co`
 
