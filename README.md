@@ -106,3 +106,6 @@ August 2006 - October 2008 - Fort Carson, CO
 * `gemini://jbeard.co/resume.gmi`
 * `gopher://jbeard.co:70/0/resume.txt`
 * `finger resume@jbeard.co`
+* man page:
+  * Linux/GNU: `man <(curl -sl https://joshbeard.me/resume/joshbeard-resume.7)`
+  * macOS/BSD: ``
