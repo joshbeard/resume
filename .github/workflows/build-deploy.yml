@@ -114,10 +114,10 @@ jobs:
         with:
           name: src
           path: dist
-    
+
       - name: ls
         run: ls -l dist/ && head dist/index.html
-    
+
       - name: Minify
         run: minify --recursive --output . .
 

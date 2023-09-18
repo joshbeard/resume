@@ -12,3 +12,4 @@ _site/
 *.log
 env
 /.dccache
+dist/joshbeard-resume.7

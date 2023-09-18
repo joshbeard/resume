@@ -6,7 +6,7 @@ DATE := $(shell date "+%B %Y")
 DOCKER_RUN = docker run --rm -v ${PWD}:/work -w /work -it --user=$(CURRENT_UID):$(CURRENT_GID)
 BUILD_PY = python resume.py
 
-.PHONY: all clean html md markdown txt text gmi gemini pdf docx json man
+.PHONY: all clean html md markdown txt test text gmi gemini pdf docx json man
 all: html md gmi txt pdf docx json man
 
 html md markdown txt text gmi gemini json:

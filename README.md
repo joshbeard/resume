@@ -108,4 +108,5 @@ August 2006 - October 2008 - Fort Carson, CO
 * `finger resume@jbeard.co`
 * man page:
   * Linux/GNU: `man <(curl -sl https://joshbeard.me/resume/joshbeard-resume.7)`
-  * macOS/BSD: ``
+  * macOS/BSD: `curl -sL https://joshbeard.me/resume/joshbeard-resume.7 > /tmp/joshbeard.7 && man /tmp/joshbeard.7
+`

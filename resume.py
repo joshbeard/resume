@@ -75,7 +75,7 @@ year = date.strftime("%Y")
 def md_strip(string: str):
     """Returns a string with Markdown URLs and emphasis removed.
 
-    Parameters:
+    Args:
         string (str): The string to parse
     Returns:
         _s (str): A string with Markdown removed
@@ -88,8 +88,10 @@ def md_strip(string: str):
 def resume(theformat='plain'):
     """Parses resume YAML, munges, and returns it as a dict.
 
+    Args:
+        theformat (str): The format to return the resume in
     Returns:
-        The resume content read from YAML as a dict
+        resume_content (dict): The resume content read from YAML as a dict
     """
     with open(config.resume_yaml, 'r') as file:
         resume_content = yaml.safe_load(file)
@@ -114,7 +116,7 @@ def css():
     """Loads CSS source file and returns it as a string.
 
     Returns:
-        The CSS from the compiled Jinja2 template as a string
+        css_content (str): The CSS content as a string
     """
     css_file = os.path.join(config.template_dir, config.html.css_src)
     with open(css_file, 'r') as _file:
@@ -127,9 +129,9 @@ def build_template(**kwargs):
     """Compile Jinja2 template and return it as a string.
 
     Returns:
-        A string containing the compiled resume template
+        src_file.render (str): The rendered template as a string
     Keyword Arguments:
-        source: The source template file
+        source (str): The source template file
     """
     src_dir = FileSystemLoader(config.template_dir)
     env = Environment(loader=src_dir,
@@ -144,7 +146,12 @@ def build_template(**kwargs):
 
 
 def write_out(**kwargs):
-    """Write a file to disk."""
+    """Write a file to disk.
+
+    Keyword Arguments:
+        target (str): The target file to write
+        content (str): The content to write to the target file
+    """
     file_out = os.path.join(base_dir, kwargs['target'])
     with open(file_out, 'w') as _file:
         _file.write(kwargs['content'])
@@ -153,7 +160,10 @@ def write_out(**kwargs):
 
 
 def gen_html():
-    """Generate HTML file from Jina2 template."""
+    """Generate HTML file from Jina2 template.
+
+    The HTML file is written to the `dist` directory.
+    """
     html = build_template(source=config.html.template, theformat='html')
     write_out(target=config.html.out, content=html)
 
@@ -190,13 +200,13 @@ def gen_json():
     write_out(target=config.json.out, content=the_json)
 
 
-def print_usage():
+def print_usage(formats=None):
     """Print script usage."""
-    print(f"{sys.argv[0]} [ html | md | gmi | txt ]")
+    print(f"{sys.argv[0]} [ " + " | ".join(formats) + " ]")
 
 
-def buill_all():
-    """Build everything by default."""
+def build_all():
+    """Build everything."""
     gen_html()
     gen_markdown()
     gen_gemini()
@@ -204,8 +214,9 @@ def buill_all():
     gen_json()
 
 
-if __name__ == '__main__':
+def main():
     actions = {
+        'all': build_all,
         'html': gen_html,
         'md': gen_markdown,
         'markdown': gen_markdown,
@@ -215,15 +226,21 @@ if __name__ == '__main__':
         'text': gen_txt,
         'gopher': gen_txt,
         'json': gen_json,
-        'help': print_usage,
     }
+
     if len(sys.argv) > 1:
         arg = sys.argv[1]
         if arg in actions:
             actions[arg]()
+        elif arg in ['-h', '--help', 'help']:
+            print_usage(actions.keys())
         else:
             print(f"Unknown argument: {arg}")
-            print_usage()
+            print_usage(actions.keys())
     else:
         print("Building everything")
-        buill_all()
+        build_all()
+
+
+if __name__ == '__main__':
+    main()
