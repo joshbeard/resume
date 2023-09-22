@@ -128,7 +128,8 @@ experience:
       - Deployed comprehensive configuration management across hundreds of
         Linux servers using Puppet and Ansible.
       - Migrated hundreds of projects from Bamboo and BitBucket to GitLab.
-      - Architected and deployed scalable and flexible HTTP services with AWS, Nginx, and Traefik.
+      - Architected and deployed scalable and flexible HTTP services with AWS,
+        Nginx, and Traefik.
       - Successfully migrated 50+ products from on-premise and on-VM
         deployments to AWS and Docker.
       - Automated CI/CD pipelines for hundreds of projects, streamlining
@@ -241,11 +242,11 @@ experience:
     start: October 2008
     end: January 2010
     location: Remote
-    #details:
-    #  - Provided end-user support to customers and business using Apple
-    #    products; especially Apple’s computers and macOS.
-    #  - Consistently received high marks for customer satisfaction and
-    #    issue resolution.
+    # details:
+    #   - Provided end-user support to customers and business using Apple
+    #     products; especially Apple’s computers and macOS.
+    #   - Consistently received high marks for customer satisfaction and
+    #     issue resolution.
 
   - title: Signal Support Systems Specialist
     org: US Army
@@ -254,10 +255,10 @@ experience:
     location: Fort Carson, CO
     # details:
     #   - Supported Army battalion network and communications equipment,
-    #     including workstations, tactical radios, GPS, crypto, network services,
-    #     and multimedia systems.
-    #   - Among first members of battalion staff at Fort Carson and integral part
-    #     of initial stand up of IT operations and communications.
+    #     including workstations, tactical radios, GPS, crypto, network
+    #     services, and multimedia systems.
+    #   - Among first members of battalion staff at Fort Carson and integral
+    #   part of initial stand up of IT operations and communications.
 
 # -----------------------------------------------------------------------------
 # Skills
