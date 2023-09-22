@@ -21,8 +21,14 @@ IT professional with a strong background in systems administration, cloud, and D
 
 September 2022 - Present - Remote
 
+* Serve as the DevOps Lead for a software engineering team dedicated to developing cutting-edge banking services.
+* Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker.
+* Developed and maintain an open source Terraform provider for publishing to the ReadMe.com documentation platform.
+* Successfully implemented CI/CD pipelines across numerous projects, streamlining processes, introducing new features, and enhancing release reliability.
+* Orchestrated the deployment of robust monitoring, observability, and alerting solutions using AWS, DataDog, and PagerDuty, all managed with Terraform.
+* Engineered Terraform modules and tools to efficiently oversee and manage hundreds of GitLab projects, users, and pipelines.
 
-_Key technology and skills: AWS, Docker, GitLab, Go, Golang, Python, Shell, Terraform_
+_Key technology and skills: AWS, DataDog, Docker, GitLab, Go, Golang, Python, Shell, Terraform_
 
 ### Lead DevSecOps Engineer with Ventera, Inc at USGS
 
@@ -31,8 +37,8 @@ June 2022 - April 2023 - Remote
 * Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources) at the [US Geological Survey](https://www.usgs.gov/).
 * DevSecOps on a small team working on a project focused on modernizing and advancing a highly-utilized set of services for water data collected and provided by the USGS.
 * Collaboratively designed, implemented, and supported infrastructure and CI/CD pipelines for a Python codebase of Lambda functions, modularized static websites, and supporting resources.
-* Cloud-native and 'serverless' application development and infrastructure.
-* Integrated and automated code analysis into developer workflow and pipeline.
+* Specialized in cloud-native and serverless application development and infrastructure.
+* Integrated and automated code analysis into the developer workflow and pipeline.
 
 _Key technology and skills: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more), GitLab, Python_
 
@@ -41,17 +47,17 @@ _Key technology and skills: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RD
 September 2015 - May 2022 - Remote
 
 * Contracted to [Science Analytics and Synthesis](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/) at the [US Geological Survey](https://www.usgs.gov/).
-* Lead and contributed to many of the group's most challenging technical projects.
-* Collaborated with over a dozen teams to deliver applications to the USGS science community.
-* Worked with hundreds of codebases spanning several languages and product teams.
-* Responsible for the architecture and implementation of the IT platform for over 50 USGS products.
-* Migrated over 50 products from on-premise and on-VM deployments to AWS deployments, using Docker and native AWS services.
-* Composed CI/CD pipelines for hundreds of projects, improving consistency through automation, empowering product teams, and reducing friction for releasing software.
-* Authored and maintained hundreds of pages of robust documentation for "all things DevOps" and project-specific documentation, utilizing Markdown and adopting a "docs-as-code" workflow.
-* Instructed colleagues on a variety of subjects, including Docker, AWS, and Terraform.
-* Implemented and maintained configuration management (Puppet, Ansible) across hundreds of servers.
-* Implemented and maintained Infrastructure as Code across dozens of applications and services.
-* Developed new HTTP architecture, utilizing CloudFront, Nginx, and S3.
+* Managed the architecture and implementation of the IT platform for 50+ USGS products, ensuring their smooth operation.
+* Led and contributed significantly to complex technical projects within the Science Analytics and Synthesis group at the US Geological Survey.
+* Deployed comprehensive configuration management across hundreds of Linux servers using Puppet and Ansible.
+* Migrated hundreds of projects from Bamboo and BitBucket to GitLab.
+* Architected and deployed scalable and flexible HTTP services with AWS, Nginx, and Traefik.
+* Successfully migrated 50+ products from on-premise and on-VM deployments to AWS and Docker.
+* Automated CI/CD pipelines for hundreds of projects, streamlining release processes and enhancing consistency.
+* Collaborated effectively with over a dozen teams to deliver critical applications to the USGS science community.
+* Authored extensive documentation, adopting a "docs-as-code" approach to ensure clear guidance on DevOps practices and project-specific information (utilized Markdown).
+* Provided mentorship and training to colleagues on various topics, including Docker, AWS, and Terraform.
+* Established and managed Infrastructure as Code for numerous applications and services.
 
 _Key technology and skills: Linux, GitLab, Docker, AWS (wide range of services), Terraform, Ansible, Puppet, Python, Packer, VMware vSphere, Jira, Artifactory, Bamboo, BitBucket, Tomcat, Ruby, Nginx, Traefik, Apache_
 
