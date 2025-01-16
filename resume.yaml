@@ -69,7 +69,8 @@ experience:
         releases across teams and projects, enhancing safety, oversight, and
         management of the release process while significantly improving team
         efficiency.
-      - Designed and implemented comprehensive CI/CD pipelines for multiple projects.
+      - Designed and implemented comprehensive CI/CD pipelines for multiple
+        projects.
       - Write and maintain an open-source Terraform provider and a companion Go
         API client for the ReadMe.com developer portal to manage documentation
         and API specifications as code.
