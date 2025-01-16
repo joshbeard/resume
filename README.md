@@ -21,28 +21,27 @@ Pragmatic engineer that values simplicity, efficiency, and getting things done.
 
 September 2022 - Present - 
 
-* Lead the design and development of tools and workflows to improve software delivery and developer efficiency across multiple teams.
-* Design and build a release orchestration tool in Go to coordinate releases across teams and projects, enhancing safety, oversight, and management of the release process while significantly improving team efficiency.
-* Streamline developer workflows by building and maintaining CI/CD pipelines, introducing automated dependency and vulnerability management, and improving feedback loops.
-* Provide teams with improved developer tooling and processes to simplify and standardize deployment and release workflows.
+* Design and develop tools and workflows to improve software delivery and developer efficiency across multiple teams.
+* Designed and built a release orchestration tool in Go to coordinate releases across teams and projects, enhancing safety, oversight, and management of the release process while significantly improving team efficiency.
+* Designed and implemented comprehensive CI/CD pipelines for multiple projects.
 * Write and maintain an open-source Terraform provider and a companion Go API client for the ReadMe.com developer portal to manage documentation and API specifications as code.
 * Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker to deliver reliable and scalable solutions supporting modern software engineering practices.
-* Establish monitoring and alerting systems to ensure reliable delivery pipelines and actionable insights for teams.
+* Established monitoring, alerting, and observability to ensure reliable delivery pipelines and actionable insights for teams.
 
 _Key technology and skills: AWS, DataDog, Docker, GitLab, Go, Golang, Kubernetes, Python, Shell, Terraform_
 
-### Lead DevSecOps Engineer with Ventera, Inc at USGS
+### Lead DevSecOps Engineer with Ventera, Inc (US Geological Survey)
 
 June 2022 - April 2023 - 
 
 * Contracted to the Water Resources Mission Area at the USGS to modernize and advance services delivering critical water data.
-* Supported infrastructure and CI/CD pipelines for serverless Python applications and static websites, built with AWS services.
+* Designed and supported infrastructure and CI/CD pipelines for serverless Python applications and static websites, built with AWS services.
 * Automated security checks and integrated code analysis into CI/CD pipelines, simplifying compliance for development teams.
 * Worked closely with a small team, balancing hands-on engineering with collaborative problem-solving.
 
 _Key technology and skills: AWS, GitLab, Python_
 
-### Lead DevOps Engineer with Apogee Engineering, LLC at USGS
+### Lead DevOps Engineer with Apogee Engineering, LLC (US Geological Survey)
 
 September 2015 - May 2022 - 
 
