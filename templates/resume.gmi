@@ -23,7 +23,7 @@
 {% for job in resume['experience'] %}
 ### {{ job['title'] }} with {{ job['org'] }}
 
-{{ job['start'] }} - {{ job['end'] }} - {{ job['location'] }}
+{{ job['start'] }} - {{ job['end'] }}{% if 'location' in job %} - {{ job['location'] }}{% endif %}
 {% for item in job['details'] %}
 * {{ item }}
 {%- endfor %}
