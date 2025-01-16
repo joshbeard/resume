@@ -1,5 +1,3 @@
-# NOTE: This depends on AWS resources deployed for the "joshbeard.me" website.
-# Refer to https://github.com/joshbeard/joshbeard.me-tf-aws
 name: Build
 on:
   push:
@@ -7,7 +5,6 @@ on:
       - master
 
 jobs:
-
   yamllint:
     name: YAML Lint
     runs-on: ubuntu-latest
@@ -18,39 +15,28 @@ jobs:
         with:
           file_or_dir: resume.yaml
 
-  # NOTE: This spell checker only checks the changes *in a commit*. It won't
-  # scan the whole repo or even a whole file - just what's changed.
-  # See https://github.com/TypoCI/spellcheck-action
-  # Another option: https://github.com/check-spelling/check-spelling
-  spellcheck:
-    name: Spell Check
-    runs-on: ubuntu-latest
-    timeout-minutes: 4
-    if: "!contains(github.event.head_commit.message, '[ci skip]')"
-    steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
-        with:
-          ref: ${{ github.ref }}
-
-      - name: TypoCheck
-        uses: typoci/spellcheck-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   build:
     name: Build Resume
     runs-on: ubuntu-latest
-    needs: [spellcheck, yamllint]
+    needs: [yamllint]
+    permissions:
+      contents: read
 
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
         with:
           ref: ${{ github.ref }}
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+          
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Generate resume documents from templates (html, md, gemini, txt, json)
-        run: |
-          pip install -r requirements.txt
-          make html md txt gmi json
+        run: make html md txt gmi json
 
       - name: Add man page frontmatter
         run: >
