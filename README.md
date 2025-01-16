@@ -1,6 +1,6 @@
 # Josh Beard
 
-## IT Professional / DevOps / Sysadmin
+## DevOps | Platform | Delivery
 
 ## Contact Details
 
@@ -12,94 +12,78 @@
 
 ## Summary
 
-IT professional with a strong background in systems administration, cloud, and DevOps with years of experience and collaborations with more than a hundred teams across hundreds of projects.
+Pragmatic engineer that values simplicity, efficiency, and getting things done.
 
 
 ## Experience
 
 ### Senior DevOps Engineer with Live Oak Bank
 
-September 2022 - Present - Remote
+September 2022 - Present - 
 
-* Serve as the DevOps Lead for a software engineering team dedicated to developing cutting-edge banking services.
-* Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker.
-* Developed and maintain an open source Terraform provider for publishing to the ReadMe.com documentation platform.
-* Successfully implemented CI/CD pipelines across numerous projects, streamlining processes, introducing new features, and enhancing release reliability.
-* Orchestrated the deployment of robust monitoring, observability, and alerting solutions using AWS, DataDog, and PagerDuty, all managed with Terraform.
-* Engineered Terraform modules and tools to efficiently oversee and manage hundreds of GitLab projects, users, and pipelines.
+* Lead the design and development of tools and workflows to improve software delivery and developer efficiency across multiple teams.
+* Design and build a release orchestration tool in Go to coordinate releases across teams and projects, enhancing safety, oversight, and management of the release process while significantly improving team efficiency.
+* Streamline developer workflows by building and maintaining CI/CD pipelines, introducing automated dependency and vulnerability management, and improving feedback loops.
+* Provide teams with improved developer tooling and processes to simplify and standardize deployment and release workflows.
+* Write and maintain an open-source Terraform provider and a companion Go API client for the ReadMe.com developer portal to manage documentation and API specifications as code.
+* Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker to deliver reliable and scalable solutions supporting modern software engineering practices.
+* Establish monitoring and alerting systems to ensure reliable delivery pipelines and actionable insights for teams.
 
-_Key technology and skills: AWS, DataDog, Docker, GitLab, Go, Golang, Python, Shell, Terraform_
+_Key technology and skills: AWS, DataDog, Docker, GitLab, Go, Golang, Kubernetes, Python, Shell, Terraform_
 
 ### Lead DevSecOps Engineer with Ventera, Inc at USGS
 
-June 2022 - April 2023 - Remote
+June 2022 - April 2023 - 
 
-* Contracted to [Water Resources Mission Area](https://www.usgs.gov/mission-areas/water-resources) at the [US Geological Survey](https://www.usgs.gov/).
-* DevSecOps on a small team working on a project focused on modernizing and advancing a highly-utilized set of services for water data collected and provided by the USGS.
-* Collaboratively designed, implemented, and supported infrastructure and CI/CD pipelines for a Python codebase of Lambda functions, modularized static websites, and supporting resources.
-* Specialized in cloud-native and serverless application development and infrastructure.
-* Integrated and automated code analysis into the developer workflow and pipeline.
+* Contracted to the Water Resources Mission Area at the USGS to modernize and advance services delivering critical water data.
+* Supported infrastructure and CI/CD pipelines for serverless Python applications and static websites, built with AWS services.
+* Automated security checks and integrated code analysis into CI/CD pipelines, simplifying compliance for development teams.
+* Worked closely with a small team, balancing hands-on engineering with collaborative problem-solving.
 
-_Key technology and skills: AWS (CloudFormation, Lambda, CloudFront, S3, IAM, RDS, API Gateway, more), GitLab, Python_
+_Key technology and skills: AWS, GitLab, Python_
 
 ### Lead DevOps Engineer with Apogee Engineering, LLC at USGS
 
-September 2015 - May 2022 - Remote
+September 2015 - May 2022 - 
 
-* Contracted to [Science Analytics and Synthesis](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/) at the [US Geological Survey](https://www.usgs.gov/).
-* Managed the architecture and implementation of the IT platform for 50+ USGS products, ensuring their smooth operation.
-* Led and contributed significantly to complex technical projects within the Science Analytics and Synthesis group at the US Geological Survey.
-* Deployed comprehensive configuration management across hundreds of Linux servers using Puppet and Ansible.
-* Migrated hundreds of projects from Bamboo and BitBucket to GitLab.
-* Architected and deployed scalable and flexible HTTP services with AWS, Nginx, and Traefik.
-* Successfully migrated 50+ products from on-premise and on-VM deployments to AWS and Docker.
-* Automated CI/CD pipelines for hundreds of projects, streamlining release processes and enhancing consistency.
-* Collaborated effectively with over a dozen teams to deliver critical applications to the USGS science community.
-* Authored extensive documentation, adopting a "docs-as-code" approach to ensure clear guidance on DevOps practices and project-specific information (utilized Markdown).
-* Provided mentorship and training to colleagues on various topics, including Docker, AWS, and Terraform.
-* Established and managed Infrastructure as Code for numerous applications and services.
+* Managed the architecture and infrastructure for over 50 USGS products, ensuring scalability and reliability.
+* Led the migration of hundreds of projects from legacy CI/CD systems to GitLab, improving efficiency and developer experience.
+* Deployed configuration management at scale using Puppet and Ansible, simplifying server operations for hundreds of Linux systems.
+* Moved 50+ applications from on-premise to AWS with Docker, enabling more flexible and scalable deployments.
+* Supported cross-team collaboration and delivery, building tools and processes that teams could easily adopt and extend.
+* Mentored colleagues in DevOps best practices, including Docker, AWS, and Terraform, empowering teams to manage their own infrastructure.
+* Authored extensive documentation with a “docs-as-code” approach, standardizing project knowledge and operational guidance.
 
-_Key technology and skills: Linux, GitLab, Docker, AWS (wide range of services), Terraform, Ansible, Puppet, Python, Packer, VMware vSphere, Jira, Artifactory, Bamboo, BitBucket, Tomcat, Ruby, Nginx, Traefik, Apache_
+_Key technology and skills: AWS, GitLab, Docker, Terraform, Ansible, Puppet, Python, Nginx, Traefik_
 
-### Sr. Professional Services Engineer with Puppet Inc.
+### Professional Services Engineer with Puppet Inc.
 
-September 2013 - April 2015 - Remote
+September 2013 - April 2015 - 
 
-* Consulted on Puppet products and DevOps practices for a wide range of customers, including some of Puppet's largest customers and most sophisticated engagements.
-* Instructed dozens of classes on Puppet products to organizations and general public.
-* Contributed Puppet modules and other tools for community use and used within Puppet's commercial products.
-* Developed Puppet, Ruby, and shell code for extending products and automating processes.
-* Consulted on pre-sales, scoping of work, and post-sales support.
-* Earned high marks for customer satisfaction, team work, and professionalism.
+* Delivered consulting and training on Puppet and DevOps practices to enterprise clients, tailoring solutions to unique needs.
+* Created reusable Puppet modules and tools to streamline automation for internal and external use.
+* Earned high marks for adaptability, customer engagement, and technical problem-solving across a diverse client base.
 
-_Key technology and skills: Linux, Puppet and Puppet Enterprise, Git, GitLab, Packer, Vagrant, Jira, Tomcat, Ruby, Shell, Nginx, Apache, WebSphere_
+_Key technology and skills: Puppet, Linux, Ruby, Git, Shell_
 
 ### Linux/Unix Systems Administrator with Douglas School District
 
-January 2010 - September 2013 - Box Elder, SD
+January 2010 - September 2013 - 
 
-* Deployed and administered school district Linux and FreeBSD servers and services for thousands of users.
-* Improved integration across network services for over 2,000 students, faculty, and staff.
-* Administered network file systems, HTTP, DNS/DHCP, Firewalls, Monitoring, Logging, Mail (SMTP, POP3, IMAP, filtering, webmail), and other services for all district users.
-* Improved workstation provisioning through automation, deploying several hundred new workstations a year.
-* Introduced configuration management (Puppet) to manage servers.
-* Redesigned district website and implemented WordPress to manage it.
 
-_Key technology and skills: FreeBSD, Linux, MacOS, Puppet, Apache, Nginx, BIND, Shell, HTML, CSS, PHP, Ruby, KVM, pf, Sophos, Graylog, Nginx, Icinga, NFS, Postfix, WordPress_
+### Senior Support Engineer with Apple, Inc.
 
-### Tier II Technical Support with Apple, Inc.
-
-October 2008 - January 2010 - Remote
+October 2008 - January 2010 - 
 
 
 ### Signal Support Systems Specialist with US Army
 
-August 2006 - October 2008 - Fort Carson, CO
+August 2006 - October 2008 - 
 
 
 ## Skills
 
-12 Factor App Methodology, AWS (EC2, RDS, IAM, S3, Elasticsearch, ECS, EFS, CloudFront, Lambda, Route53, Secrets Manager, Load Balancing, CloudFormation, CDK, misc), Accessibility, Analysis (e.g. Codacy, CodeFactor, Mend, DeepSource, Owasp ZAP, rspec), Ansible, Apache, Arch Linux, Artifactory, Atlassian, Bamboo, Bash and Shell, BitBucket, CI/CD, Cloud, DataDog, Debian/Ubuntu, DigitalOcean, Docker, Elasticsearch, Everything is Code, FreeBSD, Git, GitHub, GitHub Actions, GitHub Workflows, GitLab, GitLab CI/CD, Go, Golang, Graylog, HAProxy, HTML/CSS, Infrastructure as Code, Jira, LXC, MariaDB/MySQL, MongoDB, Nginx, Octopus, PagerDuty, PHP, Packer, Postfix, PostgreSQL, Puppet/Puppet Enterprise, Python, RedHat/CentOS/Rocky/EL, Ruby, Security and Compliance, Sensu, Serverless, Terraform (including provider development), Test-Driven Development (TDD), Tomcat, Traefik, Vagrant
+12 Factor Apps, AWS, Alpine Linux, Ansible, Apache, Arch Linux, Artifactory, Atlassian, Bamboo, Bash, BitBucket, CI/CD, Cloud, Compliance, DataDog, Debian, DevSecOps, DigitalOcean, Docker, Elasticsearch, Everything is Code, FreeBSD, Git, GitHub, GitHub Actions, GitHub Workflows, GitLab, GitLab CI/CD, Go, Golang, Graylog, HAProxy, HTML, Infrastructure as Code, Jira, Kubernetes, LXC, MongoDB, MySQL, Nginx, Octopus, PagerDuty, PHP, Packer, Postfix, PostgreSQL, Proxmox, Puppet, Python, RedHat, Ruby, Security, Sensu, Serverless, Shell, Terraform, Tomcat, Traefik, Ubuntu
 
 ## Other Formats
 
