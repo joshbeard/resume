@@ -72,6 +72,11 @@ h3:first-child {
 #heading_extra {
   flex: 0 1 auto;
   overflow: hidden;
+  font-size: 0.9em;
+}
+
+#heading_extra * {
+  font-family: "Hack", "Ubuntu Mono", "JetBrains Mono", "Fira Code", "Source Code Pro", monospace;
 }
 
 /* Content Area */
@@ -125,7 +130,7 @@ a[href^=tel] {
 
 #contact_details ul li a:hover,
 #other_formats ul li a:hover {
-  color: #EBD94C;
+  color: #87f5c7;
 }
 
 /* Other Formats Section */
@@ -135,6 +140,10 @@ a[href^=tel] {
   text-align: right;
   background: #31333C;
   font-size: 0.8em;
+}
+
+#other_formats * {
+  font-family: 'Hack', 'JetBrains Mono', monospace;
 }
 
 #other_formats li {
@@ -200,6 +209,11 @@ section h2 {
   padding: 22px 22px 12px;
   color: #FFFFFF;
   background: #26272A;
+  font-size: 0.9em;
+}
+
+#footer * {
+  font-family: 'Hack', 'JetBrains Mono', monospace;
 }
 
 #footer_left,
@@ -225,8 +239,18 @@ section h2 {
 
 #footer a:hover,
 #foot_copyright a:hover {
-  color: #EBD94C;
+  color: #87f5c7;
   text-decoration: underline;
+}
+
+section#summary {
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+section#summary p {
+  font-style: italic;
 }
 
 /* Utility Classes */
@@ -336,11 +360,13 @@ img.icon {
   }
 
   #heading {
-    display: flex;
-    padding: 8px;
     text-align: left;
-    background: #F2F2F2;
-    border: 1px solid #CCCCCC;
+    background: #FFFFFF;
+    padding: 0;
+  }
+
+  #heading * {
+    font-family: Helvetica, Verdana, sans-serif;
   }
 
   #name h1 {
@@ -358,13 +384,18 @@ img.icon {
     color: #555555;
   }
 
+  section {
+    display: flex;
+    align-items: flex-start;
+  }
+
   section h2 {
     color: #555555;
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
   }
 
   .section_content {
-    margin-top: 10px;
+    margin: 0;
   }
 
   #resume_content {

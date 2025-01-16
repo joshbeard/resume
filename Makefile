@@ -16,8 +16,13 @@ pdf:
 	@echo "Creating PDF"
 	$(DOCKER_RUN) \
 		--entrypoint=/usr/bin/google-chrome \
-		browserless/chrome:latest -headless -disable-gpu \
-		--no-sandbox --print-to-pdf=dist/resume.pdf dist/index.html
+		browserless/chrome:latest \
+		--headless \
+		--disable-gpu \
+		--no-sandbox \
+		--print-to-pdf=dist/resume.pdf \
+		--no-pdf-header-footer \
+		dist/index.html
 
 docx word:
 	@echo "Creating docx"
