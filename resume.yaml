@@ -2,7 +2,7 @@
 # Josh Beard's Resume
 # https://joshbeard.me/resume
 #
-# This YAML file is parsed by 'build.py' to generate resume documents.
+# This YAML file is parsed by 'resume.py' to generate resume documents.
 # See 'BUILDING.md' for more information.
 #
 ---
@@ -11,7 +11,9 @@
 # -----------------------------------------------------------------------------
 name: Josh Beard
 headline: DevOps | Platform | Delivery
-description: Josh Beard is an adaptable IT professional in Colorado, delivering solutions that balance simplicity and efficiency.
+description: >
+  Josh Beard is an adaptable IT professional in Colorado, delivering solutions
+  that balance simplicity and efficiency.
 url: https://joshbeard.me/resume
 repo:
   url: https://github.com/joshbeard/resume
@@ -49,7 +51,8 @@ contact:
     url: https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado
 
 summary: >
-  Pragmatic engineer that values simplicity, efficiency, and getting things done.
+  Pragmatic engineer that values simplicity, efficiency, and getting things
+  done.
 
 # -----------------------------------------------------------------------------
 # Experience
@@ -161,11 +164,6 @@ experience:
     org: Douglas School District
     start: January 2010
     end: September 2013
-    # details:
-    #   - Deployed and maintained critical IT infrastructure for 2,000+ users,
-    #     introducing automation and configuration management with Puppet.
-    #   - Improved provisioning and management processes for servers and
-    #     workstations, ensuring reliable operations district-wide.
 
   - title: Senior Support Engineer
     org: Apple, Inc.
@@ -176,11 +174,6 @@ experience:
     org: US Army
     start: August 2006
     end: October 2008
-    # details:
-    #   - Supported battalion communications and network systems, including
-    #     tactical radios, GPS, and IT operations.
-
-# -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
 # Skills
