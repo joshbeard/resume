@@ -79,8 +79,8 @@ jobs:
           -headless
           -disable-gpu
           --no-sandbox
+          --no-pdf-header-footer
           --print-to-pdf=dist/Josh-Beard-Resume.pdf
-          --print-to-pdf-no-header
           dist/index.html
 
       - name: ls
