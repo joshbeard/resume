@@ -5,241 +5,206 @@
 # This sources the "resume.yaml" and produces the resume in several formats
 # from Jinja2 templates, including HTML, plain text, Markdown, and Gemini.
 # -----------------------------------------------------------------------------
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Dict, List, Optional, Union
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-import yaml
+import datetime
 import json
 import markdown
-import datetime
 import os
 import re
 import sys
-
-# -----------------------------------------------------------------------------
-# Config
-# Environment variables with defaults.
-# -----------------------------------------------------------------------------
+import yaml
+from enum import Enum, auto
 
 
-class Config(dict):
-    """Config class."""
-
-    def __getattr__(self, attr):
-        if attr in self:
-            item = self[attr]
-            if isinstance(item, dict):
-                return Config(item)
-            return item
-        raise AttributeError(f"Config has no attribute {attr}")
+class Format(Enum):
+    RAW = auto()
+    PLAIN = auto()
+    HTML = auto()
 
 
-config = Config({
-    'template_dir': os.environ.get('RESUME_TEMPLATE_DIR', 'templates'),
-    'resume_yaml': os.environ.get('RESUME_YAML', 'resume.yaml'),
-    'html': {
-        'template': os.environ.get('RESUME_HTML_TEMPLATE', 'resume.html'),
-        'out': os.environ.get('RESUME_HTML_OUT', 'dist/index.html'),
-        'css_src': os.environ.get('RESUME_CSS_TEMPLATE', 'style.css'),
-    },
-    'markdown': {
-        'template': os.environ.get('RESUME_MD_TEMPLATE', 'resume.md'),
-        'out': os.environ.get('RESUME_MD_OUT', 'README.md'),
-    },
-    'gemini': {
-        'template': os.environ.get('RESUME_GMI_TEMPLATE', 'resume.gmi'),
-        'out': os.environ.get('RESUME_GMI_OUT', 'dist/resume.gmi'),
-    },
-    'txt': {
-        'template': os.environ.get('RESUME_TXT_TEMPLATE', 'resume.txt'),
-        'out': os.environ.get('RESUME_TXT_OUT', 'dist/resume.txt'),
-        'narrow_template': os.environ.get('RESUME_TXT_NARROW_TEMPLATE',
-                                          'resume-narrow.txt'),
-        'narrow_out': os.environ.get('RESUME_TXT_NARROW_OUT',
-                                     'dist/resume-narrow.txt'),
-    },
-    'json': {
-        'out': os.environ.get('RESUME_JSON_OUT', 'dist/resume.json'),
-    },
-})
-
-# -----------------------------------------------------------------------------
-
-# Helpers
-base_dir = os.path.dirname(os.path.realpath(__file__))
-
-# Current date
-current_date_time = datetime.datetime.now()
-date = current_date_time.date()
-year = date.strftime("%Y")
+@dataclass
+class FormatConfig:
+    template: str
+    out: str
+    css_src: Optional[str] = None
+    narrow_template: Optional[str] = None
+    narrow_out: Optional[str] = None
 
 
-def md_strip(string: str):
-    """Returns a string with Markdown URLs and emphasis removed.
+@dataclass
+class AppConfig:
+    template_dir: Path
+    resume_yaml: Path
+    html: FormatConfig
+    markdown: FormatConfig
+    gemini: FormatConfig
+    txt: FormatConfig
+    json: FormatConfig
 
-    Args:
-        string (str): The string to parse
-    Returns:
-        _s (str): A string with Markdown removed
-    """
-    _s = re.sub(r"\[([\w\s]+)\]\([\w\d\/\-\.:]+\)", "\\1", string)
-    _s = re.sub(r"(\s+)__?(.*)__?(\s+)?", "\\1\\2\\3", _s)
-    return _s
+    @classmethod
+    def from_env(cls) -> 'AppConfig':
+        """Create config from environment variables with defaults."""
+        return cls(
+            template_dir=Path(os.environ.get('RESUME_TEMPLATE_DIR', 'templates')),
+            resume_yaml=Path(os.environ.get('RESUME_YAML', 'resume.yaml')),
+            html=FormatConfig(
+                template=os.environ.get('RESUME_HTML_TEMPLATE', 'resume.html'),
+                out=os.environ.get('RESUME_HTML_OUT', 'dist/index.html'),
+                css_src=os.environ.get('RESUME_CSS_TEMPLATE', 'style.css'),
+            ),
+            markdown=FormatConfig(
+                template=os.environ.get('RESUME_MD_TEMPLATE', 'resume.md'),
+                out=os.environ.get('RESUME_MD_OUT', 'README.md'),
+            ),
+            gemini=FormatConfig(
+                template=os.environ.get('RESUME_GMI_TEMPLATE', 'resume.gmi'),
+                out=os.environ.get('RESUME_GMI_OUT', 'dist/resume.gmi'),
+            ),
+            txt=FormatConfig(
+                template=os.environ.get('RESUME_TXT_TEMPLATE', 'resume.txt'),
+                out=os.environ.get('RESUME_TXT_OUT', 'dist/resume.txt'),
+                narrow_template=os.environ.get('RESUME_TXT_NARROW_TEMPLATE', 'resume-narrow.txt'),
+                narrow_out=os.environ.get('RESUME_TXT_NARROW_OUT', 'dist/resume-narrow.txt'),
+            ),
+            json=FormatConfig(
+                template='',  # JSON doesn't need a template
+                out=os.environ.get('RESUME_JSON_OUT', 'dist/resume.json'),
+            )
+        )
 
 
-def resume(theformat='plain'):
-    """Parses resume YAML, munges, and returns it as a dict.
+class ResumeBuilder:
+    def __init__(self, config: AppConfig):
+        self.config = config
+        self.base_dir = Path(__file__).parent
+        self.year = datetime.datetime.now().strftime("%Y")
+        
+    @staticmethod
+    def md_strip(text: str) -> str:
+        """Remove Markdown URLs and emphasis from text."""
+        text = re.sub(r"\[([\w\s]+)\]\([\w\d\/\-\.:]+\)", r"\1", text)
+        text = re.sub(r"(\s+)__?(.*)__?(\s+)?", r"\1\2\3", text)
+        return text
 
-    Args:
-        theformat (str): The format to return the resume in
-    Returns:
-        resume_content (dict): The resume content read from YAML as a dict
-    """
-    with open(config.resume_yaml, 'r') as file:
-        resume_content = yaml.safe_load(file)
+    def load_resume(self, output_format: Format) -> Dict:
+        """Load and process resume data based on output format."""
+        with open(self.config.resume_yaml) as f:
+            data = yaml.safe_load(f)
 
-        if theformat == 'raw':
-            return resume_content
+        if output_format == Format.RAW:
+            return data
 
-        for i, job in enumerate(resume_content['experience']):
+        for job in data.get('experience', []):
             if 'details' in job:
                 details = []
                 for detail in job['details']:
-                    if theformat == 'plain':
-                        details.append(md_strip(detail))
-                    if theformat == 'html':
-                        details.append(markdown.markdown(detail))
-                    resume_content['experience'][i]['details'] = details
+                    if output_format == Format.PLAIN:
+                        details.append(self.md_strip(detail))
+                    elif output_format == Format.HTML:
+                        html = markdown.markdown(detail, output_format='html5')
+                        details.append(html)
+                job['details'] = details
 
-    return resume_content
+        return data
 
+    def load_css(self) -> str:
+        """Load CSS content."""
+        css_path = self.config.template_dir / self.config.html.css_src
+        return css_path.read_text()
 
-def css():
-    """Loads CSS source file and returns it as a string.
+    def render_template(self, template_name: str, output_format: Format) -> str:
+        """Render a Jinja2 template."""
+        env = Environment(
+            loader=FileSystemLoader(self.config.template_dir),
+            autoescape=select_autoescape(enabled_extensions=('html')),
+            extensions=['jinja2.ext.do', 'jinja2.ext.loopcontrols']
+        )
+        env.filters['safe'] = lambda x: x
+        
+        template = env.get_template(template_name)
+        return template.render(
+            resume=self.load_resume(output_format),
+            css=self.load_css() if template_name == self.config.html.template else None,
+            year=self.year
+        )
 
-    Returns:
-        css_content (str): The CSS content as a string
-    """
-    css_file = os.path.join(config.template_dir, config.html.css_src)
-    with open(css_file, 'r') as _file:
-        css_content = _file.read()
-    _file.close()
-    return css_content
+    def write_output(self, content: str, output_path: Union[str, Path]) -> None:
+        """Write content to output file."""
+        output_path = self.base_dir / output_path
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(content)
+        print(f"-> Wrote {output_path}")
 
+    def generate_html(self) -> None:
+        """Generate HTML resume."""
+        content = self.render_template(self.config.html.template, Format.HTML)
+        self.write_output(content, self.config.html.out)
 
-def build_template(**kwargs):
-    """Compile Jinja2 template and return it as a string.
+    def generate_markdown(self) -> None:
+        """Generate Markdown resume."""
+        content = self.render_template(self.config.markdown.template, Format.RAW)
+        self.write_output(content, self.config.markdown.out)
 
-    Returns:
-        src_file.render (str): The rendered template as a string
-    Keyword Arguments:
-        source (str): The source template file
-    """
-    src_dir = FileSystemLoader(config.template_dir)
-    env = Environment(loader=src_dir,
-                      autoescape=select_autoescape(
-                          enabled_extensions=('html')
-                      ))
-    src_file = env.get_template(kwargs['source'])
+    def generate_gemini(self) -> None:
+        """Generate Gemini resume."""
+        content = self.render_template(self.config.gemini.template, Format.PLAIN)
+        self.write_output(content, self.config.gemini.out)
 
-    return src_file.render(
-        resume=resume(theformat=kwargs['theformat']), css=css(), year=year
-    )
+    def generate_txt(self) -> None:
+        """Generate text resume versions."""
+        content = self.render_template(self.config.txt.template, Format.PLAIN)
+        self.write_output(content, self.config.txt.out)
 
+        if self.config.txt.narrow_template and self.config.txt.narrow_out:
+            narrow_content = self.render_template(self.config.txt.narrow_template, Format.PLAIN)
+            self.write_output(narrow_content, self.config.txt.narrow_out)
 
-def write_out(**kwargs):
-    """Write a file to disk.
+    def generate_json(self) -> None:
+        """Generate JSON resume."""
+        content = json.dumps(self.load_resume(Format.PLAIN), indent=2)
+        self.write_output(content, self.config.json.out)
 
-    Keyword Arguments:
-        target (str): The target file to write
-        content (str): The content to write to the target file
-    """
-    file_out = os.path.join(base_dir, kwargs['target'])
-    with open(file_out, 'w') as _file:
-        _file.write(kwargs['content'])
-    _file.close()
-    print(f"-> Wrote {kwargs['target']}")
-
-
-def gen_html():
-    """Generate HTML file from Jina2 template.
-
-    The HTML file is written to the `dist` directory.
-    """
-    html = build_template(source=config.html.template, theformat='html')
-    write_out(target=config.html.out, content=html)
-
-
-def gen_markdown():
-    """Generate Markdown file from Jina2 template."""
-    md = build_template(source=config.markdown.template,
-                        autoescape=True, theformat='raw')
-    write_out(target=config.markdown.out, content=md)
-
-
-def gen_gemini():
-    """Generate Gemini file from Jina2 template."""
-    gmi = build_template(source=config.gemini.template, theformat='plain')
-    write_out(target=config.gemini.out, content=gmi)
-
-
-def gen_txt():
-    """Generate plain text files from Jina2 template.
-
-    A regular-width (<70 chars) and a narrow-width (<45 chars) file is created.
-    """
-    txt = build_template(source=config.txt.template, theformat='plain')
-    write_out(target=config.txt.out, content=txt)
-
-    narrow_txt = build_template(
-        source=config.txt.narrow_template, theformat='plain')
-    write_out(target=config.txt.narrow_out, content=narrow_txt)
-
-
-def gen_json():
-    """Generate JSON from converting the YAML source."""
-    the_json = json.dumps(resume(theformat='plain'), indent=2)
-    write_out(target=config.json.out, content=the_json)
-
-
-def print_usage(formats=None):
-    """Print script usage."""
-    print(f"{sys.argv[0]} [ " + " | ".join(formats) + " ]")
-
-
-def build_all():
-    """Build everything."""
-    gen_html()
-    gen_markdown()
-    gen_gemini()
-    gen_txt()
-    gen_json()
+    def build_all(self) -> None:
+        """Generate all resume formats."""
+        self.generate_html()
+        self.generate_markdown()
+        self.generate_gemini()
+        self.generate_txt()
+        self.generate_json()
 
 
 def main():
+    config = AppConfig.from_env()
+    builder = ResumeBuilder(config)
+    
     actions = {
-        'all': build_all,
-        'html': gen_html,
-        'md': gen_markdown,
-        'markdown': gen_markdown,
-        'gmi': gen_gemini,
-        'gemini': gen_gemini,
-        'txt': gen_txt,
-        'text': gen_txt,
-        'gopher': gen_txt,
-        'json': gen_json,
+        'all': builder.build_all,
+        'html': builder.generate_html,
+        'md': builder.generate_markdown,
+        'markdown': builder.generate_markdown,
+        'gmi': builder.generate_gemini,
+        'gemini': builder.generate_gemini,
+        'txt': builder.generate_txt,
+        'text': builder.generate_txt,
+        'gopher': builder.generate_txt,
+        'json': builder.generate_json,
     }
 
     if len(sys.argv) > 1:
-        arg = sys.argv[1]
-        if arg in actions:
-            actions[arg]()
-        elif arg in ['-h', '--help', 'help']:
-            print_usage(actions.keys())
+        action = sys.argv[1]
+        if action in actions:
+            actions[action]()
+        elif action in ['-h', '--help', 'help']:
+            print(f"{sys.argv[0]} [{ ' | '.join(actions.keys()) }]")
         else:
-            print(f"Unknown argument: {arg}")
-            print_usage(actions.keys())
+            print(f"Unknown argument: {action}")
+            print(f"{sys.argv[0]} [{ ' | '.join(actions.keys()) }]")
     else:
         print("Building everything")
-        build_all()
+        builder.build_all()
 
 
 if __name__ == '__main__':
