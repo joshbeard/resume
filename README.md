@@ -1,6 +1,6 @@
 # Josh Beard
 
-## DevOps | Platform | Delivery
+## DevOps | Platform | Developer Experience | Software Delivery
 
 ## Contact Details
 
@@ -12,23 +12,22 @@
 
 ## Summary
 
-Pragmatic engineer that values simplicity, efficiency, and getting things done.
 
 
 ## Experience
 
-### Senior DevOps Engineer with Live Oak Bank
+### Staff DevOps Engineer with Live Oak Bank
 
 September 2022 - Present - 
 
-* Design and develop tools and workflows to improve software delivery and developer efficiency across multiple teams.
-* Designed and built a release orchestration tool in Go to coordinate releases across teams and projects, enhancing safety, oversight, and management of the release process while significantly improving team efficiency.
-* Designed and implemented comprehensive CI/CD pipelines for multiple projects.
-* Write and maintain an open-source Terraform provider and a companion Go API client for the ReadMe.com developer portal to manage documentation and API specifications as code.
-* Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker to deliver reliable and scalable solutions supporting modern software engineering practices.
-* Established monitoring, alerting, and observability to ensure reliable delivery pipelines and actionable insights for teams.
+* Developed internal tooling and workflows to enhance developer experience and software delivery.
+* Designed and built a release orchestration tool in Go, significantly improving release safety, automation, and efficiency across teams.
+* Architected and maintained CI/CD pipelines, optimizing deployment speed and reliability across multiple teams.
+* Maintains an open-source Terraform provider and Go API client for ReadMe.com, enabling docs-as-code workflows.
+* Established observability and monitoring to ensure reliable and scalable CI/CD processes.
+* Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker.
 
-_Key technology and skills: AWS, DataDog, Docker, GitLab, Go, Golang, Kubernetes, Python, Shell, Terraform_
+_Key technology and skills: AWS, CI/CD, DataDog, Docker, GitLab, GitOps, Go, Golang, Kubernetes, GitHub Actions, Platform Engineering, Python, Shell, Terraform_
 
 ### Lead DevSecOps Engineer with Ventera, Inc (US Geological Survey)
 
@@ -45,15 +44,15 @@ _Key technology and skills: AWS, GitLab, Python_
 
 September 2015 - May 2022 - 
 
-* Managed the architecture and infrastructure for over 50 USGS products, ensuring scalability and reliability.
+* Managed the architecture and infrastructure for dozens of USGS products, ensuring scalability and reliability.
 * Led the migration of hundreds of projects from legacy CI/CD systems to GitLab, improving efficiency and developer experience.
 * Deployed configuration management at scale using Puppet and Ansible, simplifying server operations for hundreds of Linux systems.
-* Moved 50+ applications from on-premise to AWS with Docker, enabling more flexible and scalable deployments.
+* Moved dozens of applications across multiple product teams from on-premise to AWS with Docker, enabling more flexible and scalable deployments.
 * Supported cross-team collaboration and delivery, building tools and processes that teams could easily adopt and extend.
 * Mentored colleagues in DevOps best practices, including Docker, AWS, and Terraform, empowering teams to manage their own infrastructure.
 * Authored extensive documentation with a “docs-as-code” approach, standardizing project knowledge and operational guidance.
 
-_Key technology and skills: AWS, GitLab, Docker, Terraform, Ansible, Puppet, Python, Nginx, Traefik_
+_Key technology and skills: AWS, CI/CD, GitLab, GitHub Actions, Docker, Terraform, Ansible, Platform Engineering, GitOps, Puppet, Python, Nginx, Traefik_
 
 ### Professional Services Engineer with Puppet Inc.
 
@@ -82,7 +81,7 @@ August 2006 - October 2008 -
 
 ## Skills
 
-12 Factor Apps, AWS, Alpine Linux, Ansible, Apache, Arch Linux, Artifactory, Atlassian, Bamboo, Bash, BitBucket, CI/CD, Cloud, Compliance, DataDog, Debian, DevSecOps, DigitalOcean, Docker, Elasticsearch, Everything is Code, FreeBSD, Git, GitHub, GitHub Actions, GitHub Workflows, GitLab, GitLab CI/CD, Go, Golang, Graylog, HAProxy, HTML, Infrastructure as Code, Jira, Kubernetes, LXC, MongoDB, MySQL, Nginx, Octopus, PagerDuty, PHP, Packer, Postfix, PostgreSQL, Proxmox, Puppet, Python, RedHat, Ruby, Security, Sensu, Serverless, Shell, Terraform, Tomcat, Traefik, Ubuntu
+
 
 ## Other Formats
 
