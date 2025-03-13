@@ -6,14 +6,14 @@
 # See 'BUILDING.md' for more information.
 #
 ---
-# -----------------------------------------------------------------------------
-# Header
-# -----------------------------------------------------------------------------
 name: Josh Beard
-headline: DevOps | Platform | Delivery
+headline: DevOps | Platform | Developer Experience | Software Delivery
 description: >
-  Josh Beard is an adaptable IT professional in Colorado, delivering solutions
-  that balance simplicity and efficiency.
+  Staff-level engineer specializing in developer experience, platform
+  engineering, inner-source and open-source development, and software delivery.
+  Passionate about empowering teams by delivering standards and frameworks that
+  balance autonomy with governance, building internal tools, and driving scalable
+  solutions and automation to enhance team efficiency.
 url: https://joshbeard.me/resume
 repo:
   url: https://github.com/joshbeard/resume
@@ -50,43 +50,40 @@ contact:
     title: Colorado Springs, CO
     url: https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado
 
-summary: >
-  Pragmatic engineer that values simplicity, efficiency, and getting things
-  done.
+summary: ""
 
 # -----------------------------------------------------------------------------
 # Experience
 # -----------------------------------------------------------------------------
 experience:
-  - title: Senior DevOps Engineer
+  - title: Staff DevOps Engineer
     org: Live Oak Bank
     start: September 2022
     end: Present
     details:
-      - Design and develop tools and workflows to improve software delivery
-        and developer efficiency across multiple teams.
-      - Designed and built a release orchestration tool in Go to coordinate
-        releases across teams and projects, enhancing safety, oversight, and
-        management of the release process while significantly improving team
-        efficiency.
-      - Designed and implemented comprehensive CI/CD pipelines for multiple
-        projects.
-      - Write and maintain an open-source Terraform provider and a companion Go
-        API client for the ReadMe.com developer portal to manage documentation
-        and API specifications as code.
-      - Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker to
-        deliver reliable and scalable solutions supporting modern software
-        engineering practices.
-      - Established monitoring, alerting, and observability to ensure reliable
-        delivery pipelines and actionable insights for teams.
+      - Developed internal tooling and workflows to enhance developer
+        experience and software delivery.
+      - Designed and built a release orchestration tool in Go, significantly
+        improving release safety, automation, and efficiency across teams.
+      - Architected and maintained CI/CD pipelines, optimizing deployment
+        speed and reliability across multiple teams.
+      - Maintains an open-source Terraform provider and Go API client for
+        ReadMe.com, enabling docs-as-code workflows.
+      - Established observability and monitoring to ensure reliable and
+        scalable CI/CD processes.
+      - Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker.
     tech:
       - AWS
+      - CI/CD
       - DataDog
       - Docker
       - GitLab
+      - GitOps
       - Go
       - Golang
       - Kubernetes
+      - GitHub Actions
+      - Platform Engineering
       - Python
       - Shell
       - Terraform
@@ -115,14 +112,15 @@ experience:
     start: September 2015
     end: May 2022
     details:
-      - Managed the architecture and infrastructure for over 50 USGS products,
+      - Managed the architecture and infrastructure for dozens of USGS products,
         ensuring scalability and reliability.
       - Led the migration of hundreds of projects from legacy CI/CD systems to
         GitLab, improving efficiency and developer experience.
       - Deployed configuration management at scale using Puppet and Ansible,
         simplifying server operations for hundreds of Linux systems.
-      - Moved 50+ applications from on-premise to AWS with Docker, enabling more
-        flexible and scalable deployments.
+      - Moved dozens of applications across multiple product teams from
+        on-premise to AWS with Docker, enabling more flexible and scalable
+        deployments.
       - Supported cross-team collaboration and delivery, building tools and
         processes that teams could easily adopt and extend.
       - Mentored colleagues in DevOps best practices, including Docker, AWS, and
@@ -131,10 +129,14 @@ experience:
         standardizing project knowledge and operational guidance.
     tech:
       - AWS
+      - CI/CD
       - GitLab
+      - GitHub Actions
       - Docker
       - Terraform
       - Ansible
+      - Platform Engineering
+      - GitOps
       - Puppet
       - Python
       - Nginx
@@ -177,63 +179,40 @@ experience:
 # Skills
 # -----------------------------------------------------------------------------
 skills:
-  products:
-    - 12 Factor Apps
-    - AWS
-    - Alpine Linux
-    - Ansible
-    - Apache
-    - Arch Linux
-    - Artifactory
-    - Atlassian
-    - Bamboo
-    - Bash
-    - BitBucket
-    - CI/CD
-    - Cloud
-    - Compliance
-    - DataDog
-    - Debian
-    - DevSecOps
-    - DigitalOcean
-    - Docker
-    - Elasticsearch
-    - Everything is Code
-    - FreeBSD
-    - Git
-    - GitHub
-    - GitHub Actions
-    - GitHub Workflows
-    - GitLab
-    - GitLab CI/CD
-    - Go
-    - Golang
-    - Graylog
-    - HAProxy
-    - HTML
-    - Infrastructure as Code
-    - Jira
-    - Kubernetes
-    - LXC
-    - MongoDB
-    - MySQL
-    - Nginx
-    - Octopus
-    - PagerDuty
-    - PHP
-    - Packer
-    - Postfix
-    - PostgreSQL
-    - Proxmox
-    - Puppet
+  core:
+    - Platform Engineering & Developer Experience
+    - Release Engineering & Deployment Orchestration
+    - CI/CD Architecture & Pipeline Design
+    - Infrastructure as Code & Configuration Management
+    - DevSecOps & Compliance Automation
+    - Technical Leadership & Team Enablement
+  programming:
+    - Go (Golang)
     - Python
-    - RedHat
+    - Shell/Bash
     - Ruby
-    - Security
-    - Sensu
-    - Serverless
-    - Shell
-    - Terraform
-    - Tomcat
-    - Traefik
-    - Ubuntu
+    - PHP
+  platform:
+    - AWS (Lambda, S3, IAM, CloudFormation, ECS, EKS, API Gateway, others)
+    - Docker, Kubernetes
+    - Linux/Unix (RHEL, Ubuntu, Debian, Alpine, FreeBSD)
+    - Virtualization (Proxmox, LXC, Vagrant, KVM, vSphere)
+    - Infrastructure & Application Security
+  tools:
+    "Infrastructure & CI/CD":
+      - GitLab CI/CD, GitHub Actions
+      - Terraform, CloudFormation, CDK
+      - Puppet, Ansible
+    "Observability":
+      - DataDog, Prometheus
+      - Elasticsearch, Graylog
+      - PagerDuty
+      - Sensu
+    "Web & Data":
+      - Nginx, Apache, HAProxy, Traefik
+      - PostgreSQL, MySQL, MongoDB, Redis
+    "Modern Practices":
+      - AI/LLM-assisted Automation
+      - GitOps Workflows
+      - 12-Factor Applications
+      - Everything as Code

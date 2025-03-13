@@ -84,10 +84,12 @@
             </ul>
         </div>
         <div id="resume_content">
+        {%- if 'summary' in resume and resume['summary'] %}
             <section id="summary">
-          <p>{{ resume['summary'] }}</p>
+              <p>{{ resume['summary'] }}</p>
             </section>
-            <section>
+          {%- endif %}
+            <section id="experience">
                 <h2 id="experience">Experience</h2>
                 <div class="section_content">
                     {% for job in resume['experience'] %}
@@ -119,18 +121,58 @@
                 </div>
                 <div class="clear"></div>
             </section>
-            <section>
-                <h2 id="skills">Skills</h2>
-                <div class="section_content">
-                    <p>
-                    {%- for skill in resume['skills']['products'] -%}
-                        {{ skill }}
-                        {%- if not loop.last %} &middot; {% endif %}
-                    {%- endfor %}
-                    </p>
+
+<section>
+                <h2 id="skills">Skills & Expertise</h2>
+                <div class="section_content skills-grid">
+                    <!-- Core Competencies -->
+                    <div class="skill-category core">
+                        <h3>Core Competencies</h3>
+                        <ul class="skill-list">
+                            {%- for skill in resume['skills']['core'] %}
+                            <li>{{ skill }}</li>
+                            {%- endfor %}
+                        </ul>
+                    </div>
+
+                    <!-- Technical Skills -->
+                    <div class="skill-category technical">
+                        <div class="subsection">
+                            <h3>Programming</h3>
+                            <ul class="skill-list compact">
+                                {%- for skill in resume['skills']['programming'] %}
+                                <li>{{ skill }}</li>
+                                {%- endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="subsection">
+                            <h3>Platform & Infrastructure</h3>
+                            <ul class="skill-list compact">
+                                {%- for skill in resume['skills']['platform'] %}
+                                <li>{{ skill }}</li>
+                                {%- endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="subsection tools-grid">
+                            <h3>Tools & Technologies</h3>
+                            {%- for category, tools in resume['skills']['tools'].items() %}
+                            <div class="tool-category">
+                                <h4>{{ category }}</h4>
+                                <ul class="tool-list">
+                                    {%- for tool in tools %}
+                                    <li>{{ tool }}</li>
+                                    {%- endfor %}
+                                </ul>
+                            </div>
+                            {%- endfor %}
+                        </div>
+                    </div>
                 </div>
                 <div class="clear"></div>
             </section>
+
         </div>
         <div id="footer">
             <div id="footer_left">
