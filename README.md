@@ -20,10 +20,10 @@
 
 September 2022 - Present - 
 
-* Developed internal tooling and workflows to enhance developer experience and software delivery.
-* Designed and built a release orchestration tool in Go, significantly improving release safety, automation, and efficiency across teams.
-* Architected and maintained CI/CD pipelines, optimizing deployment speed and reliability across multiple teams.
-* Maintains an open-source Terraform provider and Go API client for ReadMe.com, enabling docs-as-code workflows.
+* Develop internal tooling and workflows to enhance developer experience and software delivery.
+* Designed and built a release orchestration and queue tool in Go, significantly improving release safety, automation, and efficiency across teams.
+* Architect and maintain CI/CD pipelines, optimizing deployment speed and reliability across multiple teams.
+* Maintain an open-source Terraform provider and Go API client for ReadMe.com, enabling docs-as-code workflows.
 * Established observability and monitoring to ensure reliable and scalable CI/CD processes.
 * Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker.
 
