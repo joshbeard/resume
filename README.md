@@ -21,13 +21,13 @@
 September 2022 - Present - 
 
 * Develop internal tooling and workflows to enhance developer experience and software delivery.
-* Designed and built a release orchestration and queue tool in Go, significantly improving release safety, automation, and efficiency across teams.
+* Designed and built a release orchestration and queue tool in Go, significantly improving release safety, automation, and efficiency.
 * Architect and maintain CI/CD pipelines, optimizing deployment speed and reliability across multiple teams.
 * Maintain an open-source Terraform provider and Go API client for ReadMe.com, enabling docs-as-code workflows.
 * Established observability and monitoring to ensure reliable and scalable CI/CD processes.
 * Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker.
 
-_Key technology and skills: AWS, CI/CD, DataDog, Docker, GitLab, GitOps, Go, Golang, Kubernetes, GitHub Actions, Platform Engineering, Python, Shell, Terraform_
+_Key technology and skills: AWS, CI/CD, DataDog, Devcontainers, Docker, GitLab, GitOps, Go, Golang, Kubernetes, GitHub Actions, Platform Engineering, Python, Shell, Terraform_
 
 ### Lead DevSecOps Engineer with Ventera, Inc (US Geological Survey)
 
