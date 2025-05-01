@@ -64,8 +64,7 @@ experience:
       - Develop internal tooling and workflows to enhance developer
         experience and software delivery.
       - Designed and built a release orchestration and queue tool in Go,
-        significantly improving release safety, automation, and efficiency
-        across teams.
+        significantly improving release safety, automation, and efficiency.
       - Architect and maintain CI/CD pipelines, optimizing deployment
         speed and reliability across multiple teams.
       - Maintain an open-source Terraform provider and Go API client for
@@ -77,6 +76,7 @@ experience:
       - AWS
       - CI/CD
       - DataDog
+      - Devcontainers
       - Docker
       - GitLab
       - GitOps
