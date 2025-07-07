@@ -631,6 +631,10 @@ img.icon {
     padding: 15px;
   }
 
+  #contact_details {
+    text-align: center;
+  }
+
   #other_formats {
     text-align: center;
   }
@@ -693,6 +697,7 @@ img.icon {
 
   #contact_details {
     font-size: 1.2em;
+    text-align: center;
   }
 
   #contact_details ul li a {
