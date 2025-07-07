@@ -13,3 +13,4 @@ _site/
 env
 /.dccache
 dist/joshbeard-resume.7
+.venv

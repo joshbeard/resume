@@ -9,7 +9,7 @@
 name: Josh Beard
 headline: DevOps | Platform | Developer Experience | Software Delivery
 description: >
-  Staff-level engineer specializing in developer experience, platform
+  Experienced and pragmatic engineer specializing in developer experience, platform
   engineering, inner-source and open-source development, and software delivery.
   Passionate about empowering teams by delivering standards and frameworks that
   balance autonomy with governance, building internal tools, and driving
@@ -63,12 +63,12 @@ experience:
     details:
       - Develop internal tooling and workflows to enhance developer
         experience and software delivery.
-      - Designed and built a release orchestration and queue tool in Go,
-        significantly improving release safety, automation, and efficiency.
       - Architect and maintain CI/CD pipelines, optimizing deployment
         speed and reliability across multiple teams.
-      - Maintain an open-source Terraform provider and Go API client for
-        ReadMe.com, enabling docs-as-code workflows.
+      - Developed an open-source Terraform provider and Go API client for third
+        party integrations.
+      - Designed and developed a release orchestration and queue tool in Go,
+        significantly improving release safety, automation, and efficiency.
       - Established observability and monitoring to ensure reliable and
         scalable CI/CD processes.
       - Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker.
@@ -88,6 +88,7 @@ experience:
       - Python
       - Shell
       - Terraform
+      - Traefik
 
   - title: Lead DevSecOps Engineer
     org: Ventera, Inc (US Geological Survey)

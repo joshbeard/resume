@@ -30,12 +30,74 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <style type="text/css">
         {% include 'style.css' %}
+
+                        /* Theme Toggle Button Styles */
+        #theme-toggle {
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            background: none;
+            border: 2px solid var(--color-contact-text);
+            color: var(--color-contact-text);
+            padding: 4px 8px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: var(--font-tech);
+            font-size: 0.7em;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        #theme-toggle:hover {
+            background: var(--color-contact-text);
+            color: var(--color-bg-header);
+            transform: scale(1.05);
+        }
+
+        #theme-toggle:active {
+            transform: scale(0.95);
+        }
+
+        /* Adjust contact details to make room for button */
+        #contact_details {
+            margin-top: 30px;
+        }
+
+        /* Hide theme toggle when printing */
+        @media print {
+            #theme-toggle {
+                display: none;
+            }
+
+            #contact_details {
+                margin-top: 0;
+            }
+        }
+
+        /* Mobile responsive theme toggle */
+        @media (max-width: 480px) {
+            #theme-toggle {
+                top: 5px;
+                right: 10px;
+                padding: 3px 6px;
+                font-size: 0.6em;
+            }
+
+            #contact_details {
+                margin-top: 25px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div id="cv">
-        <div id="heading">
+        <div id="cv">
+                <div id="heading">
+            <!-- Theme Toggle Button in top right corner -->
+            <button id="theme-toggle" title="Toggle light/dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+
             <div id="name">
                 <h1>{{ resume['name'] }}</h1>
                 <h2 id="headline">{{ resume['headline'] }}</h2>
@@ -95,7 +157,7 @@
                     {% for job in resume['experience'] %}
                     <article class="job">
                         <h3 class="position">{{ job['title'] }} at {{ job['org'] }}</h3>
-                        <p><strong>{{ job['start'] }} - {{ job['end'] }}
+                        <p class="dates"><strong>{{ job['start'] }} - {{ job['end'] }}
                         {%- if 'location' in job %}
                         · {{ job['location'] }}
                         {%- endif %}
@@ -196,6 +258,64 @@
             </div>
         </div>
     </div>
+
+    <!-- Theme Toggle JavaScript -->
+    <script>
+        (function() {
+            // Check for saved theme preference or default to system preference
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.querySelector('.theme-icon');
+
+            // Set initial theme
+            let currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                if (themeIcon) {
+                    // Option 1: Simple Unicode symbols (more monochrome)
+                    // themeIcon.textContent = theme === 'dark' ? '○' : '●';
+
+                    // Option 2: Text-based
+                    themeIcon.textContent = theme === 'dark' ? 'Light' : 'Dark';
+
+                    // Option 3: Geometric symbols
+                    // themeIcon.textContent = theme === 'dark' ? '□' : '■';
+
+                    // Option 4: Minimal symbols
+                    // themeIcon.textContent = theme === 'dark' ? '◇' : '◆';
+
+                    // Option 5: Simple dots
+                    // themeIcon.textContent = theme === 'dark' ? '◯' : '⬤';
+                }
+                localStorage.setItem('theme', theme);
+                console.log('Theme applied:', theme); // Debug log
+            }
+
+            // Apply theme on page load
+            applyTheme(currentTheme);
+
+            // Theme toggle functionality
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+                    applyTheme(currentTheme);
+                    console.log('Theme toggled to:', currentTheme); // Debug log
+                });
+            } else {
+                console.error('Theme toggle button not found!');
+            }
+
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                if (!localStorage.getItem('theme')) {
+                    currentTheme = e.matches ? 'dark' : 'light';
+                    applyTheme(currentTheme);
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>
