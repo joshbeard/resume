@@ -8,7 +8,8 @@
     <base href="{{ resume['url'] }}/" />
     <link rel="canonical" href="{{ resume['url'] }}" />
     <meta name="description" content="{{ resume['description'] }}" />
-    <meta name="keywords" content="joshua beard, josh, joshbeard, jashbeard, devops, sysadmin, colorado springs, josh beard colorado springs, josh beard colorado, josh beard devops, josh beard denver, joshua beard colorado springs, joshua beard devops, devops engineer, colorado springs devops, colorado springs devops engineer, colorado devops engineer, denver devops engineer, josh beard resume, joshua beard resume, devops resume, devops engineer resume, sysadmin resume, systems administrator resume, josh beard sysadmin, josh beard systems administrator, josh beard apogee engineering, joshua beard apogee engineering, josh beard usgs, josh beard puppet, josh beard dsdk12" />
+    <meta name="keywords"
+        content="joshua beard, josh, joshbeard, jashbeard, devops, sysadmin, colorado springs, josh beard colorado springs, josh beard colorado, josh beard devops, josh beard denver, joshua beard colorado springs, joshua beard devops, devops engineer, colorado springs devops, colorado springs devops engineer, colorado devops engineer, denver devops engineer, josh beard resume, joshua beard resume, devops resume, devops engineer resume, sysadmin resume, systems administrator resume, josh beard sysadmin, josh beard systems administrator, josh beard apogee engineering, joshua beard apogee engineering, josh beard usgs, josh beard puppet, josh beard dsdk12" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
@@ -30,70 +31,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <style type="text/css">
         {% include 'style.css' %}
-
-                        /* Theme Toggle Button Styles */
-        #theme-toggle {
-            position: absolute;
-            top: 8px;
-            right: 15px;
-            background: none;
-            border: 2px solid var(--color-contact-text);
-            color: var(--color-contact-text);
-            padding: 4px 8px;
-            border-radius: 15px;
-            cursor: pointer;
-            font-family: var(--font-tech);
-            font-size: 0.7em;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-
-        #theme-toggle:hover {
-            background: var(--color-contact-text);
-            color: var(--color-bg-header);
-            transform: scale(1.05);
-        }
-
-        #theme-toggle:active {
-            transform: scale(0.95);
-        }
-
-        /* Adjust contact details to make room for button */
-        #contact_details {
-            margin-top: 30px;
-        }
-
-        /* Hide theme toggle when printing */
-        @media print {
-            #theme-toggle {
-                display: none;
-            }
-
-            #contact_details {
-                margin-top: 0;
-            }
-        }
-
-        /* Mobile responsive theme toggle */
-        @media (max-width: 480px) {
-            #theme-toggle {
-                top: 5px;
-                right: 10px;
-                padding: 3px 6px;
-                font-size: 0.6em;
-            }
-
-            #contact_details {
-                margin-top: 25px;
-            }
-        }
     </style>
 </head>
 
 <body>
-        <div id="cv">
-                <div id="heading">
-            <!-- Theme Toggle Button in top right corner -->
+    <div id="cv">
+        <div id="heading">
             <button id="theme-toggle" title="Toggle light/dark mode">
                 <span class="theme-icon">🌙</span>
             </button>
@@ -106,24 +49,26 @@
                 <div id="contact_details">
                     <ul>
                         <li>
-                            <a href="mailto:{{ resume['contact']['email'] }}"><img
-                                src="assets/img/envelope-solid.png" alt="mail:" class="icon" /></a><a
-                                href="mailto:{{ resume['contact']['email'] }}">{{ resume['contact']['email'] }}</a>
+                            <a href="mailto:{{ resume['contact']['email'] }}"><img src="assets/img/envelope-solid.png"
+                                    alt="mail:" class="icon" /></a><a href="mailto:{{ resume['contact']['email'] }}">{{
+                                resume['contact']['email'] }}</a>
                         </li>
                         <li>
                             <a href="{{ resume['contact']['web']['url'] }}"><img
-                                src="assets/img/globe-americas-solid.png" alt="web:" class="icon" /></a><a
+                                    src="assets/img/globe-americas-solid.png" alt="web:" class="icon" /></a><a
                                 href="{{ resume['contact']['web']['url'] }}">{{ resume['contact']['web']['title'] }}</a>
                         </li>
                         <li>
                             <a href="https://github.com/{{ resume['contact']['github'] }}"><img
-                                src="assets/img/github-brands.png" alt="github:" class="icon" /></a><a
-                                href="https://github.com/{{ resume['contact']['github'] }}">github.com/{{ resume['contact']['github'] }}</a>
+                                    src="assets/img/github-brands.png" alt="github:" class="icon" /></a><a
+                                href="https://github.com/{{ resume['contact']['github'] }}">github.com/{{
+                                resume['contact']['github'] }}</a>
                         </li>
                         <li>
                             <a href="{{ resume['contact']['location']['url'] }}"><img
-                                src="assets/img/map-marker-solid.png" alt="location:" class="icon" /></a><a
-                                href="{{ resume['contact']['location']['url'] }}">{{ resume['contact']['location']['title'] }}</a>
+                                    src="assets/img/map-marker-solid.png" alt="location:" class="icon" /></a><a
+                                href="{{ resume['contact']['location']['url'] }}">{{
+                                resume['contact']['location']['title'] }}</a>
                         </li>
                     </ul>
                 </div>
@@ -131,26 +76,23 @@
         </div>
         <div id="other_formats">
             <ul>
-                <li><a href="Josh-Beard-Resume.pdf"><img
-                        src="assets/img/file-pdf-regular.png" alt="PDF" class="icon" /></a><a
-                        href="Josh-Beard-Resume.pdf">Pdf</a></li>
-                <li><a href="Josh-Beard-Resume.docx"><img
-                        src="assets/img/file-word-regular.png" alt="Word" class="icon" /></a><a
-                        href="Josh-Beard-Resume.docx">Docx</a></li>
+                <li><a href="Josh-Beard-Resume.pdf"><img src="assets/img/file-pdf-regular.png" alt="PDF"
+                            class="icon" /></a><a href="Josh-Beard-Resume.pdf">Pdf</a></li>
+                <li><a href="Josh-Beard-Resume.docx"><img src="assets/img/file-word-regular.png" alt="Word"
+                            class="icon" /></a><a href="Josh-Beard-Resume.docx">Docx</a></li>
                 <li><a href="https://github.com/joshbeard/resume/blob/master/README.md"><img
-                        src="assets/img/markdown-brands.png" alt="Markdown" class="icon" /></a><a
+                            src="assets/img/markdown-brands.png" alt="Markdown" class="icon" /></a><a
                         href="https://github.com/joshbeard/resume/blob/master/README.md">Md</a></li>
-                <li><a href="resume.txt"><img
-                        src="assets/img/file-alt-solid.png" alt="Plain Text" class="icon" /></a><a
+                <li><a href="resume.txt"><img src="assets/img/file-alt-solid.png" alt="Plain Text" class="icon" /></a><a
                         href="resume.txt">Txt</a></li>
             </ul>
         </div>
         <div id="resume_content">
-        {%- if 'summary' in resume and resume['summary'] %}
+            {%- if 'summary' in resume and resume['summary'] %}
             <section id="summary">
-              <p>{{ resume['summary'] }}</p>
+                <p>{{ resume['summary'] }}</p>
             </section>
-          {%- endif %}
+            {%- endif %}
             <section id="experience">
                 <h2>Experience</h2>
                 <div class="section_content">
@@ -158,24 +100,24 @@
                     <article class="job">
                         <h3 class="position">{{ job['title'] }} at {{ job['org'] }}</h3>
                         <p class="dates"><strong>{{ job['start'] }} - {{ job['end'] }}
-                        {%- if 'location' in job %}
-                        · {{ job['location'] }}
-                        {%- endif %}
-                        </strong></p>
+                                {%- if 'location' in job %}
+                                · {{ job['location'] }}
+                                {%- endif %}
+                            </strong></p>
                         <ul>
                             {%- for item in job['details'] %}
-                              <li>{{ item }}</li>
+                            <li>{{ item }}</li>
                             {%- endfor %}
                         </ul>
                         {%- if 'tech' in job %}
                         <p class="key_tech">
                             Key technology:
-                        <em>
-                        {%- for skill in job['tech'] -%}
-                            {{ skill }}
-                            {%- if not loop.last %}, {% endif %}
-                        {%- endfor %}
-                        </em>
+                            <em>
+                                {%- for skill in job['tech'] -%}
+                                {{ skill }}
+                                {%- if not loop.last %}, {% endif %}
+                                {%- endfor %}
+                            </em>
                         </p>
                         {%- endif %}
                     </article>
@@ -184,53 +126,19 @@
                 <div class="clear"></div>
             </section>
 
-<section>
+            <section>
                 <h2 id="skills">Skills & Expertise</h2>
                 <div class="section_content skills-grid">
-                    <!-- Core Competencies -->
-                    <div class="skill-category core">
-                        <h3>Core Competencies</h3>
+                    {% for cat in resume['skills'] %}
+                    <div class="skill-category {{ cat }}">
+                        <h3>{{ cat }}</h3>
                         <ul class="skill-list">
-                            {%- for skill in resume['skills']['core'] %}
+                            {%- for skill in resume['skills'][cat] %}
                             <li>{{ skill }}</li>
                             {%- endfor %}
                         </ul>
                     </div>
-
-                    <!-- Technical Skills -->
-                    <div class="skill-category technical">
-                        <div class="subsection">
-                            <h3>Programming</h3>
-                            <ul class="skill-list compact">
-                                {%- for skill in resume['skills']['programming'] %}
-                                <li>{{ skill }}</li>
-                                {%- endfor %}
-                            </ul>
-                        </div>
-
-                        <div class="subsection">
-                            <h3>Platform & Infrastructure</h3>
-                            <ul class="skill-list compact">
-                                {%- for skill in resume['skills']['platform'] %}
-                                <li>{{ skill }}</li>
-                                {%- endfor %}
-                            </ul>
-                        </div>
-
-                        <div class="subsection tools-grid">
-                            <h3>Tools & Technologies</h3>
-                            {%- for category, tools in resume['skills']['tools'].items() %}
-                            <div class="tool-category">
-                                <h4>{{ category }}</h4>
-                                <ul class="tool-list">
-                                    {%- for tool in tools %}
-                                    <li>{{ tool }}</li>
-                                    {%- endfor %}
-                                </ul>
-                            </div>
-                            {%- endfor %}
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="clear"></div>
             </section>
@@ -239,12 +147,12 @@
         <div id="footer">
             <div id="footer_left">
                 <div id="foot_contact">
-                    <a href="mailto:{{ resume['contact']['email'] }}"><img src="assets/img/envelope-solid.png" alt="envelope icon"
-                            class="icon" /><span>{{ resume['contact']['email'] }}</span></a>
+                    <a href="mailto:{{ resume['contact']['email'] }}"><img src="assets/img/envelope-solid.png"
+                            alt="envelope icon" class="icon" /><span>{{ resume['contact']['email'] }}</span></a>
                 </div>
                 <div id="foot_source">
-                    <a href="{{ resume['repo']['url'] }}"><img src="assets/img/git-alt-brands.png"
-                            alt="git repo icon" class="icon" /><span>Resume source on GitHub</span></a><br />
+                    <a href="{{ resume['repo']['url'] }}"><img src="assets/img/git-alt-brands.png" alt="git repo icon"
+                            class="icon" /><span>Resume source on GitHub</span></a><br />
                 </div>
             </div>
             <div id="footer_right">
@@ -259,56 +167,43 @@
         </div>
     </div>
 
-    <!-- Theme Toggle JavaScript -->
+    <!-- Theme Toggle -->
     <script>
-        (function() {
+        (function () {
             // Check for saved theme preference or default to system preference
             const savedTheme = localStorage.getItem('theme');
             const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             const themeToggle = document.getElementById('theme-toggle');
             const themeIcon = document.querySelector('.theme-icon');
 
-            // Set initial theme
             let currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
 
             function applyTheme(theme) {
                 document.documentElement.setAttribute('data-theme', theme);
                 if (themeIcon) {
-                    // Option 1: Simple Unicode symbols (more monochrome)
                     // themeIcon.textContent = theme === 'dark' ? '○' : '●';
-
-                    // Option 2: Text-based
                     themeIcon.textContent = theme === 'dark' ? 'Light' : 'Dark';
-
-                    // Option 3: Geometric symbols
                     // themeIcon.textContent = theme === 'dark' ? '□' : '■';
-
-                    // Option 4: Minimal symbols
                     // themeIcon.textContent = theme === 'dark' ? '◇' : '◆';
-
-                    // Option 5: Simple dots
                     // themeIcon.textContent = theme === 'dark' ? '◯' : '⬤';
                 }
                 localStorage.setItem('theme', theme);
-                console.log('Theme applied:', theme); // Debug log
+                console.log('Theme applied:', theme);
             }
 
-            // Apply theme on page load
             applyTheme(currentTheme);
 
-            // Theme toggle functionality
             if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
+                themeToggle.addEventListener('click', function () {
                     currentTheme = currentTheme === 'light' ? 'dark' : 'light';
                     applyTheme(currentTheme);
-                    console.log('Theme toggled to:', currentTheme); // Debug log
+                    console.log('Theme toggled to:', currentTheme);
                 });
             } else {
                 console.error('Theme toggle button not found!');
             }
 
-            // Listen for system theme changes
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
                 if (!localStorage.getItem('theme')) {
                     currentTheme = e.matches ? 'dark' : 'light';
                     applyTheme(currentTheme);

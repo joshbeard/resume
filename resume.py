@@ -81,7 +81,7 @@ class ResumeBuilder:
         self.config = config
         self.base_dir = Path(__file__).parent
         self.year = datetime.datetime.now().strftime("%Y")
-        
+
     @staticmethod
     def md_strip(text: str) -> str:
         """Remove Markdown URLs and emphasis from text."""
@@ -123,7 +123,7 @@ class ResumeBuilder:
             extensions=['jinja2.ext.do', 'jinja2.ext.loopcontrols']
         )
         env.filters['safe'] = lambda x: x
-        
+
         template = env.get_template(template_name)
         return template.render(
             resume=self.load_resume(output_format),
@@ -179,7 +179,7 @@ class ResumeBuilder:
 def main():
     config = AppConfig.from_env()
     builder = ResumeBuilder(config)
-    
+
     actions = {
         'all': builder.build_all,
         'html': builder.generate_html,
