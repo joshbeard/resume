@@ -1,6 +1,6 @@
 # Josh Beard
 
-## DevOps | Platform | Developer Experience | Software Delivery
+## Platform Engineering | Developer Experience | DevOps
 
 ## Contact Details
 
@@ -12,6 +12,7 @@
 
 ## Summary
 
+Staff DevOps engineer focused on platform engineering and developer experience.  I build internal tools, CI/CD systems, and automation that scale teams while maintaining governance. Open-source contributor with expertise in Go, AWS, and infrastructure as code.
 
 
 ## Experience
@@ -20,12 +21,11 @@
 
 September 2022 - Present - 
 
-* Develop internal tooling and workflows to enhance developer experience and software delivery.
-* Architect and maintain CI/CD pipelines, optimizing deployment speed and reliability across multiple teams.
-* Developed an open-source Terraform provider and Go API client for third party integrations.
-* Designed and developed a release orchestration and queue tool in Go, significantly improving release safety, automation, and efficiency.
-* Established observability and monitoring to ensure reliable and scalable CI/CD processes.
-* Work extensively with AWS, Terraform, GitLab, Go, Python, and Docker.
+* Build internal tools and workflows that improve developer experience and software delivery across multiple teams.
+* Architect CI/CD pipelines optimizing deployment speed and reliability.
+* Developed open-source Terraform provider and Go API client for third-party integrations.
+* Built release orchestration tool in Go that significantly improved release safety and automation.
+* Established observability and monitoring for scalable CI/CD processes.
 
 _Key technology and skills: AWS, CI/CD, DataDog, Devcontainers, Docker, GitLab, GitOps, Go, Golang, Kubernetes, GitHub Actions, Platform Engineering, Python, Shell, Terraform, Traefik_
 
@@ -33,10 +33,9 @@ _Key technology and skills: AWS, CI/CD, DataDog, Devcontainers, Docker, GitLab, 
 
 June 2022 - April 2023 - 
 
-* Contracted to the Water Resources Mission Area at the USGS to modernize and advance services delivering critical water data.
-* Designed and supported infrastructure and CI/CD pipelines for serverless Python applications and static websites, built with AWS services.
-* Automated security checks and integrated code analysis into CI/CD pipelines, simplifying compliance for development teams.
-* Worked closely with a small team, balancing hands-on engineering with collaborative problem-solving.
+* Contracted to USGS Water Resources Mission Area to modernize critical water data services.
+* Built AWS infrastructure and CI/CD pipelines for serverless Python applications and static websites.
+* Automated security checks and code analysis in CI/CD pipelines, streamlining compliance for development teams.
 
 _Key technology and skills: AWS, GitLab, Python_
 
@@ -44,13 +43,11 @@ _Key technology and skills: AWS, GitLab, Python_
 
 September 2015 - May 2022 - 
 
-* Managed the architecture and infrastructure for dozens of USGS products, ensuring scalability and reliability.
-* Led the migration of hundreds of projects from legacy CI/CD systems to GitLab, improving efficiency and developer experience.
-* Deployed configuration management at scale using Puppet and Ansible, simplifying server operations for hundreds of Linux systems.
-* Moved dozens of applications across multiple product teams from on-premise to AWS with Docker, enabling more flexible and scalable deployments.
-* Supported cross-team collaboration and delivery, building tools and processes that teams could easily adopt and extend.
-* Mentored colleagues in DevOps best practices, including Docker, AWS, and Terraform, empowering teams to manage their own infrastructure.
-* Authored extensive documentation with a “docs-as-code” approach, standardizing project knowledge and operational guidance.
+* Managed architecture and infrastructure for dozens of USGS products, ensuring scalability and reliability.
+* Led migration of hundreds of projects from legacy CI/CD systems to GitLab, improving efficiency and developer experience.
+* Deployed configuration management at scale using Puppet and Ansible across hundreds of Linux systems.
+* Migrated dozens of applications from on-premise to AWS with Docker, enabling flexible and scalable deployments.
+* Mentored teams in DevOps practices and empowered them to manage their own infrastructure with Docker, AWS, and Terraform.
 
 _Key technology and skills: AWS, CI/CD, GitLab, GitHub Actions, Docker, Terraform, Ansible, Platform Engineering, GitOps, Puppet, Python, Nginx, Traefik_
 
@@ -59,8 +56,8 @@ _Key technology and skills: AWS, CI/CD, GitLab, GitHub Actions, Docker, Terrafor
 September 2013 - April 2015 - 
 
 * Delivered consulting and training on Puppet and DevOps practices to enterprise clients, tailoring solutions to unique needs.
-* Created reusable Puppet modules and tools to streamline automation for internal and external use.
-* Earned high marks for adaptability, customer engagement, and technical problem-solving across a diverse client base.
+* Created reusable Puppet modules and tools to streamline automation.
+* Earned high marks for customer engagement and technical problem-solving across diverse client base.
 
 _Key technology and skills: Puppet, Linux, Ruby, Git, Shell_
 
@@ -68,16 +65,11 @@ _Key technology and skills: Puppet, Linux, Ruby, Git, Shell_
 
 January 2010 - September 2013 - 
 
+* Managed Linux/Unix infrastructure and server operations for K-12 environment.
+* Implemented system automation and monitoring solutions.
+* Provided technical support and maintained network services.
 
-### Senior Support Engineer with Apple, Inc.
-
-October 2008 - January 2010 - 
-
-
-### Signal Support Systems Specialist with US Army
-
-August 2006 - October 2008 - 
-
+_Key technology and skills: Linux, Unix, Proxmox, LXC_
 
 ## Skills
 
