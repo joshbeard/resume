@@ -32,10 +32,12 @@ _Key technology and skills: {% for skill in job['tech'] -%}
 {% endfor %}
 ## Skills
 
-{% for skill in resume['skills']['products'] -%}
-{{ skill }}
-{%- if not loop.last %}, {% endif %}
-{%- endfor %}
+{% for cat in resume['skills'] %}
+### {{ cat }}
+{% for skill in resume['skills'][cat] -%}
+- {{ skill }}
+{% endfor %}
+{% endfor %}
 
 ## Other Formats
 

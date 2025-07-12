@@ -34,7 +34,7 @@
     </style>
 </head>
 
-<body>
+<body id="top">
     <div id="cv">
         <div id="heading">
             <button id="theme-toggle" title="Toggle light/dark mode">
@@ -209,6 +209,15 @@
                     applyTheme(currentTheme);
                 }
             });
+
+            // Handle Back to Top link
+            const backToTopLink = document.querySelector('#foot_to_top a');
+            if (backToTopLink) {
+                backToTopLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
         })();
     </script>
 </body>

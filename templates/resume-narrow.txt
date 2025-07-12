@@ -38,6 +38,8 @@
 {%- endif %}
 {% endfor %}
 ## Skills
-
-    {{ resume['skills']['products'] | join(", ") | wordwrap(36) | indent(4) }}
+{% for cat in resume['skills'] %}
+### {{ cat }}
+    {{ resume['skills'][cat] | join(", ") | wordwrap(36) | indent(4) }}
+{% endfor %}
 

@@ -35,5 +35,10 @@
 {% endfor %}
 ## Skills
 
-    {{ resume['skills']['products'] | join(", ") | wordwrap(63) | indent(4) }}
+    {% for cat in resume['skills'] %}
+    ### {{ cat }}
+    {%- for skill in resume['skills'][cat] %}
+    - {{ skill }}
+    {%- endfor %}
+    {%- endfor %}
 

@@ -10,7 +10,7 @@
   --font-tech: 'Share Tech', sans-serif;
   --font-base: Helvetica, Verdana, sans-serif;
 
-  /* Light Mode Colors */
+    /* Light Mode Colors */
   --text-primary: #5A595A;
   --text-secondary: #737373;
   --text-white: #FFFFFF;
@@ -32,10 +32,11 @@
 
   --border-default: #DEDEDE;
   --border-job: #DEDEDE;
+  --border-header: transparent;
+  --border-formats: transparent;
   --shadow-default: #333333;
 
   /* Common properties */
-  --transition-fast: all 0.3s ease;
   --border-radius: 15px;
 }
 
@@ -61,9 +62,11 @@
     --link-default: #77CBE9;
     --link-visited: #AE93DD;
 
-    --border-default: #393939;
-    --border-job: #393939;
-    --shadow-default: rgba(0, 0, 0, 0.5);
+      --border-default: #393939;
+  --border-job: #393939;
+  --border-header: #393939;
+  --border-formats: #393939;
+  --shadow-default: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -90,6 +93,8 @@
 
   --border-default: #393939;
   --border-job: #393939;
+  --border-header: #393939;
+  --border-formats: #393939;
   --shadow-default: rgba(0, 0, 0, 0.5);
 }
 
@@ -115,6 +120,8 @@
 
   --border-default: #DEDEDE;
   --border-job: #DEDEDE;
+  --border-header: transparent;
+  --border-formats: transparent;
   --shadow-default: #333333;
 }
 
@@ -133,7 +140,6 @@
 html, body {
   color: var(--text-primary);
   background: var(--bg-main);
-  transition: var(--transition-fast);
 }
 
 p {
@@ -174,10 +180,9 @@ h3:first-child {
   margin: 20px auto;
   background: var(--bg-content);
   box-shadow: 0 0 25px var(--shadow-default);
-  transition: var(--transition-fast);
 }
 
-/* Dark mode border */
+/* Dark mode border only */
 @media (prefers-color-scheme: dark) {
   #cv {
     border: 1px solid var(--border-default);
@@ -188,6 +193,16 @@ h3:first-child {
   border: 1px solid var(--border-default);
 }
 
+/* Explicitly remove border for light theme */
+[data-theme="light"] #cv {
+  border: none;
+}
+
+/* Default light mode (no data-theme) - remove border */
+html:not([data-theme]) #cv {
+  border: none;
+}
+
 /* Header Styles */
 #heading {
   position: relative;
@@ -195,8 +210,7 @@ h3:first-child {
   flex-direction: row;
   padding: 25px 35px 12px;
   background: var(--bg-header);
-  border-bottom: 1px solid var(--border-default);
-  transition: var(--transition-fast);
+  border-bottom: 1px solid var(--border-header);
 }
 
 #name {
@@ -208,21 +222,18 @@ h3:first-child {
   color: var(--text-white);
   font-size: 2.5em;
   line-height: 1.4em;
-  transition: var(--transition-fast);
 }
 
 #name h2 {
   margin-left: 2px;
   color: var(--text-muted);
   font-size: 1em;
-  transition: var(--transition-fast);
 }
 
 #heading_extra {
   flex: 0 1 auto;
   font-size: 0.9em;
   color: var(--text-white);
-  transition: var(--transition-fast);
 }
 
 #contact_details {
@@ -252,7 +263,6 @@ h3:first-child {
   cursor: pointer;
   font-family: var(--font-tech);
   font-size: 0.7em;
-  transition: var(--transition-fast);
   z-index: 10;
 }
 
@@ -280,7 +290,6 @@ h3:first-child {
 /* Links */
 #resume_content a {
   text-decoration: none;
-  transition: var(--transition-fast);
 }
 
 #resume_content a:link {
@@ -305,7 +314,6 @@ h3:first-child {
 a[href^="tel"] {
   color: var(--text-white);
   text-decoration: none;
-  transition: var(--transition-fast);
 }
 
 #contact_details ul li a:hover,
@@ -320,8 +328,7 @@ a[href^="tel"] {
   text-align: right;
   background: var(--bg-other);
   font-size: 0.8em;
-  border-top: 1px solid var(--border-default);
-  transition: var(--transition-fast);
+  border-top: 1px solid var(--border-formats);
 }
 
 #other_formats ul {
@@ -343,7 +350,6 @@ section {
   display: flex;
   padding: 15px 0 0;
   border-top: 1px solid var(--border-default);
-  transition: var(--transition-fast);
 }
 
 section:first-child {
@@ -368,7 +374,6 @@ section#summary p {
   font-size: 0.95em;
   line-height: 1.4;
   border-bottom: 1px solid var(--border-default);
-  transition: var(--transition-fast);
 }
 
 /* Job Articles */
@@ -376,7 +381,6 @@ article.job {
   margin-bottom: 12px;
   padding-bottom: 12px;
   border-bottom: 1px dashed var(--border-job);
-  transition: var(--transition-fast);
 }
 
 article.job:last-child {
@@ -416,7 +420,6 @@ article.job ul li p {
   font-size: 1.125em;
   border-bottom: 1px solid var(--border-default);
   padding-bottom: 0.2rem;
-  transition: var(--transition-fast);
 }
 
 .skill-list {
@@ -439,7 +442,6 @@ article.job ul li p {
   position: absolute;
   left: 0;
   color: var(--accent-blue);
-  transition: var(--transition-fast);
 }
 
 .skill-list.compact li {
@@ -454,7 +456,6 @@ article.job ul li p {
   color: var(--accent-green);
   margin: 0.4rem 0 0.1rem;
   font-size: 1em;
-  transition: var(--transition-fast);
 }
 
 .tools-grid {
@@ -482,7 +483,6 @@ article.job ul li p {
   font-size: 0.9em;
   line-height: 1.4;
   border-top: 1px solid var(--border-default);
-  transition: var(--transition-fast);
 }
 
 #footer_left,
@@ -499,7 +499,6 @@ article.job ul li p {
 #foot_copyright a {
   color: var(--text-white);
   text-decoration: none;
-  transition: var(--transition-fast);
 }
 
 #footer a:hover,
