@@ -74,6 +74,53 @@ _Key technology and skills: Linux, Unix, Proxmox, LXC_
 ## Skills
 
 
+### Core Competencies
+- Platform Engineering & Developer Experience
+- Release Management & Automation
+- CI/CD Architecture & Pipeline Design
+- Infrastructure as Code & Configuration Management
+- DevSecOps & Compliance Automation
+- Technical Leadership & Team Enablement
+
+
+### Programming Languages
+- Go
+- Python
+- Shell/Bash
+- Ruby
+- YAML, JSON, HCL
+- PHP
+
+
+### Platforms & Technologies
+- AWS Cloud Services
+- Docker, Kubernetes
+- Linux/Unix (RHEL, Ubuntu, Debian, Alpine, FreeBSD)
+- Virtualization (Proxmox, LXC, Vagrant, KVM, vSphere)
+- Security Scanning & Vulnerability Management
+
+
+### Infrastructure & CI/CD
+- GitLab CI/CD, GitHub Actions
+- Terraform, CloudFormation, CDK
+- Puppet, Ansible
+- Nginx, HAProxy, Traefik
+- PostgreSQL, MySQL, MongoDB, Redis
+
+
+### Observability
+- DataDog, Prometheus
+- Elasticsearch, Graylog
+- PagerDuty
+- Sensu
+
+
+### Security & Compliance
+- Code Analysis & Security Scanning
+- Compliance Automation
+- Security Policy as Code
+
+
 
 ## Other Formats
 
