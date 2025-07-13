@@ -69,7 +69,7 @@ January 2010 - September 2013 -
 * Implemented system automation and monitoring solutions.
 * Provided technical support and maintained network services.
 
-_Key technology and skills: Linux, Unix, Proxmox, LXC_
+_Key technology and skills: Linux, Unix, Puppet, Nginx, MySQL, KVM, PHP_
 
 ## Skills
 
