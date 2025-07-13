@@ -7,7 +7,7 @@
 * Email: [josh@joshbeard.me](mailto:josh@joshbeard.me)
 * Web: [joshbeard.me](https://joshbeard.me)
 * GitHub: [github.com/joshbeard](https://github.com/joshbeard)
-* Location: [Colorado Springs, CO](https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado)
+* Location: [Colorado Springs, CO](https://maps.app.goo.gl/v5jKrjZ8whT3nwgv7)
 * [Other Formats](#other-formats)
 
 ## Summary
@@ -37,7 +37,7 @@ June 2022 - April 2023 -
 * Built AWS infrastructure and CI/CD pipelines for serverless Python applications and static websites.
 * Automated security checks and code analysis in CI/CD pipelines, streamlining compliance for development teams.
 
-_Key technology and skills: AWS, GitLab, Python_
+_Key technology and skills: AWS, CloudFormation, GitLab, Python_
 
 ### Lead DevOps Engineer with Apogee Engineering, LLC (US Geological Survey)
 
@@ -49,7 +49,7 @@ September 2015 - May 2022 -
 * Migrated dozens of applications from on-premise to AWS with Docker, enabling flexible and scalable deployments.
 * Mentored teams in DevOps practices and empowered them to manage their own infrastructure with Docker, AWS, and Terraform.
 
-_Key technology and skills: AWS, CI/CD, GitLab, GitHub Actions, Docker, Terraform, Ansible, Platform Engineering, GitOps, Puppet, Python, Nginx, Traefik_
+_Key technology and skills: AWS, CI/CD, GitLab, Docker, Terraform, Ansible, Platform Engineering, GitOps, Puppet, Python, Nginx, Traefik_
 
 ### Professional Services Engineer with Puppet Inc.
 
