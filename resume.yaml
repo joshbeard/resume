@@ -159,8 +159,11 @@ experience:
     tech:
       - Linux
       - Unix
-      - Proxmox
-      - LXC
+      - Puppet
+      - Nginx
+      - MySQL
+      - KVM
+      - PHP
 
 # -----------------------------------------------------------------------------
 # Skills

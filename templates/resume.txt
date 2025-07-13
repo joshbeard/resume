@@ -34,7 +34,6 @@
 {%- endif %}
 {% endfor %}
 ## Skills
-
     {% for cat in resume['skills'] %}
     ### {{ cat }}
     {%- for skill in resume['skills'][cat] %}
