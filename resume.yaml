@@ -47,7 +47,7 @@ contact:
   github: joshbeard
   location:
     title: Colorado Springs, CO
-    url: https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado
+    url: https://maps.app.goo.gl/v5jKrjZ8whT3nwgv7
 
 # -----------------------------------------------------------------------------
 # Experience
@@ -97,6 +97,7 @@ experience:
         streamlining compliance for development teams.
     tech:
       - AWS
+      - CloudFormation
       - GitLab
       - Python
 
@@ -119,7 +120,6 @@ experience:
       - AWS
       - CI/CD
       - GitLab
-      - GitHub Actions
       - Docker
       - Terraform
       - Ansible
