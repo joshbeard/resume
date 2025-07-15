@@ -2,9 +2,6 @@
 # Josh Beard's Resume
 # https://joshbeard.me/resume
 #
-# This YAML file is parsed by 'resume.py' to generate resume documents.
-# See 'BUILDING.md' for more information.
-#
 ---
 name: Josh Beard
 headline: Platform Engineering | Developer Experience | DevOps
