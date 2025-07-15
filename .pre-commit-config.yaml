@@ -6,19 +6,14 @@ repos:
     - id: trailing-whitespace
     - id: check-yaml
     - id: check-added-large-files
-    - id: check-ast
     - id: check-executables-have-shebangs
     - id: check-merge-conflict
     - id: forbid-submodules
     - id: mixed-line-ending
-    - id: requirements-txt-fixer
+    - id: end-of-file-fixer
 
-- repo: https://github.com/pre-commit/mirrors-autopep8
-  rev: v2.0.4
+- repo: https://github.com/adrienverge/yamllint
+  rev: v1.32.0
   hooks:
-    - id: autopep8
-
-- repo: https://github.com/asottile/dead
-  rev: v1.5.2
-  hooks:
-    - id: dead
+    - id: yamllint
+      files: resume.yaml

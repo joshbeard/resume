@@ -1,0 +1,44 @@
+{{ .name }}
+================================
+
+{{ .headline }}
+
+## Contact Details
+
+    => email: {{ .contact.email }}
+    => web: {{ .contact.web.url }}
+    => github: https://github.com/{{ .contact.github }}
+
+## Other Formats
+
+    => web:
+       {{ .url }}
+    => pdf:
+       {{ .formats.pdf.url }}
+    => word:
+       {{ .formats.word.url }}
+
+## Summary
+
+{{ .summary | strings.WordWrap 36 | strings.Indent 4 }}
+
+## Experience
+{{ range .experience }}
+### {{ .title }}
+    with {{ .org }}
+{{ if has . "location" }}    {{ .location }}
+{{ end }}
+    {{ .start }} - {{ .end }}
+{{ range .details }}
+  * {{ . | strings.WordWrap 36 }}
+{{ end }}
+{{ if and (has . "tech") .tech }}
+    Key technology and skills:
+{{ conv.Join .tech ", " | strings.WordWrap 36 }}
+{{ end }}
+{{ end }}
+## Skills
+{{ range $category, $skills := .skills }}
+### {{ $category }}
+{{ conv.Join $skills ", " | strings.WordWrap 36 | strings.Indent 4 }}
+{{ end }}

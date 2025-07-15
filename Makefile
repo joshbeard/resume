@@ -4,29 +4,48 @@ CURRENT_GID := $(shell id -g)
 DATE := $(shell date "+%B %Y")
 
 DOCKER_RUN = docker run --rm -v ${PWD}:/work -w /work -it --user=$(CURRENT_UID):$(CURRENT_GID)
-VENV = .venv
-BUILD_PY = $(VENV)/bin/python resume.py
 
 .DEFAULT_GOAL := help
 
-.PHONY: all clean html md markdown txt test text gmi gemini pdf docx json man help venv
-all: venv html md gmi txt pdf docx json man
+.PHONY: all clean html md markdown txt test text gmi gemini pdf docx json man help check-deps
+all: check-deps html md gmi txt pdf docx json man ## Generate all formats
 
 help: ## Show help
-	@egrep '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\032[0m %s\n", $$1, $$2}'
+	@egrep '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-$(VENV)/bin/activate: requirements.txt ## Create virtual environment
-	@echo "Creating virtual environment"
-	python3 -m venv $(VENV)
-	$(VENV)/bin/pip install --upgrade pip
-	$(VENV)/bin/pip install -r requirements.txt
+check-deps: ## Check if required dependencies are installed
+	@echo "Checking dependencies..."
+	@command -v gomplate >/dev/null 2>&1 || { echo "❌ gomplate is not installed. Get it from: https://docs.gomplate.ca/installing/"; exit 1; }
+	@command -v jq >/dev/null 2>&1 || { echo "❌ jq is not installed. Install with: brew install jq"; exit 1; }
+	@command -v docker >/dev/null 2>&1 || { echo "❌ docker is not installed. Get it from: https://docs.docker.com/get-docker/"; exit 1; }
+	@echo "✅ All dependencies are installed"
 
-venv: $(VENV)/bin/activate ## Setup virtual environment
+html: check-deps ## Generate HTML using gomplate
+	@echo "Creating HTML"
+	@mkdir -p dist
+	gomplate -c .=resume.yaml -f templates/resume.html.tmpl -o dist/index.html
 
-html md markdown txt text gmi gemini json: venv ## Generate HTML, Markdown, GMI, and other formats
-	$(BUILD_PY) $@
+md markdown: check-deps ## Generate Markdown using gomplate
+	@echo "Creating Markdown"
+	gomplate -c .=resume.yaml -f templates/resume.md.tmpl -o README.md
 
-pdf: ## Generate PDF
+txt text: check-deps ## Generate text formats using gomplate
+	@echo "Creating text formats"
+	@mkdir -p dist
+	gomplate -c .=resume.yaml -f templates/resume.txt.tmpl -o dist/resume.txt
+	gomplate -c .=resume.yaml -f templates/resume-narrow.txt.tmpl -o dist/resume-narrow.txt
+
+gmi gemini: check-deps ## Generate Gemini format using gomplate
+	@echo "Creating Gemini format"
+	@mkdir -p dist
+	gomplate -c .=resume.yaml -f templates/resume.gmi.tmpl -o dist/resume.gmi
+
+json: check-deps ## Generate pretty-formatted JSON using gomplate and jq
+	@echo "Creating JSON"
+	@mkdir -p dist
+	gomplate -c .=resume.yaml -i '{{ . | toJSON }}' | jq '.' > dist/resume.json
+
+pdf: check-deps ## Generate PDF
 	@echo "Creating PDF"
 	$(DOCKER_RUN) \
 		--entrypoint=/usr/bin/google-chrome \
@@ -38,9 +57,10 @@ pdf: ## Generate PDF
 		--no-pdf-header-footer \
 		dist/index.html
 
-docx word: ## Generate DOCX
+docx word: check-deps ## Generate DOCX
 	@echo "Creating docx"
 	$(DOCKER_RUN) \
+		--platform linux/amd64 \
 		pandoc/latex --from markdown --to docx README.md \
 		-f gfm \
 		-V linkcolor:blue \
@@ -48,10 +68,12 @@ docx word: ## Generate DOCX
 		-V geometry:margin=2cm \
 		-o dist/resume.docx
 
-man: ## Generate man page
+man: check-deps ## Generate man page
 	@echo "Creating man page"
+	@mkdir -p dist
 	echo -e "% JoshBeard(7) joshbeard.me\n% Josh Beard (josh@joshbeard.me)\n% $(DATE)\n" | cat - README.md >| README.man.tmp
 	$(DOCKER_RUN) \
+		--platform linux/amd64 \
 		pandoc/latex -s --from markdown --to man README.man.tmp \
 		-o dist/joshbeard-resume.7
 	rm -f README.man.tmp
@@ -60,11 +82,10 @@ serve: ## Serve the resume
 	docker run --rm -v ${PWD}/dist:/usr/share/nginx/html/resume -w /work -p 8080:80 nginx
 
 test: ## Run tests
-	$(DOCKER_RUN) pipelinecomponents/yamllint yamllint resume.yaml
+	pre-commit run --all-files
 
 clean: ## Clean up
-	rm -f resume-narrow.txt resume.gmi resume.txt resume.json \
+	rm -f dist/resume-narrow.txt dist/resume.gmi dist/resume.txt dist/resume.json \
 		dist/resume.docx dist/resume.pdf dist/index.html dist/joshbeard-resume.7
-	rm -rf $(VENV)
 	git restore --staged README.md
 	git restore README.md

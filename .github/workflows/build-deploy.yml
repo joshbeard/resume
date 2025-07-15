@@ -27,47 +27,26 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-          cache: 'pip'
+      - name: Install gomplate
+        run: |
+          curl -o gomplate -sSL https://github.com/hairyhenderson/gomplate/releases/download/v4.3.3/gomplate_linux-amd64
+          chmod +x gomplate
+          sudo mv gomplate /usr/local/bin/
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
 
       - name: Generate resume documents from templates (html, md, gemini, txt, json)
         run: make html md txt gmi json
 
-      - name: Add man page frontmatter
-        run: >
-          _DATE=$(date "+%B %Y")
-          echo "% JoshBeard(7) joshbeard.me\n% Josh Beard (josh@joshbeard.me)\n% ${_DATE}\n\n" | cat - README.md > README.man.md
-
       - name: Generate man page
-        uses: docker://pandoc/latex
-        with:
-          args: >
-            --from markdown --to man
-            -s README.man.md -o dist/joshbeard-resume.7
+        run: make man
 
       - name: Generate Word Document
-        uses: docker://pandoc/latex
-        with:
-          args: >
-            --from markdown --to docx README.md
-            -f gfm
-            -o dist/Josh-Beard-Resume.docx
+        run: make docx
 
       - name: Generate PDF Document
-        uses: browser-actions/setup-chrome@latest
-      - run: >
-          chrome
-          -headless
-          -disable-gpu
-          --no-sandbox
-          --no-pdf-header-footer
-          --print-to-pdf=dist/Josh-Beard-Resume.pdf
-          dist/index.html
+        run: make pdf
 
       - name: ls
         run: ls -l . dist/
@@ -165,7 +144,7 @@ jobs:
     name: Deploy locally
     runs-on: self-hosted
     needs: validate
-    if: "!contains(github.event.head_commit.message, '[skip deploy]')"
+    if: ${{ !contains(github.event.head_commit.message, '[skip deploy]') }}
 
     steps:
       - uses: actions/download-artifact@master
@@ -209,7 +188,7 @@ jobs:
     needs:
       - build
       - validate
-    if: "!contains(github.event.head_commit.message, '[skip deploy]')"
+    if: ${{ !contains(github.event.head_commit.message, '[skip deploy]') }}
 
     steps:
       - uses: actions/download-artifact@master

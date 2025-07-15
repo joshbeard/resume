@@ -1,0 +1,46 @@
+# {{ .name }}
+
+## {{ .headline }}
+
+## Contact Details
+
+=> mailto:{{ .contact.email }} {{ .contact.email }}
+=> {{ .contact.web.url }}
+=> https://github.com/{{ .contact.github }} github.com/{{ .contact.github }}
+
+## Other Formats
+
+=> {{ .url }} Web/HTML
+=> resume.txt .txt
+=> {{ .formats.pdf.filename }} .pdf
+=> {{ .formats.word.filename }} .docx
+
+## Summary
+
+{{ .summary }}
+## Experience
+{{- range .experience }}
+
+### {{ .title }} with {{ .org }}
+
+{{ .start }} - {{ .end }}{{- if has . "location" }} - {{ .location }}{{- end }}
+{{- range .details }}
+* {{ . }}
+{{- end }}
+{{- if .tech }}
+
+Key technology and skills: {{- range $index, $skill := .tech }}{{- if gt $index 0 }}, {{ end }}{{ $skill }}{{- end }}
+{{- end }}
+{{- end }}
+
+## Skills
+
+{{- range $category, $skills := .skills }}
+
+### {{ $category }}
+{{- range $skills }}
+* {{ . }}
+{{- end }}
+{{- end }}
+
+=> / Back to Home

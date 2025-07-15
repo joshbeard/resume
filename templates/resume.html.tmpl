@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <title>{{ resume['name'] }}</title>
-    <base href="{{ resume['url'] }}/" />
-    <link rel="canonical" href="{{ resume['url'] }}" />
-    <meta name="description" content="{{ resume['description'] }}" />
+    <title>{{ .name }}</title>
+    <base href="{{ .url }}/" />
+    <link rel="canonical" href="{{ .url }}" />
+    <meta name="description" content="{{ .summary }}" />
     <meta name="keywords"
         content="joshua beard, josh, joshbeard, jashbeard, devops, sysadmin, colorado springs, josh beard colorado springs, josh beard colorado, josh beard devops, josh beard denver, joshua beard colorado springs, joshua beard devops, devops engineer, colorado springs devops, colorado springs devops engineer, colorado devops engineer, denver devops engineer, josh beard resume, joshua beard resume, devops resume, devops engineer resume, sysadmin resume, systems administrator resume, josh beard sysadmin, josh beard systems administrator, josh beard apogee engineering, joshua beard apogee engineering, josh beard usgs, josh beard puppet, josh beard dsdk12" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -18,10 +18,10 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Josh Beard's Resume" />
-    <meta property="og:description" content="{{ resume['description'] }}" />
-    <meta property="og:url" content="{{ resume['url'] }}" />
+    <meta property="og:description" content="{{ .summary }}" />
+    <meta property="og:url" content="{{ .url }}" />
     <meta property="og:site_name" content="Josh Beard's Resume" />
-    <meta property="og:image" content="{{ resume['url'] }}/assets/img/resume-og.png" />
+    <meta property="og:image" content="{{ .url }}/assets/img/resume-og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -30,7 +30,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <style type="text/css">
-        {% include 'style.css' %}
+{{ file.Read "templates/style.css" }}
     </style>
 </head>
 
@@ -42,33 +42,30 @@
             </button>
 
             <div id="name">
-                <h1>{{ resume['name'] }}</h1>
-                <h2 id="headline">{{ resume['headline'] }}</h2>
+                <h1>{{ .name }}</h1>
+                <h2 id="headline">{{ .headline }}</h2>
             </div>
             <div id="heading_extra">
                 <div id="contact_details">
                     <ul>
                         <li>
-                            <a href="mailto:{{ resume['contact']['email'] }}"><img src="assets/img/envelope-solid.png"
-                                    alt="mail:" class="icon" /></a><a href="mailto:{{ resume['contact']['email'] }}">{{
-                                resume['contact']['email'] }}</a>
+                            <a href="mailto:{{ .contact.email }}"><img src="assets/img/envelope-solid.png"
+                                    alt="mail:" class="icon" /></a><a href="mailto:{{ .contact.email }}">{{ .contact.email }}</a>
                         </li>
                         <li>
-                            <a href="{{ resume['contact']['web']['url'] }}"><img
+                            <a href="{{ .contact.web.url }}"><img
                                     src="assets/img/globe-americas-solid.png" alt="web:" class="icon" /></a><a
-                                href="{{ resume['contact']['web']['url'] }}">{{ resume['contact']['web']['title'] }}</a>
+                                href="{{ .contact.web.url }}">{{ .contact.web.title }}</a>
                         </li>
                         <li>
-                            <a href="https://github.com/{{ resume['contact']['github'] }}"><img
+                            <a href="https://github.com/{{ .contact.github }}"><img
                                     src="assets/img/github-brands.png" alt="github:" class="icon" /></a><a
-                                href="https://github.com/{{ resume['contact']['github'] }}">github.com/{{
-                                resume['contact']['github'] }}</a>
+                                href="https://github.com/{{ .contact.github }}">github.com/{{ .contact.github }}</a>
                         </li>
                         <li>
-                            <a href="{{ resume['contact']['location']['url'] }}"><img
+                            <a href="{{ .contact.location.url }}"><img
                                     src="assets/img/map-marker-solid.png" alt="location:" class="icon" /></a><a
-                                href="{{ resume['contact']['location']['url'] }}">{{
-                                resume['contact']['location']['title'] }}</a>
+                                href="{{ .contact.location.url }}">{{ .contact.location.title }}</a>
                         </li>
                     </ul>
                 </div>
@@ -88,40 +85,39 @@
             </ul>
         </div>
         <div id="resume_content">
-            {%- if 'summary' in resume and resume['summary'] %}
+            {{- if .summary }}
             <section id="summary">
-                <p>{{ resume['summary'] }}</p>
+                <p>{{ .summary }}</p>
             </section>
-            {%- endif %}
+            {{- end }}
             <section id="experience">
                 <h2>Experience</h2>
                 <div class="section_content">
-                    {% for job in resume['experience'] %}
+                    {{- range .experience }}
                     <article class="job">
-                        <h3 class="position">{{ job['title'] }} at {{ job['org'] }}</h3>
-                        <p class="dates"><strong>{{ job['start'] }} - {{ job['end'] }}
-                                {%- if 'location' in job %}
-                                · {{ job['location'] }}
-                                {%- endif %}
+                        <h3 class="position">{{ .title }} at {{ .org }}</h3>
+                        <p class="dates"><strong>{{ .start }} - {{ .end }}
+                                {{- if has . "location" }}
+                                · {{ .location }}
+                                {{- end }}
                             </strong></p>
                         <ul>
-                            {%- for item in job['details'] %}
-                            <li>{{ item }}</li>
-                            {%- endfor %}
+                            {{- range .details }}
+                            <li>{{ . }}</li>
+                            {{- end }}
                         </ul>
-                        {%- if 'tech' in job %}
+                        {{- if .tech }}
                         <p class="key_tech">
                             Key technology:
                             <em>
-                                {%- for skill in job['tech'] -%}
-                                {{ skill }}
-                                {%- if not loop.last %}, {% endif %}
-                                {%- endfor %}
+                                {{- range $index, $skill := .tech }}
+                                {{- if gt $index 0 }}, {{ end }}{{ $skill }}
+                                {{- end }}
                             </em>
                         </p>
-                        {%- endif %}
+                        {{- end }}
                     </article>
-                    {% endfor %}
+                    {{- end }}
                 </div>
                 <div class="clear"></div>
             </section>
@@ -129,16 +125,16 @@
             <section>
                 <h2 id="skills">Skills & Expertise</h2>
                 <div class="section_content skills-grid">
-                    {% for cat in resume['skills'] %}
-                    <div class="skill-category {{ cat }}">
-                        <h3>{{ cat }}</h3>
+                    {{- range $category, $skills := .skills }}
+                    <div class="skill-category {{ $category }}">
+                        <h3>{{ $category }}</h3>
                         <ul class="skill-list">
-                            {%- for skill in resume['skills'][cat] %}
-                            <li>{{ skill }}</li>
-                            {%- endfor %}
+                            {{- range $skills }}
+                            <li>{{ . }}</li>
+                            {{- end }}
                         </ul>
                     </div>
-                    {% endfor %}
+                    {{- end }}
                 </div>
                 <div class="clear"></div>
             </section>
@@ -147,11 +143,11 @@
         <div id="footer">
             <div id="footer_left">
                 <div id="foot_contact">
-                    <a href="mailto:{{ resume['contact']['email'] }}"><img src="assets/img/envelope-solid.png"
-                            alt="envelope icon" class="icon" /><span>{{ resume['contact']['email'] }}</span></a>
+                    <a href="mailto:{{ .contact.email }}"><img src="assets/img/envelope-solid.png"
+                            alt="envelope icon" class="icon" /><span>{{ .contact.email }}</span></a>
                 </div>
                 <div id="foot_source">
-                    <a href="{{ resume['repo']['url'] }}"><img src="assets/img/git-alt-brands.png" alt="git repo icon"
+                    <a href="{{ .repo.url }}"><img src="assets/img/git-alt-brands.png" alt="git repo icon"
                             class="icon" /><span>Resume source on GitHub</span></a><br />
                 </div>
             </div>
@@ -161,7 +157,7 @@
                             class="icon" /><span>Back to Top</span></a>
                 </div>
                 <div id="foot_copyright">
-                    <span>&copy; {{ year }} {{ resume['name'] }}</span>
+                    <span>&copy; {{ time.Now.Year }} {{ .name }}</span>
                 </div>
             </div>
         </div>
