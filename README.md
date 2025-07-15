@@ -112,3 +112,5 @@ _Key technology and skills:Linux, Unix, Puppet, Nginx, MySQL, KVM, PHP_
   * Linux/GNU: `man <(curl -sl https://joshbeard.me/resume/joshbeard-resume.7)`
   * macOS/BSD: `curl -sL https://joshbeard.me/resume/joshbeard-resume.7 > /tmp/joshbeard.7 && man /tmp/joshbeard.7
 `
+
+_This README was generated from the [resume.yaml](resume.yaml) file and using [gomplate](https://gomplate.ca/) and the [resume.md.tmpl](templates/resume.md.tmpl) template._
