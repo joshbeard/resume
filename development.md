@@ -1,4 +1,4 @@
-# Building My Resume
+# Development Notes
 
 The [`dist/`](dist) directory contains assets that are deployed for the website
 as-is. The `dist` directory acts as a staging directory - the generated
@@ -11,9 +11,8 @@ I deploy to S3 and my local Gemini and Gopher servers.
 You might consider [JSON Resume](https://jsonresume.org/) instead.
 
 I didn't develop this for general use in mind, but feel free to take what you
-want from it. You'd probably want to modify the [`templates/`](templates/)
-(gomplate templates with `.tmpl` extensions) and the [`resume.yaml`](resume.yaml),
-of course.
+want from it. You'll want to modify basically all of the files to fit your needs,
+but it's fairly generic.
 
 ## Build and Deployment
 
@@ -31,21 +30,16 @@ To build HTML only:
 make html
 ```
 
-The [GitHub Workflow](.github/workflows/build-deploy.yml) builds and deploys
-my resume.
-
-My resume is published to the S3 website bucket for
-[joshbeard.me](https://github.com/joshbeard/joshbeard.me-tf-aws).
-
-It's also useful for local development to preview the site with
-an actual HTTP server rather than as a local file, which is helpful for testing
-relative URLs and the like similar to 'production'.
+To serve locally:
 
 ```shell
 make serve
 ```
 
-Visit the local instance via <http://localhost:8080/resume/>
+It will be available at <http://localhost:8080/resume/>.
+
+The [GitHub Workflow](.github/workflows/build-deploy.yml) builds and deploys
+my resume to S3.
 
 ## Template System
 
@@ -60,7 +54,7 @@ The resume uses [gomplate](https://docs.gomplate.ca/) for template processing:
 - [gomplate](https://docs.gomplate.ca/) - Template processing
 - [jq](https://stedolan.github.io/jq/) - JSON formatting
 - [Docker](https://www.docker.com/) - For PDF/DOCX generation
-- [Pandoc](https://pandoc.org/) - For generating Word documents
+- [Pandoc](https://pandoc.org/) - For generating Word documents (ran in Docker)
 
 ## Resources
 
@@ -77,7 +71,7 @@ The resume uses [gomplate](https://docs.gomplate.ca/) for template processing:
 ## Why
 
 I've maintained my resume in different ways over the years, more recently in
-simple HTML. I hate using word processors and their nightmare document formats.
+simple HTML. I don't like using word processors and their nightmare document formats.
 I want a website version, but I also wanted a PDF and Markdown copy. For fun,
 I generate it in several formats, including some more esoteric ones like
 a [man page](), `finger resume@jbeard.co`, and [Gemini](gemini://jbeard.co/resume.gmi)

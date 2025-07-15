@@ -60,14 +60,16 @@ pdf: check-deps ## Generate PDF
 
 docx word: check-deps ## Generate DOCX
 	@echo "Creating docx"
+	gomplate -c .=resume.yaml -f templates/resume-docx.md.tmpl -o dist/Josh-Beard-Resume.md
 	$(DOCKER_RUN) \
 		--platform linux/amd64 \
-		pandoc/latex --from markdown --to docx README.md \
+		pandoc/latex --from markdown --to docx dist/Josh-Beard-Resume.md \
 		-f gfm \
 		-V linkcolor:blue \
 		-V geometry:a4paper \
 		-V geometry:margin=2cm \
 		-o dist/Josh-Beard-Resume.docx
+	rm -f dist/Josh-Beard-Resume.md
 
 man: check-deps ## Generate man page
 	@echo "Creating man page"
