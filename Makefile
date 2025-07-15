@@ -3,7 +3,7 @@ CURRENT_UID := $(shell id -u)
 CURRENT_GID := $(shell id -g)
 DATE := $(shell date "+%B %Y")
 
-DOCKER_RUN = docker run --rm -v ${PWD}:/work -w /work -it --user=$(CURRENT_UID):$(CURRENT_GID)
+DOCKER_RUN = docker run --rm -v ${PWD}:/work -w /work --user=$(CURRENT_UID):$(CURRENT_GID)
 
 .DEFAULT_GOAL := help
 
