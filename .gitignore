@@ -6,6 +6,7 @@ _site/
 /dist/resume.gmi
 /dist/resume-narrow.txt
 /dist/resume.json
+_serve/
 .DS_Store
 *.pdf
 *.docx

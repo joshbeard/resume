@@ -18,6 +18,7 @@ check-deps: ## Check if required dependencies are installed
 	@command -v gomplate >/dev/null 2>&1 || { echo "❌ gomplate is not installed. Get it from: https://docs.gomplate.ca/installing/"; exit 1; }
 	@command -v jq >/dev/null 2>&1 || { echo "❌ jq is not installed. Install with: brew install jq"; exit 1; }
 	@command -v docker >/dev/null 2>&1 || { echo "❌ docker is not installed. Get it from: https://docs.docker.com/get-docker/"; exit 1; }
+	@command -v python3 >/dev/null 2>&1 || { echo "❌ python3 is not installed. Install with: brew install python3"; exit 1; }
 	@echo "✅ All dependencies are installed"
 
 html: check-deps ## Generate HTML using gomplate
@@ -53,7 +54,7 @@ pdf: check-deps ## Generate PDF
 		--headless \
 		--disable-gpu \
 		--no-sandbox \
-		--print-to-pdf=dist/resume.pdf \
+		--print-to-pdf=dist/Josh-Beard-Resume.pdf \
 		--no-pdf-header-footer \
 		dist/index.html
 
@@ -66,7 +67,7 @@ docx word: check-deps ## Generate DOCX
 		-V linkcolor:blue \
 		-V geometry:a4paper \
 		-V geometry:margin=2cm \
-		-o dist/resume.docx
+		-o dist/Josh-Beard-Resume.docx
 
 man: check-deps ## Generate man page
 	@echo "Creating man page"
@@ -79,13 +80,18 @@ man: check-deps ## Generate man page
 	rm -f README.man.tmp
 
 serve: ## Serve the resume
-	docker run --rm -v ${PWD}/dist:/usr/share/nginx/html/resume -w /work -p 8080:80 nginx
+	@echo "Setting up local server with hot reloading..."
+	@mkdir -p _serve && ln -sf ../dist _serve/resume 2>/dev/null || true
+	@echo "Starting server at http://localhost:8080/resume/"
+	@echo "Press Ctrl+C to stop (run 'make clean' to remove _serve directory)"
+	@cd _serve && (python3 -m http.server 8080 2>/dev/null || python -m http.server 8080)
 
 test: ## Run tests
 	pre-commit run --all-files
 
 clean: ## Clean up
 	rm -f dist/resume-narrow.txt dist/resume.gmi dist/resume.txt dist/resume.json \
-		dist/resume.docx dist/resume.pdf dist/index.html dist/joshbeard-resume.7
+		dist/Josh-Beard-Resume.docx dist/Josh-Beard-Resume.pdf dist/index.html dist/joshbeard-resume.7
+	rm -rf _serve
 	git restore --staged README.md
 	git restore README.md
