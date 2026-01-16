@@ -4,8 +4,8 @@
 
 ## Contact Details
 
-* Email: [josh@joshbeard.me](mailto:josh@joshbeard.me)
-* Web: [joshbeard.me](https://joshbeard.me)
+* Email: [josh@joshbeard.com](mailto:josh@joshbeard.com)
+* Web: [joshbeard.com](https://joshbeard.com)
 * GitHub: [github.com/joshbeard](https://github.com/joshbeard)
 * Location: [Colorado Springs, CO](https://maps.app.goo.gl/v5jKrjZ8whT3nwgv7)
 * [Other Formats](#other-formats)
@@ -99,18 +99,18 @@ _Key technology and skills:Linux, Unix, Puppet, Nginx, MySQL, KVM, PHP_
 
 ## Other Formats
 
-* Web/HTML: <https://joshbeard.me/resume>
-* PDF: <https://joshbeard.me/resume/Josh-Beard-Resume.pdf>
-* Word: <https://joshbeard.me/resume/Josh-Beard-Resume.docx>
-* Text: <https://joshbeard.me/resume/resume.txt>
-* Narrow Text: <https://joshbeard.me/resume/resume-narrow.txt>
-* JSON: <https://joshbeard.me/resume/resume.json>
+* Web/HTML: <https://joshbeard.com/resume>
+* PDF: <https://joshbeard.com/resume/Josh-Beard-Resume.pdf>
+* Word: <https://joshbeard.com/resume/Josh-Beard-Resume.docx>
+* Text: <https://joshbeard.com/resume/resume.txt>
+* Narrow Text: <https://joshbeard.com/resume/resume-narrow.txt>
+* JSON: <https://joshbeard.com/resume/resume.json>
 * `gemini://jbeard.co/resume.gmi`
 * `gopher://jbeard.co:70/0/resume.txt`
 * `finger resume@jbeard.co`
 * man page:
-  * Linux/GNU: `man <(curl -sl https://joshbeard.me/resume/joshbeard-resume.7)`
-  * macOS/BSD: `curl -sL https://joshbeard.me/resume/joshbeard-resume.7 > /tmp/joshbeard.7 && man /tmp/joshbeard.7
+  * Linux/GNU: `man <(curl -sl https://joshbeard.com/resume/joshbeard-resume.7)`
+  * macOS/BSD: `curl -sL https://joshbeard.com/resume/joshbeard-resume.7 > /tmp/joshbeard.7 && man /tmp/joshbeard.7
 `
 
 _This README was generated from the [resume.yaml](resume.yaml) file and using [gomplate](https://gomplate.ca/) and the [resume.md.tmpl](templates/resume.md.tmpl) template._
