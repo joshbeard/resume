@@ -1,6 +1,6 @@
 #
 # Josh Beard's Resume
-# https://joshbeard.me/resume
+# https://joshbeard.com/resume
 #
 ---
 name: Josh Beard
@@ -10,37 +10,37 @@ summary: >
   experience.  I build internal tools, CI/CD systems, and automation that scale
   teams while maintaining governance. Open-source contributor with expertise in
   Go, AWS, and infrastructure as code.
-url: https://joshbeard.me/resume
+url: https://joshbeard.com/resume
 repo:
   url: https://github.com/joshbeard/resume
 
 formats:
   # Formats and URLs
   pdf:
-    url: https://joshbeard.me/resume/Josh-Beard-Resume.pdf
+    url: https://joshbeard.com/resume/Josh-Beard-Resume.pdf
     filename: Josh-Beard-Resume.pdf
   word:
-    url: https://joshbeard.me/resume/Josh-Beard-Resume.docx
+    url: https://joshbeard.com/resume/Josh-Beard-Resume.docx
     filename: Josh-Beard-Resume.docx
   txt:
-    url: https://joshbeard.me/resume/resume.txt
-    narrow_url: https://joshbeard.me/resume/resume-narrow.txt
+    url: https://joshbeard.com/resume/resume.txt
+    narrow_url: https://joshbeard.com/resume/resume-narrow.txt
   json:
-    url: https://joshbeard.me/resume/resume.json
+    url: https://joshbeard.com/resume/resume.json
   gemini: gemini://jbeard.co/resume.gmi
   gopher: gopher://jbeard.co:70/0/resume.txt
   finger: resume@jbeard.co
   man_page:
-    linux_gnu: man <(curl -sl https://joshbeard.me/resume/joshbeard-resume.7)
+    linux_gnu: man <(curl -sl https://joshbeard.com/resume/joshbeard-resume.7)
     mac_bsd: >
-      curl -sL https://joshbeard.me/resume/joshbeard-resume.7 >
+      curl -sL https://joshbeard.com/resume/joshbeard-resume.7 >
       /tmp/joshbeard.7 && man /tmp/joshbeard.7
 
 contact:
-  email: josh@joshbeard.me
+  email: josh@joshbeard.com
   web:
-    url: https://joshbeard.me
-    title: joshbeard.me
+    url: https://joshbeard.com
+    title: joshbeard.com
   github: joshbeard
   location:
     title: Colorado Springs, CO

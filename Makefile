@@ -74,7 +74,7 @@ docx word: check-deps ## Generate DOCX
 man: check-deps ## Generate man page
 	@echo "Creating man page"
 	@mkdir -p dist
-	echo -e "% JoshBeard(7) joshbeard.me\n% Josh Beard (josh@joshbeard.me)\n% $(DATE)\n" | cat - README.md >| README.man.tmp
+	echo -e "% JoshBeard(7) joshbeard.com\n% Josh Beard (josh@joshbeard.com)\n% $(DATE)\n" | cat - README.md >| README.man.tmp
 	$(DOCKER_RUN) \
 		--platform linux/amd64 \
 		pandoc/latex -s --from markdown --to man README.man.tmp \

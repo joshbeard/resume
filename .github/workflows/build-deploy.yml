@@ -136,7 +136,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           author_name: Josh Beard
-          author_email: josh@joshbeard.me
+          author_email: josh@joshbeard.com
           message: 'Generated Markdown Resume'
           add: 'README.md'
 
