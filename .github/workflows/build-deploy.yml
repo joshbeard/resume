@@ -66,8 +66,8 @@ jobs:
             dist/
 
   minify:
+    name: Minify
     runs-on: ubuntu-latest
-    container: thekevjames/minify:2.10.0
     needs: build
     steps:
       - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v4
@@ -80,6 +80,15 @@ jobs:
           name: artifacts
           path: dist
 
+      - name: Install minify
+        run: |
+          wget https://github.com/tdewolff/minify/releases/download/v2.10.0/minify_linux_amd64.tar.gz
+          tar -xzf minify_linux_amd64.tar.gz
+          chmod +x minify
+          sudo mv minify /usr/local/bin/
+
+      - name: ls
+        run: ls -l
       - name: Minify
         run: minify --recursive --output . .
 
