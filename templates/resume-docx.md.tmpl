@@ -16,6 +16,10 @@
 ## Experience
 {{- range .experience }}
 ### {{ .title }} with {{ .org }}
+{{- if has . "previous_titles" }}
+
+_Previously:{{- range $index, $prev := .previous_titles }}{{- if gt $index 0 }},{{ end }} {{ $prev.title }} ({{ $prev.dates }}){{- end }}_
+{{- end }}
 
 {{ .start }} - {{ .end }}{{- if has . "location" }} - {{ .location }}{{- end }}
 {{- range .details }}

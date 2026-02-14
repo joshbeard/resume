@@ -402,6 +402,40 @@ article.job ul li p {
   display: inline;
 }
 
+/* Previous Titles */
+.previous-titles {
+  font-size: 0.85em;
+  color: var(--text-secondary);
+  margin: 2px 0 6px;
+}
+
+.previous-titles-label {
+  font-style: italic;
+}
+
+.previous-titles ul {
+  list-style: none;
+  margin: 2px 0 0 0;
+  padding-left: 1em;
+}
+
+.previous-titles li {
+  line-height: 1.4;
+}
+
+.previous-titles .prev-title {
+  font-weight: 500;
+}
+
+.previous-titles .prev-dates {
+  color: var(--text-secondary);
+  font-size: 0.95em;
+}
+
+.previous-titles .prev-dates::before {
+  content: "— ";
+}
+
 /* Skills Section */
 .skills-grid {
   display: grid;

@@ -101,6 +101,16 @@
                                 · {{ .location }}
                                 {{- end }}
                             </strong></p>
+                        {{- if has . "previous_titles" }}
+                        <div class="previous-titles">
+                            <span class="previous-titles-label">Previously:</span>
+                            <ul>
+                                {{- range .previous_titles }}
+                                <li><span class="prev-title">{{ .title }}</span> <span class="prev-dates">{{ .dates }}</span></li>
+                                {{- end }}
+                            </ul>
+                        </div>
+                        {{- end }}
                         <ul>
                             {{- range .details }}
                             <li>{{ . }}</li>

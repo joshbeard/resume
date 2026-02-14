@@ -4,12 +4,12 @@
 #
 ---
 name: Josh Beard
-headline: DevOps | Platform | Developer Experience
+headline: DevOps | Platform | Engineering Leadership
 summary: >
-  Staff DevOps engineer focused on platform engineering and developer
-  experience.  I build internal tools, CI/CD systems, and automation that scale
-  teams while maintaining governance. Open-source contributor with expertise in
-  Go, AWS, and infrastructure as code.
+  DevOps engineering manager combining technical depth with team leadership. I
+  drive platform strategy while staying hands-on with internal tools, CI/CD
+  systems, and automation that scale teams and maintain governance. Open-source
+  contributor with expertise in Go, AWS, and infrastructure as code.
 url: https://joshbeard.com/resume
 repo:
   url: https://github.com/joshbeard/resume
@@ -50,19 +50,27 @@ contact:
 # Experience
 # -----------------------------------------------------------------------------
 experience:
-  - title: Staff DevOps Engineer
+  - title: DevOps Engineering Manager
     org: Live Oak Bank
     start: September 2022
     end: Present
+    previous_titles:
+      - title: Staff DevOps Engineer
+        dates: February 2025 - February 2026
+      - title: Senior DevOps Engineer
+        dates: September 2022 - February 2025
     details:
-      - Build internal tools and workflows that improve developer experience
-        and software delivery across multiple teams.
-      - Architect CI/CD pipelines optimizing deployment speed and reliability.
+      - Lead DevOps team strategy and execution, aligning platform initiatives
+        with engineering and business goals.
+      - Drive cross-team collaboration to standardize tooling, improve developer
+        experience, and accelerate software delivery.
+      - Architect CI/CD pipelines and platform infrastructure that scale across
+        multiple teams while maintaining reliability and governance.
       - Developed open-source Terraform provider and Go API client for
         third-party integrations.
       - Built release orchestration tool in Go that significantly improved
         release safety and automation.
-      - Established observability and monitoring for scalable CI/CD processes.
+      - Established observability and monitoring practices for CI/CD processes.
     tech:
       - AWS
       - CI/CD
@@ -102,6 +110,9 @@ experience:
     org: Apogee Engineering, LLC (US Geological Survey)
     start: September 2015
     end: May 2022
+    previous_titles:
+      - title: Senior DevOps Engineer
+        dates: September 2015 - December 2019
     details:
       - Managed architecture and infrastructure for dozens of USGS products,
         ensuring scalability and reliability.
