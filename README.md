@@ -1,6 +1,6 @@
 # Josh Beard
 
-## Platform Engineering | Developer Experience | DevOps
+## DevOps | Platform | Engineering Leadership
 
 ## Contact Details
 
@@ -12,18 +12,21 @@
 
 ## Summary
 
-Staff DevOps engineer focused on platform engineering and developer experience.  I build internal tools, CI/CD systems, and automation that scale teams while maintaining governance. Open-source contributor with expertise in Go, AWS, and infrastructure as code.
+DevOps engineering manager combining technical depth with team leadership. I drive platform strategy while staying hands-on with internal tools, CI/CD systems, and automation that scale teams and maintain governance. Open-source contributor with expertise in Go, AWS, and infrastructure as code.
 
 
 ## Experience
-### Staff DevOps Engineer with Live Oak Bank
+### DevOps Engineering Manager with Live Oak Bank
+
+_Previously: Staff DevOps Engineer (February 2025 - February 2026), Senior DevOps Engineer (September 2022 - February 2025)_
 
 September 2022 - Present
-* Build internal tools and workflows that improve developer experience and software delivery across multiple teams.
-* Architect CI/CD pipelines optimizing deployment speed and reliability.
+* Lead DevOps team strategy and execution, aligning platform initiatives with engineering and business goals.
+* Drive cross-team collaboration to standardize tooling, improve developer experience, and accelerate software delivery.
+* Architect CI/CD pipelines and platform infrastructure that scale across multiple teams while maintaining reliability and governance.
 * Developed open-source Terraform provider and Go API client for third-party integrations.
 * Built release orchestration tool in Go that significantly improved release safety and automation.
-* Established observability and monitoring for scalable CI/CD processes.
+* Established observability and monitoring practices for CI/CD processes.
 
 _Key technology and skills:AWS, CI/CD, DataDog, Devcontainers, Docker, GitLab, GitOps, Go, Golang, Kubernetes, GitHub Actions, Platform Engineering, Python, Shell, Terraform, Traefik_
 ### Lead DevSecOps Engineer with Ventera, Inc (US Geological Survey)
@@ -35,6 +38,8 @@ June 2022 - April 2023
 
 _Key technology and skills:AWS, CloudFormation, GitLab, Python_
 ### Lead DevOps Engineer with Apogee Engineering, LLC (US Geological Survey)
+
+_Previously: Senior DevOps Engineer (September 2015 - December 2019)_
 
 September 2015 - May 2022
 * Managed architecture and infrastructure for dozens of USGS products, ensuring scalability and reliability.
