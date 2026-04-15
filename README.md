@@ -1,6 +1,6 @@
 # Josh Beard
 
-## DevOps | Platform | Engineering Leadership
+## Platform Engineering | DevOps Leadership | Developer Experience
 
 ## Contact Details
 
@@ -12,7 +12,7 @@
 
 ## Summary
 
-DevOps engineering manager combining technical depth with team leadership. I drive platform strategy while staying hands-on with internal tools, CI/CD systems, and automation that scale teams and maintain governance. Open-source contributor with expertise in Go, AWS, and infrastructure as code.
+Engineering manager and hands-on platform engineer with 15+ years building the systems that let development teams ship faster and safer. I own platform strategy while staying close to the work - designing CI/CD architecture, building internal tools in Go, and establishing governance that scales without becoming bureaucracy. Known for turning fragmented toolchains into coherent platforms and for growing engineers who can own their own infrastructure.
 
 
 ## Experience
@@ -21,20 +21,20 @@ DevOps engineering manager combining technical depth with team leadership. I dri
 _Previously: Staff DevOps Engineer (February 2025 - February 2026), Senior DevOps Engineer (September 2022 - February 2025)_
 
 September 2022 - Present
-* Lead DevOps team strategy and execution, aligning platform initiatives with engineering and business goals.
-* Drive cross-team collaboration to standardize tooling, improve developer experience, and accelerate software delivery.
-* Architect CI/CD pipelines and platform infrastructure that scale across multiple teams while maintaining reliability and governance.
-* Developed open-source Terraform provider and Go API client for third-party integrations.
-* Built release orchestration tool in Go that significantly improved release safety and automation.
-* Established observability and monitoring practices for CI/CD processes.
+* Lead platform strategy and roadmap for a DevOps team supporting multiple engineering groups, aligning infrastructure decisions with business and compliance requirements.
+* Drive cross-team standardization of tooling and delivery practices, reducing per-team pipeline variance and improving time-to-production across the engineering org.
+* Architect CI/CD and platform infrastructure that scales across teams while maintaining auditability and governance controls for a regulated banking environment.
+* Built a release orchestration tool in Go that reduced manual release steps and improved rollback safety across production deployments.
+* Developed and open-sourced a Terraform provider and Go API client for a third-party integration, enabling self-service infrastructure for downstream teams.
+* Established observability practices for CI/CD pipelines, giving engineering leadership visibility into delivery performance for the first time.
 
 _Key technology and skills:AWS, CI/CD, DataDog, Devcontainers, Docker, GitLab, GitOps, Go, Golang, Kubernetes, GitHub Actions, Platform Engineering, Python, Shell, Terraform, Traefik_
 ### Lead DevSecOps Engineer with Ventera, Inc (US Geological Survey)
 
 June 2022 - April 2023
-* Contracted to USGS Water Resources Mission Area to modernize critical water data services.
-* Built AWS infrastructure and CI/CD pipelines for serverless Python applications and static websites.
-* Automated security checks and code analysis in CI/CD pipelines, streamlining compliance for development teams.
+* Contracted to USGS Water Resources Mission Area to modernize critical national water data services used by researchers and the public.
+* Built AWS infrastructure and CI/CD pipelines for serverless Python applications and static websites, reducing deployment time and operational overhead.
+* Integrated automated security scanning and compliance checks into CI/CD pipelines, reducing manual review burden on development teams.
 
 _Key technology and skills:AWS, CloudFormation, GitLab, Python_
 ### Lead DevOps Engineer with Apogee Engineering, LLC (US Geological Survey)
@@ -42,37 +42,37 @@ _Key technology and skills:AWS, CloudFormation, GitLab, Python_
 _Previously: Senior DevOps Engineer (September 2015 - December 2019)_
 
 September 2015 - May 2022
-* Managed architecture and infrastructure for dozens of USGS products, ensuring scalability and reliability.
-* Led migration of hundreds of projects from legacy CI/CD systems to GitLab, improving efficiency and developer experience.
-* Deployed configuration management at scale using Puppet and Ansible across hundreds of Linux systems.
-* Migrated dozens of applications from on-premise to AWS with Docker, enabling flexible and scalable deployments.
-* Mentored teams in DevOps practices and empowered them to manage their own infrastructure with Docker, AWS, and Terraform.
+* Owned platform architecture and infrastructure for dozens of USGS scientific data products serving millions of public users.
+* Led migration of 200+ projects from legacy CI/CD systems to GitLab, standardizing delivery practices across a large multi-team organization.
+* Deployed configuration management at scale using Puppet and Ansible across hundreds of Linux systems, eliminating configuration drift and reducing incident response time.
+* Migrated dozens of applications from on-premise to AWS using Docker, cutting infrastructure costs and enabling teams to scale workloads independently.
+* Mentored engineers and scientists in DevOps practices, enabling teams to own and operate their own infrastructure without platform team dependency.
 
 _Key technology and skills:AWS, CI/CD, GitLab, Docker, Terraform, Ansible, Platform Engineering, GitOps, Puppet, Python, Nginx, Traefik_
 ### Professional Services Engineer with Puppet Inc.
 
 September 2013 - April 2015
-* Delivered consulting and training on Puppet and DevOps practices to enterprise clients, tailoring solutions to unique needs.
-* Created reusable Puppet modules and tools to streamline automation.
-* Earned high marks for customer engagement and technical problem-solving across diverse client base.
+* Delivered consulting and hands-on training on Puppet and DevOps practices to enterprise clients across multiple industries.
+* Developed reusable Puppet modules and automation tooling adopted by client teams after engagements closed.
+* Consistently earned strong client feedback for practical, no-nonsense technical guidance.
 
 _Key technology and skills:Puppet, Linux, Ruby, Git, Shell_
 ### Linux/Unix Systems Administrator with Douglas School District
 
 January 2010 - September 2013
-* Managed Linux/Unix infrastructure and server operations for K-12 environment.
-* Implemented system automation and monitoring solutions.
-* Provided technical support and maintained network services.
+* Managed Linux/Unix infrastructure and server operations for a K-12 district environment.
+* Introduced system automation and monitoring, reducing manual maintenance toil and improving uptime.
+* Provided technical support and maintained core network services.
 
 _Key technology and skills:Linux, Unix, Puppet, Nginx, MySQL, KVM, PHP_
 ## Skills
 ### Core Competencies
 - Platform Engineering & Developer Experience
+- Engineering Leadership & Team Enablement
 - Release Management & Automation
 - CI/CD Architecture & Pipeline Design
 - Infrastructure as Code & Configuration Management
 - DevSecOps & Compliance Automation
-- Technical Leadership & Team Enablement
 ### Infrastructure & CI/CD
 - GitLab CI/CD, GitHub Actions
 - Terraform, CloudFormation, CDK
