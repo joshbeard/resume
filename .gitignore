@@ -1,11 +1,11 @@
 _site/
-/dist/index.html
-/dist/resume.html
-/dist/resume.md
-/dist/resume.txt
-/dist/resume.gmi
-/dist/resume-narrow.txt
-/dist/resume.json
+/public/index.html
+/public/resume.html
+/public/resume.md
+/public/resume.txt
+/public/resume.gmi
+/public/resume-narrow.txt
+/public/resume.json
 _serve/
 .DS_Store
 *.pdf
@@ -13,5 +13,5 @@ _serve/
 *.log
 env
 /.dccache
-dist/joshbeard-resume.7
+public/joshbeard-resume.7
 .venv

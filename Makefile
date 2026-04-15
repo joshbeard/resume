@@ -7,7 +7,7 @@ DOCKER_RUN = docker run --rm -v ${PWD}:/work -w /work --user=$(CURRENT_UID):$(CU
 
 .DEFAULT_GOAL := help
 
-.PHONY: all clean html md markdown txt test text gmi gemini pdf docx json man help check-deps
+.PHONY: all clean html md markdown txt test text gmi gemini pdf docx json man help check-deps serve
 all: check-deps html md gmi txt pdf docx json man ## Generate all formats
 
 help: ## Show help
@@ -23,8 +23,8 @@ check-deps: ## Check if required dependencies are installed
 
 html: check-deps ## Generate HTML using gomplate
 	@echo "Creating HTML"
-	@mkdir -p dist
-	gomplate -c .=resume.yaml -f templates/resume.html.tmpl -o dist/index.html
+	@mkdir -p public
+	gomplate -c .=resume.yaml -f templates/resume.html.tmpl -o public/index.html
 
 md markdown: check-deps ## Generate Markdown using gomplate
 	@echo "Creating Markdown"
@@ -32,19 +32,19 @@ md markdown: check-deps ## Generate Markdown using gomplate
 
 txt text: check-deps ## Generate text formats using gomplate
 	@echo "Creating text formats"
-	@mkdir -p dist
-	gomplate -c .=resume.yaml -f templates/resume.txt.tmpl -o dist/resume.txt
-	gomplate -c .=resume.yaml -f templates/resume-narrow.txt.tmpl -o dist/resume-narrow.txt
+	@mkdir -p public
+	gomplate -c .=resume.yaml -f templates/resume.txt.tmpl -o public/resume.txt
+	gomplate -c .=resume.yaml -f templates/resume-narrow.txt.tmpl -o public/resume-narrow.txt
 
 gmi gemini: check-deps ## Generate Gemini format using gomplate
 	@echo "Creating Gemini format"
-	@mkdir -p dist
-	gomplate -c .=resume.yaml -f templates/resume.gmi.tmpl -o dist/resume.gmi
+	@mkdir -p public
+	gomplate -c .=resume.yaml -f templates/resume.gmi.tmpl -o public/resume.gmi
 
 json: check-deps ## Generate pretty-formatted JSON using gomplate and jq
 	@echo "Creating JSON"
-	@mkdir -p dist
-	gomplate -c .=resume.yaml -i '{{ . | toJSON }}' | jq '.' > dist/resume.json
+	@mkdir -p public
+	gomplate -c .=resume.yaml -i '{{ . | toJSON }}' | jq '.' > public/resume.json
 
 pdf: check-deps ## Generate PDF
 	@echo "Creating PDF"
@@ -54,46 +54,47 @@ pdf: check-deps ## Generate PDF
 		--headless \
 		--disable-gpu \
 		--no-sandbox \
-		--print-to-pdf=dist/Josh-Beard-Resume.pdf \
+		--print-to-pdf=public/Josh-Beard-Resume.pdf \
 		--no-pdf-header-footer \
-		dist/index.html
+		public/index.html
 
 docx word: check-deps ## Generate DOCX
 	@echo "Creating docx"
-	gomplate -c .=resume.yaml -f templates/resume-docx.md.tmpl -o dist/Josh-Beard-Resume.md
+	gomplate -c .=resume.yaml -f templates/resume-docx.md.tmpl -o public/Josh-Beard-Resume.md
 	$(DOCKER_RUN) \
 		--platform linux/amd64 \
-		pandoc/latex --from markdown --to docx dist/Josh-Beard-Resume.md \
+		pandoc/latex --from markdown --to docx public/Josh-Beard-Resume.md \
 		-f gfm \
 		-V linkcolor:blue \
 		-V geometry:a4paper \
 		-V geometry:margin=2cm \
-		-o dist/Josh-Beard-Resume.docx
-	rm -f dist/Josh-Beard-Resume.md
+		-o public/Josh-Beard-Resume.docx
+	rm -f public/Josh-Beard-Resume.md
 
 man: check-deps ## Generate man page
 	@echo "Creating man page"
-	@mkdir -p dist
+	@mkdir -p public
 	echo -e "% JoshBeard(7) joshbeard.com\n% Josh Beard (josh@joshbeard.com)\n% $(DATE)\n" | cat - README.md >| README.man.tmp
 	$(DOCKER_RUN) \
 		--platform linux/amd64 \
 		pandoc/latex -s --from markdown --to man README.man.tmp \
-		-o dist/joshbeard-resume.7
+		-o public/joshbeard-resume.7
 	rm -f README.man.tmp
 
-serve: ## Serve the resume
-	@echo "Setting up local server with hot reloading..."
-	@mkdir -p _serve && ln -sf ../dist _serve/resume 2>/dev/null || true
+serve: html ## Serve the resume with auto-rebuild on changes
+	@command -v fswatch >/dev/null 2>&1 || { echo "❌ fswatch is not installed. Install with: brew install fswatch"; exit 1; }
+	@mkdir -p _serve && ln -sf ../public _serve/resume 2>/dev/null || true
 	@echo "Starting server at http://localhost:8080/resume/"
-	@echo "Press Ctrl+C to stop (run 'make clean' to remove _serve directory)"
-	@cd _serve && (python3 -m http.server 8080 2>/dev/null || python -m http.server 8080)
+	@echo "Watching resume.yaml and templates/ for changes... Press Ctrl+C to stop"
+	@fswatch -o resume.yaml templates/ | xargs -n1 -I{} sh -c 'echo "Change detected, rebuilding..."; make html' & \
+	  cd _serve && python3 -m http.server 8080
 
 test: ## Run tests
 	pre-commit run --all-files
 
 clean: ## Clean up
-	rm -f dist/resume-narrow.txt dist/resume.gmi dist/resume.txt dist/resume.json \
-		dist/Josh-Beard-Resume.docx dist/Josh-Beard-Resume.pdf dist/index.html dist/joshbeard-resume.7
+	rm -f public/resume-narrow.txt public/resume.gmi public/resume.txt public/resume.json \
+		public/Josh-Beard-Resume.docx public/Josh-Beard-Resume.pdf public/index.html public/joshbeard-resume.7
 	rm -rf _serve
 	git restore --staged README.md
 	git restore README.md

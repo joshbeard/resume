@@ -1,7 +1,7 @@
 # Development Notes
 
-The [`dist/`](dist) directory contains assets that are deployed for the website
-as-is. The `dist` directory acts as a staging directory - the generated
+The [`public/`](public) directory contains assets that are deployed for the website
+as-is. The `public` directory acts as a staging directory - the generated
 `index.html` would exist at the root of this.
 
 I deploy to S3 and my local Gemini and Gopher servers.
