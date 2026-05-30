@@ -12,7 +12,7 @@
 
 ## Summary
 
-Engineering manager and hands-on platform engineer with 15+ years building the systems that let development teams ship faster and safer. I own platform strategy while staying close to the work - designing CI/CD architecture, building internal tools in Go, and establishing governance that scales without becoming bureaucracy. Known for turning fragmented toolchains into coherent platforms and for growing engineers who can own their own infrastructure.
+Engineering manager and platform engineer focused on delivery systems, developer experience, and the infrastructure behind reliable software. I lead platform strategy as a hands-on manager, including CI/CD architecture, production Go tooling, and open-source infrastructure integrations. My work centers on coherent systems, reduced toil, and enabling engineers to own the services they build.
 
 
 ## Experience
@@ -21,14 +21,14 @@ Engineering manager and hands-on platform engineer with 15+ years building the s
 _Previously: Staff DevOps Engineer (February 2025 - February 2026), Senior DevOps Engineer (September 2022 - February 2025)_
 
 September 2022 - Present
-* Lead platform strategy and roadmap for a DevOps team supporting multiple engineering groups, aligning infrastructure decisions with business and compliance requirements.
+* Lead platform strategy and DevOps AI roadmap for a team supporting multiple engineering groups, aligning delivery automation, engineering standards, and platform adoption with business and compliance requirements.
 * Drive cross-team standardization of tooling and delivery practices, reducing per-team pipeline variance and improving time-to-production across the engineering org.
 * Architect CI/CD and platform infrastructure that scales across teams while maintaining auditability and governance controls for a regulated banking environment.
 * Built a release orchestration tool in Go that reduced manual release steps and improved rollback safety across production deployments.
 * Developed and open-sourced a Terraform provider and Go API client for a third-party integration, enabling self-service infrastructure for downstream teams.
 * Established observability practices for CI/CD pipelines, giving engineering leadership visibility into delivery performance for the first time.
 
-_Key technology and skills:AWS, CI/CD, DataDog, Devcontainers, Docker, GitLab, GitOps, Go, Golang, Kubernetes, GitHub Actions, Platform Engineering, Python, Shell, Terraform, Traefik_
+_Key technology and skills:AWS, CI/CD, Claude, Cursor, DataDog, Devcontainers, Docker, GitLab, GitOps, Go, Golang, Kubernetes, GitHub Actions, Developer AI Tooling, Platform Engineering, Python, Shell, Terraform, Traefik_
 ### Lead DevSecOps Engineer with Ventera, Inc (US Geological Survey)
 
 June 2022 - April 2023
