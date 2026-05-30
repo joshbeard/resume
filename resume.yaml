@@ -6,12 +6,12 @@
 name: Josh Beard
 headline: Platform Engineering | DevOps Leadership | Developer Experience
 summary: >
-  Engineering manager and hands-on platform engineer with 15+ years building
-  the systems that let development teams ship faster and safer. I own platform
-  strategy while staying close to the work - designing CI/CD architecture,
-  building internal tools in Go, and establishing governance that scales without
-  becoming bureaucracy. Known for turning fragmented toolchains into coherent
-  platforms and for growing engineers who can own their own infrastructure.
+  Engineering manager and platform engineer focused on delivery systems,
+  developer experience, and the infrastructure behind reliable software. I lead
+  platform strategy as a hands-on manager, including CI/CD architecture,
+  production Go tooling, and open-source infrastructure integrations. My work
+  centers on coherent systems, reduced toil, and enabling engineers to own the
+  services they build.
 url: https://joshbeard.com/resume
 repo:
   url: https://github.com/joshbeard/resume
@@ -62,9 +62,10 @@ experience:
       - title: Senior DevOps Engineer
         dates: September 2022 - February 2025
     details:
-      - Lead platform strategy and roadmap for a DevOps team supporting
-        multiple engineering groups, aligning infrastructure decisions with
-        business and compliance requirements.
+      - Lead platform strategy and DevOps AI roadmap for a team supporting
+        multiple engineering groups, aligning delivery automation, engineering
+        standards, and platform adoption with business and compliance
+        requirements.
       - Drive cross-team standardization of tooling and delivery practices,
         reducing per-team pipeline variance and improving time-to-production
         across the engineering org.
@@ -82,6 +83,8 @@ experience:
     tech:
       - AWS
       - CI/CD
+      - Claude
+      - Cursor
       - DataDog
       - Devcontainers
       - Docker
@@ -91,6 +94,7 @@ experience:
       - Golang
       - Kubernetes
       - GitHub Actions
+      - Developer AI Tooling
       - Platform Engineering
       - Python
       - Shell
