@@ -1,6 +1,6 @@
 # Josh Beard
 
-## Platform Engineering | DevOps Leadership | Developer Experience
+## Platform Engineering | Software Delivery | DevOps Leadership
 
 ## Contact Details
 
@@ -12,7 +12,7 @@
 
 ## Summary
 
-Engineering manager and platform engineer focused on delivery systems, developer experience, and the infrastructure behind reliable software. I lead platform strategy as a hands-on manager, including CI/CD architecture, production Go tooling, and open-source infrastructure integrations. My work centers on coherent systems, reduced toil, and enabling engineers to own the services they build.
+Engineering manager and platform engineer focused on software delivery, developer experience, and the platforms teams use to build and deploy reliable services. I lead platform strategy as a hands-on manager, shaping the systems, tooling, and standards that connect development workflows to production. My work centers on coherent platforms, reduced toil, and enabling engineers to own the services they build.
 
 
 ## Experience
