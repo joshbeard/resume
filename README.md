@@ -17,10 +17,12 @@ Engineering manager and platform engineer focused on software delivery, develope
 
 ## Experience
 ### DevOps Engineering Manager with Live Oak Bank
-
-_Previously: Staff DevOps Engineer (February 2025 - February 2026), Senior DevOps Engineer (September 2022 - February 2025)_
-
 September 2022 - Present
+
+> Earlier roles:
+> Staff DevOps Engineer (February 2025 - February 2026)
+> Senior DevOps Engineer (September 2022 - February 2025)
+
 * Lead platform strategy and DevOps AI roadmap for a team supporting multiple engineering groups, aligning delivery automation, engineering standards, and platform adoption with business and compliance requirements.
 * Drive cross-team standardization of tooling and delivery practices, reducing per-team pipeline variance and improving time-to-production across the engineering org.
 * Architect CI/CD and platform infrastructure that scales across teams while maintaining auditability and governance controls for a regulated banking environment.
@@ -30,7 +32,6 @@ September 2022 - Present
 
 _Key technology and skills:AWS, CI/CD, Claude, Cursor, DataDog, Devcontainers, Docker, GitLab, GitOps, Go, Golang, Kubernetes, GitHub Actions, Developer AI Tooling, Platform Engineering, Python, Shell, Terraform, Traefik_
 ### Lead DevSecOps Engineer with Ventera, Inc (US Geological Survey)
-
 June 2022 - April 2023
 * Contracted to USGS Water Resources Mission Area to modernize critical national water data services used by researchers and the public.
 * Built AWS infrastructure and CI/CD pipelines for serverless Python applications and static websites, reducing deployment time and operational overhead.
@@ -38,10 +39,11 @@ June 2022 - April 2023
 
 _Key technology and skills:AWS, CloudFormation, GitLab, Python_
 ### Lead DevOps Engineer with Apogee Engineering, LLC (US Geological Survey)
-
-_Previously: Senior DevOps Engineer (September 2015 - December 2019)_
-
 September 2015 - May 2022
+
+> Earlier roles:
+> Senior DevOps Engineer (September 2015 - December 2019)
+
 * Owned platform architecture and infrastructure for dozens of USGS scientific data products serving millions of public users.
 * Led migration of 200+ projects from legacy CI/CD systems to GitLab, standardizing delivery practices across a large multi-team organization.
 * Deployed configuration management at scale using Puppet and Ansible across hundreds of Linux systems, eliminating configuration drift and reducing incident response time.
@@ -50,7 +52,6 @@ September 2015 - May 2022
 
 _Key technology and skills:AWS, CI/CD, GitLab, Docker, Terraform, Ansible, Platform Engineering, GitOps, Puppet, Python, Nginx, Traefik_
 ### Professional Services Engineer with Puppet Inc.
-
 September 2013 - April 2015
 * Delivered consulting and hands-on training on Puppet and DevOps practices to enterprise clients across multiple industries.
 * Developed reusable Puppet modules and automation tooling adopted by client teams after engagements closed.
@@ -58,7 +59,6 @@ September 2013 - April 2015
 
 _Key technology and skills:Puppet, Linux, Ruby, Git, Shell_
 ### Linux/Unix Systems Administrator with Douglas School District
-
 January 2010 - September 2013
 * Managed Linux/Unix infrastructure and server operations for a K-12 district environment.
 * Introduced system automation and monitoring, reducing manual maintenance toil and improving uptime.
