@@ -16,12 +16,13 @@
 ## Experience
 {{- range .experience }}
 ### {{ .title }} with {{ .org }}
+{{ .start }} - {{ .end }}{{- if has . "location" }} - {{ .location }}{{- end }}
 {{- if has . "previous_titles" }}
 
-_Previously:{{- range $index, $prev := .previous_titles }}{{- if gt $index 0 }},{{ end }} {{ $prev.title }} ({{ $prev.dates }}){{- end }}_
+> Earlier roles:
+{{ range .previous_titles }}> {{ .title }} ({{ .dates }})
+{{ end -}}
 {{- end }}
-
-{{ .start }} - {{ .end }}{{- if has . "location" }} - {{ .location }}{{- end }}
 {{- range .details }}
 * {{ . }}
 {{- end }}
