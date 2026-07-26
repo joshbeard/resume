@@ -6,12 +6,13 @@
 name: Josh Beard
 headline: Platform Engineering | Software Delivery | DevOps Leadership
 summary: >
-  Engineering manager and platform engineer focused on software delivery,
-  developer experience, and the platforms teams use to build and deploy
-  reliable services. I lead platform strategy as a hands-on manager, shaping the
-  systems, tooling, and standards that connect development workflows to
-  production. My work centers on coherent platforms, reduced toil, and enabling
-  engineers to own the services they build.
+  Hands-on engineering manager and platform engineer who leads strategy and
+  architecture for the platforms, services, and tools that support engineering
+  teams. I guide platform and DevOps initiatives across software delivery and
+  developer experience, with a current focus on delivering a managed AI
+  platform through tools and integrations that increase developer autonomy and
+  streamline engineering workflows. I stay close to implementation, translating
+  strategy into useful capabilities while reducing operational toil.
 url: https://joshbeard.com/resume
 repo:
   url: https://github.com/joshbeard/resume
