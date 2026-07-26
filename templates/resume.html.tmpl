@@ -118,12 +118,7 @@
                         </ul>
                         {{- if .tech }}
                         <p class="key_tech">
-                            Key technology:
-                            <em>
-                                {{- range $index, $skill := .tech }}
-                                {{- if gt $index 0 }}, {{ end }}{{ $skill }}
-                                {{- end }}
-                            </em>
+                            <span class="key_tech-label">Key technology:</span>{{ range $index, $skill := .tech }}{{ if gt $index 0 }}, {{ else }} {{ end }}{{ $skill }}{{ end }}
                         </p>
                         {{- end }}
                     </article>

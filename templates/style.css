@@ -402,6 +402,16 @@ article.job ul li p {
   display: inline;
 }
 
+.key_tech {
+  font-size: 0.9em;
+  line-height: 1.35;
+  margin: 8px 0 0;
+}
+
+.key_tech-label {
+  font-weight: 600;
+}
+
 /* Previous Titles */
 .previous-titles {
   font-size: 0.95em;
