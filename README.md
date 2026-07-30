@@ -12,7 +12,7 @@
 
 ## Summary
 
-Hands-on engineering manager and platform engineer who leads strategy and architecture for the platforms, services, and tools that support engineering teams. I guide platform and DevOps initiatives across software delivery and developer experience, with a current focus on delivering a managed AI platform through tools and integrations that increase developer autonomy and streamline engineering workflows. I stay close to implementation, translating strategy into useful capabilities while reducing operational toil.
+Hands-on engineering manager and platform engineer who leads strategy and architecture for the platforms, services, and tools that support engineering teams. I guide platform and DevOps initiatives across software delivery and developer experience, with a current focus on a managed AI platform and AI harness: MCP integrations, custom agent skills and tools, and agentic workflows grounded in deterministic systems. I stay close to implementation, translating strategy into useful capabilities while reducing operational toil.
 
 
 ## Experience
@@ -23,14 +23,14 @@ September 2022 - Present
 > Staff DevOps Engineer (February 2025 - February 2026)
 > Senior DevOps Engineer (September 2022 - February 2025)
 
-* Lead platform strategy and DevOps AI roadmap for a team supporting multiple engineering groups, aligning delivery automation, engineering standards, and platform adoption with business and compliance requirements.
+* Lead platform strategy and DevOps AI roadmap for a team supporting multiple engineering groups, including AI harness design, MCP integrations, and agentic workflows that call deterministic platform APIs and delivery systems under banking compliance constraints.
 * Drive cross-team standardization of tooling and delivery practices, reducing per-team pipeline variance and improving time-to-production across the engineering org.
 * Architect CI/CD and platform infrastructure that scales across teams while maintaining auditability and governance controls for a regulated banking environment.
 * Built a release orchestration tool in Go that reduced manual release steps and improved rollback safety across production deployments.
 * Developed and open-sourced a Terraform provider and Go API client for a third-party integration, enabling self-service infrastructure for downstream teams.
 * Established observability practices for CI/CD pipelines, giving engineering leadership visibility into delivery performance for the first time.
 
-_Key technology and skills:AWS, CI/CD, Claude, Cursor, DataDog, Devcontainers, Docker, GitLab, GitOps, Go, Golang, Kubernetes, GitHub Actions, Developer AI Tooling, Platform Engineering, Python, Shell, Terraform, Traefik_
+_Key technology and skills:AWS, CI/CD, Claude, Cursor, DataDog, Devcontainers, Docker, GitLab, GitOps, Go, Kubernetes, GitHub Actions, MCP, Developer AI Tooling, Platform Engineering, Python, Shell, Terraform, Traefik_
 ### Lead DevSecOps Engineer with Ventera, Inc (US Geological Survey)
 June 2022 - April 2023
 * Contracted to USGS Water Resources Mission Area to modernize critical national water data services used by researchers and the public.
@@ -69,36 +69,34 @@ _Key technology and skills:Linux, Unix, Puppet, Nginx, MySQL, KVM, PHP_
 ### Core Competencies
 - Platform Engineering & Developer Experience
 - Engineering Leadership & Team Enablement
-- Release Management & Automation
-- CI/CD Architecture & Pipeline Design
-- Infrastructure as Code & Configuration Management
+- AI Harness, Agentic Workflows & Developer Tooling
+- CI/CD Architecture & Release Automation
+- Infrastructure as Code
 - DevSecOps & Compliance Automation
 ### Infrastructure & CI/CD
 - GitLab CI/CD, GitHub Actions
-- Terraform, CloudFormation, CDK
-- Puppet, Ansible
-- Nginx, HAProxy, Traefik
-- PostgreSQL, MySQL, MongoDB, Redis
+- Terraform, CloudFormation
+- Ansible
+- Traefik, Nginx
+- PostgreSQL, Redis
 ### Observability
-- DataDog, Prometheus
-- Elasticsearch, Graylog
+- DataDog
+- Prometheus
 - PagerDuty
-- Sensu
 ### Platforms & Technologies
-- AWS Cloud Services
+- AWS
 - Docker, Kubernetes
-- Linux/Unix (RHEL, Ubuntu, Debian, Alpine, FreeBSD)
-- Virtualization (Proxmox, LXC, Vagrant, KVM, vSphere)
-- Security Scanning & Vulnerability Management
+- Linux
+- GitOps
+- Devcontainers
+- MCP
+- Claude, Cursor
 ### Programming Languages
 - Go
 - Python
 - Shell/Bash
-- Ruby
-- YAML, JSON, HCL
-- PHP
 ### Security & Compliance
-- Code Analysis & Security Scanning
+- Security Scanning & Vulnerability Management
 - Compliance Automation
 - Security Policy as Code
 
