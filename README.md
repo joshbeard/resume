@@ -102,7 +102,7 @@ _Key technology and skills:Linux, Unix, Puppet, Nginx, MySQL, KVM, PHP_
 
 ## Other Formats
 
-* Web/HTML: <https://joshbeard.com/resume>
+* Web/HTML: <https://joshbeard.com/resume/>
 * PDF: <https://joshbeard.com/resume/Josh-Beard-Resume.pdf>
 * Word: <https://joshbeard.com/resume/Josh-Beard-Resume.docx>
 * Text: <https://joshbeard.com/resume/resume.txt>
