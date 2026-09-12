@@ -1,6 +1,6 @@
 #
 # Josh Beard's Resume
-# https://joshbeard.com/resume
+# https://joshbeard.com/resume/
 #
 ---
 name: Josh Beard
@@ -14,7 +14,7 @@ summary: >
   workflows grounded in deterministic systems. I stay close to implementation,
   translating strategy into useful capabilities while reducing operational
   toil.
-url: https://joshbeard.com/resume
+url: https://joshbeard.com/resume/
 repo:
   url: https://github.com/joshbeard/resume
 
