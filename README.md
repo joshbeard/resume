@@ -1,6 +1,6 @@
 # Josh Beard
 
-## Platform Engineering | Software Delivery | DevOps Leadership
+## DevOps & Platform Engineering | AI Enablement | Engineering Leadership
 
 ## Contact Details
 
@@ -12,7 +12,7 @@
 
 ## Summary
 
-Hands-on engineering manager and platform engineer who leads strategy and architecture for the platforms, services, and tools that support engineering teams. I guide platform and DevOps initiatives across software delivery and developer experience, with a current focus on a managed AI platform and AI harness: MCP integrations, custom agent skills and tools, and agentic workflows grounded in deterministic systems. I stay close to implementation, translating strategy into useful capabilities while reducing operational toil.
+Hands-on engineering manager and platform engineer. I lead strategy and architecture for the platform and tools that engineers and business users rely on to ship software, including with AI. I extend proven platform fundamentals rather than replacing them, so people and their AI agents get the same paved paths, guardrails, and auditability a regulated bank requires. I stay close to implementation.
 
 
 ## Experience
@@ -23,17 +23,18 @@ September 2022 - Present
 > Staff DevOps Engineer (February 2025 - February 2026)
 > Senior DevOps Engineer (September 2022 - February 2025)
 
-* Lead platform strategy and DevOps AI roadmap for a team supporting multiple engineering groups, including AI harness design, MCP integrations, and agentic workflows that call deterministic platform APIs and delivery systems under banking compliance constraints.
-* Drive cross-team standardization of tooling and delivery practices, reducing per-team pipeline variance and improving time-to-production across the engineering org.
-* Architect CI/CD and platform infrastructure that scales across teams while maintaining auditability and governance controls for a regulated banking environment.
-* Built a release orchestration tool in Go that reduced manual release steps and improved rollback safety across production deployments.
-* Developed and open-sourced a Terraform provider and Go API client for a third-party integration, enabling self-service infrastructure for downstream teams.
-* Established observability practices for CI/CD pipelines, giving engineering leadership visibility into delivery performance for the first time.
+* Lead the DevSecOps team and own its AI strategy for software delivery, serving an 85-person engineering org and business users (citizen developers) across a 1,000-person bank from one governed platform. Remain a hands-on technical lead and contributor.
+* Established the team's operating model, including planning, a roadmap aligned to business priorities, and regular updates and demos across the org, earning the team a reputation as a trusted delivery partner.
+* Led the team's delivery of complementary AI tools on that platform, including a cloud coding agent, enterprise plugin distribution, and integrations that give users and their agents governed access to delivery systems.
+* Led design and development of a shared knowledge base with an MCP server and agent skills that work across AI agents and platforms, including Microsoft Teams, so people and agents draw on the same context.
+* Drove standardization of software delivery across hundreds of projects and more than a dozen engineering teams with a modular CI/CD platform that balances consistency and governance with team flexibility, reducing pipeline variance and time-to-production.
+* Led the design of platform-as-code for AWS account structure, shared services, and Terraform modules, enabling self-service with built-in auditability.
+* Built a Go release orchestration tool and open-sourced a Terraform provider and Go API client; added CI/CD delivery metrics that gave leadership its first view of delivery performance.
 
-_Key technology and skills:AWS, CI/CD, Claude, Cursor, DataDog, Devcontainers, Docker, GitLab, GitOps, Go, Kubernetes, GitHub Actions, MCP, Developer AI Tooling, Platform Engineering, Python, Shell, Terraform, Traefik_
+_Key technology and skills:AWS, Terraform, GitLab CI/CD, Go, Python, MCP, Claude, Cursor_
 ### Lead DevSecOps Engineer with Ventera, Inc (US Geological Survey)
 June 2022 - April 2023
-* Contracted to USGS Water Resources Mission Area to modernize critical national water data services used by researchers and the public.
+* Contracted to USGS Water Resources Mission Area to modernize critical national water data services used by researchers and the public. Full-time, then part-time from September 2022.
 * Built AWS infrastructure and CI/CD pipelines for serverless Python applications and static websites, reducing deployment time and operational overhead.
 * Integrated automated security scanning and compliance checks into CI/CD pipelines, reducing manual review burden on development teams.
 
@@ -50,55 +51,39 @@ September 2015 - May 2022
 * Migrated dozens of applications from on-premise to AWS using Docker, cutting infrastructure costs and enabling teams to scale workloads independently.
 * Mentored engineers and scientists in DevOps practices, enabling teams to own and operate their own infrastructure without platform team dependency.
 
-_Key technology and skills:AWS, CI/CD, GitLab, Docker, Terraform, Ansible, Platform Engineering, GitOps, Puppet, Python, Nginx, Traefik_
+_Key technology and skills:AWS, GitLab, Docker, Terraform, Puppet, Ansible_
 ### Professional Services Engineer with Puppet Inc.
 September 2013 - April 2015
 * Delivered consulting and hands-on training on Puppet and DevOps practices to enterprise clients across multiple industries.
 * Developed reusable Puppet modules and automation tooling adopted by client teams after engagements closed.
-* Consistently earned strong client feedback for practical, no-nonsense technical guidance.
 
-_Key technology and skills:Puppet, Linux, Ruby, Git, Shell_
+_Key technology and skills:Puppet, Linux, Ruby_
 ### Linux/Unix Systems Administrator with Douglas School District
 January 2010 - September 2013
-* Managed Linux/Unix infrastructure and server operations for a K-12 district environment.
-* Introduced system automation and monitoring, reducing manual maintenance toil and improving uptime.
-* Provided technical support and maintained core network services.
+* Managed Linux/Unix infrastructure for a K-12 district, introducing configuration management and monitoring that reduced manual toil and improved uptime.
 
-_Key technology and skills:Linux, Unix, Puppet, Nginx, MySQL, KVM, PHP_
+_Key technology and skills:Linux, Puppet, KVM_
 ## Skills
-### Core Competencies
-- Platform Engineering & Developer Experience
-- Engineering Leadership & Team Enablement
-- AI Harness, Agentic Workflows & Developer Tooling
-- CI/CD Architecture & Release Automation
-- Infrastructure as Code
-- DevSecOps & Compliance Automation
-### Infrastructure & CI/CD
-- GitLab CI/CD, GitHub Actions
-- Terraform, CloudFormation
-- Ansible
-- Traefik, Nginx
-- PostgreSQL, Redis
-### Observability
-- DataDog
-- Prometheus
-- PagerDuty
-### Platforms & Technologies
-- AWS
-- Docker, Kubernetes
-- Linux
-- GitOps
-- Devcontainers
-- MCP
+### AI Enablement
+- AI strategy & governance
+- Agentic workflows, MCP, agent skills
+- Knowledge bases & AI context
 - Claude, Cursor
-### Programming Languages
+### Cloud & Infrastructure
+- AWS, multi-account architecture
+- Terraform modules & providers, CloudFormation
+- Docker, Kubernetes
+- Ansible, Puppet
+### Delivery & Governance
+- GitLab CI/CD, GitHub Actions
+- Platform as code, GitOps
+- DevSecOps & compliance automation
+- Observability (DataDog)
+### Languages & Systems
 - Go
 - Python
 - Shell/Bash
-### Security & Compliance
-- Security Scanning & Vulnerability Management
-- Compliance Automation
-- Security Policy as Code
+- Linux
 
 ## Other Formats
 
