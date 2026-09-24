@@ -11,7 +11,7 @@ summary: >
   rely on to ship software, including with AI. I extend proven platform
   fundamentals rather than replacing them, so people and their AI agents get
   the same paved paths, guardrails, and auditability a regulated bank
-  requires. I stay close to implementation.
+  requires. I'm pragmatic and stay close to implementation.
 url: https://joshbeard.com/resume/
 repo:
   url: https://github.com/joshbeard/resume
@@ -178,7 +178,7 @@ experience:
 # -----------------------------------------------------------------------------
 skills:
   "AI Enablement":
-    - AI strategy & governance
+    - AI adoption strategy & guardrails
     - Agentic workflows, MCP, agent skills
     - Knowledge bases & AI context
     - Claude, Cursor
