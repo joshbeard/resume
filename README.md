@@ -12,7 +12,7 @@
 
 ## Summary
 
-Hands-on engineering manager and platform engineer. I lead strategy and architecture for the platform and tools that engineers and business users rely on to ship software, including with AI. I extend proven platform fundamentals rather than replacing them, so people and their AI agents get the same paved paths, guardrails, and auditability a regulated bank requires. I stay close to implementation.
+Hands-on engineering manager and platform engineer. I lead strategy and architecture for the platform and tools that engineers and business users rely on to ship software, including with AI. I extend proven platform fundamentals rather than replacing them, so people and their AI agents get the same paved paths, guardrails, and auditability a regulated bank requires. I'm pragmatic and stay close to implementation.
 
 
 ## Experience
@@ -65,7 +65,7 @@ January 2010 - September 2013
 _Key technology and skills:Linux, Puppet, KVM_
 ## Skills
 ### AI Enablement
-- AI strategy & governance
+- AI adoption strategy & guardrails
 - Agentic workflows, MCP, agent skills
 - Knowledge bases & AI context
 - Claude, Cursor
