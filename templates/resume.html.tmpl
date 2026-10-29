@@ -101,11 +101,11 @@
                                 · {{ .location }}
                                 {{- end }}
                             </strong></p>
-                        {{- if has . "previous_titles" }}
+                        {{- if has . "roles" }}
                         <div class="previous-titles">
-                            <span class="previous-titles-label">Earlier roles:</span>
+                            <span class="previous-titles-label">Roles:</span>
                             <ul>
-                                {{- range .previous_titles }}
+                                {{- range .roles }}
                                 <li><span class="prev-title">{{ .title }}</span> <span class="prev-dates">{{ .dates }}</span></li>
                                 {{- end }}
                             </ul>

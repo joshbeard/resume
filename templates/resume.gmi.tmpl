@@ -23,10 +23,10 @@
 
 ### {{ .title }} with {{ .org }}
 {{ .start }} - {{ .end }}{{- if has . "location" }} - {{ .location }}{{- end }}
-{{- if has . "previous_titles" }}
+{{- if has . "roles" }}
 
-> Earlier roles:
-{{ range .previous_titles }}> {{ .title }} ({{ .dates }})
+> Roles:
+{{ range .roles }}> {{ .title }} ({{ .dates }})
 {{ end -}}
 {{- end }}
 {{- range .details }}

@@ -29,10 +29,10 @@
 {{ if has . "location" }}    {{ .location }}
 {{ end }}
     {{ .start }} - {{ .end }}
-{{ if has . "previous_titles" }}
-    Earlier roles:
-{{- range $index, $prev := .previous_titles }}
-     - {{ $prev.title }} ({{ $prev.dates }})
+{{ if has . "roles" }}
+    Roles:
+{{- range $index, $role := .roles }}
+     - {{ $role.title }} ({{ $role.dates }})
 {{- end }}
 {{ end }}
 {{ range .details }}

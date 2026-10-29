@@ -23,9 +23,9 @@
 {{ range .experience }}
 ### {{ .title }} with {{ .org }}
     {{ .start }} - {{ .end }}{{ if has . "location" }} - {{ .location }}{{ end }}
-{{ if has . "previous_titles" }}
-    Earlier roles:
-{{ range .previous_titles }}      - {{ .title }} ({{ .dates }})
+{{ if has . "roles" }}
+    Roles:
+{{ range .roles }}      - {{ .title }} ({{ .dates }})
 {{ end -}}
 {{ end }}
 {{ range .details }}
