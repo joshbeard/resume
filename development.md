@@ -4,7 +4,9 @@ The [`public/`](public) directory contains assets that are deployed for the webs
 as-is. The `public` directory acts as a staging directory - the generated
 `index.html` would exist at the root of this.
 
-I deploy to S3 and my local Gemini and Gopher servers.
+I deploy to S3. The [smol stack](https://github.com/joshbeard/smol-content) that
+serves Gemini, Gopher, and Finger on `jbeard.co` pulls the resume from there
+every 30 minutes.
 
 ## Copy this for your own resume
 

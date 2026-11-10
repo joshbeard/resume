@@ -149,48 +149,6 @@ jobs:
           message: 'Generated Markdown Resume'
           add: 'README.md'
 
-  local-deploy:
-    name: Deploy locally
-    runs-on: self-hosted
-    needs: validate
-    if: ${{ !contains(github.event.head_commit.message, '[skip deploy]') }}
-
-    steps:
-      - uses: actions/download-artifact@master
-        with:
-          name: src
-
-      - name: Deploy resume to Gemini server
-        id: deploy
-        uses: Pendect/action-rsyncer@v2.0.0
-        env:
-          DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
-        with:
-          flags: '-rv'
-          options: '--chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r'
-          ssh_options: ''
-          src: '.'
-          dest: '${{ secrets.DEPLOY_USER }}@${{ secrets.LOCAL_GEMINI_SERVER }}:${{ secrets.DEPLOY_PATH }}/'
-
-      - name: Display status from deploy
-        run: echo "${{ steps.deploy.outputs.status }}"
-
-      - name: Deploy resume to Gopher server
-        id: deploy_gopher
-        uses: Pendect/action-rsyncer@v2.0.0
-        env:
-          DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
-        with:
-          flags: '-rv'
-          options: '--chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r'
-          ssh_options: ''
-          src: 'resume-narrow.txt'
-          dest: '${{ secrets.DEPLOY_USER }}@${{ secrets.LOCAL_GEMINI_SERVER }}:${{ secrets.GOPHER_DEPLOY_PATH }}/resume.txt'
-
-      - name: Display status from deploy
-        run: echo "${{ steps.deploy_gopher.outputs.status }}"
-
-
   deploy:
     name: Deploy Resume Website
     runs-on: ubuntu-latest
